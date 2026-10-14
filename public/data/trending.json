@@ -1,0 +1,371 @@
+{
+  "generatedAt": "2026-10-14T01:36:12.317Z",
+  "source": "https://github.com/trending?since=daily",
+  "period": "daily",
+  "repositories": [
+    {
+      "rank": 1,
+      "fullName": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": 208826,
+      "forks": 51076,
+      "starsToday": 54679,
+      "license": "MIT",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli",
+        "codex",
+        "cordis",
+        "ctf"
+      ],
+      "homepage": "https://rea.tools",
+      "updatedAt": "2026-10-14T01:34:05Z",
+      "chinese": {
+        "title": "REa：面向软件与二进制的智能逆向工程 Agent",
+        "summary": "REa 把逆向工程拆成可由 Agent 调度的调查流程：从观察应用行为、定位关键路径，到分析原生二进制与协议实现。它更像一套研究工作台，而不是一次性反编译器，重点在于让分析线索、工具调用和结论能够连续推进。",
+        "highlights": [
+          "覆盖应用行为、协议与原生二进制等不同分析层级",
+          "以 CLI 和 Agent Skill 形态接入 Claude Code、Codex 等编码环境",
+          "适合把零散逆向命令组织成可复查的调查过程"
+        ],
+        "useCases": [
+          "安全研究与 CTF 分析",
+          "遗留软件兼容性调查",
+          "无文档协议与应用行为研究"
+        ],
+        "audience": "具备逆向工程基础的安全研究者、系统开发者与 Agent 工具作者",
+        "caution": "逆向行为应限于获得授权的软件、数据和环境；能力范围与平台支持以仓库 README 为准。",
+        "status": "reviewed"
+      }
+    },
+    {
+      "rank": 2,
+      "fullName": "bilawalsidhu/gods-eye-view",
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars": 55450,
+      "forks": 10838,
+      "starsToday": 1961,
+      "license": "NOASSERTION",
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry"
+      ],
+      "homepage": "https://maptheworld.ai/",
+      "updatedAt": "2026-10-13T23:03:44Z",
+      "chinese": {
+        "title": "God's Eye View：浏览器中的实时开源空间情报地球",
+        "summary": "该项目把公开空间数据叠加到照片级 3D 地球上，用类似卫星态势界面的方式观察飞机、地理事件与空间线索。它将 Cesium、GIS 与 OSINT 数据源组合成可交互场景，适合探索空间信息如何汇聚和表达。",
+        "highlights": [
+          "基于真实公开数据而非预设演示数据",
+          "使用 3D 地球承载飞行追踪与地理空间信息",
+          "强调浏览器端的沉浸式态势浏览体验"
+        ],
+        "useCases": [
+          "开源情报可视化原型",
+          "航空与空间数据探索",
+          "三维 GIS 交互设计参考"
+        ],
+        "audience": "OSINT 研究者、GIS 开发者、数据记者和三维可视化团队",
+        "caution": "公开数据也可能存在延迟、缺失或误差；不能将页面展示直接作为安全、执法或军事决策依据。仓库许可证需进一步核验。",
+        "status": "reviewed"
+      }
+    },
+    {
+      "rank": 3,
+      "fullName": "debpalash/VoiceStudio",
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "stars": 63406,
+      "forks": 7052,
+      "starsToday": 1748,
+      "license": "AGPL-3.0",
+      "topics": [
+        "ai",
+        "audiobook",
+        "cuda",
+        "dubbing",
+        "elevenlabs-alternative",
+        "huggingface",
+        "local-first",
+        "mlx"
+      ],
+      "homepage": "https://voicestudio.sh",
+      "updatedAt": "2026-10-14T01:24:15Z",
+      "chinese": {
+        "title": "VoiceStudio：本地优先的开源语音生产套件",
+        "summary": "VoiceStudio 把声音克隆、声音设计、视频配音、听写、转录和有声书制作放进同一套本地工作流，定位为 ElevenLabs 的开源替代方案。项目强调模型在本机运行，并面向多语言内容生产提供统一界面。",
+        "highlights": [
+          "覆盖从语音生成到转录、配音的完整链路",
+          "本地优先，可减少音频上传第三方服务的需求",
+          "项目宣称支持 646 种语言，实际质量需按语言与模型测试"
+        ],
+        "useCases": [
+          "视频和播客配音",
+          "有声书与辅助朗读",
+          "隐私敏感的本地转录实验"
+        ],
+        "audience": "音视频创作者、本地 AI 用户、语音产品原型团队",
+        "caution": "克隆他人声音必须取得明确授权，并遵守肖像、声音人格权和平台规则；AGPL-3.0 对网络服务分发有额外义务。",
+        "status": "reviewed"
+      }
+    },
+    {
+      "rank": 4,
+      "fullName": "mksglu/context-mode",
+      "owner": "mksglu",
+      "name": "context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
+      "language": "TypeScript",
+      "stars": 28268,
+      "forks": 1995,
+      "starsToday": 969,
+      "license": "NOASSERTION",
+      "topics": [
+        "antigravity",
+        "claude",
+        "claude-code",
+        "claude-code-hooks",
+        "claude-code-plugins",
+        "claude-code-skill",
+        "codex",
+        "codex-cli"
+      ],
+      "homepage": "https://context-mode.com",
+      "updatedAt": "2026-10-14T00:33:46Z",
+      "chinese": {
+        "title": "Context Mode：为编码 Agent 压缩工具输出与延续会话记忆",
+        "summary": "Context Mode 面向上下文窗口容易被日志和工具输出挤满的问题，把高噪声结果放入沙箱处理，只把相关片段返回给 Agent，同时保存可跨会话使用的记忆。它通过 MCP 与 hooks 接入多种编码平台，重点是降低上下文占用并约束工具路由。",
+        "highlights": [
+          "在工具输出进入模型前进行隔离、检索和压缩",
+          "保存会话记忆，减少长任务中的重复读取",
+          "通过 MCP 与 hooks 适配多个 Agent 环境"
+        ],
+        "useCases": [
+          "大型仓库的长时间编码任务",
+          "测试日志和搜索结果压缩",
+          "多 Agent 环境的上下文治理"
+        ],
+        "audience": "重度使用 AI 编程工具的开发者、Agent 平台团队与成本治理人员",
+        "caution": "项目宣称的压缩比例需要用自己的任务复测；过度裁剪可能隐藏关键错误上下文，且仓库许可证需进一步核验。",
+        "status": "reviewed"
+      }
+    },
+    {
+      "rank": 5,
+      "fullName": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML",
+      "stars": 54183,
+      "forks": 3439,
+      "starsToday": 1815,
+      "license": "MIT",
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "data-visualization",
+        "diagrams",
+        "drawio",
+        "mermaid",
+        "svg"
+      ],
+      "homepage": "https://diagramdesign.dev",
+      "updatedAt": "2026-10-13T21:48:36Z",
+      "chinese": {
+        "title": "Diagram Design：让编码 Agent 产出编辑型专业图表",
+        "summary": "这是一套面向 Claude Code、Codex、Copilot、Cursor 等工具的图表设计 Skill，覆盖 44 类图表，并输出自包含的 HTML 与 SVG。它强调编辑设计原则与清晰的信息层级，适合替代千篇一律的默认流程图样式。",
+        "highlights": [
+          "覆盖流程、架构、关系与数据表达等多类图表",
+          "生成自包含 HTML + SVG，便于分享与继续编辑",
+          "可作为多个主流编码 Agent 的设计规范层"
+        ],
+        "useCases": [
+          "技术架构与流程说明",
+          "研究报告配图",
+          "产品方案中的信息图与关系图"
+        ],
+        "audience": "需要高质量技术图表的开发者、研究者、产品经理和设计工程师",
+        "caution": "Skill 能改善生成规范，但不自动保证事实正确；发布前仍需核对节点、数据、阅读顺序和无障碍表现。",
+        "status": "reviewed"
+      }
+    },
+    {
+      "rank": 6,
+      "fullName": "vercel-labs/skills",
+      "owner": "vercel-labs",
+      "name": "skills",
+      "url": "https://github.com/vercel-labs/skills",
+      "description": "The open agent skills tool - npx skills",
+      "language": "TypeScript",
+      "stars": 34533,
+      "forks": 2953,
+      "starsToday": 190,
+      "license": "MIT",
+      "topics": [],
+      "homepage": "https://skills.sh",
+      "updatedAt": "2026-10-09T17:54:47Z",
+      "chinese": {
+        "title": "skills：开放的 Agent Skills 安装与发现工具",
+        "summary": "Vercel Labs 的 skills 提供一条以 npx 为入口的 Agent Skill 获取与安装路径，目标是让可复用能力包更容易被发现并装入不同开发环境。它关注的是 Skill 的分发体验，而不是某个具体 Agent 的推理能力。",
+        "highlights": [
+          "通过 npx 提供低门槛的安装入口",
+          "围绕开放 Skill 生态进行发现与分发",
+          "适合统一团队的可复用 Agent 工作规范"
+        ],
+        "useCases": [
+          "为编码 Agent 安装专项能力",
+          "团队共享工作流规范",
+          "评估 Skill 包分发方式"
+        ],
+        "audience": "Agent 工具用户、平台工程师和维护内部开发规范的团队",
+        "caution": "安装第三方 Skill 前应审查其指令、脚本与权限范围；不要把未审计内容直接用于含密钥或生产权限的环境。",
+        "status": "reviewed"
+      }
+    },
+    {
+      "rank": 7,
+      "fullName": "lyogavin/airllm",
+      "owner": "lyogavin",
+      "name": "airllm",
+      "url": "https://github.com/lyogavin/airllm",
+      "description": "AirLLM 2.8T LLM inference with single 4GB GPU",
+      "language": "Jupyter Notebook",
+      "stars": 38355,
+      "forks": 3922,
+      "starsToday": 1001,
+      "license": "Apache-2.0",
+      "topics": [
+        "chinese-llm",
+        "chinese-nlp",
+        "finetune",
+        "generative-ai",
+        "instruct-gpt",
+        "instruction-set",
+        "llama",
+        "llm"
+      ],
+      "homepage": null,
+      "updatedAt": "2026-10-13T06:24:34Z",
+      "chinese": {
+        "title": "AirLLM：用有限显存运行超大语言模型",
+        "summary": "AirLLM 通过分层加载等内存管理策略，尝试在单张低显存 GPU 上进行超大模型推理。项目突出“能加载并运行”而非高吞吐服务，适合研究显存受限条件下的模型推理机制与可行性。",
+        "highlights": [
+          "目标是在约 4GB GPU 显存条件下运行远大于显存容量的模型",
+          "通过逐层加载降低峰值显存需求",
+          "覆盖 Llama 等常见模型生态与实验笔记"
+        ],
+        "useCases": [
+          "低显存环境下的模型可行性实验",
+          "超大模型分层推理研究",
+          "教学与个人原型验证"
+        ],
+        "audience": "熟悉 Python、GPU 推理和 Hugging Face 生态的研究者与工程师",
+        "caution": "低显存可运行不等于速度或吞吐可用；模型权重仍需要大量内存、磁盘和下载资源，具体兼容性应按版本验证。",
+        "status": "reviewed"
+      }
+    },
+    {
+      "rank": 8,
+      "fullName": "storytold/artcraft",
+      "owner": "storytold",
+      "name": "artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "language": "Rust",
+      "stars": 25756,
+      "forks": 4037,
+      "starsToday": 4081,
+      "license": "Apache-2.0",
+      "topics": [
+        "3d-graphics",
+        "ai",
+        "aivideo",
+        "filmmaking",
+        "imagegeneration"
+      ],
+      "homepage": "https://getartcraft.com",
+      "updatedAt": "2026-10-11T13:47:59Z",
+      "chinese": {
+        "title": "ArtCraft：面向艺术家与影视创作者的可控创作引擎",
+        "summary": "ArtCraft 将图像生成、三维图形与 AI 视频能力组织为强调创作意图的工具链，服务对象是艺术家、设计师和影视制作人员。其定位不是单一提示词生成器，而是支持视觉资产持续打磨与制作流程衔接的创作环境。",
+        "highlights": [
+          "同时覆盖图像、三维与 AI 视频方向",
+          "强调创作者控制与连续制作，而非一次性生成",
+          "Rust 技术栈适合构建本地高性能创作工具"
+        ],
+        "useCases": [
+          "概念设计与视觉开发",
+          "短片和预演素材制作",
+          "生成式媒体工作流研究"
+        ],
+        "audience": "视觉艺术家、设计师、影视团队和生成式媒体开发者",
+        "caution": "商用前需核验模型、训练数据和输出资产的授权边界；生成结果仍需人工审美判断和版权审查。",
+        "status": "reviewed"
+      }
+    },
+    {
+      "rank": 9,
+      "fullName": "xtool-org/xtool",
+      "owner": "xtool-org",
+      "name": "xtool",
+      "url": "https://github.com/xtool-org/xtool",
+      "description": "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
+      "language": "Swift",
+      "stars": 9422,
+      "forks": 401,
+      "starsToday": 1198,
+      "license": "MIT",
+      "topics": [
+        "ios",
+        "linux",
+        "swift",
+        "swift-package-manager",
+        "windows",
+        "xcode"
+      ],
+      "homepage": "https://xtool.sh",
+      "updatedAt": "2026-10-14T00:11:42Z",
+      "chinese": {
+        "title": "xtool：跨平台的 Swift 与 iOS 构建部署工具",
+        "summary": "xtool 试图把原本高度依赖 Xcode 与 macOS 的 iOS 开发流程带到 Linux、Windows 和 macOS，通过 Swift Package Manager 组织构建与部署。它关注命令行和跨平台工具链，可用于探索非 Xcode 环境下的 Swift 应用开发。",
+        "highlights": [
+          "支持 Linux、Windows 与 macOS 上的 SwiftPM 工作流",
+          "目标覆盖 iOS 应用构建与设备部署",
+          "为自动化和非 macOS 开发环境提供实验路径"
+        ],
+        "useCases": [
+          "跨平台 Swift 开发",
+          "iOS 构建流水线实验",
+          "轻量命令行开发环境"
+        ],
+        "audience": "Swift/iOS 开发者、CI 工程师和跨平台工具链研究者",
+        "caution": "Apple 签名、SDK 授权、设备部署和 App Store 发布仍有平台约束；不能假定所有 Xcode 能力都已被替代。",
+        "status": "reviewed"
+      }
+    }
+  ]
+}
