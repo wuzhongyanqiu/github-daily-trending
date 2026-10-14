@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T01:36:12.317Z",
+  "generatedAt": "2026-10-14T02:15:17.106Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "repositories": [
@@ -11,8 +11,8 @@
       "url": "https://github.com/morluto/rea",
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "language": "TypeScript",
-      "stars": 208826,
-      "forks": 51076,
+      "stars": 210192,
+      "forks": 51522,
       "starsToday": 54679,
       "license": "MIT",
       "topics": [
@@ -26,7 +26,7 @@
         "ctf"
       ],
       "homepage": "https://rea.tools",
-      "updatedAt": "2026-10-14T01:34:05Z",
+      "updatedAt": "2026-10-14T02:07:59Z",
       "chinese": {
         "title": "REa：面向软件与二进制的智能逆向工程 Agent",
         "summary": "REa 把逆向工程拆成可由 Agent 调度的调查流程：从观察应用行为、定位关键路径，到分析原生二进制与协议实现。它更像一套研究工作台，而不是一次性反编译器，重点在于让分析线索、工具调用和结论能够连续推进。",
@@ -53,8 +53,8 @@
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
       "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
       "language": "JavaScript",
-      "stars": 55450,
-      "forks": 10838,
+      "stars": 55512,
+      "forks": 10843,
       "starsToday": 1961,
       "license": "NOASSERTION",
       "topics": [
@@ -68,7 +68,7 @@
         "photogrammetry"
       ],
       "homepage": "https://maptheworld.ai/",
-      "updatedAt": "2026-10-13T23:03:44Z",
+      "updatedAt": "2026-10-14T02:06:22Z",
       "chinese": {
         "title": "God's Eye View：浏览器中的实时开源空间情报地球",
         "summary": "该项目把公开空间数据叠加到照片级 3D 地球上，用类似卫星态势界面的方式观察飞机、地理事件与空间线索。它将 Cesium、GIS 与 OSINT 数据源组合成可交互场景，适合探索空间信息如何汇聚和表达。",
@@ -95,8 +95,8 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
       "language": "Python",
-      "stars": 63406,
-      "forks": 7052,
+      "stars": 63526,
+      "forks": 7061,
       "starsToday": 1748,
       "license": "AGPL-3.0",
       "topics": [
@@ -137,8 +137,8 @@
       "url": "https://github.com/mksglu/context-mode",
       "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
       "language": "TypeScript",
-      "stars": 28268,
-      "forks": 1995,
+      "stars": 28302,
+      "forks": 1997,
       "starsToday": 969,
       "license": "NOASSERTION",
       "topics": [
@@ -152,7 +152,7 @@
         "codex-cli"
       ],
       "homepage": "https://context-mode.com",
-      "updatedAt": "2026-10-14T00:33:46Z",
+      "updatedAt": "2026-10-14T01:57:23Z",
       "chinese": {
         "title": "Context Mode：为编码 Agent 压缩工具输出与延续会话记忆",
         "summary": "Context Mode 面向上下文窗口容易被日志和工具输出挤满的问题，把高噪声结果放入沙箱处理，只把相关片段返回给 Agent，同时保存可跨会话使用的记忆。它通过 MCP 与 hooks 接入多种编码平台，重点是降低上下文占用并约束工具路由。",
@@ -179,8 +179,8 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
       "language": "HTML",
-      "stars": 54183,
-      "forks": 3439,
+      "stars": 54247,
+      "forks": 3441,
       "starsToday": 1815,
       "license": "MIT",
       "topics": [
@@ -221,7 +221,7 @@
       "url": "https://github.com/vercel-labs/skills",
       "description": "The open agent skills tool - npx skills",
       "language": "TypeScript",
-      "stars": 34533,
+      "stars": 34560,
       "forks": 2953,
       "starsToday": 190,
       "license": "MIT",
@@ -254,8 +254,8 @@
       "url": "https://github.com/lyogavin/airllm",
       "description": "AirLLM 2.8T LLM inference with single 4GB GPU",
       "language": "Jupyter Notebook",
-      "stars": 38355,
-      "forks": 3922,
+      "stars": 38371,
+      "forks": 3924,
       "starsToday": 1001,
       "license": "Apache-2.0",
       "topics": [
@@ -296,8 +296,8 @@
       "url": "https://github.com/storytold/artcraft",
       "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
       "language": "Rust",
-      "stars": 25756,
-      "forks": 4037,
+      "stars": 25833,
+      "forks": 4051,
       "starsToday": 4081,
       "license": "Apache-2.0",
       "topics": [
@@ -335,8 +335,8 @@
       "url": "https://github.com/xtool-org/xtool",
       "description": "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
       "language": "Swift",
-      "stars": 9422,
-      "forks": 401,
+      "stars": 9476,
+      "forks": 404,
       "starsToday": 1198,
       "license": "MIT",
       "topics": [
