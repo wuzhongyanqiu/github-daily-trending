@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T02:15:17.106Z",
+  "generatedAt": "2026-10-15T00:21:52.206Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "repositories": [
@@ -11,9 +11,9 @@
       "url": "https://github.com/morluto/rea",
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "language": "TypeScript",
-      "stars": 210192,
-      "forks": 51522,
-      "starsToday": 54679,
+      "stars": 241452,
+      "forks": 60074,
+      "starsToday": 41034,
       "license": "MIT",
       "topics": [
         "agent-skills",
@@ -23,10 +23,10 @@
         "cli",
         "codex",
         "cordis",
-        "ctf"
+        "decompiler"
       ],
       "homepage": "https://rea.tools",
-      "updatedAt": "2026-10-14T02:07:59Z",
+      "updatedAt": "2026-10-15T00:21:04Z",
       "chinese": {
         "title": "REa：面向软件与二进制的智能逆向工程 Agent",
         "summary": "REa 把逆向工程拆成可由 Agent 调度的调查流程：从观察应用行为、定位关键路径，到分析原生二进制与协议实现。它更像一套研究工作台，而不是一次性反编译器，重点在于让分析线索、工具调用和结论能够连续推进。",
@@ -47,57 +47,15 @@
     },
     {
       "rank": 2,
-      "fullName": "bilawalsidhu/gods-eye-view",
-      "owner": "bilawalsidhu",
-      "name": "gods-eye-view",
-      "url": "https://github.com/bilawalsidhu/gods-eye-view",
-      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
-      "language": "JavaScript",
-      "stars": 55512,
-      "forks": 10843,
-      "starsToday": 1961,
-      "license": "NOASSERTION",
-      "topics": [
-        "3d-globe",
-        "cesium",
-        "flight-tracking",
-        "geospatial",
-        "geospatial-intelligence",
-        "gis",
-        "osint",
-        "photogrammetry"
-      ],
-      "homepage": "https://maptheworld.ai/",
-      "updatedAt": "2026-10-14T02:06:22Z",
-      "chinese": {
-        "title": "God's Eye View：浏览器中的实时开源空间情报地球",
-        "summary": "该项目把公开空间数据叠加到照片级 3D 地球上，用类似卫星态势界面的方式观察飞机、地理事件与空间线索。它将 Cesium、GIS 与 OSINT 数据源组合成可交互场景，适合探索空间信息如何汇聚和表达。",
-        "highlights": [
-          "基于真实公开数据而非预设演示数据",
-          "使用 3D 地球承载飞行追踪与地理空间信息",
-          "强调浏览器端的沉浸式态势浏览体验"
-        ],
-        "useCases": [
-          "开源情报可视化原型",
-          "航空与空间数据探索",
-          "三维 GIS 交互设计参考"
-        ],
-        "audience": "OSINT 研究者、GIS 开发者、数据记者和三维可视化团队",
-        "caution": "公开数据也可能存在延迟、缺失或误差；不能将页面展示直接作为安全、执法或军事决策依据。仓库许可证需进一步核验。",
-        "status": "reviewed"
-      }
-    },
-    {
-      "rank": 3,
       "fullName": "debpalash/VoiceStudio",
       "owner": "debpalash",
       "name": "VoiceStudio",
       "url": "https://github.com/debpalash/VoiceStudio",
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
       "language": "Python",
-      "stars": 63526,
-      "forks": 7061,
-      "starsToday": 1748,
+      "stars": 66301,
+      "forks": 7314,
+      "starsToday": 3538,
       "license": "AGPL-3.0",
       "topics": [
         "ai",
@@ -110,7 +68,7 @@
         "mlx"
       ],
       "homepage": "https://voicestudio.sh",
-      "updatedAt": "2026-10-14T01:24:15Z",
+      "updatedAt": "2026-10-14T22:26:47Z",
       "chinese": {
         "title": "VoiceStudio：本地优先的开源语音生产套件",
         "summary": "VoiceStudio 把声音克隆、声音设计、视频配音、听写、转录和有声书制作放进同一套本地工作流，定位为 ElevenLabs 的开源替代方案。项目强调模型在本机运行，并面向多语言内容生产提供统一界面。",
@@ -130,16 +88,16 @@
       }
     },
     {
-      "rank": 4,
+      "rank": 3,
       "fullName": "mksglu/context-mode",
       "owner": "mksglu",
       "name": "context-mode",
       "url": "https://github.com/mksglu/context-mode",
       "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
       "language": "TypeScript",
-      "stars": 28302,
-      "forks": 1997,
-      "starsToday": 969,
+      "stars": 29110,
+      "forks": 2044,
+      "starsToday": 947,
       "license": "NOASSERTION",
       "topics": [
         "antigravity",
@@ -152,7 +110,7 @@
         "codex-cli"
       ],
       "homepage": "https://context-mode.com",
-      "updatedAt": "2026-10-14T01:57:23Z",
+      "updatedAt": "2026-10-14T22:18:40Z",
       "chinese": {
         "title": "Context Mode：为编码 Agent 压缩工具输出与延续会话记忆",
         "summary": "Context Mode 面向上下文窗口容易被日志和工具输出挤满的问题，把高噪声结果放入沙箱处理，只把相关片段返回给 Agent，同时保存可跨会话使用的记忆。它通过 MCP 与 hooks 接入多种编码平台，重点是降低上下文占用并约束工具路由。",
@@ -172,172 +130,248 @@
       }
     },
     {
+      "rank": 4,
+      "fullName": "nvm-sh/nvm",
+      "owner": "nvm-sh",
+      "name": "nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "language": "Shell",
+      "stars": 95450,
+      "forks": 10517,
+      "starsToday": 52,
+      "license": "MIT",
+      "topics": [
+        "bash",
+        "install",
+        "lts",
+        "node",
+        "node-js",
+        "nodejs",
+        "nvm",
+        "nvmrc"
+      ],
+      "homepage": null,
+      "updatedAt": "2026-10-10T04:34:41Z",
+      "chinese": {
+        "title": "nvm",
+        "summary": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 52 Star",
+          "主要使用 Shell，当前累计 95,450 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
       "rank": 5,
-      "fullName": "cathrynlavery/diagram-design",
-      "owner": "cathrynlavery",
-      "name": "diagram-design",
-      "url": "https://github.com/cathrynlavery/diagram-design",
-      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-      "language": "HTML",
-      "stars": 54247,
-      "forks": 3441,
-      "starsToday": 1815,
+      "fullName": "K-Dense-AI/scientific-agent-skills",
+      "owner": "K-Dense-AI",
+      "name": "scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "language": "Python",
+      "stars": 49315,
+      "forks": 4420,
+      "starsToday": 163,
       "license": "MIT",
       "topics": [
         "agent-skills",
-        "claude-code",
-        "codex",
-        "data-visualization",
-        "diagrams",
-        "drawio",
-        "mermaid",
-        "svg"
+        "ai-scientist",
+        "bioinformatics",
+        "chemoinformatics",
+        "claude",
+        "claude-skills",
+        "claudecode",
+        "clinical-research"
       ],
-      "homepage": "https://diagramdesign.dev",
-      "updatedAt": "2026-10-13T21:48:36Z",
+      "homepage": "https://arxiv.org/abs/2609.00065",
+      "updatedAt": "2026-10-12T09:43:31Z",
       "chinese": {
-        "title": "Diagram Design：让编码 Agent 产出编辑型专业图表",
-        "summary": "这是一套面向 Claude Code、Codex、Copilot、Cursor 等工具的图表设计 Skill，覆盖 44 类图表，并输出自包含的 HTML 与 SVG。它强调编辑设计原则与清晰的信息层级，适合替代千篇一律的默认流程图样式。",
+        "title": "scientific-agent-skills",
+        "summary": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "覆盖流程、架构、关系与数据表达等多类图表",
-          "生成自包含 HTML + SVG，便于分享与继续编辑",
-          "可作为多个主流编码 Agent 的设计规范层"
+          "今日新增 163 Star",
+          "主要使用 Python，当前累计 49,315 Star",
+          "仓库标注 MIT 许可证"
         ],
         "useCases": [
-          "技术架构与流程说明",
-          "研究报告配图",
-          "产品方案中的信息图与关系图"
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
         ],
-        "audience": "需要高质量技术图表的开发者、研究者、产品经理和设计工程师",
-        "caution": "Skill 能改善生成规范，但不自动保证事实正确；发布前仍需核对节点、数据、阅读顺序和无障碍表现。",
-        "status": "reviewed"
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
       }
     },
     {
       "rank": 6,
-      "fullName": "vercel-labs/skills",
-      "owner": "vercel-labs",
-      "name": "skills",
-      "url": "https://github.com/vercel-labs/skills",
-      "description": "The open agent skills tool - npx skills",
-      "language": "TypeScript",
-      "stars": 34560,
-      "forks": 2953,
-      "starsToday": 190,
-      "license": "MIT",
+      "fullName": "HKUDS/CLI-Anything",
+      "owner": "HKUDS",
+      "name": "CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python",
+      "stars": 52477,
+      "forks": 4773,
+      "starsToday": 103,
+      "license": "Apache-2.0",
       "topics": [],
-      "homepage": "https://skills.sh",
-      "updatedAt": "2026-10-09T17:54:47Z",
+      "homepage": "https://clianything.cc/",
+      "updatedAt": "2026-09-22T02:01:29Z",
       "chinese": {
-        "title": "skills：开放的 Agent Skills 安装与发现工具",
-        "summary": "Vercel Labs 的 skills 提供一条以 npx 为入口的 Agent Skill 获取与安装路径，目标是让可复用能力包更容易被发现并装入不同开发环境。它关注的是 Skill 的分发体验，而不是某个具体 Agent 的推理能力。",
+        "title": "CLI-Anything",
+        "summary": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "通过 npx 提供低门槛的安装入口",
-          "围绕开放 Skill 生态进行发现与分发",
-          "适合统一团队的可复用 Agent 工作规范"
+          "今日新增 103 Star",
+          "主要使用 Python，当前累计 52,477 Star",
+          "仓库标注 Apache-2.0 许可证"
         ],
         "useCases": [
-          "为编码 Agent 安装专项能力",
-          "团队共享工作流规范",
-          "评估 Skill 包分发方式"
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
         ],
-        "audience": "Agent 工具用户、平台工程师和维护内部开发规范的团队",
-        "caution": "安装第三方 Skill 前应审查其指令、脚本与权限范围；不要把未审计内容直接用于含密钥或生产权限的环境。",
-        "status": "reviewed"
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
       }
     },
     {
       "rank": 7,
-      "fullName": "lyogavin/airllm",
-      "owner": "lyogavin",
-      "name": "airllm",
-      "url": "https://github.com/lyogavin/airllm",
-      "description": "AirLLM 2.8T LLM inference with single 4GB GPU",
-      "language": "Jupyter Notebook",
-      "stars": 38371,
-      "forks": 3924,
-      "starsToday": 1001,
+      "fullName": "ifixai-ai/iFixAi",
+      "owner": "ifixai-ai",
+      "name": "iFixAi",
+      "url": "https://github.com/ifixai-ai/iFixAi",
+      "description": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
+      "language": "Python",
+      "stars": 27380,
+      "forks": 1503,
+      "starsToday": 2109,
       "license": "Apache-2.0",
       "topics": [
-        "chinese-llm",
-        "chinese-nlp",
-        "finetune",
-        "generative-ai",
-        "instruct-gpt",
-        "instruction-set",
-        "llama",
-        "llm"
+        "agent-evaluation",
+        "ai",
+        "ai-alignment",
+        "ai-evaluation",
+        "ai-governance",
+        "ai-safety",
+        "cli",
+        "diagnostic-tool"
       ],
-      "homepage": null,
-      "updatedAt": "2026-10-13T06:24:34Z",
+      "homepage": "https://www.ifixai.ai",
+      "updatedAt": "2026-10-14T23:04:34Z",
       "chinese": {
-        "title": "AirLLM：用有限显存运行超大语言模型",
-        "summary": "AirLLM 通过分层加载等内存管理策略，尝试在单张低显存 GPU 上进行超大模型推理。项目突出“能加载并运行”而非高吞吐服务，适合研究显存受限条件下的模型推理机制与可行性。",
+        "title": "iFixAi",
+        "summary": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "目标是在约 4GB GPU 显存条件下运行远大于显存容量的模型",
-          "通过逐层加载降低峰值显存需求",
-          "覆盖 Llama 等常见模型生态与实验笔记"
+          "今日新增 2,109 Star",
+          "主要使用 Python，当前累计 27,380 Star",
+          "仓库标注 Apache-2.0 许可证"
         ],
         "useCases": [
-          "低显存环境下的模型可行性实验",
-          "超大模型分层推理研究",
-          "教学与个人原型验证"
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
         ],
-        "audience": "熟悉 Python、GPU 推理和 Hugging Face 生态的研究者与工程师",
-        "caution": "低显存可运行不等于速度或吞吐可用；模型权重仍需要大量内存、磁盘和下载资源，具体兼容性应按版本验证。",
-        "status": "reviewed"
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
       }
     },
     {
       "rank": 8,
-      "fullName": "storytold/artcraft",
-      "owner": "storytold",
-      "name": "artcraft",
-      "url": "https://github.com/storytold/artcraft",
-      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
-      "language": "Rust",
-      "stars": 25833,
-      "forks": 4051,
-      "starsToday": 4081,
-      "license": "Apache-2.0",
+      "fullName": "vxcontrol/pentagi",
+      "owner": "vxcontrol",
+      "name": "pentagi",
+      "url": "https://github.com/vxcontrol/pentagi",
+      "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+      "language": "Go",
+      "stars": 29431,
+      "forks": 4424,
+      "starsToday": 1025,
+      "license": "MIT",
       "topics": [
-        "3d-graphics",
-        "ai",
-        "aivideo",
-        "filmmaking",
-        "imagegeneration"
+        "ai-agents",
+        "ai-security-tool",
+        "anthropic",
+        "autonomous-agents",
+        "golang",
+        "gpt",
+        "graphql",
+        "multi-agent-system"
       ],
-      "homepage": "https://getartcraft.com",
-      "updatedAt": "2026-10-11T13:47:59Z",
+      "homepage": "https://pentagi.com",
+      "updatedAt": "2026-10-09T20:54:31Z",
       "chinese": {
-        "title": "ArtCraft：面向艺术家与影视创作者的可控创作引擎",
-        "summary": "ArtCraft 将图像生成、三维图形与 AI 视频能力组织为强调创作意图的工具链，服务对象是艺术家、设计师和影视制作人员。其定位不是单一提示词生成器，而是支持视觉资产持续打磨与制作流程衔接的创作环境。",
+        "title": "pentagi",
+        "summary": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "同时覆盖图像、三维与 AI 视频方向",
-          "强调创作者控制与连续制作，而非一次性生成",
-          "Rust 技术栈适合构建本地高性能创作工具"
+          "今日新增 1,025 Star",
+          "主要使用 Go，当前累计 29,431 Star",
+          "仓库标注 MIT 许可证"
         ],
         "useCases": [
-          "概念设计与视觉开发",
-          "短片和预演素材制作",
-          "生成式媒体工作流研究"
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
         ],
-        "audience": "视觉艺术家、设计师、影视团队和生成式媒体开发者",
-        "caution": "商用前需核验模型、训练数据和输出资产的授权边界；生成结果仍需人工审美判断和版权审查。",
-        "status": "reviewed"
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
       }
     },
     {
       "rank": 9,
+      "fullName": "rust-lang/rust",
+      "owner": "rust-lang",
+      "name": "rust",
+      "url": "https://github.com/rust-lang/rust",
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "language": "Rust",
+      "stars": 120018,
+      "forks": 18701,
+      "starsToday": 207,
+      "license": "Apache-2.0",
+      "topics": [
+        "compiler",
+        "language",
+        "rust"
+      ],
+      "homepage": "https://www.rust-lang.org",
+      "updatedAt": "2026-10-14T23:41:32Z",
+      "chinese": {
+        "title": "rust",
+        "summary": "Empowering everyone to build reliable and efficient software.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 207 Star",
+          "主要使用 Rust，当前累计 120,018 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 10,
       "fullName": "xtool-org/xtool",
       "owner": "xtool-org",
       "name": "xtool",
       "url": "https://github.com/xtool-org/xtool",
       "description": "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
       "language": "Swift",
-      "stars": 9476,
-      "forks": 404,
-      "starsToday": 1198,
+      "stars": 10790,
+      "forks": 486,
+      "starsToday": 1502,
       "license": "MIT",
       "topics": [
         "ios",
@@ -348,7 +382,7 @@
         "xcode"
       ],
       "homepage": "https://xtool.sh",
-      "updatedAt": "2026-10-14T00:11:42Z",
+      "updatedAt": "2026-10-14T04:44:37Z",
       "chinese": {
         "title": "xtool：跨平台的 Swift 与 iOS 构建部署工具",
         "summary": "xtool 试图把原本高度依赖 Xcode 与 macOS 的 iOS 开发流程带到 Linux、Windows 和 macOS，通过 Swift Package Manager 组织构建与部署。它关注命令行和跨平台工具链，可用于探索非 Xcode 环境下的 Swift 应用开发。",
@@ -365,6 +399,74 @@
         "audience": "Swift/iOS 开发者、CI 工程师和跨平台工具链研究者",
         "caution": "Apple 签名、SDK 授权、设备部署和 App Store 发布仍有平台约束；不能假定所有 Xcode 能力都已被替代。",
         "status": "reviewed"
+      }
+    },
+    {
+      "rank": 11,
+      "fullName": "ntdevlabs/tiny11builder",
+      "owner": "ntdevlabs",
+      "name": "tiny11builder",
+      "url": "https://github.com/ntdevlabs/tiny11builder",
+      "description": "WinUI app for building smaller, customized Windows 11 images.",
+      "language": "C#",
+      "stars": 20209,
+      "forks": 1555,
+      "starsToday": 139,
+      "license": null,
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-10-12T20:32:09Z",
+      "chinese": {
+        "title": "tiny11builder",
+        "summary": "WinUI app for building smaller, customized Windows 11 images.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 139 Star",
+          "主要使用 C#，当前累计 20,209 Star",
+          "公开元数据未识别到许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 12,
+      "fullName": "NationalSecurityAgency/ghidra",
+      "owner": "NationalSecurityAgency",
+      "name": "ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "language": "Java",
+      "stars": 87476,
+      "forks": 9767,
+      "starsToday": 1008,
+      "license": "Apache-2.0",
+      "topics": [
+        "disassembler",
+        "reverse-engineering",
+        "software-analysis"
+      ],
+      "homepage": null,
+      "updatedAt": "2026-10-13T17:14:10Z",
+      "chinese": {
+        "title": "ghidra",
+        "summary": "Ghidra is a software reverse engineering (SRE) framework。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 1,008 Star",
+          "主要使用 Java，当前累计 87,476 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
       }
     }
   ]
