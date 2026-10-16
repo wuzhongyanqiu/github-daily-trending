@@ -29,6 +29,10 @@ function formatNumber(value: number) {
   return new Intl.NumberFormat('zh-CN', { notation: value >= 10_000 ? 'compact' : 'standard', maximumFractionDigits: 1 }).format(value);
 }
 
+function staleHours(value: string) {
+  return (Date.now() - new Date(value).getTime()) / 3_600_000;
+}
+
 function formatDate(value: string) {
   return new Intl.DateTimeFormat('zh-CN', {
     timeZone: 'Asia/Shanghai',
@@ -161,7 +165,7 @@ function App() {
     <div className="app-shell">
       <header className="topbar">
         <div className="brand"><span className="brand-mark"><Github size={22} /></span><div><strong>GitHub 每日趋势观察</strong><small>Daily Trending · 中文编审</small></div></div>
-        <div className="source-state"><span><span className="live-dot" />数据快照 {formatDate(snapshot.generatedAt)}</span><a href={snapshot.source} target="_blank" rel="noreferrer">GitHub Trending<ExternalLink size={13} /></a></div>
+        <div className="source-state"><span className={staleHours(snapshot.generatedAt) > 30 ? 'stale' : ''} title={staleHours(snapshot.generatedAt) > 30 ? '每日刷新任务未按时完成，请检查 github-daily-trending-update 任务或 GitHub 网络连通性' : undefined}><span className="live-dot" />数据快照 {formatDate(snapshot.generatedAt)}{staleHours(snapshot.generatedAt) > 30 && <b className="stale-badge">已 {Math.floor(staleHours(snapshot.generatedAt))} 小时未更新</b>}</span><a href={snapshot.source} target="_blank" rel="noreferrer">GitHub Trending<ExternalLink size={13} /></a></div>
       </header>
 
       <main>
