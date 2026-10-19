@@ -1,55 +1,19 @@
 {
-  "generatedAt": "2026-10-18T00:23:27.945Z",
+  "generatedAt": "2026-10-19T00:22:31.730Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "repositories": [
     {
       "rank": 1,
-      "fullName": "anthropics/claude-plugins-official",
-      "owner": "anthropics",
-      "name": "claude-plugins-official",
-      "url": "https://github.com/anthropics/claude-plugins-official",
-      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
-      "language": "Python",
-      "stars": 41741,
-      "forks": 4465,
-      "starsToday": 1397,
-      "license": "Apache-2.0",
-      "topics": [
-        "claude-code",
-        "mcp",
-        "skills"
-      ],
-      "homepage": "https://code.claude.com/docs/en/plugins",
-      "updatedAt": "2026-10-17T16:41:00Z",
-      "chinese": {
-        "title": "claude-plugins-official",
-        "summary": "Official, Anthropic-managed directory of high quality Claude Code Plugins.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 1,397 Star",
-          "主要使用 Python，当前累计 41,741 Star",
-          "仓库标注 Apache-2.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 2,
       "fullName": "MadsLorentzen/ai-job-search",
       "owner": "MadsLorentzen",
       "name": "ai-job-search",
       "url": "https://github.com/MadsLorentzen/ai-job-search",
       "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
       "language": "Python",
-      "stars": 50383,
-      "forks": 16933,
-      "starsToday": 1365,
+      "stars": 53119,
+      "forks": 17364,
+      "starsToday": 2232,
       "license": "MIT",
       "topics": [
         "ai",
@@ -62,13 +26,13 @@
         "job-application"
       ],
       "homepage": null,
-      "updatedAt": "2026-10-17T18:12:49Z",
+      "updatedAt": "2026-10-18T19:38:41Z",
       "chinese": {
         "title": "ai-job-search",
         "summary": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 1,365 Star",
-          "主要使用 Python，当前累计 50,383 Star",
+          "今日新增 2,232 Star",
+          "主要使用 Python，当前累计 53,119 Star",
           "仓库标注 MIT 许可证"
         ],
         "useCases": [
@@ -81,35 +45,62 @@
       }
     },
     {
-      "rank": 3,
-      "fullName": "affaan-m/ECC",
-      "owner": "affaan-m",
-      "name": "ECC",
-      "url": "https://github.com/affaan-m/ECC",
-      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "language": "JavaScript",
-      "stars": 282500,
-      "forks": 41985,
-      "starsToday": 1145,
-      "license": "MIT",
+      "rank": 2,
+      "fullName": "anthropics/claude-plugins-official",
+      "owner": "anthropics",
+      "name": "claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "language": "Python",
+      "stars": 42677,
+      "forks": 4532,
+      "starsToday": 1175,
+      "license": "Apache-2.0",
       "topics": [
-        "ai-agents",
-        "anthropic",
-        "claude",
         "claude-code",
-        "developer-tools",
-        "llm",
         "mcp",
-        "productivity"
+        "skills"
       ],
-      "homepage": "https://ecc.tools",
-      "updatedAt": "2026-10-15T19:17:01Z",
+      "homepage": "https://code.claude.com/docs/en/plugins",
+      "updatedAt": "2026-10-18T17:04:56Z",
       "chinese": {
-        "title": "ECC",
-        "summary": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "claude-plugins-official",
+        "summary": "Official, Anthropic-managed directory of high quality Claude Code Plugins.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 1,145 Star",
-          "主要使用 JavaScript，当前累计 282,500 Star",
+          "今日新增 1,175 Star",
+          "主要使用 Python，当前累计 42,677 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 3,
+      "fullName": "anomalyco/opencode",
+      "owner": "anomalyco",
+      "name": "opencode",
+      "url": "https://github.com/anomalyco/opencode",
+      "description": "The open source coding agent.",
+      "language": "TypeScript",
+      "stars": 216565,
+      "forks": 28994,
+      "starsToday": 1414,
+      "license": "MIT",
+      "topics": [],
+      "homepage": "https://opencode.ai",
+      "updatedAt": "2026-10-19T00:08:57Z",
+      "chinese": {
+        "title": "opencode",
+        "summary": "The open source coding agent.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 1,414 Star",
+          "主要使用 TypeScript，当前累计 216,565 Star",
           "仓库标注 MIT 许可证"
         ],
         "useCases": [
@@ -123,26 +114,26 @@
     },
     {
       "rank": 4,
-      "fullName": "HKUDS/CLI-Anything",
-      "owner": "HKUDS",
-      "name": "CLI-Anything",
-      "url": "https://github.com/HKUDS/CLI-Anything",
-      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
-      "language": "Python",
-      "stars": 54052,
-      "forks": 4905,
-      "starsToday": 574,
-      "license": "Apache-2.0",
+      "fullName": "cursor/plugins",
+      "owner": "cursor",
+      "name": "plugins",
+      "url": "https://github.com/cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "language": "TypeScript",
+      "stars": 12737,
+      "forks": 1254,
+      "starsToday": 350,
+      "license": null,
       "topics": [],
-      "homepage": "https://clianything.cc/",
-      "updatedAt": "2026-09-22T02:01:29Z",
+      "homepage": null,
+      "updatedAt": "2026-10-19T00:02:08Z",
       "chinese": {
-        "title": "CLI-Anything",
-        "summary": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "plugins",
+        "summary": "Cursor plugin specification and official plugins。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 574 Star",
-          "主要使用 Python，当前累计 54,052 Star",
-          "仓库标注 Apache-2.0 许可证"
+          "今日新增 350 Star",
+          "主要使用 TypeScript，当前累计 12,737 Star",
+          "公开元数据未识别到许可证"
         ],
         "useCases": [
           "了解近期开发者关注方向",
@@ -155,34 +146,34 @@
     },
     {
       "rank": 5,
-      "fullName": "K-Dense-AI/scientific-agent-skills",
-      "owner": "K-Dense-AI",
-      "name": "scientific-agent-skills",
-      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
-      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
-      "language": "Python",
-      "stars": 52241,
-      "forks": 4627,
-      "starsToday": 878,
+      "fullName": "ruvnet/ruflo",
+      "owner": "ruvnet",
+      "name": "ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+      "language": "TypeScript",
+      "stars": 76512,
+      "forks": 9047,
+      "starsToday": 513,
       "license": "MIT",
       "topics": [
-        "agent-skills",
-        "ai-scientist",
-        "bioinformatics",
-        "chemoinformatics",
-        "claude",
-        "claude-skills",
-        "claudecode",
-        "clinical-research"
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-workflow",
+        "agents",
+        "ai-agents",
+        "ai-assistant",
+        "ai-skills",
+        "autonomous-agents"
       ],
-      "homepage": "https://arxiv.org/abs/2609.00065",
-      "updatedAt": "2026-10-15T23:57:39Z",
+      "homepage": "https://Cognitum.One",
+      "updatedAt": "2026-10-18T11:13:04Z",
       "chinese": {
-        "title": "scientific-agent-skills",
-        "summary": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "ruflo",
+        "summary": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 878 Star",
-          "主要使用 Python，当前累计 52,241 Star",
+          "今日新增 513 Star",
+          "主要使用 TypeScript，当前累计 76,512 Star",
           "仓库标注 MIT 许可证"
         ],
         "useCases": [
@@ -202,19 +193,19 @@
       "url": "https://github.com/akitaonrails/ai-memory",
       "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
       "language": "Rust",
-      "stars": 9912,
-      "forks": 716,
-      "starsToday": 178,
+      "stars": 10473,
+      "forks": 749,
+      "starsToday": 512,
       "license": "MIT",
       "topics": [],
       "homepage": null,
-      "updatedAt": "2026-10-17T19:53:00Z",
+      "updatedAt": "2026-10-18T17:56:17Z",
       "chinese": {
         "title": "ai-memory",
         "summary": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 178 Star",
-          "主要使用 Rust，当前累计 9,912 Star",
+          "今日新增 512 Star",
+          "主要使用 Rust，当前累计 10,473 Star",
           "仓库标注 MIT 许可证"
         ],
         "useCases": [
@@ -228,49 +219,15 @@
     },
     {
       "rank": 7,
-      "fullName": "android/skills",
-      "owner": "android",
-      "name": "skills",
-      "url": "https://github.com/android/skills",
-      "description": "",
-      "language": "Kotlin",
-      "stars": 8422,
-      "forks": 556,
-      "starsToday": 355,
-      "license": "Apache-2.0",
-      "topics": [
-        "skills"
-      ],
-      "homepage": null,
-      "updatedAt": "2026-10-16T10:07:27Z",
-      "chinese": {
-        "title": "skills",
-        "summary": "android/skills 开源仓库。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 355 Star",
-          "主要使用 Kotlin，当前累计 8,422 Star",
-          "仓库标注 Apache-2.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 8,
       "fullName": "stablyai/orca",
       "owner": "stablyai",
       "name": "orca",
       "url": "https://github.com/stablyai/orca",
       "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
       "language": "TypeScript",
-      "stars": 95397,
-      "forks": 6109,
-      "starsToday": 830,
+      "stars": 96623,
+      "forks": 6176,
+      "starsToday": 1146,
       "license": "MIT",
       "topics": [
         "ade",
@@ -283,13 +240,13 @@
         "ghostty"
       ],
       "homepage": "https://orca.dev",
-      "updatedAt": "2026-10-18T00:22:28Z",
+      "updatedAt": "2026-10-19T00:21:59Z",
       "chinese": {
         "title": "orca",
         "summary": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 830 Star",
-          "主要使用 TypeScript，当前累计 95,397 Star",
+          "今日新增 1,146 Star",
+          "主要使用 TypeScript，当前累计 96,623 Star",
           "仓库标注 MIT 许可证"
         ],
         "useCases": [
@@ -302,27 +259,27 @@
       }
     },
     {
-      "rank": 9,
-      "fullName": "anthropics/claude-code",
-      "owner": "anthropics",
-      "name": "claude-code",
-      "url": "https://github.com/anthropics/claude-code",
-      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
-      "language": "TypeScript",
-      "stars": 151740,
-      "forks": 26877,
-      "starsToday": 179,
-      "license": null,
+      "rank": 8,
+      "fullName": "HKUDS/CLI-Anything",
+      "owner": "HKUDS",
+      "name": "CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python",
+      "stars": 54586,
+      "forks": 4946,
+      "starsToday": 589,
+      "license": "Apache-2.0",
       "topics": [],
-      "homepage": "https://code.claude.com/docs/en/overview",
-      "updatedAt": "2026-10-17T23:14:51Z",
+      "homepage": "https://clianything.cc/",
+      "updatedAt": "2026-09-22T02:01:29Z",
       "chinese": {
-        "title": "claude-code",
-        "summary": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "CLI-Anything",
+        "summary": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 179 Star",
-          "主要使用 TypeScript，当前累计 151,740 Star",
-          "公开元数据未识别到许可证"
+          "今日新增 589 Star",
+          "主要使用 Python，当前累计 54,586 Star",
+          "仓库标注 Apache-2.0 许可证"
         ],
         "useCases": [
           "了解近期开发者关注方向",
@@ -334,16 +291,16 @@
       }
     },
     {
-      "rank": 10,
+      "rank": 9,
       "fullName": "debpalash/VoiceStudio",
       "owner": "debpalash",
       "name": "VoiceStudio",
       "url": "https://github.com/debpalash/VoiceStudio",
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
       "language": "Python",
-      "stars": 73335,
-      "forks": 8026,
-      "starsToday": 2125,
+      "stars": 75324,
+      "forks": 8244,
+      "starsToday": 2082,
       "license": "AGPL-3.0",
       "topics": [
         "ai",
@@ -356,7 +313,7 @@
         "mlx"
       ],
       "homepage": "https://voicestudio.sh",
-      "updatedAt": "2026-10-18T00:01:21Z",
+      "updatedAt": "2026-10-18T21:56:49Z",
       "chinese": {
         "title": "VoiceStudio：本地优先的开源语音生产套件",
         "summary": "VoiceStudio 把声音克隆、声音设计、视频配音、听写、转录和有声书制作放进同一套本地工作流，定位为 ElevenLabs 的开源替代方案。项目强调模型在本机运行，并面向多语言内容生产提供统一界面。",
@@ -376,27 +333,67 @@
       }
     },
     {
-      "rank": 11,
-      "fullName": "anomalyco/opencode",
-      "owner": "anomalyco",
-      "name": "opencode",
-      "url": "https://github.com/anomalyco/opencode",
-      "description": "The open source coding agent.",
-      "language": "TypeScript",
-      "stars": 215301,
-      "forks": 28863,
-      "starsToday": 438,
-      "license": "MIT",
-      "topics": [],
-      "homepage": "https://opencode.ai",
-      "updatedAt": "2026-10-17T23:59:54Z",
+      "rank": 10,
+      "fullName": "android/skills",
+      "owner": "android",
+      "name": "skills",
+      "url": "https://github.com/android/skills",
+      "description": "",
+      "language": "Kotlin",
+      "stars": 8764,
+      "forks": 568,
+      "starsToday": 375,
+      "license": "Apache-2.0",
+      "topics": [
+        "skills"
+      ],
+      "homepage": null,
+      "updatedAt": "2026-10-16T10:07:27Z",
       "chinese": {
-        "title": "opencode",
-        "summary": "The open source coding agent.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "skills",
+        "summary": "android/skills 开源仓库。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 438 Star",
-          "主要使用 TypeScript，当前累计 215,301 Star",
-          "仓库标注 MIT 许可证"
+          "今日新增 375 Star",
+          "主要使用 Kotlin，当前累计 8,764 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 11,
+      "fullName": "mlabonne/llm-course",
+      "owner": "mlabonne",
+      "name": "llm-course",
+      "url": "https://github.com/mlabonne/llm-course",
+      "description": "Course to get into Large Language Models (LLMs) with roadmaps and Colab notebooks.",
+      "language": null,
+      "stars": 84019,
+      "forks": 9781,
+      "starsToday": 81,
+      "license": "Apache-2.0",
+      "topics": [
+        "course",
+        "large-language-models",
+        "llm",
+        "machine-learning",
+        "roadmap"
+      ],
+      "homepage": "https://mlabonne.github.io/blog/",
+      "updatedAt": "2026-02-05T13:09:26Z",
+      "chinese": {
+        "title": "llm-course",
+        "summary": "Course to get into Large Language Models (LLMs) with roadmaps and Colab notebooks.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 81 Star",
+          "主要语言暂未识别，当前累计 84,019 Star",
+          "仓库标注 Apache-2.0 许可证"
         ],
         "useCases": [
           "了解近期开发者关注方向",
@@ -409,35 +406,26 @@
     },
     {
       "rank": 12,
-      "fullName": "ruvnet/ruflo",
-      "owner": "ruvnet",
-      "name": "ruflo",
-      "url": "https://github.com/ruvnet/ruflo",
-      "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
-      "language": "TypeScript",
-      "stars": 76059,
-      "forks": 9001,
-      "starsToday": 420,
-      "license": "MIT",
-      "topics": [
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "agents",
-        "ai-agents",
-        "ai-assistant",
-        "ai-skills",
-        "autonomous-agents"
-      ],
-      "homepage": "https://Cognitum.One",
-      "updatedAt": "2026-10-18T00:20:27Z",
+      "fullName": "Kruk2/jasna",
+      "owner": "Kruk2",
+      "name": "jasna",
+      "url": "https://github.com/Kruk2/jasna",
+      "description": "Video restoration tool",
+      "language": "Python",
+      "stars": 2391,
+      "forks": 187,
+      "starsToday": 115,
+      "license": "AGPL-3.0",
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-10-18T11:43:28Z",
       "chinese": {
-        "title": "ruflo",
-        "summary": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "jasna",
+        "summary": "Video restoration tool。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 420 Star",
-          "主要使用 TypeScript，当前累计 76,059 Star",
-          "仓库标注 MIT 许可证"
+          "今日新增 115 Star",
+          "主要使用 Python，当前累计 2,391 Star",
+          "仓库标注 AGPL-3.0 许可证"
         ],
         "useCases": [
           "了解近期开发者关注方向",
@@ -450,35 +438,33 @@
     },
     {
       "rank": 13,
-      "fullName": "xerj-org/xerj",
-      "owner": "xerj-org",
-      "name": "xerj",
-      "url": "https://github.com/xerj-org/xerj",
-      "description": "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep (1974 tool). One command indexes code, docs, logs and PDFs for search, RAG, security audits and agent memory, using 40x fewer tokens than grep. It’s durable and can replace ElasticSearch saving you x10 infra costs.",
-      "language": "Rust",
-      "stars": 7789,
-      "forks": 416,
-      "starsToday": 1160,
-      "license": "Apache-2.0",
+      "fullName": "Comfy-Org/ComfyUI",
+      "owner": "Comfy-Org",
+      "name": "ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+      "language": "Python",
+      "stars": 138602,
+      "forks": 16503,
+      "starsToday": 154,
+      "license": "GPL-3.0",
       "topics": [
-        "ai-search",
-        "ai-search-algorithms",
-        "ai-search-engine",
-        "ai-search-free",
-        "ai-search-module",
-        "ai-search-optimization",
-        "ai-searchengine",
-        "bm25-search"
+        "ai",
+        "comfy",
+        "comfyui",
+        "python",
+        "pytorch",
+        "stable-diffusion"
       ],
-      "homepage": "https://xerj.org",
-      "updatedAt": "2026-10-18T00:18:18Z",
+      "homepage": "https://www.comfy.org/",
+      "updatedAt": "2026-10-18T23:17:15Z",
       "chinese": {
-        "title": "xerj",
-        "summary": "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep (1974 tool). One command indexes code, docs, logs and PDFs for search, RAG, security audits and agent memory, using 40x fewer tokens than grep. It’s durable and can replace ElasticSearch saving you x10 infra costs.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "ComfyUI",
+        "summary": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 1,160 Star",
-          "主要使用 Rust，当前累计 7,789 Star",
-          "仓库标注 Apache-2.0 许可证"
+          "今日新增 154 Star",
+          "主要使用 Python，当前累计 138,602 Star",
+          "仓库标注 GPL-3.0 许可证"
         ],
         "useCases": [
           "了解近期开发者关注方向",
