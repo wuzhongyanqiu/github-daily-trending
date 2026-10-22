@@ -94,6 +94,14 @@ function DetailPanel({ repo, onClose }: { repo: TrendRepository; onClose: () => 
         </div>
       </section>
 
+      {repo.chinese.workflow && <section>
+        <h3><BookOpenText size={17} />如何工作与试用</h3>
+        <ol>{repo.chinese.workflow.map(step => <li key={step}>{step}</li>)}</ol>
+        <p>{repo.chinese.implementation}</p>
+        <p>固定版本 {repo.chinese.commit?.slice(0, 12)} · 整理于 {repo.chinese.researchedAt}。以下为一手资料阅读，未做功能实测。</p>
+        <ul>{repo.chinese.sources?.map(source => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.label}<ExternalLink size={13} /></a></li>)}</ul>
+      </section>}
+
       <section>
         <h3><ShieldCheck size={17} />采用前先看</h3>
         <div className="caution"><AlertTriangle size={17} /><p>{repo.chinese.caution}</p></div>
@@ -101,6 +109,7 @@ function DetailPanel({ repo, onClose }: { repo: TrendRepository; onClose: () => 
 
       <section>
         <h3>技术与许可</h3>
+        {repo.metadataStatus && repo.metadataStatus !== 'fresh' && <p className="caution">本次仓库 API 未完整返回；许可等字段{repo.metadataStatus === 'stale' ? '沿用之前记录' : '暂缺'}，不代表今日已核验。</p>}
         <dl className="metadata-grid">
           <div><dt>主要语言</dt><dd>{repo.language || '未识别'}</dd></div>
           <div><dt>许可证</dt><dd>{repo.license === 'NOASSERTION' || !repo.license ? '需进一步核验' : repo.license}</dd></div>

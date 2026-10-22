@@ -1,5 +1,9 @@
 # GitHub Daily Trending
 
+每日质量规范：先看快照 `coverage.pendingResearch` 与 `metadataFailures`。新增研究写入 `data/research.json`，保持 `draft`、完整 commit、阅读日期与一手来源；人工 `data/editorial.json` 始终优先。当前 12 个项目已补充作用机制、试用步骤和边界，资料阅读不代表功能实测。
+
+更新器原子写入快照。仓库 API 失败时保留此前许可等字段并标注 `stale` / `unavailable`，不把失败伪装成今日核验；退出码 2 表示部分刷新，空榜或格式错误拒绝覆盖。先提交本任务改动、核对自有远端，再重新构建与发布；本仓库尚无远端时保留本地提交并报告未推送，不自行创建远端。
+
 一个面向中文读者的 GitHub 每日趋势观察看板。它每天读取 GitHub Trending 与公开仓库元数据，并把“今天什么项目在升温”整理成可搜索、可筛选、可连续阅读的中文技术简报。
 
 ## 看板内容

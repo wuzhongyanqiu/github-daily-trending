@@ -1,5 +1,5 @@
 import { load } from 'cheerio';
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile, rename } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
@@ -8,6 +8,7 @@ import path from 'node:path';
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const defaultOutput = path.join(projectRoot, 'public/data/trending.json');
 const editorialPath = path.join(projectRoot, 'data/editorial.json');
+const researchPath = path.join(projectRoot, 'data/research.json');
 const userAgent = 'GitHubDailyTrending/0.1 (+https://github.com/wuzhongyanqiu/github-daily-trending)';
 const execFileAsync = promisify(execFile);
 const reservedOwners = new Set(['about', 'apps', 'collections', 'customer-stories', 'enterprise', 'events', 'features', 'marketplace', 'orgs', 'pricing', 'search', 'security', 'settings', 'sponsors', 'topics', 'trending']);
@@ -96,31 +97,44 @@ async function fetchRepository(fullName) {
   }).catch(() => null);
 }
 
-export async function buildSnapshot({ html, editorial = {}, now = new Date() }) {
+export async function buildSnapshot({ html, editorial = {}, research = {}, previous = {}, now = new Date(), fetchDetails = fetchRepository }) {
   const parsed = parseTrendingHtml(html);
   if (parsed.length === 0) throw new Error('未从 GitHub Trending 页面解析出任何仓库，拒绝覆盖现有数据');
 
   const repositories = await Promise.all(parsed.map(async (item) => {
-    const details = await fetchRepository(item.fullName).catch(() => null);
+    const details = await fetchDetails(item.fullName).catch(() => null);
+    const prior = previous.repositories?.find(r => r.fullName === item.fullName);
     const repo = {
       ...item,
       description: details?.description || item.description,
       language: details?.language || item.language,
       stars: details?.stargazers_count ?? item.stars,
       forks: details?.forks_count ?? item.forks,
-      license: details?.license?.spdx_id || null,
-      topics: Array.isArray(details?.topics) ? details.topics.slice(0, 8) : [],
-      homepage: details?.homepage || null,
-      updatedAt: details?.pushed_at || null,
+      license: details ? details.license?.spdx_id || null : prior?.license ?? null,
+      topics: details ? (Array.isArray(details.topics) ? details.topics.slice(0, 8) : []) : prior?.topics ?? [],
+      homepage: details ? details.homepage || null : prior?.homepage ?? null,
+      updatedAt: details ? details.pushed_at || null : prior?.updatedAt ?? null,
+      metadataStatus: details ? 'fresh' : prior ? 'stale' : 'unavailable',
+      metadataCheckedAt: details ? now.toISOString() : prior ? prior.metadataCheckedAt ?? previous.generatedAt ?? null : null,
     };
 
-    return { ...repo, chinese: editorial[item.fullName] || metadataEditorial(repo) };
+    const draft = research[item.fullName];
+    if (draft && (draft.status !== 'draft' || !/^[a-f0-9]{40}$/.test(draft.commit) || !draft.sources?.length)) {
+      throw new Error(`研究草稿缺少固定版本来源或状态错误：${item.fullName}`);
+    }
+    return { ...repo, chinese: editorial[item.fullName] || draft || metadataEditorial(repo) };
   }));
 
   return {
     generatedAt: now.toISOString(),
     source: 'https://github.com/trending?since=daily',
     period: 'daily',
+    status: repositories.every(repo => repo.metadataStatus === 'fresh') ? 'success' : 'partial',
+    coverage: {
+      researched: repositories.filter(repo => repo.chinese.status !== 'metadata').length,
+      pendingResearch: repositories.filter(repo => repo.chinese.status === 'metadata').map(repo => repo.fullName),
+      metadataFailures: repositories.filter(repo => repo.metadataStatus !== 'fresh').map(repo => repo.fullName),
+    },
     repositories,
   };
 }
@@ -128,13 +142,19 @@ export async function buildSnapshot({ html, editorial = {}, now = new Date() }) 
 async function main() {
   const outputIndex = process.argv.indexOf('--output');
   const output = outputIndex >= 0 ? path.resolve(process.argv[outputIndex + 1]) : defaultOutput;
-  const [html, editorialRaw] = await Promise.all([
+  const [html, editorialRaw, researchRaw, previousRaw] = await Promise.all([
     request('https://github.com/trending?since=daily'),
     readFile(editorialPath, 'utf8'),
+    readFile(researchPath, 'utf8'),
+    readFile(output, 'utf8').catch(error => { if (error.code === 'ENOENT') return '{}'; throw error; }),
   ]);
-  const snapshot = await buildSnapshot({ html, editorial: JSON.parse(editorialRaw) });
-  await writeFile(output, `${JSON.stringify(snapshot, null, 2)}\n`, 'utf8');
+  const snapshot = await buildSnapshot({ html, editorial: JSON.parse(editorialRaw), research: JSON.parse(researchRaw), previous: JSON.parse(previousRaw) });
+  const temporary = `${output}.${process.pid}.tmp`;
+  await writeFile(temporary, `${JSON.stringify(snapshot, null, 2)}\n`, 'utf8');
+  await rename(temporary, output);
   console.log(`已写入 ${snapshot.repositories.length} 个项目：${output}`);
+  console.log(JSON.stringify({ status: snapshot.status, ...snapshot.coverage }));
+  if (snapshot.status === 'partial') process.exitCode = 2;
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

@@ -15,6 +15,8 @@ export interface TrendRepository {
   topics: string[];
   homepage: string | null;
   updatedAt: string | null;
+  metadataStatus?: 'fresh' | 'stale' | 'unavailable';
+  metadataCheckedAt?: string | null;
   chinese: {
     title: string;
     summary: string;
@@ -23,6 +25,11 @@ export interface TrendRepository {
     audience: string;
     caution: string;
     status: EditorialStatus;
+    commit?: string;
+    researchedAt?: string;
+    workflow?: string[];
+    implementation?: string;
+    sources?: { label: string; url: string }[];
   };
 }
 
