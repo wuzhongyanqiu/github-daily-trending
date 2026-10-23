@@ -1,244 +1,129 @@
 {
-  "generatedAt": "2026-10-22T07:13:23.494Z",
+  "generatedAt": "2026-10-23T00:26:20.077Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "status": "success",
   "coverage": {
-    "researched": 12,
+    "researched": 9,
     "pendingResearch": [],
     "metadataFailures": []
   },
   "repositories": [
     {
       "rank": 1,
-      "fullName": "cloudflare/security-audit-skill",
-      "owner": "cloudflare",
-      "name": "security-audit-skill",
-      "url": "https://github.com/cloudflare/security-audit-skill",
-      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-      "language": "JavaScript",
-      "stars": 37426,
-      "forks": 2341,
-      "starsToday": 2012,
-      "license": "MIT",
+      "fullName": "php/php-src",
+      "owner": "php",
+      "name": "php-src",
+      "url": "https://github.com/php/php-src",
+      "description": "The PHP Interpreter",
+      "language": "C",
+      "stars": 41148,
+      "forks": 8309,
+      "starsToday": 287,
+      "license": "BSD-3-Clause",
       "topics": [],
-      "homepage": null,
-      "updatedAt": "2026-09-14T19:29:02Z",
+      "homepage": "https://www.php.net",
+      "updatedAt": "2026-10-22T23:59:52Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-22T07:13:23.494Z",
+      "metadataCheckedAt": "2026-10-23T00:26:20.077Z",
       "chinese": {
-        "title": "Cloudflare 安全审查技能",
-        "summary": "把单仓代码安全审查拆成架构侦察、覆盖台账、候选验证和报告生成。主文件与多个专题参考共同指导 Agent，校验脚本检查报告结构；它不是扫描一次就能证明仓库安全的产品。",
+        "title": "PHP 解释器源码",
+        "summary": "PHP 语言解释器及其内置扩展的主仓库。适合追踪语言运行机制、构建调试版本和验证语言行为；日常使用 PHP 可以先选官方预编译包。",
         "highlights": [
-          "先列信任边界和输入面，再按覆盖单元审查",
-          "区分已确认、待验证和已否定发现",
-          "README 将 SKILL.md、专题文档、report-schema.json 与 validate-findings.cjs 分开：模型产生候选和证据，程序校验结构，再由独立审阅核对结论。"
+          "按平台安装构建依赖并运行 buildconf、configure、make",
+          "用 make test 或 TESTS 参数验证改动范围",
+          "main/main.c 中可定位请求启动、脚本执行与请求结束的入口"
         ],
         "useCases": [
-          "授权仓库的安全评审流程设计",
-          "已有发现的证据复核"
+          "解释器问题定位",
+          "PHP 扩展和语言行为研究"
         ],
-        "audience": "安全工程师和维护自有代码的团队",
-        "caution": "只对明确授权的代码开展审查；结构校验通过不能证明漏洞结论正确，本页未执行安全扫描。",
+        "audience": "PHP 运行时贡献者与扩展开发者",
+        "caution": "源码构建依赖平台工具链；README 的构建路径不保证某个扩展已启用。本页未编译 PHP 或运行其测试套件。",
         "status": "draft",
-        "commit": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
-        "researchedAt": "2026-10-22",
+        "commit": "a2bf170ee5a6faa97d21e157a9a7e589f2b6db47",
+        "researchedAt": "2026-10-23",
         "workflow": [
-          "先列信任边界和输入面，再按覆盖单元审查",
-          "区分已确认、待验证和已否定发现",
-          "用独立复核约束源码引用与结论"
+          "先用预编译包确认目标行为",
+          "按 README 构建调试版并缩小测试目录",
+          "追踪请求入口和相关扩展实现"
         ],
-        "implementation": "README 将 SKILL.md、专题文档、report-schema.json 与 validate-findings.cjs 分开：模型产生候选和证据，程序校验结构，再由独立审阅核对结论。",
+        "implementation": "README 给出 buildconf、configure、make、make test 的开发路径。main/main.c 定义 php_request_startup、php_execute_script_ex 和 php_request_shutdown，说明运行时按请求生命周期组织处理；尚未逐步追踪 Zend 引擎内部调用。",
         "sources": [
           {
             "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/cloudflare/security-audit-skill/blob/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8/README.md"
+            "url": "https://github.com/php/php-src/blob/a2bf170ee5a6faa97d21e157a9a7e589f2b6db47/README.md"
+          },
+          {
+            "label": "固定版本请求处理源码",
+            "url": "https://github.com/php/php-src/blob/a2bf170ee5a6faa97d21e157a9a7e589f2b6db47/main/main.c"
           }
         ]
       }
     },
     {
       "rank": 2,
-      "fullName": "vllm-project/vllm",
-      "owner": "vllm-project",
-      "name": "vllm",
-      "url": "https://github.com/vllm-project/vllm",
-      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+      "fullName": "anthropics/knowledge-work-plugins",
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
       "language": "Python",
-      "stars": 95016,
-      "forks": 23776,
-      "starsToday": 441,
+      "stars": 31587,
+      "forks": 3530,
+      "starsToday": 303,
       "license": "Apache-2.0",
-      "topics": [
-        "amd",
-        "blackwell",
-        "cuda",
-        "deepseek",
-        "deepseek-v3",
-        "gpt",
-        "gpt-oss",
-        "inference"
-      ],
-      "homepage": "https://vllm.ai",
-      "updatedAt": "2026-10-22T06:57:09Z",
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-10-22T07:39:25Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-22T07:13:23.494Z",
+      "metadataCheckedAt": "2026-10-23T00:26:20.077Z",
       "chinese": {
-        "title": "vLLM：模型推理与服务引擎",
-        "summary": "为开放模型提供推理、批处理和在线服务能力。核心关注显存管理与请求调度，适合已经确定模型和硬件后评估部署吞吐，而不是替代模型本身。",
+        "title": "Claude 知识工作插件集合",
+        "summary": "为销售、客服、产品、财务等岗位提供可定制的 Claude Cowork 插件，也支持 Claude Code。每个插件组合技能、显式命令与连接器，具体能力取决于所接工具和权限。",
         "highlights": [
-          "核对目标模型架构、量化格式与硬件支持",
-          "用固定模型启动最小推理服务",
-          "官方 README 将 PagedAttention、连续批处理、前缀缓存、量化与分布式并行列为关键机制。"
+          "从目标岗位选插件并核对所需连接器",
+          "把团队术语和流程写入对应技能文件",
+          "销售插件说明了无连接器时可用上传文件替代，连接 CRM 后才可能写入记录"
         ],
         "useCases": [
-          "私有模型 API 服务",
-          "推理后端性能评估"
+          "团队知识工作流程模板",
+          "岗位专用 Agent 插件原型"
         ],
-        "audience": "模型部署与推理工程团队",
-        "caution": "README 的性能描述属于项目自述；没有在本机加载模型或做 GPU 压测。不同硬件插件和模型格式须分别核验。",
+        "audience": "负责配置 Claude 工作流的团队管理员与业务专家",
+        "caution": "连接器能访问组织数据，读写范围由实际权限决定；外部材料应作为数据核查。本页未安装插件、连接账号或验证执行效果。",
         "status": "draft",
-        "commit": "49dbf7c44f8157285db653fbe789daa30df6cfc4",
-        "researchedAt": "2026-10-22",
+        "commit": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+        "researchedAt": "2026-10-23",
         "workflow": [
-          "核对目标模型架构、量化格式与硬件支持",
-          "用固定模型启动最小推理服务",
-          "比较目标并发下的首包、吞吐、尾延迟和显存"
+          "在 Cowork 或 Claude Code 安装选定插件",
+          "核对技能、命令、连接器和权限",
+          "用非敏感样例检查输出与任何写入动作"
         ],
-        "implementation": "官方 README 将 PagedAttention、连续批处理、前缀缓存、量化与分布式并行列为关键机制。请求进入 API 层后由调度和执行引擎处理；本页是架构资料阅读，没有逐内核源码审计。",
+        "implementation": "根 README 将插件组织为清单、.mcp.json、commands 和 skills；销售插件 README 进一步区分上传文件与已连接 CRM、邮件等路径，并说明写入动作受连接器权限约束。",
         "sources": [
           {
             "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/vllm-project/vllm/blob/49dbf7c44f8157285db653fbe789daa30df6cfc4/README.md"
+            "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/README.md"
+          },
+          {
+            "label": "固定版本销售插件说明",
+            "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/sales/README.md"
           }
         ]
       }
     },
     {
       "rank": 3,
-      "fullName": "stablyai/orca",
-      "owner": "stablyai",
-      "name": "orca",
-      "url": "https://github.com/stablyai/orca",
-      "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
-      "language": "TypeScript",
-      "stars": 101792,
-      "forks": 6435,
-      "starsToday": 1541,
-      "license": "MIT",
-      "topics": [
-        "ade",
-        "agent-ide",
-        "ai-agents",
-        "automation",
-        "bot",
-        "claude-code",
-        "codex",
-        "ghostty"
-      ],
-      "homepage": "https://orca.dev",
-      "updatedAt": "2026-10-22T07:11:26Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-22T07:13:23.494Z",
-      "chinese": {
-        "title": "Orca：多 Agent 工作区",
-        "summary": "把多个编程 Agent 的终端、Git worktree、浏览器和任务状态放在一个桌面工作台。它负责组织开发环境，代码修改质量仍由所用 Agent、需求和验证决定。",
-        "highlights": [
-          "给每个并行任务建立独立 worktree",
-          "查看终端输出、浏览器反馈和改动",
-          "README 描述每个 Agent 使用独立 worktree，工作台统一呈现终端、页面和 Git 协作。"
-        ],
-        "useCases": [
-          "并行实现候选方案",
-          "多仓库开发与任务跟踪"
-        ],
-        "audience": "同时使用多个编程 Agent 的开发者",
-        "caution": "worktree 隔离不等于进程或凭据沙箱；合并、远程操作和移动端连接应分别检查。本页未安装或执行应用。",
-        "status": "draft",
-        "commit": "95f8f73b9a373948e1b97d6d012a7df26a7f984c",
-        "researchedAt": "2026-10-22",
-        "workflow": [
-          "给每个并行任务建立独立 worktree",
-          "查看终端输出、浏览器反馈和改动",
-          "运行项目测试后比较并选择合入结果"
-        ],
-        "implementation": "README 描述每个 Agent 使用独立 worktree，工作台统一呈现终端、页面和 Git 协作。Design Mode 能将界面元素材料送入提示；这不自动构成 UI 正确性验证。",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/stablyai/orca/blob/95f8f73b9a373948e1b97d6d012a7df26a7f984c/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 4,
-      "fullName": "headroomlabs-ai/headroom",
-      "owner": "headroomlabs-ai",
-      "name": "headroom",
-      "url": "https://github.com/headroomlabs-ai/headroom",
-      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
-      "language": "Python",
-      "stars": 77406,
-      "forks": 6009,
-      "starsToday": 474,
-      "license": "Apache-2.0",
-      "topics": [
-        "agent",
-        "ai",
-        "anthropic",
-        "claude-code",
-        "compression",
-        "context-engineering",
-        "context-window",
-        "cursor"
-      ],
-      "homepage": "https://docs.headroomlabs.ai/docs",
-      "updatedAt": "2026-10-22T05:19:27Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-22T07:13:23.494Z",
-      "chinese": {
-        "title": "Headroom：上下文压缩与取回",
-        "summary": "在模型请求之前处理长工具输出、日志、文件或检索材料，并提供库、代理、Agent 包装与 MCP 接口。压缩后能否保持任务质量需要与省下的 Token 一起评估。",
-        "highlights": [
-          "选一份可重复产生的长工具输出",
-          "记录压缩结果及原文取回标识",
-          "README 将压缩与 CCR 原文取回分开，并列出 headroom_compress、headroom_retrieve、headroom_stats。"
-        ],
-        "useCases": [
-          "日志分析的上下文控制",
-          "工具密集型 Agent 成本试验"
-        ],
-        "audience": "Agent 平台与检索应用开发者",
-        "caution": "原文可取回依赖缓存仍存在；不能把项目宣传的压缩比例当作本地测得结果。本页未启动代理或模型 A/B。",
-        "status": "draft",
-        "commit": "e995eb9f1dacac7ed548758406de6c1508caef95",
-        "researchedAt": "2026-10-22",
-        "workflow": [
-          "选一份可重复产生的长工具输出",
-          "记录压缩结果及原文取回标识",
-          "以相同问题比较答案正确率和总调用成本"
-        ],
-        "implementation": "README 将压缩与 CCR 原文取回分开，并列出 headroom_compress、headroom_retrieve、headroom_stats。采用时须区分库调用、网络代理和 MCP 的不同运行路径。",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/headroomlabs-ai/headroom/blob/e995eb9f1dacac7ed548758406de6c1508caef95/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 5,
       "fullName": "DietrichGebert/ponytail",
       "owner": "DietrichGebert",
       "name": "ponytail",
       "url": "https://github.com/DietrichGebert/ponytail",
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "language": "JavaScript",
-      "stars": 172159,
-      "forks": 9371,
-      "starsToday": 2079,
+      "stars": 173450,
+      "forks": 9436,
+      "starsToday": 1948,
       "license": "MIT",
       "topics": [
         "agent-skills",
@@ -253,7 +138,7 @@
       "homepage": "https://ponytail.dev",
       "updatedAt": "2026-10-18T01:55:14Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-22T07:13:23.494Z",
+      "metadataCheckedAt": "2026-10-23T00:26:20.077Z",
       "chinese": {
         "title": "Ponytail：减少不必要实现",
         "summary": "以编程技能引导 Agent 先读代码和真实流程，再寻找现有组件或更简单的实现。另有变更审查、全仓审查与任务成本展示，重点应是满足需求而非单纯缩短代码。",
@@ -286,71 +171,121 @@
       }
     },
     {
-      "rank": 6,
-      "fullName": "Comfy-Org/ComfyUI",
-      "owner": "Comfy-Org",
-      "name": "ComfyUI",
-      "url": "https://github.com/Comfy-Org/ComfyUI",
-      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
-      "language": "Python",
-      "stars": 141733,
-      "forks": 16746,
-      "starsToday": 939,
-      "license": "GPL-3.0",
-      "topics": [
-        "ai",
-        "comfy",
-        "comfyui",
-        "python",
-        "pytorch",
-        "stable-diffusion"
-      ],
-      "homepage": "https://www.comfy.org/",
-      "updatedAt": "2026-10-22T04:26:33Z",
+      "rank": 4,
+      "fullName": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": 39549,
+      "forks": 2462,
+      "starsToday": 2979,
+      "license": "MIT",
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-09-14T19:29:02Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-22T07:13:23.494Z",
+      "metadataCheckedAt": "2026-10-23T00:26:20.077Z",
       "chinese": {
-        "title": "ComfyUI：可复用的生成工作流",
-        "summary": "用节点图组织图像、视频、音频等模型与处理步骤，支持本地执行和 API 接入。适合需要反复控制参数、复用子流程和检查中间结果的创作者或工具开发者。",
+        "title": "Cloudflare 安全审查技能",
+        "summary": "把单仓代码安全审查拆成架构侦察、覆盖台账、候选验证和报告生成。主文件与多个专题参考共同指导 Agent，校验脚本检查报告结构；它不是扫描一次就能证明仓库安全的产品。",
         "highlights": [
-          "选择与模型和硬件匹配的官方模板",
-          "核对节点依赖、权重来源及参数",
-          "README 描述节点图、复用子图、异步队列、局部重执行及显存管理。"
+          "先列信任边界和输入面，再按覆盖单元审查",
+          "区分已确认、待验证和已否定发现",
+          "README 将 SKILL.md、专题文档、report-schema.json 与 validate-findings.cjs 分开：模型产生候选和证据，程序校验结构，再由独立审阅核对结论。"
         ],
         "useCases": [
-          "可控的图片处理管线",
-          "生成工作流接入应用"
+          "授权仓库的安全评审流程设计",
+          "已有发现的证据复核"
         ],
-        "audience": "视觉创作者和生成工具开发者",
-        "caution": "自定义节点是可执行依赖，模型权重也有独立许可；本页没有安装节点、加载权重或验收图片。",
+        "audience": "安全工程师和维护自有代码的团队",
+        "caution": "只对明确授权的代码开展审查；结构校验通过不能证明漏洞结论正确，本页未执行安全扫描。",
         "status": "draft",
-        "commit": "1a82e6d01f395b43275c77acd289af1eb7090bb9",
+        "commit": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
         "researchedAt": "2026-10-22",
         "workflow": [
-          "选择与模型和硬件匹配的官方模板",
-          "核对节点依赖、权重来源及参数",
-          "检查中间结果和最终导出，再保存工作流"
+          "先列信任边界和输入面，再按覆盖单元审查",
+          "区分已确认、待验证和已否定发现",
+          "用独立复核约束源码引用与结论"
         ],
-        "implementation": "README 描述节点图、复用子图、异步队列、局部重执行及显存管理。工作流图决定组合关系，模型和节点实现决定真实输出，能导出图片不代表构图或事实正确。",
+        "implementation": "README 将 SKILL.md、专题文档、report-schema.json 与 validate-findings.cjs 分开：模型产生候选和证据，程序校验结构，再由独立审阅核对结论。",
         "sources": [
           {
             "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/Comfy-Org/ComfyUI/blob/1a82e6d01f395b43275c77acd289af1eb7090bb9/README.md"
+            "url": "https://github.com/cloudflare/security-audit-skill/blob/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8/README.md"
           }
         ]
       }
     },
     {
-      "rank": 7,
+      "rank": 5,
+      "fullName": "Graphify-Labs/graphify",
+      "owner": "Graphify-Labs",
+      "name": "graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "language": "Python",
+      "stars": 132933,
+      "forks": 12721,
+      "starsToday": 1408,
+      "license": "Apache-2.0",
+      "topics": [
+        "ai-agents",
+        "antigravity",
+        "ast",
+        "claude-code",
+        "code-analysis",
+        "code-search",
+        "codex",
+        "cursor"
+      ],
+      "homepage": "https://www.graphify.com",
+      "updatedAt": "2026-10-22T16:19:38Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-10-23T00:26:20.077Z",
+      "chinese": {
+        "title": "Graphify：关系图辅助理解代码",
+        "summary": "把代码和其他项目材料转成知识图，提供查询、关系路径和解释入口。代码 AST 抽取与文档/媒体的语义抽取应分开评估，后者可能依赖配置的模型。",
+        "highlights": [
+          "从一个小仓库建立图并保存来源",
+          "查询具体符号、路径和相关节点",
+          "README 将 EXTRACTED 与 INFERRED 关系分开，并输出 graph.json、图页面和报告。"
+        ],
+        "useCases": [
+          "陌生代码库导航",
+          "跨模块影响分析"
+        ],
+        "audience": "代码维护者与研究人员",
+        "caution": "抽取关系不等于运行时必然调用，推断边需单独核对；未建图或测性能，缺失边不能证明不存在关系。",
+        "status": "draft",
+        "commit": "847a93f3cab5e2c82ea9170014b21cd2c52a4417",
+        "researchedAt": "2026-10-22",
+        "workflow": [
+          "从一个小仓库建立图并保存来源",
+          "查询具体符号、路径和相关节点",
+          "回到源码核对关系并检查增量更新"
+        ],
+        "implementation": "README 将 EXTRACTED 与 INFERRED 关系分开，并输出 graph.json、图页面和报告。图遍历与向量检索是不同机制；查询结果仍需以源文件为证据。",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/Graphify-Labs/graphify/blob/847a93f3cab5e2c82ea9170014b21cd2c52a4417/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 6,
       "fullName": "supabase/supabase",
       "owner": "supabase",
       "name": "supabase",
       "url": "https://github.com/supabase/supabase",
       "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
       "language": "TypeScript",
-      "stars": 113169,
-      "forks": 16982,
-      "starsToday": 504,
+      "stars": 113480,
+      "forks": 16999,
+      "starsToday": 693,
       "license": "Apache-2.0",
       "topics": [
         "ai",
@@ -363,9 +298,9 @@
         "firebase"
       ],
       "homepage": "https://supabase.com",
-      "updatedAt": "2026-10-22T07:11:10Z",
+      "updatedAt": "2026-10-23T00:20:07Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-22T07:13:23.494Z",
+      "metadataCheckedAt": "2026-10-23T00:26:20.077Z",
       "chinese": {
         "title": "Supabase：以 Postgres 为中心的后端平台",
         "summary": "把数据库、认证、自动 API、文件存储、Realtime 与开发控制台组合为后端平台。既可用托管服务，也可按官方方案本地开发或自托管。",
@@ -398,268 +333,166 @@
       }
     },
     {
-      "rank": 8,
-      "fullName": "twentyhq/twenty",
-      "owner": "twentyhq",
-      "name": "twenty",
-      "url": "https://github.com/twentyhq/twenty",
-      "description": "The open alternative to Salesforce, designed for AI.",
-      "language": "TypeScript",
-      "stars": 59385,
-      "forks": 9674,
-      "starsToday": 112,
-      "license": "NOASSERTION",
+      "rank": 7,
+      "fullName": "fastapi/fastapi",
+      "owner": "fastapi",
+      "name": "fastapi",
+      "url": "https://github.com/fastapi/fastapi",
+      "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+      "language": "Python",
+      "stars": 103735,
+      "forks": 10087,
+      "starsToday": 101,
+      "license": "MIT",
       "topics": [
-        "crm",
-        "crm-system",
-        "customer",
-        "good-first-issue",
-        "graphql",
-        "hacktoberfest",
-        "javascript",
-        "marketing"
+        "api",
+        "async",
+        "asyncio",
+        "fastapi",
+        "framework",
+        "json",
+        "json-schema",
+        "openapi"
       ],
-      "homepage": "https://twenty.com",
-      "updatedAt": "2026-10-22T06:54:19Z",
+      "homepage": "https://fastapi.tiangolo.com/",
+      "updatedAt": "2026-10-22T22:21:50Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-22T07:13:23.494Z",
+      "metadataCheckedAt": "2026-10-23T00:26:20.077Z",
       "chinese": {
-        "title": "Twenty：可用代码扩展的 CRM",
-        "summary": "提供客户、对象、视图、工作流和 Agent 等 CRM 构件，技术团队可把自定义业务结构作为代码维护。可以使用云端工作区或自托管，并通过应用 SDK 扩展。",
+        "title": "FastAPI：Python API 框架",
+        "summary": "利用 Python 类型标注定义 API 参数和响应，并生成 OpenAPI 文档。Web 层依赖 Starlette，数据模型依赖 Pydantic，适合构建需要明确输入输出契约的服务。",
         "highlights": [
-          "用一个实际销售场景定义对象和字段",
-          "建立视图与工作流，检查权限和字段含义",
-          "README 用 defineObject 展示对象/字段的代码声明，CLI 将应用发布到工作区。"
+          "安装 fastapi[standard] 并定义最小路由",
+          "本地启动后检查端点和自动生成的 /docs",
+          "routing.py 的 APIRoute 将请求处理、依赖求解与响应序列化串起来"
         ],
         "useCases": [
-          "自定义销售流程",
-          "CRM 扩展应用原型"
+          "Python HTTP API",
+          "带自动文档的内部服务"
         ],
-        "audience": "有定制需求的销售系统与产品团队",
-        "caution": "不能因功能相近就假设可无损迁移现有 CRM；需验证权限、历史数据、自动化和升级兼容。本页未连接工作区。",
+        "audience": "Python 后端与数据服务开发者",
+        "caution": "自动文档与类型校验不等于鉴权、安全或生产部署就绪；README 性能数字是项目自述，本页未进行压测或运行服务。",
         "status": "draft",
-        "commit": "9044bdd7d2ac023e973b292a3b883fa535f2f34e",
-        "researchedAt": "2026-10-22",
+        "commit": "69ddc2badf9da1123bba4d360225ae6b085985f6",
+        "researchedAt": "2026-10-23",
         "workflow": [
-          "用一个实际销售场景定义对象和字段",
-          "建立视图与工作流，检查权限和字段含义",
-          "在测试工作区发布应用并验证升级行为"
+          "定义路由及输入输出模型",
+          "启动开发服务并检查文档和错误响应",
+          "补充鉴权、部署与实际流量测试"
         ],
-        "implementation": "README 用 defineObject 展示对象/字段的代码声明，CLI 将应用发布到工作区。整体栈包含 NestJS、PostgreSQL、Redis 与 React；这解释扩展路径，不证明具体业务流程适配。",
+        "implementation": "README 展示路由声明、开发服务器和交互式文档；fastapi/routing.py 中 APIRoute 通过请求处理器调用依赖求解与响应序列化。具体性能受应用逻辑与部署环境影响。",
         "sources": [
           {
             "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/twentyhq/twenty/blob/9044bdd7d2ac023e973b292a3b883fa535f2f34e/README.md"
+            "url": "https://github.com/fastapi/fastapi/blob/69ddc2badf9da1123bba4d360225ae6b085985f6/README.md"
+          },
+          {
+            "label": "固定版本路由实现",
+            "url": "https://github.com/fastapi/fastapi/blob/69ddc2badf9da1123bba4d360225ae6b085985f6/fastapi/routing.py"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "fullName": "luongnv89/claude-howto",
+      "owner": "luongnv89",
+      "name": "claude-howto",
+      "url": "https://github.com/luongnv89/claude-howto",
+      "description": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+      "language": "Python",
+      "stars": 43189,
+      "forks": 5386,
+      "starsToday": 177,
+      "license": "MIT",
+      "topics": [
+        "claude-code",
+        "guide",
+        "tutorial"
+      ],
+      "homepage": "http://luongnv.com/claude-howto/",
+      "updatedAt": "2026-10-20T12:23:14Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-10-23T00:26:20.077Z",
+      "chinese": {
+        "title": "Claude Code 图解教程与模板",
+        "summary": "按学习路线串联 Claude Code 的命令、记忆、技能、Hooks、MCP 和子代理，并附可复制的配置模板及中文文档。它是社区教程，不是官方功能规范。",
+        "highlights": [
+          "先按自评选择学习模块",
+          "在测试项目试用单个命令或技能模板",
+          "再按任务需要组合记忆、Hooks 与 MCP"
+        ],
+        "useCases": [
+          "Claude Code 团队入门",
+          "工作流模板参考"
+        ],
+        "audience": "学习或培训 Claude Code 的开发者",
+        "caution": "教程可能与当前产品版本产生差异；复制 Hook、命令或插件前应审查权限和副作用。本页未执行其中模板。",
+        "status": "draft",
+        "commit": "188f468893231cbe4525f45e657d554746232072",
+        "researchedAt": "2026-10-23",
+        "workflow": [
+          "阅读路线图并选择起点",
+          "在隔离项目复制一份示例配置",
+          "对照官方文档核验现行语法和权限"
+        ],
+        "implementation": "README 把十个主题模块、学习路线图和可复制的 .claude 配置分开组织；教程提供说明和示例文件，效果仍依赖用户实际安装与验证。",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/luongnv89/claude-howto/blob/188f468893231cbe4525f45e657d554746232072/README.md"
           }
         ]
       }
     },
     {
       "rank": 9,
-      "fullName": "shiyu-coder/Kronos",
-      "owner": "shiyu-coder",
-      "name": "Kronos",
-      "url": "https://github.com/shiyu-coder/Kronos",
-      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
-      "language": "Python",
-      "stars": 42988,
-      "forks": 7087,
-      "starsToday": 575,
-      "license": "MIT",
-      "topics": [],
-      "homepage": null,
-      "updatedAt": "2026-04-13T12:38:49Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-22T07:13:23.494Z",
-      "chinese": {
-        "title": "Kronos：金融时序模型研究",
-        "summary": "围绕 K 线序列设计的 decoder-only 模型家族，将多维 OHLCV 数据量化成离散 token 后进行自回归建模。适合研究时序表示与预测实验，输出不是交易指令。",
-        "highlights": [
-          "核对时间戳、交易日和数据字段",
-          "固定训练/验证时间边界，运行离线预测",
-          "README 给出两阶段设计：专用 tokenizer 处理连续多维 K 线，再由自回归 Transformer 建模。"
-        ],
-        "useCases": [
-          "时序模型研究",
-          "金融数据表征实验"
-        ],
-        "audience": "量化研究与时序建模人员",
-        "caution": "预测误差、回测表现与真实盈利不是同一个指标；本页未运行模型、回测或提供投资建议。",
-        "status": "draft",
-        "commit": "67b630e67f6a18c9e9be918d9b4337c960db1e9a",
-        "researchedAt": "2026-10-22",
-        "workflow": [
-          "核对时间戳、交易日和数据字段",
-          "固定训练/验证时间边界，运行离线预测",
-          "对照简单基线并检查数据泄漏和成本假设"
-        ],
-        "implementation": "README 给出两阶段设计：专用 tokenizer 处理连续多维 K 线，再由自回归 Transformer 建模。应独立核对数据切分和公开权重适用范围，不能凭演示曲线判断可交易性。",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/shiyu-coder/Kronos/blob/67b630e67f6a18c9e9be918d9b4337c960db1e9a/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 10,
-      "fullName": "strelov1/freehire",
-      "owner": "strelov1",
-      "name": "freehire",
-      "url": "https://github.com/strelov1/freehire",
-      "description": "freehire — the open-source search engine for job seekers",
-      "language": "Go",
-      "stars": 2551,
-      "forks": 256,
-      "starsToday": 360,
-      "license": "MIT",
+      "fullName": "Meloong-Git/PCL",
+      "owner": "Meloong-Git",
+      "name": "PCL",
+      "url": "https://github.com/Meloong-Git/PCL",
+      "description": "Minecraft 启动器 Plain Craft Launcher（PCL）。",
+      "language": "Visual Basic .NET",
+      "stars": 8685,
+      "forks": 1199,
+      "starsToday": 119,
+      "license": "NOASSERTION",
       "topics": [
-        "ats",
-        "career",
-        "careers",
-        "golang",
-        "hiring",
-        "job-aggregator",
-        "job-board",
-        "job-portal"
+        "launcher",
+        "minecraft",
+        "minecraft-launcher"
       ],
-      "homepage": "https://freehire.me",
-      "updatedAt": "2026-10-22T05:09:30Z",
+      "homepage": "https://meloong.com/PCL",
+      "updatedAt": "2026-10-20T07:01:33Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-22T07:13:23.494Z",
+      "metadataCheckedAt": "2026-10-23T00:26:20.077Z",
       "chinese": {
-        "title": "Freehire：从招聘源站到求职工作台",
-        "summary": "聚合公司招聘页面和 ATS 数据，将职位标准化、去重后提供筛选搜索；仓库还描述简历、申请跟踪和 Agent 等相关能力。适合研究招聘聚合与个人求职工作流。",
+        "title": "PCL：Minecraft 启动器源码",
+        "summary": "Plain Craft Launcher 的公开源码仓库，包含 UI、动画、下载和 Minecraft 启动等模块。README 说明源码随正式版更新同步，不能据仓库提交时间推断线上版本实时状态。",
         "highlights": [
-          "选择职位类别、地区和工作方式",
-          "回到公司原始招聘页核验岗位",
-          "README 描述采集源、统一 schema 与稳定键去重，Go/Fiber 提供 HTTP，PostgreSQL 与搜索组件保存和检索数据，SvelteKit 提供界面。"
+          "先从官方渠道获取正式版",
+          "按模块查看启动、下载与界面代码",
+          "结合发布版本核对源码同步点"
         ],
         "useCases": [
-          "职位发现",
-          "招聘信息聚合系统研究"
+          "研究 Minecraft 启动器实现",
+          "查阅 PCL 公开模块"
         ],
-        "audience": "求职者和招聘工具开发者",
-        "caution": "岗位规模和实时性是项目自述，未逐条验证；不应把聚合记录当作岗位仍开放的保证。本页未发送求职信息。",
+        "audience": "PCL 用户与启动器开发者",
+        "caution": "README 没有提供完整构建或使用步骤；源码并非实时更新，下载与分发许可需单独核对。本页未构建或运行启动器。",
         "status": "draft",
-        "commit": "804c174d91fea3d94378967a2c8e2deb7bb1d4e7",
-        "researchedAt": "2026-10-22",
+        "commit": "6b9a50df911c9d68b69b24c979efba477fb14b67",
+        "researchedAt": "2026-10-23",
         "workflow": [
-          "选择职位类别、地区和工作方式",
-          "回到公司原始招聘页核验岗位",
-          "按实际需求再评估简历和申请跟踪功能"
+          "从 README 的正式版入口了解产品",
+          "在仓库按相关模块定位源码",
+          "与对应发布版本核对行为和许可"
         ],
-        "implementation": "README 描述采集源、统一 schema 与稳定键去重，Go/Fiber 提供 HTTP，PostgreSQL 与搜索组件保存和检索数据，SvelteKit 提供界面。CLI、MCP 和 AI 功能各有独立入口及依赖。",
+        "implementation": "README 明确列出 UI 库、动画、下载和启动模块，并说明仓库只在 PCL 发布更新时同步；仓库目录包含解决方案和分模块代码，但本页未验证可构建性。",
         "sources": [
           {
             "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/strelov1/freehire/blob/804c174d91fea3d94378967a2c8e2deb7bb1d4e7/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 11,
-      "fullName": "akitaonrails/ai-memory",
-      "owner": "akitaonrails",
-      "name": "ai-memory",
-      "url": "https://github.com/akitaonrails/ai-memory",
-      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
-      "language": "Rust",
-      "stars": 12528,
-      "forks": 882,
-      "starsToday": 286,
-      "license": "MIT",
-      "topics": [],
-      "homepage": null,
-      "updatedAt": "2026-10-22T06:37:13Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-22T07:13:23.494Z",
-      "chinese": {
-        "title": "AI Memory：跨 Agent 的项目记忆",
-        "summary": "把多个编程 Agent 的工作记录、交接与项目知识接入共享记忆服务。官方说明以 Git 支持的 Markdown wiki 为内容真源，数据库承担可重建索引。",
-        "highlights": [
-          "先用合成项目验证会话采集范围",
-          "结束一次任务并在另一个 Agent 恢复交接",
-          "README 区分生命周期采集、服务端整理、搜索与带所有者的交接协议。"
-        ],
-        "useCases": [
-          "跨工具任务交接",
-          "团队项目知识复用"
-        ],
-        "audience": "多 Agent 工作流与团队工具开发者",
-        "caution": "共享记忆可能跨用户或机器传播信息；先确认项目隔离和敏感内容处理。本页未连接服务或导入真实对话。",
-        "status": "draft",
-        "commit": "394fd873b9748e0589386dd6106b4eb84e49b98a",
-        "researchedAt": "2026-10-22",
-        "workflow": [
-          "先用合成项目验证会话采集范围",
-          "结束一次任务并在另一个 Agent 恢复交接",
-          "检查来源、隔离、过期和删除后的检索结果"
-        ],
-        "implementation": "README 区分生命周期采集、服务端整理、搜索与带所有者的交接协议。Markdown 可读性和索引可重建有利于排查，但不能证明记忆内容始终准确或授权范围正确。",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/akitaonrails/ai-memory/blob/394fd873b9748e0589386dd6106b4eb84e49b98a/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 12,
-      "fullName": "Graphify-Labs/graphify",
-      "owner": "Graphify-Labs",
-      "name": "graphify",
-      "url": "https://github.com/Graphify-Labs/graphify",
-      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
-      "language": "Python",
-      "stars": 131999,
-      "forks": 12664,
-      "starsToday": 1433,
-      "license": "Apache-2.0",
-      "topics": [
-        "ai-agents",
-        "antigravity",
-        "ast",
-        "claude-code",
-        "code-analysis",
-        "code-search",
-        "codex",
-        "cursor"
-      ],
-      "homepage": "https://www.graphify.com",
-      "updatedAt": "2026-10-21T15:23:36Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-22T07:13:23.494Z",
-      "chinese": {
-        "title": "Graphify：关系图辅助理解代码",
-        "summary": "把代码和其他项目材料转成知识图，提供查询、关系路径和解释入口。代码 AST 抽取与文档/媒体的语义抽取应分开评估，后者可能依赖配置的模型。",
-        "highlights": [
-          "从一个小仓库建立图并保存来源",
-          "查询具体符号、路径和相关节点",
-          "README 将 EXTRACTED 与 INFERRED 关系分开，并输出 graph.json、图页面和报告。"
-        ],
-        "useCases": [
-          "陌生代码库导航",
-          "跨模块影响分析"
-        ],
-        "audience": "代码维护者与研究人员",
-        "caution": "抽取关系不等于运行时必然调用，推断边需单独核对；未建图或测性能，缺失边不能证明不存在关系。",
-        "status": "draft",
-        "commit": "847a93f3cab5e2c82ea9170014b21cd2c52a4417",
-        "researchedAt": "2026-10-22",
-        "workflow": [
-          "从一个小仓库建立图并保存来源",
-          "查询具体符号、路径和相关节点",
-          "回到源码核对关系并检查增量更新"
-        ],
-        "implementation": "README 将 EXTRACTED 与 INFERRED 关系分开，并输出 graph.json、图页面和报告。图遍历与向量检索是不同机制；查询结果仍需以源文件为证据。",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/Graphify-Labs/graphify/blob/847a93f3cab5e2c82ea9170014b21cd2c52a4417/README.md"
+            "url": "https://github.com/Meloong-Git/PCL/blob/6b9a50df911c9d68b69b24c979efba477fb14b67/README.md"
           }
         ]
       }

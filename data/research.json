@@ -358,5 +358,100 @@
         "url": "https://github.com/Graphify-Labs/graphify/blob/847a93f3cab5e2c82ea9170014b21cd2c52a4417/README.md"
       }
     ]
+  },
+  "php/php-src": {
+    "title": "PHP 解释器源码",
+    "summary": "PHP 语言解释器及其内置扩展的主仓库。适合追踪语言运行机制、构建调试版本和验证语言行为；日常使用 PHP 可以先选官方预编译包。",
+    "highlights": [
+      "按平台安装构建依赖并运行 buildconf、configure、make",
+      "用 make test 或 TESTS 参数验证改动范围",
+      "main/main.c 中可定位请求启动、脚本执行与请求结束的入口"
+    ],
+    "useCases": ["解释器问题定位", "PHP 扩展和语言行为研究"],
+    "audience": "PHP 运行时贡献者与扩展开发者",
+    "caution": "源码构建依赖平台工具链；README 的构建路径不保证某个扩展已启用。本页未编译 PHP 或运行其测试套件。",
+    "status": "draft",
+    "commit": "a2bf170ee5a6faa97d21e157a9a7e589f2b6db47",
+    "researchedAt": "2026-10-23",
+    "workflow": ["先用预编译包确认目标行为", "按 README 构建调试版并缩小测试目录", "追踪请求入口和相关扩展实现"],
+    "implementation": "README 给出 buildconf、configure、make、make test 的开发路径。main/main.c 定义 php_request_startup、php_execute_script_ex 和 php_request_shutdown，说明运行时按请求生命周期组织处理；尚未逐步追踪 Zend 引擎内部调用。",
+    "sources": [
+      { "label": "固定版本官方 README（资料依据）", "url": "https://github.com/php/php-src/blob/a2bf170ee5a6faa97d21e157a9a7e589f2b6db47/README.md" },
+      { "label": "固定版本请求处理源码", "url": "https://github.com/php/php-src/blob/a2bf170ee5a6faa97d21e157a9a7e589f2b6db47/main/main.c" }
+    ]
+  },
+  "anthropics/knowledge-work-plugins": {
+    "title": "Claude 知识工作插件集合",
+    "summary": "为销售、客服、产品、财务等岗位提供可定制的 Claude Cowork 插件，也支持 Claude Code。每个插件组合技能、显式命令与连接器，具体能力取决于所接工具和权限。",
+    "highlights": [
+      "从目标岗位选插件并核对所需连接器",
+      "把团队术语和流程写入对应技能文件",
+      "销售插件说明了无连接器时可用上传文件替代，连接 CRM 后才可能写入记录"
+    ],
+    "useCases": ["团队知识工作流程模板", "岗位专用 Agent 插件原型"],
+    "audience": "负责配置 Claude 工作流的团队管理员与业务专家",
+    "caution": "连接器能访问组织数据，读写范围由实际权限决定；外部材料应作为数据核查。本页未安装插件、连接账号或验证执行效果。",
+    "status": "draft",
+    "commit": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+    "researchedAt": "2026-10-23",
+    "workflow": ["在 Cowork 或 Claude Code 安装选定插件", "核对技能、命令、连接器和权限", "用非敏感样例检查输出与任何写入动作"],
+    "implementation": "根 README 将插件组织为清单、.mcp.json、commands 和 skills；销售插件 README 进一步区分上传文件与已连接 CRM、邮件等路径，并说明写入动作受连接器权限约束。",
+    "sources": [
+      { "label": "固定版本官方 README（资料依据）", "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/README.md" },
+      { "label": "固定版本销售插件说明", "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/sales/README.md" }
+    ]
+  },
+  "fastapi/fastapi": {
+    "title": "FastAPI：Python API 框架",
+    "summary": "利用 Python 类型标注定义 API 参数和响应，并生成 OpenAPI 文档。Web 层依赖 Starlette，数据模型依赖 Pydantic，适合构建需要明确输入输出契约的服务。",
+    "highlights": [
+      "安装 fastapi[standard] 并定义最小路由",
+      "本地启动后检查端点和自动生成的 /docs",
+      "routing.py 的 APIRoute 将请求处理、依赖求解与响应序列化串起来"
+    ],
+    "useCases": ["Python HTTP API", "带自动文档的内部服务"],
+    "audience": "Python 后端与数据服务开发者",
+    "caution": "自动文档与类型校验不等于鉴权、安全或生产部署就绪；README 性能数字是项目自述，本页未进行压测或运行服务。",
+    "status": "draft",
+    "commit": "69ddc2badf9da1123bba4d360225ae6b085985f6",
+    "researchedAt": "2026-10-23",
+    "workflow": ["定义路由及输入输出模型", "启动开发服务并检查文档和错误响应", "补充鉴权、部署与实际流量测试"],
+    "implementation": "README 展示路由声明、开发服务器和交互式文档；fastapi/routing.py 中 APIRoute 通过请求处理器调用依赖求解与响应序列化。具体性能受应用逻辑与部署环境影响。",
+    "sources": [
+      { "label": "固定版本官方 README（资料依据）", "url": "https://github.com/fastapi/fastapi/blob/69ddc2badf9da1123bba4d360225ae6b085985f6/README.md" },
+      { "label": "固定版本路由实现", "url": "https://github.com/fastapi/fastapi/blob/69ddc2badf9da1123bba4d360225ae6b085985f6/fastapi/routing.py" }
+    ]
+  },
+  "luongnv89/claude-howto": {
+    "title": "Claude Code 图解教程与模板",
+    "summary": "按学习路线串联 Claude Code 的命令、记忆、技能、Hooks、MCP 和子代理，并附可复制的配置模板及中文文档。它是社区教程，不是官方功能规范。",
+    "highlights": ["先按自评选择学习模块", "在测试项目试用单个命令或技能模板", "再按任务需要组合记忆、Hooks 与 MCP"],
+    "useCases": ["Claude Code 团队入门", "工作流模板参考"],
+    "audience": "学习或培训 Claude Code 的开发者",
+    "caution": "教程可能与当前产品版本产生差异；复制 Hook、命令或插件前应审查权限和副作用。本页未执行其中模板。",
+    "status": "draft",
+    "commit": "188f468893231cbe4525f45e657d554746232072",
+    "researchedAt": "2026-10-23",
+    "workflow": ["阅读路线图并选择起点", "在隔离项目复制一份示例配置", "对照官方文档核验现行语法和权限"],
+    "implementation": "README 把十个主题模块、学习路线图和可复制的 .claude 配置分开组织；教程提供说明和示例文件，效果仍依赖用户实际安装与验证。",
+    "sources": [
+      { "label": "固定版本官方 README（资料依据）", "url": "https://github.com/luongnv89/claude-howto/blob/188f468893231cbe4525f45e657d554746232072/README.md" }
+    ]
+  },
+  "Meloong-Git/PCL": {
+    "title": "PCL：Minecraft 启动器源码",
+    "summary": "Plain Craft Launcher 的公开源码仓库，包含 UI、动画、下载和 Minecraft 启动等模块。README 说明源码随正式版更新同步，不能据仓库提交时间推断线上版本实时状态。",
+    "highlights": ["先从官方渠道获取正式版", "按模块查看启动、下载与界面代码", "结合发布版本核对源码同步点"],
+    "useCases": ["研究 Minecraft 启动器实现", "查阅 PCL 公开模块"],
+    "audience": "PCL 用户与启动器开发者",
+    "caution": "README 没有提供完整构建或使用步骤；源码并非实时更新，下载与分发许可需单独核对。本页未构建或运行启动器。",
+    "status": "draft",
+    "commit": "6b9a50df911c9d68b69b24c979efba477fb14b67",
+    "researchedAt": "2026-10-23",
+    "workflow": ["从 README 的正式版入口了解产品", "在仓库按相关模块定位源码", "与对应发布版本核对行为和许可"],
+    "implementation": "README 明确列出 UI 库、动画、下载和启动模块，并说明仓库只在 PCL 发布更新时同步；仓库目录包含解决方案和分模块代码，但本页未验证可构建性。",
+    "sources": [
+      { "label": "固定版本官方 README（资料依据）", "url": "https://github.com/Meloong-Git/PCL/blob/6b9a50df911c9d68b69b24c979efba477fb14b67/README.md" }
+    ]
   }
 }
