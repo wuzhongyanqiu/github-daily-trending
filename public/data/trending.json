@@ -1,17 +1,11 @@
 {
-  "generatedAt": "2026-10-24T02:46:36.293Z",
+  "generatedAt": "2026-10-24T02:49:47.860Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "status": "success",
   "coverage": {
-    "researched": 3,
-    "pendingResearch": [
-      "NVIDIA/OpenShell",
-      "Renhuai123/ziwei-doushu",
-      "SnailSploit/Claude-Red",
-      "OpenBMB/VoxCPM",
-      "nodejs/node"
-    ],
+    "researched": 8,
+    "pendingResearch": [],
     "metadataFailures": []
   },
   "repositories": [
@@ -23,7 +17,7 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "language": "JavaScript",
-      "stars": 42277,
+      "stars": 42283,
       "forks": 2641,
       "starsToday": 2716,
       "license": "MIT",
@@ -31,7 +25,7 @@
       "homepage": null,
       "updatedAt": "2026-09-14T19:29:02Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:46:36.293Z",
+      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
       "chinese": {
         "title": "Cloudflare 安全审查技能",
         "summary": "把单仓代码安全审查拆成架构侦察、覆盖台账、候选验证和报告生成。主文件与多个专题参考共同指导 Agent，校验脚本检查报告结构；它不是扫描一次就能证明仓库安全的产品。",
@@ -79,7 +73,7 @@
       "homepage": "https://www.php.net",
       "updatedAt": "2026-10-24T01:28:33Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:46:36.293Z",
+      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
       "chinese": {
         "title": "PHP 解释器源码",
         "summary": "PHP 语言解释器及其内置扩展的主仓库。适合追踪语言运行机制、构建调试版本和验证语言行为；日常使用 PHP 可以先选官方预编译包。",
@@ -123,7 +117,7 @@
       "url": "https://github.com/anthropics/knowledge-work-plugins",
       "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
       "language": "Python",
-      "stars": 32265,
+      "stars": 32267,
       "forks": 3574,
       "starsToday": 635,
       "license": "Apache-2.0",
@@ -131,7 +125,7 @@
       "homepage": null,
       "updatedAt": "2026-10-23T07:38:30Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:46:36.293Z",
+      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
       "chinese": {
         "title": "Claude 知识工作插件集合",
         "summary": "为销售、客服、产品、财务等岗位提供可定制的 Claude Cowork 插件，也支持 Claude Code。每个插件组合技能、显式命令与连接器，具体能力取决于所接工具和权限。",
@@ -175,7 +169,7 @@
       "url": "https://github.com/NVIDIA/OpenShell",
       "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
       "language": "Rust",
-      "stars": 18852,
+      "stars": 18853,
       "forks": 1886,
       "starsToday": 1119,
       "license": "Apache-2.0",
@@ -183,22 +177,36 @@
       "homepage": "https://docs.nvidia.com/openshell/latest/",
       "updatedAt": "2026-10-24T02:12:45Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:46:36.293Z",
+      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
       "chinese": {
-        "title": "OpenShell",
-        "summary": "OpenShell is the safe, private runtime for autonomous AI agents.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "OpenShell：自治 Agent 的隔离运行时",
+        "summary": "为自治 Agent 提供声明式策略、沙箱和网关，限制文件、系统调用、网络与凭据访问。它适合把 Agent 放进可审查的执行环境，不等于应用本身已经安全。",
         "highlights": [
-          "今日新增 1,119 Star",
-          "主要使用 Rust，当前累计 18,852 Star",
-          "仓库标注 Apache-2.0 许可证"
+          "在策略中声明 Agent 可访问的资源",
+          "用内核级沙箱和网关执行访问控制",
+          "在策略变更前用形式化检查发现新增权限"
         ],
         "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
+          "运行需要文件、API 或凭据的自治 Agent",
+          "评估 Agent 执行权限与网络边界"
         ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
+        "audience": "Agent 平台、基础设施与安全工程团队",
+        "caution": "README 要求 Linux、Apple Silicon macOS 或实验性的 WSL2，并依赖容器或主机虚拟化；策略检查不能替代人工审查，遥测和第三方 Agent 仍需单独核对。",
+        "status": "draft",
+        "commit": "c4688aa8715ea75d6c39fe468361dbbc16c691fa",
+        "researchedAt": "2026-10-24",
+        "workflow": [
+          "安装 CLI 并创建命名沙箱",
+          "为文件、网络和进程访问写策略",
+          "运行 Agent 并审查新增访问请求"
+        ],
+        "implementation": "README 将 gateway、supervisor 和 sandbox 组成控制面；Agent 在隔离环境中运行，内核控制文件和系统调用，网络连接经过策略检查，凭据只注入已批准的端点。资料阅读未安装或运行该项目。",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/NVIDIA/OpenShell/blob/c4688aa8715ea75d6c39fe468361dbbc16c691fa/README.md"
+          }
+        ]
       }
     },
     {
@@ -209,8 +217,8 @@
       "url": "https://github.com/Renhuai123/ziwei-doushu",
       "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
       "language": "TypeScript",
-      "stars": 6913,
-      "forks": 1417,
+      "stars": 6917,
+      "forks": 1418,
       "starsToday": 546,
       "license": "MIT",
       "topics": [
@@ -226,22 +234,36 @@
       "homepage": "https://metisziwei.com/?from=gh-about",
       "updatedAt": "2026-10-24T02:34:09Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:46:36.293Z",
+      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
       "chinese": {
-        "title": "ziwei-doushu",
-        "summary": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "紫微斗数：开源排盘引擎与解读数据",
+        "summary": "基于倪海厦《天纪》体系的中文排盘项目，包含排盘算法、四化、格局知识库、古籍数据和大规模解读数据集。它是传统术数软件与资料库，不是经过科学验证的预测工具。",
         "highlights": [
-          "今日新增 546 Star",
-          "主要使用 TypeScript，当前累计 6,913 Star",
-          "仓库标注 MIT 许可证"
+          "按出生日期、时辰和性别生成命盘",
+          "处理真太阳时、中国夏令时和农历边界",
+          "从固定版本数据集读取多维解读内容"
         ],
         "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
+          "研究排盘算法和历法边界",
+          "搭建传统术数学习或展示界面"
         ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
+        "audience": "中文应用开发者、资料研究者与术数学习者",
+        "caution": "README 明确六亲等部分存在局限，数据与古籍引文有不同授权；解读仅供参考，不能代替医疗、法律或财务判断。大数据集体积很大，本页未下载或运行。",
+        "status": "draft",
+        "commit": "e478393ad6c865ad6270e978a3164d2f2cb5315b",
+        "researchedAt": "2026-10-24",
+        "workflow": [
+          "按项目文档准备公历日期、时辰和性别",
+          "调用排盘引擎生成星曜与宫位",
+          "按数据集许可读取解读并展示出处"
+        ],
+        "implementation": "README 列出 algorithm、真太阳时、农历转换、夏令时和流派配置等模块，并说明 v4.0 数据集按年份提供 JSON Lines；资料阅读未安装或验证排盘结果。",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/Renhuai123/ziwei-doushu/blob/e478393ad6c865ad6270e978a3164d2f2cb5315b/README.md"
+          }
+        ]
       }
     },
     {
@@ -252,7 +274,7 @@
       "url": "https://github.com/SnailSploit/Claude-Red",
       "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
       "language": "Python",
-      "stars": 8542,
+      "stars": 8543,
       "forks": 1105,
       "starsToday": 226,
       "license": "MIT",
@@ -267,22 +289,36 @@
       "homepage": null,
       "updatedAt": "2026-10-12T15:02:40Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:46:36.293Z",
+      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
       "chinese": {
-        "title": "Claude-Red",
-        "summary": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "Claude-Red：进攻安全技能目录",
+        "summary": "面向 Claude skills 系统的进攻安全技能集合，把不同攻击面整理成 SKILL.md 方法说明。它用于获授权的安全测试准备与知识检索，不能把技能目录当成自动化漏洞证明。",
         "highlights": [
-          "今日新增 226 Star",
-          "主要使用 Python，当前累计 8,542 Star",
-          "仓库标注 MIT 许可证"
+          "按 Web、无线、云、移动和 IoT 等攻击面选择技能",
+          "通过结构化 SKILL.md 载入测试方法",
+          "把授权范围、证据和人工复核放在执行前"
         ],
         "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
+          "设计授权渗透测试步骤",
+          "为安全工程 Agent 提供攻击面参考"
         ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
+        "audience": "安全研究员、渗透测试团队和防御工程师",
+        "caution": "内容包含高风险攻击技术，只能在明确授权的环境中使用；README 是技能目录而非安全保证，本页未执行其中任何测试。",
+        "status": "draft",
+        "commit": "a8de813edc9f66f60d44cfe42d47750e89d9930b",
+        "researchedAt": "2026-10-24",
+        "workflow": [
+          "确认资产、时间和测试授权",
+          "选择对应攻击面技能并限定范围",
+          "记录证据后由独立人员复核结论"
+        ],
+        "implementation": "README 按 Web、无线、云、移动、IoT 与基础设施等目录索引技能，每项技能是可供 Agent 读取的 SKILL.md；资料阅读未执行攻击链。",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/SnailSploit/Claude-Red/blob/a8de813edc9f66f60d44cfe42d47750e89d9930b/README.md"
+          }
+        ]
       }
     },
     {
@@ -293,7 +329,7 @@
       "url": "https://github.com/OpenBMB/VoxCPM",
       "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
       "language": "Python",
-      "stars": 40296,
+      "stars": 40297,
       "forks": 4580,
       "starsToday": 150,
       "license": "Apache-2.0",
@@ -310,22 +346,36 @@
       "homepage": "https://voxcpm.com",
       "updatedAt": "2026-10-08T03:26:41Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:46:36.293Z",
+      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
       "chinese": {
-        "title": "VoxCPM",
-        "summary": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "VoxCPM2：无分词器多语种语音生成",
+        "summary": "基于扩散自回归架构的文本转语音系统，支持多语种、自然语言声音设计、可控音色克隆和 48kHz 输出。实际效果与显存、参考音频和许可条件有关。",
         "highlights": [
-          "今日新增 150 Star",
-          "主要使用 Python，当前累计 40,296 Star",
-          "仓库标注 Apache-2.0 许可证"
+          "安装 Python 包并加载 Hugging Face 模型",
+          "用文本生成语音或用括号描述设计声音",
+          "提供参考音频和文本做可控或连续克隆"
         ],
         "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
+          "多语种语音合成原型",
+          "角色声音设计与受控音色实验"
         ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
+        "audience": "语音应用开发者、内容工具团队和研究者",
+        "caution": "README 要求 Python 3.10 至 3.12、PyTorch 2.5+ 与 CUDA 12+；音色克隆涉及隐私和授权，模型表现与实时性声明需要按硬件实测。本页未下载模型。",
+        "status": "draft",
+        "commit": "cce58a5b59303c9bd63d12f23afe6a49a4a80c59",
+        "researchedAt": "2026-10-24",
+        "workflow": [
+          "安装 voxcpm 并下载固定模型",
+          "用固定种子生成文本语音",
+          "在获授权的参考音频上比较音色和风格控制"
+        ],
+        "implementation": "README 说明模型直接生成连续语音表示，VoxCPM2 为 2B 参数并支持 30 种语言、Voice Design、可控克隆和流式服务；Python API 通过 VoxCPM.from_pretrained 与 generate 生成 WAV。资料阅读未运行推理。",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/OpenBMB/VoxCPM/blob/cce58a5b59303c9bd63d12f23afe6a49a4a80c59/README.md"
+          }
+        ]
       }
     },
     {
@@ -336,7 +386,7 @@
       "url": "https://github.com/nodejs/node",
       "description": "Node.js JavaScript runtime ✨🐢🚀✨",
       "language": "JavaScript",
-      "stars": 122902,
+      "stars": 122903,
       "forks": 39834,
       "starsToday": 66,
       "license": "NOASSERTION",
@@ -353,22 +403,36 @@
       "homepage": "https://nodejs.org",
       "updatedAt": "2026-10-24T00:09:23Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:46:36.293Z",
+      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
       "chinese": {
-        "title": "node",
-        "summary": "Node.js JavaScript runtime ✨🐢🚀✨。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "Node.js：跨平台 JavaScript 运行时",
+        "summary": "Node.js 是开源的跨平台 JavaScript 运行时，项目采用开放治理并提供 Current、LTS、Nightly 等发布线。它是运行服务和工具的基础设施，不是单一应用框架。",
         "highlights": [
-          "今日新增 66 Star",
-          "主要使用 JavaScript，当前累计 122,902 Star",
-          "仓库标注 NOASSERTION 许可证"
+          "用官方发行包或源码构建运行时",
+          "按 Current、LTS 和 Nightly 选择发布线",
+          "通过校验和与签名验证下载的二进制"
         ],
         "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
+          "运行 JavaScript 服务与构建工具",
+          "研究运行时、模块和发布流程"
         ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
+        "audience": "JavaScript 开发者、平台工程师和工具维护者",
+        "caution": "Alpha 和 Nightly 不适合生产；不同发布线的 ABI、支持周期和兼容性不同，升级前应查看官方发行说明和项目测试。",
+        "status": "draft",
+        "commit": "b12bad4b1119608ba98dcfdcddb4fabaa3c93daf",
+        "researchedAt": "2026-10-24",
+        "workflow": [
+          "按项目需求选择 LTS 或 Current",
+          "从官方渠道下载并验证签名",
+          "运行应用测试后再切换生产版本"
+        ],
+        "implementation": "README 将运行时支持、发布线、二进制校验、源码构建、安全和贡献入口分开说明；Node.js 通过 OpenJS Foundation 获得支持，仓库采用开放治理。资料阅读未编译运行时。",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/nodejs/node/blob/b12bad4b1119608ba98dcfdcddb4fabaa3c93daf/README.md"
+          }
+        ]
       }
     }
   ]
