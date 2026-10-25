@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-24T02:49:47.860Z",
+  "generatedAt": "2026-10-25T00:26:21.204Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "status": "success",
   "coverage": {
-    "researched": 8,
+    "researched": 10,
     "pendingResearch": [],
     "metadataFailures": []
   },
@@ -17,15 +17,15 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "language": "JavaScript",
-      "stars": 42283,
-      "forks": 2641,
-      "starsToday": 2716,
+      "stars": 44539,
+      "forks": 2768,
+      "starsToday": 2264,
       "license": "MIT",
       "topics": [],
       "homepage": null,
       "updatedAt": "2026-09-14T19:29:02Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
+      "metadataCheckedAt": "2026-10-25T00:26:21.204Z",
       "chinese": {
         "title": "Cloudflare 安全审查技能",
         "summary": "把单仓代码安全审查拆成架构侦察、覆盖台账、候选验证和报告生成。主文件与多个专题参考共同指导 Agent，校验脚本检查报告结构；它不是扫描一次就能证明仓库安全的产品。",
@@ -59,125 +59,21 @@
     },
     {
       "rank": 2,
-      "fullName": "php/php-src",
-      "owner": "php",
-      "name": "php-src",
-      "url": "https://github.com/php/php-src",
-      "description": "The PHP Interpreter",
-      "language": "C",
-      "stars": 41582,
-      "forks": 8362,
-      "starsToday": 716,
-      "license": "BSD-3-Clause",
-      "topics": [],
-      "homepage": "https://www.php.net",
-      "updatedAt": "2026-10-24T01:28:33Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
-      "chinese": {
-        "title": "PHP 解释器源码",
-        "summary": "PHP 语言解释器及其内置扩展的主仓库。适合追踪语言运行机制、构建调试版本和验证语言行为；日常使用 PHP 可以先选官方预编译包。",
-        "highlights": [
-          "按平台安装构建依赖并运行 buildconf、configure、make",
-          "用 make test 或 TESTS 参数验证改动范围",
-          "main/main.c 中可定位请求启动、脚本执行与请求结束的入口"
-        ],
-        "useCases": [
-          "解释器问题定位",
-          "PHP 扩展和语言行为研究"
-        ],
-        "audience": "PHP 运行时贡献者与扩展开发者",
-        "caution": "源码构建依赖平台工具链；README 的构建路径不保证某个扩展已启用。本页未编译 PHP 或运行其测试套件。",
-        "status": "draft",
-        "commit": "a2bf170ee5a6faa97d21e157a9a7e589f2b6db47",
-        "researchedAt": "2026-10-23",
-        "workflow": [
-          "先用预编译包确认目标行为",
-          "按 README 构建调试版并缩小测试目录",
-          "追踪请求入口和相关扩展实现"
-        ],
-        "implementation": "README 给出 buildconf、configure、make、make test 的开发路径。main/main.c 定义 php_request_startup、php_execute_script_ex 和 php_request_shutdown，说明运行时按请求生命周期组织处理；尚未逐步追踪 Zend 引擎内部调用。",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/php/php-src/blob/a2bf170ee5a6faa97d21e157a9a7e589f2b6db47/README.md"
-          },
-          {
-            "label": "固定版本请求处理源码",
-            "url": "https://github.com/php/php-src/blob/a2bf170ee5a6faa97d21e157a9a7e589f2b6db47/main/main.c"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 3,
-      "fullName": "anthropics/knowledge-work-plugins",
-      "owner": "anthropics",
-      "name": "knowledge-work-plugins",
-      "url": "https://github.com/anthropics/knowledge-work-plugins",
-      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
-      "language": "Python",
-      "stars": 32267,
-      "forks": 3574,
-      "starsToday": 635,
-      "license": "Apache-2.0",
-      "topics": [],
-      "homepage": null,
-      "updatedAt": "2026-10-23T07:38:30Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
-      "chinese": {
-        "title": "Claude 知识工作插件集合",
-        "summary": "为销售、客服、产品、财务等岗位提供可定制的 Claude Cowork 插件，也支持 Claude Code。每个插件组合技能、显式命令与连接器，具体能力取决于所接工具和权限。",
-        "highlights": [
-          "从目标岗位选插件并核对所需连接器",
-          "把团队术语和流程写入对应技能文件",
-          "销售插件说明了无连接器时可用上传文件替代，连接 CRM 后才可能写入记录"
-        ],
-        "useCases": [
-          "团队知识工作流程模板",
-          "岗位专用 Agent 插件原型"
-        ],
-        "audience": "负责配置 Claude 工作流的团队管理员与业务专家",
-        "caution": "连接器能访问组织数据，读写范围由实际权限决定；外部材料应作为数据核查。本页未安装插件、连接账号或验证执行效果。",
-        "status": "draft",
-        "commit": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
-        "researchedAt": "2026-10-23",
-        "workflow": [
-          "在 Cowork 或 Claude Code 安装选定插件",
-          "核对技能、命令、连接器和权限",
-          "用非敏感样例检查输出与任何写入动作"
-        ],
-        "implementation": "根 README 将插件组织为清单、.mcp.json、commands 和 skills；销售插件 README 进一步区分上传文件与已连接 CRM、邮件等路径，并说明写入动作受连接器权限约束。",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/README.md"
-          },
-          {
-            "label": "固定版本销售插件说明",
-            "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/sales/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 4,
       "fullName": "NVIDIA/OpenShell",
       "owner": "NVIDIA",
       "name": "OpenShell",
       "url": "https://github.com/NVIDIA/OpenShell",
       "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
       "language": "Rust",
-      "stars": 18853,
-      "forks": 1886,
-      "starsToday": 1119,
+      "stars": 19471,
+      "forks": 1930,
+      "starsToday": 896,
       "license": "Apache-2.0",
       "topics": [],
       "homepage": "https://docs.nvidia.com/openshell/latest/",
-      "updatedAt": "2026-10-24T02:12:45Z",
+      "updatedAt": "2026-10-24T23:55:12Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
+      "metadataCheckedAt": "2026-10-25T00:26:21.204Z",
       "chinese": {
         "title": "OpenShell：自治 Agent 的隔离运行时",
         "summary": "为自治 Agent 提供声明式策略、沙箱和网关，限制文件、系统调用、网络与凭据访问。它适合把 Agent 放进可审查的执行环境，不等于应用本身已经安全。",
@@ -210,227 +106,406 @@
       }
     },
     {
-      "rank": 5,
-      "fullName": "Renhuai123/ziwei-doushu",
-      "owner": "Renhuai123",
-      "name": "ziwei-doushu",
-      "url": "https://github.com/Renhuai123/ziwei-doushu",
-      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
-      "language": "TypeScript",
-      "stars": 6917,
-      "forks": 1418,
-      "starsToday": 546,
-      "license": "MIT",
-      "topics": [
-        "bazi",
-        "chinese-astrology",
-        "divination",
-        "fortune-telling",
-        "nextjs",
-        "open-source",
-        "purple-star-astrology",
-        "typescript"
-      ],
-      "homepage": "https://metisziwei.com/?from=gh-about",
-      "updatedAt": "2026-10-24T02:34:09Z",
+      "rank": 3,
+      "fullName": "aws/agent-toolkit-for-aws",
+      "owner": "aws",
+      "name": "agent-toolkit-for-aws",
+      "url": "https://github.com/aws/agent-toolkit-for-aws",
+      "description": "Official, AWS-supported MCP servers, skills, and plugins to help AI agents build on AWS",
+      "language": "Python",
+      "stars": 3126,
+      "forks": 397,
+      "starsToday": 13,
+      "license": "Apache-2.0",
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-10-23T15:00:22Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
+      "metadataCheckedAt": "2026-10-25T00:26:21.204Z",
       "chinese": {
-        "title": "紫微斗数：开源排盘引擎与解读数据",
-        "summary": "基于倪海厦《天纪》体系的中文排盘项目，包含排盘算法、四化、格局知识库、古籍数据和大规模解读数据集。它是传统术数软件与资料库，不是经过科学验证的预测工具。",
+        "title": "AWS Agent Toolkit：面向 AWS 的 Agent 工具包",
+        "summary": "AWS 官方维护的 MCP Server、Skills 与 Plugins 集合，帮助编码 Agent 调用 AWS 服务、遵循云端开发流程。适合把云资源操作接入 Agent 工作流，但权限和费用仍由 AWS 账号策略决定。",
         "highlights": [
-          "按出生日期、时辰和性别生成命盘",
-          "处理真太阳时、中国夏令时和农历边界",
-          "从固定版本数据集读取多维解读内容"
+          "按场景安装官方 MCP Server、Skill 或 Plugin",
+          "在 Agent 中调用 AWS 文档、资源与开发工具",
+          "用最小 IAM 权限和隔离账号验证操作"
         ],
         "useCases": [
-          "研究排盘算法和历法边界",
-          "搭建传统术数学习或展示界面"
+          "AWS 应用开发辅助",
+          "云资源运维流程原型"
         ],
-        "audience": "中文应用开发者、资料研究者与术数学习者",
-        "caution": "README 明确六亲等部分存在局限，数据与古籍引文有不同授权；解读仅供参考，不能代替医疗、法律或财务判断。大数据集体积很大，本页未下载或运行。",
-        "status": "draft",
-        "commit": "e478393ad6c865ad6270e978a3164d2f2cb5315b",
-        "researchedAt": "2026-10-24",
+        "audience": "AWS 开发者、平台工程师和 Agent 工具作者",
+        "caution": "工具可触发真实云资源变更与费用；应先审查源码、权限、区域差异和凭据注入方式，本页仅基于固定版本 README 研究。",
         "workflow": [
-          "按项目文档准备公历日期、时辰和性别",
-          "调用排盘引擎生成星曜与宫位",
-          "按数据集许可读取解读并展示出处"
+          "选择所需的 MCP、Skill 或 Plugin",
+          "在隔离 AWS 账号配置凭据与最小权限",
+          "用只读和模拟环境验证调用后再扩大权限"
         ],
-        "implementation": "README 列出 algorithm、真太阳时、农历转换、夏令时和流派配置等模块，并说明 v4.0 数据集按年份提供 JSON Lines；资料阅读未安装或验证排盘结果。",
+        "implementation": "仓库把 MCP servers、skills 和 plugins 按目录组织，README 以安装和按需选择为主；实际调用链由宿主 Agent、工具包与 AWS API 共同完成。",
+        "commit": "e8c630949189f03b3dd77388c86b06a7f2f911a9",
+        "status": "draft",
+        "researchedAt": "2026-10-25",
         "sources": [
           {
             "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/Renhuai123/ziwei-doushu/blob/e478393ad6c865ad6270e978a3164d2f2cb5315b/README.md"
+            "url": "https://github.com/aws/agent-toolkit-for-aws/blob/e8c630949189f03b3dd77388c86b06a7f2f911a9/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "fullName": "Nutlope/hallmark",
+      "owner": "Nutlope",
+      "name": "hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "stars": 32132,
+      "forks": 1649,
+      "starsToday": 455,
+      "license": "MIT",
+      "topics": [],
+      "homepage": "https://www.usehallmark.com/",
+      "updatedAt": "2026-10-22T17:20:32Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-10-25T00:26:21.204Z",
+      "chinese": {
+        "title": "hallmark：AI 设计规范 Skill",
+        "summary": "面向 Claude Code、Cursor 和 Codex 的设计 Skill，用一组设计语言与约束帮助编码 Agent 产出更有辨识度的界面。它改善提示和审美方向，不能替代产品研究、可用性测试或真实内容。",
+        "highlights": [
+          "把设计原则和视觉约束装入编码 Agent",
+          "针对常见 AI 生成界面提供改进方向",
+          "适合在已有前端项目中作为设计规范参考"
+        ],
+        "useCases": [
+          "AI 辅助前端界面设计",
+          "组件和视觉风格统一"
+        ],
+        "audience": "前端开发者、设计工程师和产品原型团队",
+        "caution": "Skill 会影响生成结果但不保证事实、可访问性或响应式质量；安装前应审查其中指令和文件写入范围，本页未执行安装。",
+        "workflow": [
+          "阅读 Skill 内容并确认适用项目",
+          "在隔离分支让 Agent 生成小范围页面",
+          "用桌面、移动和可访问性检查结果迭代"
+        ],
+        "implementation": "README 将 hallmark 定位为可供 Claude Code、Cursor 和 Codex 使用的设计 Skill，并通过网站提供示例和说明；它位于提示与工作流层，不是独立渲染框架。",
+        "commit": "7ec868225c6caa040558c321ee0fefa0e73f83a8",
+        "status": "draft",
+        "researchedAt": "2026-10-25",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/Nutlope/hallmark/blob/7ec868225c6caa040558c321ee0fefa0e73f83a8/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "fullName": "luongnv89/claude-howto",
+      "owner": "luongnv89",
+      "name": "claude-howto",
+      "url": "https://github.com/luongnv89/claude-howto",
+      "description": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+      "language": "Python",
+      "stars": 44555,
+      "forks": 5492,
+      "starsToday": 392,
+      "license": "MIT",
+      "topics": [
+        "claude-code",
+        "guide",
+        "tutorial"
+      ],
+      "homepage": "http://luongnv.com/claude-howto/",
+      "updatedAt": "2026-10-20T12:23:14Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-10-25T00:26:21.204Z",
+      "chinese": {
+        "title": "Claude Code 图解教程与模板",
+        "summary": "按学习路线串联 Claude Code 的命令、记忆、技能、Hooks、MCP 和子代理，并附可复制的配置模板及中文文档。它是社区教程，不是官方功能规范。",
+        "highlights": [
+          "先按自评选择学习模块",
+          "在测试项目试用单个命令或技能模板",
+          "再按任务需要组合记忆、Hooks 与 MCP"
+        ],
+        "useCases": [
+          "Claude Code 团队入门",
+          "工作流模板参考"
+        ],
+        "audience": "学习或培训 Claude Code 的开发者",
+        "caution": "教程可能与当前产品版本产生差异；复制 Hook、命令或插件前应审查权限和副作用。本页未执行其中模板。",
+        "status": "draft",
+        "commit": "188f468893231cbe4525f45e657d554746232072",
+        "researchedAt": "2026-10-23",
+        "workflow": [
+          "阅读路线图并选择起点",
+          "在隔离项目复制一份示例配置",
+          "对照官方文档核验现行语法和权限"
+        ],
+        "implementation": "README 把十个主题模块、学习路线图和可复制的 .claude 配置分开组织；教程提供说明和示例文件，效果仍依赖用户实际安装与验证。",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/luongnv89/claude-howto/blob/188f468893231cbe4525f45e657d554746232072/README.md"
           }
         ]
       }
     },
     {
       "rank": 6,
-      "fullName": "SnailSploit/Claude-Red",
-      "owner": "SnailSploit",
-      "name": "Claude-Red",
-      "url": "https://github.com/SnailSploit/Claude-Red",
-      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
-      "language": "Python",
-      "stars": 8543,
-      "forks": 1105,
-      "starsToday": 226,
-      "license": "MIT",
-      "topics": [
-        "claude-ai",
-        "claude-pt",
-        "claude-skills",
-        "redteam",
-        "redteam-tools",
-        "skills"
-      ],
-      "homepage": null,
-      "updatedAt": "2026-10-12T15:02:40Z",
+      "fullName": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "Rust",
+      "stars": 86396,
+      "forks": 5154,
+      "starsToday": 619,
+      "license": "Apache-2.0",
+      "topics": [],
+      "homepage": "https://impeccable.style",
+      "updatedAt": "2026-10-24T06:29:27Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
+      "metadataCheckedAt": "2026-10-25T00:26:21.204Z",
       "chinese": {
-        "title": "Claude-Red：进攻安全技能目录",
-        "summary": "面向 Claude skills 系统的进攻安全技能集合，把不同攻击面整理成 SKILL.md 方法说明。它用于获授权的安全测试准备与知识检索，不能把技能目录当成自动化漏洞证明。",
+        "title": "impeccable：面向 AI Harness 的设计语言",
+        "summary": "一套让 AI 编程工具更擅长界面设计的设计语言与规则集合，目标是把布局、层级、字体、颜色和交互质量转化为 Agent 可执行的参考。适合改进原型质量，仍需人工验收成品。",
         "highlights": [
-          "按 Web、无线、云、移动和 IoT 等攻击面选择技能",
-          "通过结构化 SKILL.md 载入测试方法",
-          "把授权范围、证据和人工复核放在执行前"
+          "提供可复用的界面设计原则和术语",
+          "用于指导 AI Agent 生成或重构前端界面",
+          "可结合实际页面截图和组件库持续校验"
         ],
         "useCases": [
-          "设计授权渗透测试步骤",
-          "为安全工程 Agent 提供攻击面参考"
+          "AI 生成网页的视觉改进",
+          "设计系统和提示规范整理"
         ],
-        "audience": "安全研究员、渗透测试团队和防御工程师",
-        "caution": "内容包含高风险攻击技术，只能在明确授权的环境中使用；README 是技能目录而非安全保证，本页未执行其中任何测试。",
-        "status": "draft",
-        "commit": "a8de813edc9f66f60d44cfe42d47750e89d9930b",
-        "researchedAt": "2026-10-24",
+        "audience": "产品设计工程师、前端开发者和 AI 工具用户",
+        "caution": "设计语言不能证明交互可用或满足品牌、无障碍要求；需要结合真实设备和用户任务复核，本页未运行其工具链。",
         "workflow": [
-          "确认资产、时间和测试授权",
-          "选择对应攻击面技能并限定范围",
-          "记录证据后由独立人员复核结论"
+          "选定页面和目标用户任务",
+          "把设计规则用于一轮生成或重构",
+          "检查信息层级、交互、移动端和无障碍"
         ],
-        "implementation": "README 按 Web、无线、云、移动、IoT 与基础设施等目录索引技能，每项技能是可供 Agent 读取的 SKILL.md；资料阅读未执行攻击链。",
+        "implementation": "README 将项目描述为供 AI harness 使用的 design language，核心产物是可供 Agent 读取的设计规则和示例，而非必须安装的运行时服务。",
+        "commit": "936867543ac2576920d663cc9803597f6044f3ac",
+        "status": "draft",
+        "researchedAt": "2026-10-25",
         "sources": [
           {
             "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/SnailSploit/Claude-Red/blob/a8de813edc9f66f60d44cfe42d47750e89d9930b/README.md"
+            "url": "https://github.com/pbakaus/impeccable/blob/936867543ac2576920d663cc9803597f6044f3ac/README.md"
           }
         ]
       }
     },
     {
       "rank": 7,
-      "fullName": "OpenBMB/VoxCPM",
-      "owner": "OpenBMB",
-      "name": "VoxCPM",
-      "url": "https://github.com/OpenBMB/VoxCPM",
-      "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
-      "language": "Python",
-      "stars": 40297,
-      "forks": 4580,
-      "starsToday": 150,
+      "fullName": "pollen-robotics/microduck",
+      "owner": "pollen-robotics",
+      "name": "microduck",
+      "url": "https://github.com/pollen-robotics/microduck",
+      "description": "A Tiny biped duck robot 🦆",
+      "language": "Rust",
+      "stars": 10988,
+      "forks": 1409,
+      "starsToday": 319,
       "license": "Apache-2.0",
-      "topics": [
-        "audio",
-        "deeplearning",
-        "minicpm",
-        "multilingual",
-        "python",
-        "pytorch",
-        "speech",
-        "speech-synthesis"
-      ],
-      "homepage": "https://voxcpm.com",
-      "updatedAt": "2026-10-08T03:26:41Z",
+      "topics": [],
+      "homepage": "https://pollen-robotics.com/microduck",
+      "updatedAt": "2026-10-24T09:37:44Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
+      "metadataCheckedAt": "2026-10-25T00:26:21.204Z",
       "chinese": {
-        "title": "VoxCPM2：无分词器多语种语音生成",
-        "summary": "基于扩散自回归架构的文本转语音系统，支持多语种、自然语言声音设计、可控音色克隆和 48kHz 输出。实际效果与显存、参考音频和许可条件有关。",
+        "title": "MicroDuck：微型双足鸭机器人",
+        "summary": "Pollen Robotics 的小型双足鸭机器人项目，公开硬件、机械结构与控制软件资料，适合学习双足机器人从零件装配到运动控制的完整链路。真正运行需要硬件、固件和安全测试。",
         "highlights": [
-          "安装 Python 包并加载 Hugging Face 模型",
-          "用文本生成语音或用括号描述设计声音",
-          "提供参考音频和文本做可控或连续克隆"
+          "围绕小型双足机器人提供开源设计资料",
+          "机械、电子和软件需要协同调试",
+          "适合教育、原型和机器人控制实验"
         ],
         "useCases": [
-          "多语种语音合成原型",
-          "角色声音设计与受控音色实验"
+          "机器人课程和实验室原型",
+          "双足步态与嵌入式控制研究"
         ],
-        "audience": "语音应用开发者、内容工具团队和研究者",
-        "caution": "README 要求 Python 3.10 至 3.12、PyTorch 2.5+ 与 CUDA 12+；音色克隆涉及隐私和授权，模型表现与实时性声明需要按硬件实测。本页未下载模型。",
-        "status": "draft",
-        "commit": "cce58a5b59303c9bd63d12f23afe6a49a4a80c59",
-        "researchedAt": "2026-10-24",
+        "audience": "机器人开发者、硬件创客和教学实验室",
+        "caution": "机器人运动有夹伤、跌落和电池风险；需核对 BOM、固件兼容性和许可证，仓库资料阅读不代表硬件实测。",
         "workflow": [
-          "安装 voxcpm 并下载固定模型",
-          "用固定种子生成文本语音",
-          "在获授权的参考音频上比较音色和风格控制"
+          "阅读 README 和硬件清单确认版本",
+          "按安全规范组装并单独测试执行器",
+          "在限位和急停条件下逐步调试步态"
         ],
-        "implementation": "README 说明模型直接生成连续语音表示，VoxCPM2 为 2B 参数并支持 30 种语言、Voice Design、可控克隆和流式服务；Python API 通过 VoxCPM.from_pretrained 与 generate 生成 WAV。资料阅读未运行推理。",
+        "implementation": "README 将 MicroDuck 定位为 tiny biped duck robot，并链接项目网站；实现由机械结构、执行器、电控和控制程序组成，实际性能取决于装配和校准。",
+        "commit": "942e58e3aa6dbb28e7037203fff11866122c7567",
+        "status": "draft",
+        "researchedAt": "2026-10-25",
         "sources": [
           {
             "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/OpenBMB/VoxCPM/blob/cce58a5b59303c9bd63d12f23afe6a49a4a80c59/README.md"
+            "url": "https://github.com/pollen-robotics/microduck/blob/942e58e3aa6dbb28e7037203fff11866122c7567/README.md"
           }
         ]
       }
     },
     {
       "rank": 8,
-      "fullName": "nodejs/node",
-      "owner": "nodejs",
-      "name": "node",
-      "url": "https://github.com/nodejs/node",
-      "description": "Node.js JavaScript runtime ✨🐢🚀✨",
-      "language": "JavaScript",
-      "stars": 122903,
-      "forks": 39834,
-      "starsToday": 66,
-      "license": "NOASSERTION",
+      "fullName": "google-gemini/gemini-cli",
+      "owner": "google-gemini",
+      "name": "gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+      "language": "TypeScript",
+      "stars": 108049,
+      "forks": 14807,
+      "starsToday": 44,
+      "license": "Apache-2.0",
       "topics": [
-        "javascript",
-        "js",
-        "linux",
-        "macos",
-        "mit",
-        "node",
-        "nodejs",
-        "runtime"
+        "ai",
+        "ai-agents",
+        "cli",
+        "gemini",
+        "gemini-api",
+        "mcp-client",
+        "mcp-server"
       ],
-      "homepage": "https://nodejs.org",
-      "updatedAt": "2026-10-24T00:09:23Z",
+      "homepage": "https://geminicli.com",
+      "updatedAt": "2026-10-24T01:15:52Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-24T02:49:47.860Z",
+      "metadataCheckedAt": "2026-10-25T00:26:21.204Z",
       "chinese": {
-        "title": "Node.js：跨平台 JavaScript 运行时",
-        "summary": "Node.js 是开源的跨平台 JavaScript 运行时，项目采用开放治理并提供 Current、LTS、Nightly 等发布线。它是运行服务和工具的基础设施，不是单一应用框架。",
+        "title": "Gemini CLI：终端里的开源 AI Agent",
+        "summary": "Google Gemini 的开源终端 Agent，通过命令行读取项目、调用工具和执行开发任务，并支持 MCP 等扩展方式。适合脚本化和代码协作，使用时需管理模型权限、网络访问和本地文件范围。",
         "highlights": [
-          "用官方发行包或源码构建运行时",
-          "按 Current、LTS 和 Nightly 选择发布线",
-          "通过校验和与签名验证下载的二进制"
+          "在终端中与 Gemini 模型协作完成开发任务",
+          "支持工具、扩展和 MCP 生态",
+          "适合在项目目录内进行可审查的命令行工作流"
         ],
         "useCases": [
-          "运行 JavaScript 服务与构建工具",
-          "研究运行时、模块和发布流程"
+          "代码阅读和修改辅助",
+          "终端自动化与工具调用实验"
         ],
-        "audience": "JavaScript 开发者、平台工程师和工具维护者",
-        "caution": "Alpha 和 Nightly 不适合生产；不同发布线的 ABI、支持周期和兼容性不同，升级前应查看官方发行说明和项目测试。",
-        "status": "draft",
-        "commit": "b12bad4b1119608ba98dcfdcddb4fabaa3c93daf",
-        "researchedAt": "2026-10-24",
+        "audience": "开发者、平台工程师和命令行重度用户",
+        "caution": "Agent 可能读取文件或执行命令；应使用隔离目录、最小凭据和人工确认，模型输出与工具结果都需复核。",
         "workflow": [
-          "按项目需求选择 LTS 或 Current",
-          "从官方渠道下载并验证签名",
-          "运行应用测试后再切换生产版本"
+          "安装 CLI 并配置受控的模型凭据",
+          "在测试仓库提出小任务并观察工具调用",
+          "审查 diff、命令副作用和网络访问后再扩大范围"
         ],
-        "implementation": "README 将运行时支持、发布线、二进制校验、源码构建、安全和贡献入口分开说明；Node.js 通过 OpenJS Foundation 获得支持，仓库采用开放治理。资料阅读未编译运行时。",
+        "implementation": "README 将 gemini-cli 描述为直接在终端使用 Gemini 的开源 AI Agent，并提供安装、认证、工具和 MCP 入口；命令行界面负责会话与工具编排，模型和外部服务决定实际能力。",
+        "commit": "cd1b45c2db0a5ea7b7fc3b67c1ba5879601d6005",
+        "status": "draft",
+        "researchedAt": "2026-10-25",
         "sources": [
           {
             "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/nodejs/node/blob/b12bad4b1119608ba98dcfdcddb4fabaa3c93daf/README.md"
+            "url": "https://github.com/google-gemini/gemini-cli/blob/cd1b45c2db0a5ea7b7fc3b67c1ba5879601d6005/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "fullName": "jbiaojerry/ebook-treasure-chest",
+      "owner": "jbiaojerry",
+      "name": "ebook-treasure-chest",
+      "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
+      "description": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。",
+      "language": "Python",
+      "stars": 22598,
+      "forks": 3190,
+      "starsToday": 227,
+      "license": null,
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-01-13T00:59:23Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-10-25T00:26:21.204Z",
+      "chinese": {
+        "title": "电子书下载宝库：中文电子书链接整理",
+        "summary": "中文电子书链接集合，按文学、经管、学习和技术等方向汇总多个阅读平台或下载入口。它更像链接目录，不是独立阅读器或内容授权平台，使用前必须核对版权和来源。",
+        "highlights": [
+          "按主题汇聚大量电子书链接",
+          "覆盖多种中文阅读和内容平台",
+          "适合查找资料线索，不应视为授权证明"
+        ],
+        "useCases": [
+          "中文书目和资料线索检索",
+          "阅读资源目录整理"
+        ],
+        "audience": "中文读者、资料整理者和学习者",
+        "caution": "仓库未识别到许可证，链接内容可能涉及版权、失效或恶意跳转；不要下载或传播未获授权的内容，使用前核验来源。",
+        "workflow": [
+          "只从仓库 README 了解目录结构和来源",
+          "逐链接核对平台、版权与安全性",
+          "优先使用出版社、图书馆或正式平台提供的版本"
+        ],
+        "implementation": "README 以中文说明仓库收录帆书、微信读书、京东读书、喜马拉雅等平台相关电子书链接；仓库本身主要保存索引，链接目标和授权边界需独立判断。",
+        "commit": "93cf3ffcf5a2e6814644d1747a101272557d7eac",
+        "status": "draft",
+        "researchedAt": "2026-10-25",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/jbiaojerry/ebook-treasure-chest/blob/93cf3ffcf5a2e6814644d1747a101272557d7eac/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "fullName": "makecindy/cindy",
+      "owner": "makecindy",
+      "name": "cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "stars": 4092,
+      "forks": 584,
+      "starsToday": 477,
+      "license": "Apache-2.0",
+      "topics": [
+        "agent",
+        "ai-agent",
+        "ai-assistant",
+        "android",
+        "claude-code",
+        "codex",
+        "electron",
+        "ios"
+      ],
+      "homepage": "https://cindy.app",
+      "updatedAt": "2026-10-25T00:14:02Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-10-25T00:26:21.204Z",
+      "chinese": {
+        "title": "Cindy：开箱即用的开源 AI Agent",
+        "summary": "面向桌面和移动端场景的开源 AI Agent，项目主题涵盖 Electron、Android、iOS、Claude Code 与 Codex。它试图把模型能力包装成可直接使用的助手，实际效果取决于模型、工具权限和平台集成。",
+        "highlights": [
+          "以开源 Agent 形式连接多种终端平台",
+          "覆盖桌面、移动端和编码工具相关入口",
+          "适合评估个人助手与开发工作流整合"
+        ],
+        "useCases": [
+          "个人 AI 助手原型",
+          "跨平台 Agent 交互研究"
+        ],
+        "audience": "AI 应用开发者、效率工具用户和跨平台工程师",
+        "caution": "跨平台 Agent 可能接触本地文件、账号和外部服务；安装前审查权限、依赖和数据流，许可证和模型服务条款需分别核验。",
+        "workflow": [
+          "阅读 README 确认平台和安装路径",
+          "在测试账号和非敏感目录中启动",
+          "逐项检查工具权限、网络请求和数据保存"
+        ],
+        "implementation": "README 将 Cindy 定位为开源、开箱即用的 AI Agent，并列出 Electron、Android、iOS 及编码 Agent 相关方向；具体能力由客户端、模型服务和工具适配层共同决定。",
+        "commit": "784e8c477e13ebf5cc9fb40874310e8b49366fff",
+        "status": "draft",
+        "researchedAt": "2026-10-25",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/makecindy/cindy/blob/784e8c477e13ebf5cc9fb40874310e8b49366fff/README.md"
           }
         ]
       }
