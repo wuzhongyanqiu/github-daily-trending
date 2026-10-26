@@ -1,4 +1,76 @@
 {
+  "TauricResearch/TradingAgents": {
+    "title": "TradingAgents：多角色交易研究框架",
+    "summary": "用基本面、情绪、新闻和技术分析 Agent 分工形成报告，再经多空辩论、交易员与风险团队汇总为模拟交易决策。适合研究多 Agent 决策流程与回测方法，不应直接当作投资建议。",
+    "highlights": [
+      "分析员可并行生成报告，再进入多空研究讨论",
+      "交易员提出方案，风险团队评估后交由组合经理决定",
+      "图编排实现包含日期校验、检查点签名与历史运行的时间截断逻辑"
+    ],
+    "useCases": ["研究多 Agent 金融决策流程", "比较历史回测与数据时点约束"],
+    "audience": "量化研究者与 Agent 系统开发者",
+    "caution": "项目明确定位研究用途；数据质量、时点完整性、模型随机性和交易成本都会影响结果。本页仅阅读固定版本 README 与编排源码，未运行回测或验证收益。",
+    "status": "draft",
+    "commit": "e8f5503e9b86d5c2710b0c76b1f686703968c9df",
+    "researchedAt": "2026-10-26",
+    "workflow": ["配置模型提供方、市场数据与分析日期", "选择分析员并运行 CLI 或 Python 接口", "检查报告、数据时点和模拟交易结果，再独立回测"],
+    "implementation": "README 描述分析员、研究员、交易员、风险团队和组合经理的分层流程。trading_graph.py 创建不同模型层、组装 GraphSetup 工作流，并以分析员选择、辩论深度、模型配置等生成检查点签名；历史日期运行会限制可见的决策记忆。",
+    "sources": [
+      {"label": "固定版本官方 README（资料依据）", "url": "https://github.com/TauricResearch/TradingAgents/blob/e8f5503e9b86d5c2710b0c76b1f686703968c9df/README.md"},
+      {"label": "固定版本图编排源码（实现依据）", "url": "https://github.com/TauricResearch/TradingAgents/blob/e8f5503e9b86d5c2710b0c76b1f686703968c9df/tradingagents/graph/trading_graph.py"}
+    ]
+  },
+  "JetBrains/thinkrail": {
+    "title": "ThinkRail：围绕编程 Agent 的工作台",
+    "summary": "把 pi 编程 Agent、编辑器、终端、Git worktree、代码审阅和项目规格文档放在同一工作台。适合并行开发与追踪变更，但 Agent 的结果仍需人工审查和项目测试。",
+    "highlights": ["每个任务可在独立 worktree 与分支中运行", "SPEC.md 图谱承载可持续更新的项目知识", "CLI 的 bootstrap 启动宿主服务并打开浏览器界面"],
+    "useCases": ["并行处理仓库开发任务", "将代码、对话与规格文档并排审阅"],
+    "audience": "经常使用编程 Agent 的开发者与团队",
+    "caution": "worktree 隔离的是 Git 工作目录，并非进程或凭据沙箱；发布、合并和 MCP 授权仍需逐项核对。本页未安装或运行 IDE。",
+    "status": "draft",
+    "commit": "d299f20d2ba014f382ddbcc9b49f2aa63fada132",
+    "researchedAt": "2026-10-26",
+    "workflow": ["安装桌面版或 CLI，并连接模型提供方", "打开仓库，为任务创建独立 workspace", "查看 Agent 对话、文件差异和测试后选择合入"],
+    "implementation": "README 将独立 worktree、pi 会话、SPEC.md 图谱与内置编辑器列为核心组件。apps/cli/src/bootstrap.ts 解析参数后调用服务端 bootHost，按可用端口暴露 Web 界面；这段入口不负责证明编辑或合并结果正确。",
+    "sources": [
+      {"label": "固定版本官方 README（资料依据）", "url": "https://github.com/JetBrains/thinkrail/blob/d299f20d2ba014f382ddbcc9b49f2aa63fada132/README.md"},
+      {"label": "固定版本 CLI 启动源码（实现依据）", "url": "https://github.com/JetBrains/thinkrail/blob/d299f20d2ba014f382ddbcc9b49f2aa63fada132/apps/cli/src/bootstrap.ts"}
+    ]
+  },
+  "coollabsio/coolify": {
+    "title": "Coolify：自托管应用部署平台",
+    "summary": "通过 SSH 管理自有服务器上的应用、数据库与服务，支持 Git 或容器镜像部署、域名和 HTTPS、日志及备份。适合愿意自行承担服务器运维的团队。",
+    "highlights": ["支持 Nixpacks、Railpack、Dockerfile、Compose 与现成镜像", "Git 推送、预览环境和 Webhook 可触发部署", "部署任务源码区分构建服务器与部署服务器，并处理镜像和健康检查"],
+    "useCases": ["在自有服务器部署 Web 应用和数据库", "集中管理多个服务的部署与运行状态"],
+    "audience": "自托管应用的开发与运维团队",
+    "caution": "自托管需自行维护主机、SSH 权限、备份恢复、网络与补丁；一键安装脚本应先审查。本页未部署服务或验证回滚。",
+    "status": "draft",
+    "commit": "0d22b30910df2d40f13121fc14a22c91f12f3397",
+    "researchedAt": "2026-10-26",
+    "workflow": ["准备支持 SSH 的服务器并审查安装要求", "连接代码仓库或镜像，配置构建方式、环境与域名", "部署后检查健康状态、日志、备份和回滚路径"],
+    "implementation": "README 描述控制面通过 SSH 管理服务器和容器工作负载。app/Jobs/ApplicationDeploymentJob.php 按应用构建包与服务器角色选择构建位置，并编排镜像、部署和健康检查；实际可靠性取决于主机和应用配置。",
+    "sources": [
+      {"label": "固定版本官方 README（资料依据）", "url": "https://github.com/coollabsio/coolify/blob/0d22b30910df2d40f13121fc14a22c91f12f3397/README.md"},
+      {"label": "固定版本部署任务源码（实现依据）", "url": "https://github.com/coollabsio/coolify/blob/0d22b30910df2d40f13121fc14a22c91f12f3397/app/Jobs/ApplicationDeploymentJob.php"}
+    ]
+  },
+  "AgriciDaniel/claude-seo": {
+    "title": "Claude SEO：网站审查技能集",
+    "summary": "在 Claude Code 中以主技能调度技术 SEO、内容、结构化数据、搜索可见性等专题技能和 Agent，输出带优先级的审查建议。适合形成检查清单与候选修复，排名效果仍需真实数据验证。",
+    "highlights": ["主技能按站点类型路由专题审查", "完整审查可并行调度多个专业 Agent", "架构文档列出技能、Agent 与按需加载的参考材料"],
+    "useCases": ["网站 SEO 初查与整改计划", "技术、内容和结构化数据的分项复核"],
+    "audience": "网站维护者、SEO 团队与内容负责人",
+    "caution": "README 中速度、流量与排名数字是项目自述，不能推广为通用效果；搜索引擎结果还受站点、时间与竞争环境影响。本页未运行审查。",
+    "status": "draft",
+    "commit": "6be93f45064ffbadced572b5d5c95f55fd263af0",
+    "researchedAt": "2026-10-26",
+    "workflow": ["在 Claude Code 安装插件并运行 /seo setup 与 /seo doctor", "对目标页面运行 /seo audit 或专题命令", "人工核验建议与 Search Console 等真实数据后实施修复"],
+    "implementation": "docs/ARCHITECTURE.md 将 skills/seo/SKILL.md 定为总调度入口，按站点特征选择专题子技能与 Agent，汇总后形成评分和行动计划；部分实时数据能力依赖额外扩展与凭据。",
+    "sources": [
+      {"label": "固定版本官方 README（资料依据）", "url": "https://github.com/AgriciDaniel/claude-seo/blob/6be93f45064ffbadced572b5d5c95f55fd263af0/README.md"},
+      {"label": "固定版本架构文档（机制依据）", "url": "https://github.com/AgriciDaniel/claude-seo/blob/6be93f45064ffbadced572b5d5c95f55fd263af0/docs/ARCHITECTURE.md"}
+    ]
+  },
   "cloudflare/security-audit-skill": {
     "title": "Cloudflare 安全审查技能",
     "summary": "把单仓代码安全审查拆成架构侦察、覆盖台账、候选验证和报告生成。主文件与多个专题参考共同指导 Agent，校验脚本检查报告结构；它不是扫描一次就能证明仓库安全的产品。",
