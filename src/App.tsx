@@ -163,7 +163,7 @@ function App() {
       .sort((a, b) => sort === 'rank' ? a.rank - b.rank : b.starsToday - a.starsToday);
   }, [snapshot, query, language, sort]);
 
-  const selected = selectedName ? snapshot?.repositories.find((repo) => repo.fullName === selectedName) || null : null;
+  const selected = selectedName ? repositories.find((repo) => repo.fullName === selectedName) || repositories[0] || null : null;
   const totalStarsToday = snapshot?.repositories.reduce((sum, repo) => sum + repo.starsToday, 0) || 0;
   const reviewedCount = snapshot?.repositories.filter((repo) => repo.chinese.status === 'reviewed').length || 0;
 
