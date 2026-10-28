@@ -1,31 +1,83 @@
 {
-  "generatedAt": "2026-10-27T00:25:56.288Z",
+  "generatedAt": "2026-10-28T00:19:57.874Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "status": "success",
   "coverage": {
-    "researched": 14,
+    "researched": 11,
     "pendingResearch": [],
     "metadataFailures": []
   },
   "repositories": [
     {
       "rank": 1,
+      "fullName": "elayadesign/ai-design-skills",
+      "owner": "elayadesign",
+      "name": "ai-design-skills",
+      "url": "https://github.com/elayadesign/ai-design-skills",
+      "description": "",
+      "language": null,
+      "stars": 9290,
+      "forks": 667,
+      "starsToday": 1395,
+      "license": "MIT",
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-10-27T16:02:10Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-10-28T00:19:57.874Z",
+      "chinese": {
+        "title": "AI Design Skills：落地页设计技能集",
+        "summary": "面向编程 Agent 的设计指令仓库，目前 README 只列出 landing-page-design，用需求澄清、页面结构、文案和视觉规则指导落地页制作。",
+        "highlights": [
+          "按单一转化目标组织受众、文案和页面结构",
+          "技能文件包含字体、间距、动效等视觉约束",
+          "可复制到不同 Agent 的项目规则位置"
+        ],
+        "useCases": [
+          "给编程 Agent 提供落地页设计约束",
+          "制作营销页面原型并检查内容完整性"
+        ],
+        "audience": "使用编程 Agent 制作营销页面的设计师和开发者",
+        "caution": "README 当前只列一个技能；指令不能保证转化效果，示例安装路径需按宿主核对，素材版权和实际页面质量仍需人工检查。本页未安装试用。",
+        "status": "draft",
+        "commit": "ded7efc9d5c02761c41a03caf3b78f9259ab8828",
+        "researchedAt": "2026-10-28",
+        "workflow": [
+          "从固定版本仓库选取 landing-page-design 并阅读技能文件",
+          "按 Agent 宿主复制到技能或规则目录",
+          "提供产品、受众与素材，检查输出页面和移动端效果"
+        ],
+        "implementation": "landing-page-design/SKILL.md 先收集转化目标、受众和证据，再规定页面段落及视觉系统；这是提示指令而非页面生成程序。",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/elayadesign/ai-design-skills/blob/ded7efc9d5c02761c41a03caf3b78f9259ab8828/README.md"
+          },
+          {
+            "label": "固定版本落地页技能",
+            "url": "https://github.com/elayadesign/ai-design-skills/blob/ded7efc9d5c02761c41a03caf3b78f9259ab8828/skills/landing-page-design/SKILL.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 2,
       "fullName": "Nutlope/hallmark",
       "owner": "Nutlope",
       "name": "hallmark",
       "url": "https://github.com/Nutlope/hallmark",
       "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
       "language": "CSS",
-      "stars": 36285,
-      "forks": 1894,
-      "starsToday": 2244,
+      "stars": 38970,
+      "forks": 2032,
+      "starsToday": 2830,
       "license": "MIT",
       "topics": [],
       "homepage": "https://www.usehallmark.com/",
-      "updatedAt": "2026-10-22T17:20:32Z",
+      "updatedAt": "2026-10-27T15:05:53Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-27T00:25:56.288Z",
+      "metadataCheckedAt": "2026-10-28T00:19:57.874Z",
       "chinese": {
         "title": "hallmark：AI 设计规范 Skill",
         "summary": "面向 Claude Code、Cursor 和 Codex 的设计 Skill，用一组设计语言与约束帮助编码 Agent 产出更有辨识度的界面。它改善提示和审美方向，不能替代产品研究、可用性测试或真实内容。",
@@ -58,406 +110,16 @@
       }
     },
     {
-      "rank": 2,
-      "fullName": "TauricResearch/TradingAgents",
-      "owner": "TauricResearch",
-      "name": "TradingAgents",
-      "url": "https://github.com/TauricResearch/TradingAgents",
-      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
-      "language": "Python",
-      "stars": 116078,
-      "forks": 22274,
-      "starsToday": 1395,
-      "license": "Apache-2.0",
-      "topics": [
-        "agent",
-        "finance",
-        "llm",
-        "multiagent",
-        "trading"
-      ],
-      "homepage": "https://arxiv.org/pdf/2412.20138",
-      "updatedAt": "2026-10-16T21:38:46Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-27T00:25:56.288Z",
-      "chinese": {
-        "title": "TradingAgents：多角色交易研究框架",
-        "summary": "用基本面、情绪、新闻和技术分析 Agent 分工形成报告，再经多空辩论、交易员与风险团队汇总为模拟交易决策。适合研究多 Agent 决策流程与回测方法，不应直接当作投资建议。",
-        "highlights": [
-          "分析员可并行生成报告，再进入多空研究讨论",
-          "交易员提出方案，风险团队评估后交由组合经理决定",
-          "图编排实现包含日期校验、检查点签名与历史运行的时间截断逻辑"
-        ],
-        "useCases": [
-          "研究多 Agent 金融决策流程",
-          "比较历史回测与数据时点约束"
-        ],
-        "audience": "量化研究者与 Agent 系统开发者",
-        "caution": "项目明确定位研究用途；数据质量、时点完整性、模型随机性和交易成本都会影响结果。本页仅阅读固定版本 README 与编排源码，未运行回测或验证收益。",
-        "status": "draft",
-        "commit": "e8f5503e9b86d5c2710b0c76b1f686703968c9df",
-        "researchedAt": "2026-10-26",
-        "workflow": [
-          "配置模型提供方、市场数据与分析日期",
-          "选择分析员并运行 CLI 或 Python 接口",
-          "检查报告、数据时点和模拟交易结果，再独立回测"
-        ],
-        "implementation": "README 描述分析员、研究员、交易员、风险团队和组合经理的分层流程。trading_graph.py 创建不同模型层、组装 GraphSetup 工作流，并以分析员选择、辩论深度、模型配置等生成检查点签名；历史日期运行会限制可见的决策记忆。",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/TauricResearch/TradingAgents/blob/e8f5503e9b86d5c2710b0c76b1f686703968c9df/README.md"
-          },
-          {
-            "label": "固定版本图编排源码（实现依据）",
-            "url": "https://github.com/TauricResearch/TradingAgents/blob/e8f5503e9b86d5c2710b0c76b1f686703968c9df/tradingagents/graph/trading_graph.py"
-          }
-        ]
-      }
-    },
-    {
       "rank": 3,
-      "fullName": "JetBrains/thinkrail",
-      "owner": "JetBrains",
-      "name": "thinkrail",
-      "url": "https://github.com/JetBrains/thinkrail",
-      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
-      "language": "TypeScript",
-      "stars": 2884,
-      "forks": 154,
-      "starsToday": 1173,
-      "license": "Apache-2.0",
-      "topics": [
-        "agent",
-        "agent-skills",
-        "agentic-ai",
-        "agentic-workflow",
-        "ai-coding",
-        "ai-tools",
-        "pi-agent",
-        "pi-agent-extension"
-      ],
-      "homepage": "https://thinkrail.ai/",
-      "updatedAt": "2026-10-27T00:22:48Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-27T00:25:56.288Z",
-      "chinese": {
-        "title": "ThinkRail：围绕编程 Agent 的工作台",
-        "summary": "把 pi 编程 Agent、编辑器、终端、Git worktree、代码审阅和项目规格文档放在同一工作台。适合并行开发与追踪变更，但 Agent 的结果仍需人工审查和项目测试。",
-        "highlights": [
-          "每个任务可在独立 worktree 与分支中运行",
-          "SPEC.md 图谱承载可持续更新的项目知识",
-          "CLI 的 bootstrap 启动宿主服务并打开浏览器界面"
-        ],
-        "useCases": [
-          "并行处理仓库开发任务",
-          "将代码、对话与规格文档并排审阅"
-        ],
-        "audience": "经常使用编程 Agent 的开发者与团队",
-        "caution": "worktree 隔离的是 Git 工作目录，并非进程或凭据沙箱；发布、合并和 MCP 授权仍需逐项核对。本页未安装或运行 IDE。",
-        "status": "draft",
-        "commit": "d299f20d2ba014f382ddbcc9b49f2aa63fada132",
-        "researchedAt": "2026-10-26",
-        "workflow": [
-          "安装桌面版或 CLI，并连接模型提供方",
-          "打开仓库，为任务创建独立 workspace",
-          "查看 Agent 对话、文件差异和测试后选择合入"
-        ],
-        "implementation": "README 将独立 worktree、pi 会话、SPEC.md 图谱与内置编辑器列为核心组件。apps/cli/src/bootstrap.ts 解析参数后调用服务端 bootHost，按可用端口暴露 Web 界面；这段入口不负责证明编辑或合并结果正确。",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/JetBrains/thinkrail/blob/d299f20d2ba014f382ddbcc9b49f2aa63fada132/README.md"
-          },
-          {
-            "label": "固定版本 CLI 启动源码（实现依据）",
-            "url": "https://github.com/JetBrains/thinkrail/blob/d299f20d2ba014f382ddbcc9b49f2aa63fada132/apps/cli/src/bootstrap.ts"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 4,
-      "fullName": "makecindy/cindy",
-      "owner": "makecindy",
-      "name": "cindy",
-      "url": "https://github.com/makecindy/cindy",
-      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
-      "language": "TypeScript",
-      "stars": 6452,
-      "forks": 788,
-      "starsToday": 1296,
-      "license": "Apache-2.0",
-      "topics": [
-        "agent",
-        "ai-agent",
-        "ai-assistant",
-        "android",
-        "claude-code",
-        "codex",
-        "electron",
-        "ios"
-      ],
-      "homepage": "https://cindy.app",
-      "updatedAt": "2026-10-27T00:03:14Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-27T00:25:56.288Z",
-      "chinese": {
-        "title": "Cindy：开箱即用的开源 AI Agent",
-        "summary": "面向桌面和移动端场景的开源 AI Agent，项目主题涵盖 Electron、Android、iOS、Claude Code 与 Codex。它试图把模型能力包装成可直接使用的助手，实际效果取决于模型、工具权限和平台集成。",
-        "highlights": [
-          "以开源 Agent 形式连接多种终端平台",
-          "覆盖桌面、移动端和编码工具相关入口",
-          "适合评估个人助手与开发工作流整合"
-        ],
-        "useCases": [
-          "个人 AI 助手原型",
-          "跨平台 Agent 交互研究"
-        ],
-        "audience": "AI 应用开发者、效率工具用户和跨平台工程师",
-        "caution": "跨平台 Agent 可能接触本地文件、账号和外部服务；安装前审查权限、依赖和数据流，许可证和模型服务条款需分别核验。",
-        "workflow": [
-          "阅读 README 确认平台和安装路径",
-          "在测试账号和非敏感目录中启动",
-          "逐项检查工具权限、网络请求和数据保存"
-        ],
-        "implementation": "README 将 Cindy 定位为开源、开箱即用的 AI Agent，并列出 Electron、Android、iOS 及编码 Agent 相关方向；具体能力由客户端、模型服务和工具适配层共同决定。",
-        "commit": "784e8c477e13ebf5cc9fb40874310e8b49366fff",
-        "status": "draft",
-        "researchedAt": "2026-10-25",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/makecindy/cindy/blob/784e8c477e13ebf5cc9fb40874310e8b49366fff/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 5,
-      "fullName": "affaan-m/ECC",
-      "owner": "affaan-m",
-      "name": "ECC",
-      "url": "https://github.com/affaan-m/ECC",
-      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "language": "JavaScript",
-      "stars": 289833,
-      "forks": 42946,
-      "starsToday": 896,
-      "license": "MIT",
-      "topics": [
-        "ai-agents",
-        "anthropic",
-        "claude",
-        "claude-code",
-        "developer-tools",
-        "llm",
-        "mcp",
-        "productivity"
-      ],
-      "homepage": "https://ecc.tools",
-      "updatedAt": "2026-10-26T04:56:56Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-27T00:25:56.288Z",
-      "chinese": {
-        "title": "ECC：编程 Agent 的流程与技能包",
-        "summary": "为 Claude Code、Codex 等编程 Agent 提供规划、测试、审查、记忆和安全检查的规则、技能、钩子与安装适配。适合为已有开发流程选择性加装能力。",
-        "highlights": [
-          "将 plan、test、implement、review、verify 串成可复用流程",
-          "提供专用 Agent、技能、规则和 AgentShield 扫描",
-          "各宿主的支持范围不同，需查看项目支持矩阵"
-        ],
-        "useCases": [
-          "给编程 Agent 配置团队开发规范",
-          "试用可复用的审查与验证流程"
-        ],
-        "audience": "使用编程 Agent 的开发者和团队",
-        "caution": "技能与钩子会进入 Agent 的执行环境，应先审查权限和安装来源；跨宿主能力并不完全一致。本页只阅读资料，未安装或测量效果。",
-        "status": "draft",
-        "commit": "25278e7d7b6cf6e6a4e7a6c8e10f14ff22f0eb5b",
-        "researchedAt": "2026-10-27",
-        "workflow": [
-          "从官方仓库核对宿主支持矩阵和安装方式",
-          "选择所需规则、技能和钩子并审查权限",
-          "在测试项目中检查生成差异与验证结果"
-        ],
-        "implementation": "README 将规则、技能、专用 Agent、钩子和记忆组织成开发流程，并区分 Claude 插件、Codex 与其他宿主的安装能力；这些是项目自述，未做运行验证。",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/affaan-m/ECC/blob/25278e7d7b6cf6e6a4e7a6c8e10f14ff22f0eb5b/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 6,
-      "fullName": "pbakaus/impeccable",
-      "owner": "pbakaus",
-      "name": "impeccable",
-      "url": "https://github.com/pbakaus/impeccable",
-      "description": "The design language that makes your AI harness better at design.",
-      "language": "Rust",
-      "stars": 89182,
-      "forks": 5310,
-      "starsToday": 1506,
-      "license": "Apache-2.0",
-      "topics": [],
-      "homepage": "https://impeccable.style",
-      "updatedAt": "2026-10-26T23:41:54Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-27T00:25:56.288Z",
-      "chinese": {
-        "title": "impeccable：面向 AI Harness 的设计语言",
-        "summary": "一套让 AI 编程工具更擅长界面设计的设计语言与规则集合，目标是把布局、层级、字体、颜色和交互质量转化为 Agent 可执行的参考。适合改进原型质量，仍需人工验收成品。",
-        "highlights": [
-          "提供可复用的界面设计原则和术语",
-          "用于指导 AI Agent 生成或重构前端界面",
-          "可结合实际页面截图和组件库持续校验"
-        ],
-        "useCases": [
-          "AI 生成网页的视觉改进",
-          "设计系统和提示规范整理"
-        ],
-        "audience": "产品设计工程师、前端开发者和 AI 工具用户",
-        "caution": "设计语言不能证明交互可用或满足品牌、无障碍要求；需要结合真实设备和用户任务复核，本页未运行其工具链。",
-        "workflow": [
-          "选定页面和目标用户任务",
-          "把设计规则用于一轮生成或重构",
-          "检查信息层级、交互、移动端和无障碍"
-        ],
-        "implementation": "README 将项目描述为供 AI harness 使用的 design language，核心产物是可供 Agent 读取的设计规则和示例，而非必须安装的运行时服务。",
-        "commit": "936867543ac2576920d663cc9803597f6044f3ac",
-        "status": "draft",
-        "researchedAt": "2026-10-25",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/pbakaus/impeccable/blob/936867543ac2576920d663cc9803597f6044f3ac/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 7,
-      "fullName": "NVIDIA/SkillSpector",
-      "owner": "NVIDIA",
-      "name": "SkillSpector",
-      "url": "https://github.com/NVIDIA/SkillSpector",
-      "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them.",
-      "language": "Python",
-      "stars": 22170,
-      "forks": 1936,
-      "starsToday": 214,
-      "license": "Apache-2.0",
-      "topics": [
-        "agent-security",
-        "agent-skills",
-        "agentic-ai",
-        "ai-security",
-        "claude-code",
-        "mcp",
-        "prompt-injection",
-        "security-scanner"
-      ],
-      "homepage": "https://docs.nvidia.com/skills/scanning-agent-skills",
-      "updatedAt": "2026-10-23T09:40:29Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-27T00:25:56.288Z",
-      "chinese": {
-        "title": "SkillSpector：Agent 技能安全扫描器",
-        "summary": "扫描 Agent 技能目录、文件、压缩包或 Git 仓库，结合静态规则与可选模型分析生成风险报告。适合在安装第三方技能前做初筛与复核。",
-        "highlights": [
-          "静态分析覆盖提示注入、外传、供应链和危险代码等类别",
-          "可选 LLM 语义分析并输出终端、JSON、Markdown 或 SARIF",
-          "基线机制可抑制已接受发现，报告保留风险分数"
-        ],
-        "useCases": [
-          "安装前检查第三方技能",
-          "在持续集成中追踪新出现的风险"
-        ],
-        "audience": "Agent 平台维护者与安全工程师",
-        "caution": "扫描结果包含误报和漏报可能，风险分数不能证明技能安全；远程输入还需信任下载和依赖链。本页未实际运行扫描。",
-        "status": "draft",
-        "commit": "d7338f58200a9ae2a24810cee08911ab68b107a7",
-        "researchedAt": "2026-10-27",
-        "workflow": [
-          "在隔离环境安装 CLI，选择本地技能或仓库作为输入",
-          "先运行静态扫描，按需要配置模型语义分析",
-          "核对具体证据、抑制规则和 SARIF 报告后决定是否安装"
-        ],
-        "implementation": "开发文档描述 LangGraph 流程：解析输入、构建上下文、并行分析器、可选 LLM 过滤与增强，最后应用基线并生成报告和风险分数。",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/NVIDIA/SkillSpector/blob/d7338f58200a9ae2a24810cee08911ab68b107a7/README.md"
-          },
-          {
-            "label": "固定版本开发文档（流程依据）",
-            "url": "https://github.com/NVIDIA/SkillSpector/blob/d7338f58200a9ae2a24810cee08911ab68b107a7/docs/DEVELOPMENT.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 8,
-      "fullName": "pollen-robotics/microduck",
-      "owner": "pollen-robotics",
-      "name": "microduck",
-      "url": "https://github.com/pollen-robotics/microduck",
-      "description": "A Tiny biped duck robot 🦆",
-      "language": "Rust",
-      "stars": 12403,
-      "forks": 1546,
-      "starsToday": 843,
-      "license": "Apache-2.0",
-      "topics": [],
-      "homepage": "https://pollen-robotics.com/microduck",
-      "updatedAt": "2026-10-26T11:29:24Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-27T00:25:56.288Z",
-      "chinese": {
-        "title": "MicroDuck：微型双足鸭机器人",
-        "summary": "Pollen Robotics 的小型双足鸭机器人项目，公开硬件、机械结构与控制软件资料，适合学习双足机器人从零件装配到运动控制的完整链路。真正运行需要硬件、固件和安全测试。",
-        "highlights": [
-          "围绕小型双足机器人提供开源设计资料",
-          "机械、电子和软件需要协同调试",
-          "适合教育、原型和机器人控制实验"
-        ],
-        "useCases": [
-          "机器人课程和实验室原型",
-          "双足步态与嵌入式控制研究"
-        ],
-        "audience": "机器人开发者、硬件创客和教学实验室",
-        "caution": "机器人运动有夹伤、跌落和电池风险；需核对 BOM、固件兼容性和许可证，仓库资料阅读不代表硬件实测。",
-        "workflow": [
-          "阅读 README 和硬件清单确认版本",
-          "按安全规范组装并单独测试执行器",
-          "在限位和急停条件下逐步调试步态"
-        ],
-        "implementation": "README 将 MicroDuck 定位为 tiny biped duck robot，并链接项目网站；实现由机械结构、执行器、电控和控制程序组成，实际性能取决于装配和校准。",
-        "commit": "942e58e3aa6dbb28e7037203fff11866122c7567",
-        "status": "draft",
-        "researchedAt": "2026-10-25",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/pollen-robotics/microduck/blob/942e58e3aa6dbb28e7037203fff11866122c7567/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 9,
       "fullName": "nightly-labs/openbot",
       "owner": "nightly-labs",
       "name": "openbot",
       "url": "https://github.com/nightly-labs/openbot",
       "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
       "language": "TypeScript",
-      "stars": 1460,
-      "forks": 184,
-      "starsToday": 176,
+      "stars": 2411,
+      "forks": 249,
+      "starsToday": 777,
       "license": "NOASSERTION",
       "topics": [
         "ai-agents",
@@ -470,9 +132,9 @@
         "typescript"
       ],
       "homepage": "https://openbot.run/",
-      "updatedAt": "2026-10-26T23:49:48Z",
+      "updatedAt": "2026-10-27T23:47:12Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-27T00:25:56.288Z",
+      "metadataCheckedAt": "2026-10-28T00:19:57.874Z",
       "chinese": {
         "title": "OpenBot：本地优先的多 Agent 工作台",
         "summary": "在桌面应用中管理持久 Agent、独立工作区、任务队列、文件传递、浏览器和协作消息，连接 Codex、Claude 等模型工具。适合探索多 Agent 的持续任务组织。",
@@ -509,121 +171,182 @@
       }
     },
     {
-      "rank": 10,
-      "fullName": "Panniantong/Agent-Reach",
-      "owner": "Panniantong",
-      "name": "Agent-Reach",
-      "url": "https://github.com/Panniantong/Agent-Reach",
-      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
-      "language": "Python",
-      "stars": 103565,
-      "forks": 9187,
-      "starsToday": 746,
+      "rank": 4,
+      "fullName": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "stars": 306430,
+      "forks": 27277,
+      "starsToday": 617,
       "license": "MIT",
       "topics": [
-        "agent-infrastructure",
-        "ai-agent",
-        "ai-search",
-        "automation",
-        "bilibili",
-        "claude-code",
-        "cli",
-        "cursor"
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
       ],
       "homepage": null,
-      "updatedAt": "2026-10-25T04:37:26Z",
+      "updatedAt": "2026-10-23T03:48:57Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-27T00:25:56.288Z",
+      "metadataCheckedAt": "2026-10-28T00:19:57.874Z",
       "chinese": {
-        "title": "Agent Reach：多网站只读访问接口",
-        "summary": "为 CLI Agent 提供统一的渠道与动作命令，读取和搜索 GitHub、视频、社区等站点，并按顺序尝试渠道后端。适合需要多平台资料检索的 Agent。",
+        "title": "Superpowers：编程 Agent 技能流程",
+        "summary": "通过可组合技能与宿主安装入口，让编程 Agent 按需求讨论、设计、计划、测试和验证的阶段推进软件开发。",
         "highlights": [
-          "渠道动作可配置首选和回退后端",
-          "默认、可选、实验渠道区分依赖与稳定性",
-          "部分站点使用专用浏览器保存登录会话"
+          "为不同 Agent 宿主提供各自的安装方式",
+          "基础流程涵盖 brainstorm、计划、实施与验证",
+          "技能依赖宿主读取指令并触发，具体支持范围随宿主变化"
         ],
         "useCases": [
-          "跨网站检索公开资料",
-          "为 Agent 增加视频字幕和社区内容读取"
+          "为 Agent 开发任务建立一致流程",
+          "评估团队的测试与代码审查步骤"
         ],
-        "audience": "需要跨平台研究能力的 Agent 用户",
-        "caution": "登录渠道涉及会话复制与平台访问限制，应使用专用账号并核对授权；实验渠道可能随时失效，免费不等于零维护成本。本页未安装或登录。",
+        "audience": "编程 Agent 用户与研发团队",
+        "caution": "技能文本会影响 Agent 行为，安装前应审查指令与权限；项目自述的开发成效未经本页实测，流程成本也可能不适合短任务。",
         "status": "draft",
-        "commit": "14c213405669414492bda0f8d52cc6531d062c45",
-        "researchedAt": "2026-10-27",
+        "commit": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+        "researchedAt": "2026-10-28",
         "workflow": [
-          "从官方固定版本安装说明核对依赖与会话行为",
-          "运行 channels 和 check 查看可用渠道",
-          "按需启用渠道，再用 channel action 或 read 读取内容"
+          "按宿主安装并检查技能目录",
+          "从明确需求和设计开始，再进入任务计划与实施",
+          "核对实际测试、审查及最终产物"
         ],
-        "implementation": "channels/base.py 定义统一 Action、按顺序排列的后端、渠道级别、会话目录和登录要求；调度器据此尝试后端并处理可重试错误。",
+        "implementation": "README 将基础流程列为 brainstorming、writing-plans、执行计划、测试驱动开发及完成前验证；using-superpowers 技能通过宿主读取的指令要求加载相关技能。",
         "sources": [
           {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/Panniantong/Agent-Reach/blob/14c213405669414492bda0f8d52cc6531d062c45/README.md"
+            "label": "固定版本官方 README",
+            "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/README.md"
           },
           {
-            "label": "固定版本渠道接口（实现依据）",
-            "url": "https://github.com/Panniantong/Agent-Reach/blob/14c213405669414492bda0f8d52cc6531d062c45/agent_reach/channels/base.py"
+            "label": "固定版本技能入口",
+            "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/using-superpowers/SKILL.md"
           }
         ]
       }
     },
     {
-      "rank": 11,
-      "fullName": "debpalash/VoiceStudio",
-      "owner": "debpalash",
-      "name": "VoiceStudio",
-      "url": "https://github.com/debpalash/VoiceStudio",
-      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
-      "language": "Python",
-      "stars": 89208,
-      "forks": 9843,
-      "starsToday": 2297,
-      "license": "AGPL-3.0",
-      "topics": [
-        "ai",
-        "audiobook",
-        "cuda",
-        "dubbing",
-        "elevenlabs-alternative",
-        "huggingface",
-        "local-first",
-        "mlx"
-      ],
-      "homepage": "https://voicestudio.sh",
-      "updatedAt": "2026-10-26T21:52:40Z",
+      "rank": 5,
+      "fullName": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "Rust",
+      "stars": 90493,
+      "forks": 5375,
+      "starsToday": 1449,
+      "license": "Apache-2.0",
+      "topics": [],
+      "homepage": "https://impeccable.style",
+      "updatedAt": "2026-10-27T16:28:34Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-27T00:25:56.288Z",
+      "metadataCheckedAt": "2026-10-28T00:19:57.874Z",
       "chinese": {
-        "title": "VoiceStudio：本地优先的开源语音生产套件",
-        "summary": "VoiceStudio 把声音克隆、声音设计、视频配音、听写、转录和有声书制作放进同一套本地工作流，定位为 ElevenLabs 的开源替代方案。项目强调模型在本机运行，并面向多语言内容生产提供统一界面。",
+        "title": "impeccable：面向 AI Harness 的设计语言",
+        "summary": "一套让 AI 编程工具更擅长界面设计的设计语言与规则集合，目标是把布局、层级、字体、颜色和交互质量转化为 Agent 可执行的参考。适合改进原型质量，仍需人工验收成品。",
         "highlights": [
-          "覆盖从语音生成到转录、配音的完整链路",
-          "本地优先，可减少音频上传第三方服务的需求",
-          "项目宣称支持 646 种语言，实际质量需按语言与模型测试"
+          "提供可复用的界面设计原则和术语",
+          "用于指导 AI Agent 生成或重构前端界面",
+          "可结合实际页面截图和组件库持续校验"
         ],
         "useCases": [
-          "视频和播客配音",
-          "有声书与辅助朗读",
-          "隐私敏感的本地转录实验"
+          "AI 生成网页的视觉改进",
+          "设计系统和提示规范整理"
         ],
-        "audience": "音视频创作者、本地 AI 用户、语音产品原型团队",
-        "caution": "克隆他人声音必须取得明确授权，并遵守肖像、声音人格权和平台规则；AGPL-3.0 对网络服务分发有额外义务。",
-        "status": "reviewed"
+        "audience": "产品设计工程师、前端开发者和 AI 工具用户",
+        "caution": "设计语言不能证明交互可用或满足品牌、无障碍要求；需要结合真实设备和用户任务复核，本页未运行其工具链。",
+        "workflow": [
+          "选定页面和目标用户任务",
+          "把设计规则用于一轮生成或重构",
+          "检查信息层级、交互、移动端和无障碍"
+        ],
+        "implementation": "README 将项目描述为供 AI harness 使用的 design language，核心产物是可供 Agent 读取的设计规则和示例，而非必须安装的运行时服务。",
+        "commit": "936867543ac2576920d663cc9803597f6044f3ac",
+        "status": "draft",
+        "researchedAt": "2026-10-25",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/pbakaus/impeccable/blob/936867543ac2576920d663cc9803597f6044f3ac/README.md"
+          }
+        ]
       }
     },
     {
-      "rank": 12,
+      "rank": 6,
+      "fullName": "makecindy/cindy",
+      "owner": "makecindy",
+      "name": "cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "stars": 7450,
+      "forks": 885,
+      "starsToday": 1465,
+      "license": "Apache-2.0",
+      "topics": [
+        "agent",
+        "ai-agent",
+        "ai-assistant",
+        "android",
+        "claude-code",
+        "codex",
+        "electron",
+        "ios"
+      ],
+      "homepage": "https://cindy.app",
+      "updatedAt": "2026-10-27T23:55:54Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-10-28T00:19:57.874Z",
+      "chinese": {
+        "title": "Cindy：开箱即用的开源 AI Agent",
+        "summary": "面向桌面和移动端场景的开源 AI Agent，项目主题涵盖 Electron、Android、iOS、Claude Code 与 Codex。它试图把模型能力包装成可直接使用的助手，实际效果取决于模型、工具权限和平台集成。",
+        "highlights": [
+          "以开源 Agent 形式连接多种终端平台",
+          "覆盖桌面、移动端和编码工具相关入口",
+          "适合评估个人助手与开发工作流整合"
+        ],
+        "useCases": [
+          "个人 AI 助手原型",
+          "跨平台 Agent 交互研究"
+        ],
+        "audience": "AI 应用开发者、效率工具用户和跨平台工程师",
+        "caution": "跨平台 Agent 可能接触本地文件、账号和外部服务；安装前审查权限、依赖和数据流，许可证和模型服务条款需分别核验。",
+        "workflow": [
+          "阅读 README 确认平台和安装路径",
+          "在测试账号和非敏感目录中启动",
+          "逐项检查工具权限、网络请求和数据保存"
+        ],
+        "implementation": "README 将 Cindy 定位为开源、开箱即用的 AI Agent，并列出 Electron、Android、iOS 及编码 Agent 相关方向；具体能力由客户端、模型服务和工具适配层共同决定。",
+        "commit": "784e8c477e13ebf5cc9fb40874310e8b49366fff",
+        "status": "draft",
+        "researchedAt": "2026-10-25",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/makecindy/cindy/blob/784e8c477e13ebf5cc9fb40874310e8b49366fff/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 7,
       "fullName": "gitroomhq/postiz-app",
       "owner": "gitroomhq",
       "name": "postiz-app",
       "url": "https://github.com/gitroomhq/postiz-app",
       "description": "📨 The ultimate agentic social media scheduling tool 🤖",
       "language": "TypeScript",
-      "stars": 38442,
-      "forks": 7455,
-      "starsToday": 188,
+      "stars": 39359,
+      "forks": 7514,
+      "starsToday": 951,
       "license": "AGPL-3.0",
       "topics": [
         "nextjs",
@@ -638,7 +361,7 @@
       "homepage": "https://postiz.com",
       "updatedAt": "2026-10-24T18:27:21Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-27T00:25:56.288Z",
+      "metadataCheckedAt": "2026-10-28T00:19:57.874Z",
       "chinese": {
         "title": "Postiz：多平台社媒排程与分析",
         "summary": "集中创建、排程、自动化和分析社媒内容，提供云托管与自托管版本，也可通过 API 和 Agent 接口接入工作流。",
@@ -675,114 +398,228 @@
       }
     },
     {
-      "rank": 13,
-      "fullName": "alchaincyf/huashu-design",
-      "owner": "alchaincyf",
-      "name": "huashu-design",
-      "url": "https://github.com/alchaincyf/huashu-design",
-      "description": "Huashu Design 3.0 · 在 agent 里打一句话，拿回能交付的设计：网页 / App 原型 / 可编辑 PPTX / 动画 / 信息图 · 六个候选挑三个方向 · 84 种带样张的风格库 · 越用越懂你的外观账本与设计体检 · HTML-native design skill for Claude Code, Codex, Cursor & any agent",
-      "language": "HTML",
-      "stars": 26734,
-      "forks": 2960,
-      "starsToday": 251,
+      "rank": 8,
+      "fullName": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 290872,
+      "forks": 43074,
+      "starsToday": 1165,
       "license": "MIT",
       "topics": [
-        "agent-skills",
-        "ai-design",
+        "ai-agents",
+        "anthropic",
+        "claude",
         "claude-code",
-        "claude-skills",
-        "codex",
-        "cursor",
-        "design",
-        "html"
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
       ],
-      "homepage": null,
-      "updatedAt": "2026-10-23T15:32:08Z",
+      "homepage": "https://ecc.tools",
+      "updatedAt": "2026-10-26T04:56:56Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-27T00:25:56.288Z",
+      "metadataCheckedAt": "2026-10-28T00:19:57.874Z",
       "chinese": {
-        "title": "花叔 Design：HTML 原生设计技能",
-        "summary": "让编程 Agent 以 HTML 为媒介制作网页与 App 原型、幻灯片、动画和信息图；先探索多个视觉方向，再按选定方向交付。",
+        "title": "ECC：编程 Agent 的流程与技能包",
+        "summary": "为 Claude Code、Codex 等编程 Agent 提供规划、测试、审查、记忆和安全检查的规则、技能、钩子与安装适配。适合为已有开发流程选择性加装能力。",
         "highlights": [
-          "从六张缩略候选挑三种方向给用户选择",
-          "按网页、幻灯片、动画等媒介加载对应手册",
-          "品牌资产、方向确认与交付检查由技能流程约束"
+          "将 plan、test、implement、review、verify 串成可复用流程",
+          "提供专用 Agent、技能、规则和 AgentShield 扫描",
+          "各宿主的支持范围不同，需查看项目支持矩阵"
         ],
         "useCases": [
-          "快速制作可交互视觉原型",
-          "探索演示稿与信息图方向"
+          "给编程 Agent 配置团队开发规范",
+          "试用可复用的审查与验证流程"
         ],
-        "audience": "设计师、产品团队和使用编程 Agent 的创作者",
-        "caution": "官方 SKILL.md 明确不适合生产级 Web App 或需要后端的系统；README 的耗时和质量展示属项目自述，实际交付仍需核验资产许可、可读性和导出结果。本页未安装试用。",
+        "audience": "使用编程 Agent 的开发者和团队",
+        "caution": "技能与钩子会进入 Agent 的执行环境，应先审查权限和安装来源；跨宿主能力并不完全一致。本页只阅读资料，未安装或测量效果。",
         "status": "draft",
-        "commit": "4fc7bfdbd5ec3fa2d43ce7a6433de60976a5e4b1",
+        "commit": "25278e7d7b6cf6e6a4e7a6c8e10f14ff22f0eb5b",
         "researchedAt": "2026-10-27",
         "workflow": [
-          "从官方仓库安装并检查 references、scripts 和 assets 完整性",
-          "给出内容与品牌资产，选择方向初稿",
-          "检查可交互原型或导出物的实际效果"
+          "从官方仓库核对宿主支持矩阵和安装方式",
+          "选择所需规则、技能和钩子并审查权限",
+          "在测试项目中检查生成差异与验证结果"
         ],
-        "implementation": "SKILL.md 按媒介路由到模块手册，要求先做背景核实与视觉方向选择，再通过品牌、方向等检查点推进；素材和导出依赖随媒介变化。",
+        "implementation": "README 将规则、技能、专用 Agent、钩子和记忆组织成开发流程，并区分 Claude 插件、Codex 与其他宿主的安装能力；这些是项目自述，未做运行验证。",
         "sources": [
           {
             "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/alchaincyf/huashu-design/blob/4fc7bfdbd5ec3fa2d43ce7a6433de60976a5e4b1/README.md"
-          },
-          {
-            "label": "固定版本技能流程（机制依据）",
-            "url": "https://github.com/alchaincyf/huashu-design/blob/4fc7bfdbd5ec3fa2d43ce7a6433de60976a5e4b1/SKILL.md"
+            "url": "https://github.com/affaan-m/ECC/blob/25278e7d7b6cf6e6a4e7a6c8e10f14ff22f0eb5b/README.md"
           }
         ]
       }
     },
     {
-      "rank": 14,
-      "fullName": "multica-ai/andrej-karpathy-skills",
-      "owner": "multica-ai",
-      "name": "andrej-karpathy-skills",
-      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
-      "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
-      "language": null,
-      "stars": 224640,
-      "forks": 22472,
-      "starsToday": 638,
-      "license": null,
-      "topics": [],
-      "homepage": null,
-      "updatedAt": "2026-04-20T10:05:04Z",
+      "rank": 9,
+      "fullName": "HKUDS/DeepTutor",
+      "owner": "HKUDS",
+      "name": "DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "language": "Python",
+      "stars": 45850,
+      "forks": 5752,
+      "starsToday": 1598,
+      "license": "Apache-2.0",
+      "topics": [
+        "ai-agents",
+        "ai-tutor",
+        "clawbot",
+        "cli-tool",
+        "deepresearch",
+        "interactive-learning",
+        "learning",
+        "multi-agent-systems"
+      ],
+      "homepage": "http://arxiv.org/abs/2604.26962",
+      "updatedAt": "2026-10-27T18:37:55Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-27T00:25:56.288Z",
+      "metadataCheckedAt": "2026-10-28T00:19:57.874Z",
       "chinese": {
-        "title": "Karpathy 启发的编程 Agent 指南",
-        "summary": "通过一份 CLAUDE.md 约束编程 Agent 在动手前澄清假设、保持实现简洁、缩小修改范围，并以可验证目标收尾。",
+        "title": "DeepTutor：个性化学习工作台",
+        "summary": "提供聊天、问答、测验、研究、阅读和知识库等学习能力；本地 Web 应用与 CLI 共用运行环境，可配置模型和检索提供方。",
         "highlights": [
-          "四项原则覆盖思考、简洁、局部修改和目标验证",
-          "可作为 Claude 插件或项目级 CLAUDE.md 使用",
-          "内容是行为指导，不是自动执行的测试框架"
+          "多种学习模式共用能力运行时与会话上下文",
+          "支持本地安装、初始化模型配置后启动前后端",
+          "知识库检索和部分功能依赖另配模型或服务"
         ],
         "useCases": [
-          "为项目建立 Agent 协作约定",
-          "减少无关重构并明确验收条件"
+          "围绕资料建立个人学习空间",
+          "用问答和测验辅助学习复盘"
         ],
-        "audience": "使用 Claude Code 或类似编程 Agent 的开发者",
-        "caution": "这些原则基于作者对公开观点的整理，不代表原发言者背书；成效需在具体团队和任务中评估。本页未测量实际代码质量变化。",
+        "audience": "自主学习者、教育工具开发者与自托管用户",
+        "caution": "需要配置模型凭据与运行环境，回答和测验质量取决于模型与资料；学习结果不能替代教师或权威教材核验。本页仅阅读资料与入口实现，未安装实测。",
         "status": "draft",
-        "commit": "2c606141936f1eeef17fa3043a72095b4765b9c2",
-        "researchedAt": "2026-10-27",
+        "commit": "a31d82624c27d75f4e771d4fcb78dce16470b383",
+        "researchedAt": "2026-10-28",
         "workflow": [
-          "阅读固定版本 README 与 CLAUDE.md",
-          "按项目需要安装插件或合并项目指令",
-          "通过代码差异、测试与返工记录评估效果"
+          "核对 Python、Node 和部署方式",
+          "安装后运行 deeptutor init 配置模型，再执行 deeptutor start",
+          "导入资料建立知识库，检查问答引用与测验结果"
         ],
-        "implementation": "CLAUDE.md 直接写出四组行为约束及验收示例；它通过 Agent 读取项目指令发挥作用，不包含自动校验执行器。",
+        "implementation": "README 描述统一能力运行时和会话上下文；deeptutor/agents/chat/agentic_pipeline.py 是聊天 Agent 流程入口，具体教学效果仍需使用场景验证。",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/HKUDS/DeepTutor/blob/a31d82624c27d75f4e771d4fcb78dce16470b383/README.md"
+          },
+          {
+            "label": "固定版本聊天流程入口",
+            "url": "https://github.com/HKUDS/DeepTutor/blob/a31d82624c27d75f4e771d4fcb78dce16470b383/deeptutor/agents/chat/agentic_pipeline.py"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "fullName": "JetBrains/thinkrail",
+      "owner": "JetBrains",
+      "name": "thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "language": "TypeScript",
+      "stars": 3977,
+      "forks": 212,
+      "starsToday": 1204,
+      "license": "Apache-2.0",
+      "topics": [
+        "agent",
+        "agent-skills",
+        "agentic-ai",
+        "agentic-workflow",
+        "ai-coding",
+        "ai-tools",
+        "pi-agent",
+        "pi-agent-extension"
+      ],
+      "homepage": "https://thinkrail.ai/",
+      "updatedAt": "2026-10-27T23:51:32Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-10-28T00:19:57.874Z",
+      "chinese": {
+        "title": "ThinkRail：围绕编程 Agent 的工作台",
+        "summary": "把 pi 编程 Agent、编辑器、终端、Git worktree、代码审阅和项目规格文档放在同一工作台。适合并行开发与追踪变更，但 Agent 的结果仍需人工审查和项目测试。",
+        "highlights": [
+          "每个任务可在独立 worktree 与分支中运行",
+          "SPEC.md 图谱承载可持续更新的项目知识",
+          "CLI 的 bootstrap 启动宿主服务并打开浏览器界面"
+        ],
+        "useCases": [
+          "并行处理仓库开发任务",
+          "将代码、对话与规格文档并排审阅"
+        ],
+        "audience": "经常使用编程 Agent 的开发者与团队",
+        "caution": "worktree 隔离的是 Git 工作目录，并非进程或凭据沙箱；发布、合并和 MCP 授权仍需逐项核对。本页未安装或运行 IDE。",
+        "status": "draft",
+        "commit": "d299f20d2ba014f382ddbcc9b49f2aa63fada132",
+        "researchedAt": "2026-10-26",
+        "workflow": [
+          "安装桌面版或 CLI，并连接模型提供方",
+          "打开仓库，为任务创建独立 workspace",
+          "查看 Agent 对话、文件差异和测试后选择合入"
+        ],
+        "implementation": "README 将独立 worktree、pi 会话、SPEC.md 图谱与内置编辑器列为核心组件。apps/cli/src/bootstrap.ts 解析参数后调用服务端 bootHost，按可用端口暴露 Web 界面；这段入口不负责证明编辑或合并结果正确。",
         "sources": [
           {
             "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/multica-ai/andrej-karpathy-skills/blob/2c606141936f1eeef17fa3043a72095b4765b9c2/README.md"
+            "url": "https://github.com/JetBrains/thinkrail/blob/d299f20d2ba014f382ddbcc9b49f2aa63fada132/README.md"
           },
           {
-            "label": "固定版本 CLAUDE.md（内容依据）",
-            "url": "https://github.com/multica-ai/andrej-karpathy-skills/blob/2c606141936f1eeef17fa3043a72095b4765b9c2/CLAUDE.md"
+            "label": "固定版本 CLI 启动源码（实现依据）",
+            "url": "https://github.com/JetBrains/thinkrail/blob/d299f20d2ba014f382ddbcc9b49f2aa63fada132/apps/cli/src/bootstrap.ts"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "fullName": "togg53192-cmd/jailbreaks",
+      "owner": "togg53192-cmd",
+      "name": "jailbreaks",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "language": null,
+      "stars": 5502,
+      "forks": 818,
+      "starsToday": 902,
+      "license": null,
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-10-25T15:21:20Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-10-28T00:19:57.874Z",
+      "chinese": {
+        "title": "Jailbreaks：模型提示词与 Agent 配置资料集",
+        "summary": "整理面向不同模型和宿主的系统提示词、角色设定、AGENTS.md 及 Ollama Modelfile，供研究提示冲突和指令层级时参考。",
+        "highlights": [
+          "README 按模型家族列出独立文件",
+          "包含工作区指令、系统提示词和 Modelfile 等格式",
+          "资料为静态提示文本，不提供统一执行引擎"
+        ],
+        "useCases": [
+          "研究提示注入与指令冲突",
+          "对比不同 Agent 配置格式"
+        ],
+        "audience": "模型安全研究者与 Agent 平台维护者",
+        "caution": "仓库未标注许可证；提示内容可能违反平台条款，且有效性随模型版本变化。不要把第三方提示直接放进生产环境；本页未尝试绕过任何模型限制。",
+        "status": "draft",
+        "commit": "8b9719913b2bd563246fea9880d2201acf70330b",
+        "researchedAt": "2026-10-28",
+        "workflow": [
+          "按 README 索引选择模型和文件类型",
+          "在隔离环境阅读并评估提示内容与适用条款",
+          "记录模型版本及观察结果，不将文本当作可复现保证"
+        ],
+        "implementation": "README 把文件按模型和配置格式索引，并说明不同宿主的放置位置；仓库核心是提示文本集合，没有统一运行器。",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/togg53192-cmd/jailbreaks/blob/8b9719913b2bd563246fea9880d2201acf70330b/README.md"
           }
         ]
       }
