@@ -115,6 +115,8 @@ function DetailPanel({ repo, onClose }: { repo: TrendRepository; onClose: () => 
           <div><dt>许可证</dt><dd>{repo.license === 'NOASSERTION' || !repo.license ? '需进一步核验' : repo.license}</dd></div>
           <div><dt>最近推送</dt><dd>{repo.updatedAt ? formatDate(repo.updatedAt) : '暂无数据'}</dd></div>
           <div><dt>中文状态</dt><dd>{statusLabels[repo.chinese.status]}</dd></div>
+          <div><dt>元数据核验</dt><dd>{repo.metadataCheckedAt ? formatDate(repo.metadataCheckedAt) : '未记录'}</dd></div>
+          <div><dt>本轮来源状态</dt><dd>{repo.metadataStatus === 'fresh' ? '本轮已返回' : repo.metadataStatus === 'stale' ? '沿用旧记录' : '未完整获取'}</dd></div>
         </dl>
         {repo.topics.length > 0 && <div className="topics">{repo.topics.map((topic) => <span key={topic}>{topic}</span>)}</div>}
       </section>
@@ -166,6 +168,8 @@ function App() {
   const selected = selectedName ? repositories.find((repo) => repo.fullName === selectedName) || repositories[0] || null : null;
   const totalStarsToday = snapshot?.repositories.reduce((sum, repo) => sum + repo.starsToday, 0) || 0;
   const reviewedCount = snapshot?.repositories.filter((repo) => repo.chinese.status === 'reviewed').length || 0;
+  const metadataFailures = snapshot?.repositories.filter(repo => repo.metadataStatus !== 'fresh') || [];
+  const pendingResearch = snapshot?.repositories.filter(repo => !repo.chinese.workflow?.length || !/^[a-f0-9]{40}$/.test(repo.chinese.commit || '') || !repo.chinese.sources?.length) || [];
 
   if (error) return <main className="state-page"><AlertTriangle size={28} /><h1>无法打开看板</h1><p>{error}</p></main>;
   if (!snapshot) return <main className="state-page"><Github size={28} /><h1>正在载入今日趋势</h1></main>;
@@ -178,6 +182,11 @@ function App() {
       </header>
 
       <main>
+        <section className={`coverage-band ${snapshot.status === 'partial' || metadataFailures.length ? 'partial' : ''}`} aria-label="数据覆盖与核验状态">
+          <div><span className="coverage-eyebrow">来源与研究覆盖</span><strong>{snapshot.status === 'partial' || metadataFailures.length ? '本轮采集不完整，部分字段沿用旧记录' : '榜单与仓库元数据已采集'}</strong><p>快照 {formatDate(snapshot.generatedAt)}（北京时间）{staleHours(snapshot.generatedAt) > 30 ? ` · 已 ${Math.floor(staleHours(snapshot.generatedAt))} 小时未刷新` : ''}。仅覆盖 GitHub Trending 日榜，资料阅读不代表功能实测。</p></div>
+          <dl><div><dt>{snapshot.repositories.length - metadataFailures.length}/{snapshot.repositories.length}</dt><dd>本轮元数据完整</dd></div><div><dt>{snapshot.repositories.length - pendingResearch.length}/{snapshot.repositories.length}</dt><dd>已有固定版本研究</dd></div></dl>
+          {(metadataFailures.length > 0 || pendingResearch.length > 0) && <details><summary>查看待处理资料</summary>{metadataFailures.length > 0 && <p>元数据未完整返回：{metadataFailures.map(repo => repo.fullName).join('、')}。详情页保留上次核验日期。</p>}{pendingResearch.length > 0 && <p>待补研究：{pendingResearch.map(repo => repo.fullName).join('、')}。</p>}</details>}
+        </section>
         <section className="overview-band">
           <div><span className="eyebrow">TODAY'S OPEN SOURCE SIGNAL</span><h1>今天，开发者在关注什么？</h1><p>把 GitHub 热门榜从英文项目列表，整理成可快速判断价值、用途与采用风险的中文技术观察。</p></div>
           <dl>
@@ -193,7 +202,7 @@ function App() {
           <label className="select-control"><Filter size={16} /><span className="sr-only">按语言筛选</span><select value={language} onChange={(event) => setLanguage(event.target.value)}><option>全部语言</option>{languages.map((item) => <option key={item}>{item}</option>)}</select></label>
           <div className="segmented" aria-label="排序方式">
             <button type="button" className={sort === 'rank' ? 'active' : ''} aria-pressed={sort === 'rank'} onClick={() => setSort('rank')}>榜单顺序</button>
-            <button type="button" className={sort === 'stars' ? 'active' : ''} aria-pressed={sort === 'stars'} onClick={() => setSort('stars')}>今日增速</button>
+            <button type="button" className={sort === 'stars' ? 'active' : ''} aria-pressed={sort === 'stars'} onClick={() => setSort('stars')}>新增 Star</button>
           </div>
           <span className="result-count">{repositories.length} 个结果</span>
         </section>
@@ -205,7 +214,7 @@ function App() {
               {repositories.map((repo) => (
                 <button type="button" className={`repo-row ${selected?.fullName === repo.fullName ? 'selected' : ''}`} key={repo.fullName} onClick={() => setSelectedName(repo.fullName)}>
                   <span className="rank-number">{String(repo.rank).padStart(2, '0')}</span>
-                  <span className="repo-identity"><strong>{repo.chinese.title}</strong><small>{repo.fullName}</small><span>{repo.chinese.summary}</span></span>
+                  <span className="repo-identity"><strong>{repo.chinese.title}</strong><small>{repo.fullName}{repo.metadataStatus !== 'fresh' && <em className="metadata-warning">资料待复核</em>}</small><span>{repo.chinese.summary}</span></span>
                   <span className="language-cell"><i />{repo.language || '未知'}</span>
                   <span className="growth-cell"><Star size={14} />+{formatNumber(repo.starsToday)}</span>
                   <ChevronRight size={17} />

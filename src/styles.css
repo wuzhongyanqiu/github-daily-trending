@@ -163,3 +163,17 @@ footer span { display: flex; align-items: center; gap: 5px; }
 
 /* Advanced Research 看板统一规范：正文不小于 13px、辅助信息不小于 11px，统一键盘焦点样式。 */
 :where(button, a, input, select, summary, [tabindex]):focus-visible { outline: 3px solid rgba(23, 111, 96, .45); outline-offset: 2px; }
+
+.coverage-band { padding: 22px 32px; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px 30px; background: #edf4f0; border-bottom: 1px solid #cddfd5; }
+.coverage-eyebrow { display: block; margin-bottom: 6px; color: #49715e; font-size: 11px; font-weight: 750; letter-spacing: .08em; }
+.coverage-band strong { color: #264d3f; font-size: 16px; }
+.coverage-band p { margin: 7px 0 0; color: #5b6f65; font-size: 12px; line-height: 1.7; }
+.coverage-band dl { display: flex; gap: 26px; margin: 0; }
+.coverage-band dt { font-size: 24px; font-weight: 750; color: #285e49; font-variant-numeric: tabular-nums; }
+.coverage-band dd { margin: 3px 0 0; font-size: 11px; color: #5e7367; }
+.coverage-band details { grid-column: 1 / -1; font-size: 12px; }
+.coverage-band summary { cursor: pointer; color: #705b28; }
+.coverage-band.partial { background: #fff7e7; border-color: #e8d4a9; }
+.coverage-band.partial strong { color: #806027; }
+.metadata-warning { display: inline-block; margin-left: 8px; padding: 1px 5px; border-radius: 3px; color: #8a6424; background: #fff0d0; font-size: 11px; font-style: normal; }
+@media(max-width:720px) { .coverage-band { padding: 18px 16px; grid-template-columns: 1fr; gap: 14px; }.coverage-band dl { gap: 30px; }.coverage-band dt { font-size: 22px; } }

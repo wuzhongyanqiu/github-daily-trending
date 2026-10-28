@@ -37,5 +37,11 @@ export interface TrendingSnapshot {
   generatedAt: string;
   source: string;
   period: 'daily';
+  status?: 'success' | 'partial';
+  coverage?: {
+    researched: number;
+    pendingResearch: string[];
+    metadataFailures: string[];
+  };
   repositories: TrendRepository[];
 }
