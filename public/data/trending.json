@@ -1,199 +1,25 @@
 {
-  "generatedAt": "2026-10-29T00:18:58.008Z",
+  "generatedAt": "2026-10-30T00:18:45.667Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "status": "success",
   "coverage": {
-    "researched": 14,
+    "researched": 11,
     "pendingResearch": [],
     "metadataFailures": []
   },
   "repositories": [
     {
       "rank": 1,
-      "fullName": "JetBrains/thinkrail",
-      "owner": "JetBrains",
-      "name": "thinkrail",
-      "url": "https://github.com/JetBrains/thinkrail",
-      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
-      "language": "TypeScript",
-      "stars": 5019,
-      "forks": 260,
-      "starsToday": 1068,
-      "license": "Apache-2.0",
-      "topics": [
-        "agent",
-        "agent-skills",
-        "agentic-ai",
-        "agentic-workflow",
-        "ai-coding",
-        "ai-tools",
-        "pi-agent",
-        "pi-agent-extension"
-      ],
-      "homepage": "https://thinkrail.ai/",
-      "updatedAt": "2026-10-28T20:06:59Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-29T00:18:58.008Z",
-      "chinese": {
-        "title": "ThinkRail：围绕编程 Agent 的工作台",
-        "summary": "把 pi 编程 Agent、编辑器、终端、Git worktree、代码审阅和项目规格文档放在同一工作台。适合并行开发与追踪变更，但 Agent 的结果仍需人工审查和项目测试。",
-        "highlights": [
-          "每个任务可在独立 worktree 与分支中运行",
-          "SPEC.md 图谱承载可持续更新的项目知识",
-          "CLI 的 bootstrap 启动宿主服务并打开浏览器界面"
-        ],
-        "useCases": [
-          "并行处理仓库开发任务",
-          "将代码、对话与规格文档并排审阅"
-        ],
-        "audience": "经常使用编程 Agent 的开发者与团队",
-        "caution": "worktree 隔离的是 Git 工作目录，并非进程或凭据沙箱；发布、合并和 MCP 授权仍需逐项核对。本页未安装或运行 IDE。",
-        "status": "draft",
-        "commit": "d299f20d2ba014f382ddbcc9b49f2aa63fada132",
-        "researchedAt": "2026-10-26",
-        "workflow": [
-          "安装桌面版或 CLI，并连接模型提供方",
-          "打开仓库，为任务创建独立 workspace",
-          "查看 Agent 对话、文件差异和测试后选择合入"
-        ],
-        "implementation": "README 将独立 worktree、pi 会话、SPEC.md 图谱与内置编辑器列为核心组件。apps/cli/src/bootstrap.ts 解析参数后调用服务端 bootHost，按可用端口暴露 Web 界面；这段入口不负责证明编辑或合并结果正确。",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/JetBrains/thinkrail/blob/d299f20d2ba014f382ddbcc9b49f2aa63fada132/README.md"
-          },
-          {
-            "label": "固定版本 CLI 启动源码（实现依据）",
-            "url": "https://github.com/JetBrains/thinkrail/blob/d299f20d2ba014f382ddbcc9b49f2aa63fada132/apps/cli/src/bootstrap.ts"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 2,
-      "fullName": "elayadesign/ai-design-skills",
-      "owner": "elayadesign",
-      "name": "ai-design-skills",
-      "url": "https://github.com/elayadesign/ai-design-skills",
-      "description": "",
-      "language": null,
-      "stars": 11098,
-      "forks": 796,
-      "starsToday": 2139,
-      "license": "MIT",
-      "topics": [],
-      "homepage": null,
-      "updatedAt": "2026-10-27T16:02:10Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-29T00:18:58.008Z",
-      "chinese": {
-        "title": "AI Design Skills：落地页设计技能集",
-        "summary": "面向编程 Agent 的设计指令仓库，目前 README 只列出 landing-page-design，用需求澄清、页面结构、文案和视觉规则指导落地页制作。",
-        "highlights": [
-          "按单一转化目标组织受众、文案和页面结构",
-          "技能文件包含字体、间距、动效等视觉约束",
-          "可复制到不同 Agent 的项目规则位置"
-        ],
-        "useCases": [
-          "给编程 Agent 提供落地页设计约束",
-          "制作营销页面原型并检查内容完整性"
-        ],
-        "audience": "使用编程 Agent 制作营销页面的设计师和开发者",
-        "caution": "README 当前只列一个技能；指令不能保证转化效果，示例安装路径需按宿主核对，素材版权和实际页面质量仍需人工检查。本页未安装试用。",
-        "status": "draft",
-        "commit": "ded7efc9d5c02761c41a03caf3b78f9259ab8828",
-        "researchedAt": "2026-10-28",
-        "workflow": [
-          "从固定版本仓库选取 landing-page-design 并阅读技能文件",
-          "按 Agent 宿主复制到技能或规则目录",
-          "提供产品、受众与素材，检查输出页面和移动端效果"
-        ],
-        "implementation": "landing-page-design/SKILL.md 先收集转化目标、受众和证据，再规定页面段落及视觉系统；这是提示指令而非页面生成程序。",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/elayadesign/ai-design-skills/blob/ded7efc9d5c02761c41a03caf3b78f9259ab8828/README.md"
-          },
-          {
-            "label": "固定版本落地页技能",
-            "url": "https://github.com/elayadesign/ai-design-skills/blob/ded7efc9d5c02761c41a03caf3b78f9259ab8828/skills/landing-page-design/SKILL.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 3,
-      "fullName": "obra/superpowers",
-      "owner": "obra",
-      "name": "superpowers",
-      "url": "https://github.com/obra/superpowers",
-      "description": "An agentic skills framework & software development methodology that works.",
-      "language": "Shell",
-      "stars": 307431,
-      "forks": 27348,
-      "starsToday": 1095,
-      "license": "MIT",
-      "topics": [
-        "ai",
-        "brainstorming",
-        "coding",
-        "obra",
-        "sdlc",
-        "skills",
-        "subagent-driven-development",
-        "superpowers"
-      ],
-      "homepage": null,
-      "updatedAt": "2026-10-23T03:48:57Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-29T00:18:58.008Z",
-      "chinese": {
-        "title": "Superpowers：编程 Agent 技能流程",
-        "summary": "通过可组合技能与宿主安装入口，让编程 Agent 按需求讨论、设计、计划、测试和验证的阶段推进软件开发。",
-        "highlights": [
-          "为不同 Agent 宿主提供各自的安装方式",
-          "基础流程涵盖 brainstorm、计划、实施与验证",
-          "技能依赖宿主读取指令并触发，具体支持范围随宿主变化"
-        ],
-        "useCases": [
-          "为 Agent 开发任务建立一致流程",
-          "评估团队的测试与代码审查步骤"
-        ],
-        "audience": "编程 Agent 用户与研发团队",
-        "caution": "技能文本会影响 Agent 行为，安装前应审查指令与权限；项目自述的开发成效未经本页实测，流程成本也可能不适合短任务。",
-        "status": "draft",
-        "commit": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
-        "researchedAt": "2026-10-28",
-        "workflow": [
-          "按宿主安装并检查技能目录",
-          "从明确需求和设计开始，再进入任务计划与实施",
-          "核对实际测试、审查及最终产物"
-        ],
-        "implementation": "README 将基础流程列为 brainstorming、writing-plans、执行计划、测试驱动开发及完成前验证；using-superpowers 技能通过宿主读取的指令要求加载相关技能。",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/README.md"
-          },
-          {
-            "label": "固定版本技能入口",
-            "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/using-superpowers/SKILL.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 4,
       "fullName": "HKUDS/DeepTutor",
       "owner": "HKUDS",
       "name": "DeepTutor",
       "url": "https://github.com/HKUDS/DeepTutor",
       "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
       "language": "Python",
-      "stars": 47941,
-      "forks": 5948,
-      "starsToday": 2371,
+      "stars": 50014,
+      "forks": 6154,
+      "starsToday": 1930,
       "license": "Apache-2.0",
       "topics": [
         "ai-agents",
@@ -206,9 +32,9 @@
         "multi-agent-systems"
       ],
       "homepage": "http://arxiv.org/abs/2604.26962",
-      "updatedAt": "2026-10-28T18:01:08Z",
+      "updatedAt": "2026-10-29T23:51:51Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-29T00:18:58.008Z",
+      "metadataCheckedAt": "2026-10-30T00:18:45.667Z",
       "chinese": {
         "title": "DeepTutor：个性化学习工作台",
         "summary": "提供聊天、问答、测验、研究、阅读和知识库等学习能力；本地 Web 应用与 CLI 共用运行环境，可配置模型和检索提供方。",
@@ -245,121 +71,77 @@
       }
     },
     {
-      "rank": 5,
-      "fullName": "macro-inc/macro",
-      "owner": "macro-inc",
-      "name": "macro",
-      "url": "https://github.com/macro-inc/macro",
-      "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
-      "language": "Rust",
-      "stars": 5412,
-      "forks": 517,
-      "starsToday": 117,
-      "license": "AGPL-3.0",
+      "rank": 2,
+      "fullName": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "stars": 308526,
+      "forks": 27440,
+      "starsToday": 1034,
+      "license": "MIT",
       "topics": [
-        "agent",
         "ai",
-        "ai-agents",
-        "all-in-one",
-        "crm",
-        "crm-system",
-        "email",
-        "linear"
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
       ],
-      "homepage": "https://macro.com",
-      "updatedAt": "2026-10-29T00:17:28Z",
+      "homepage": null,
+      "updatedAt": "2026-10-29T23:35:34Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-29T00:18:58.008Z",
+      "metadataCheckedAt": "2026-10-30T00:18:45.667Z",
       "chinese": {
-        "title": "Macro：跨邮件、消息与任务的团队工作台",
-        "summary": "把邮件、消息、文档、任务、Agent 和 CRM 放在同一工作区，使用双向关联保存跨模块上下文。",
+        "title": "Superpowers：编程 Agent 技能流程",
+        "summary": "通过可组合技能与宿主安装入口，让编程 Agent 按需求讨论、设计、计划、测试和验证的阶段推进软件开发。",
         "highlights": [
-          "README 列出邮件、消息、文档、任务等功能模块",
-          "任务可与原始邮件或消息双向关联",
-          "提供网页注册入口和独立产品文档"
+          "为不同 Agent 宿主提供各自的安装方式",
+          "基础流程涵盖 brainstorm、计划、实施与验证",
+          "技能依赖宿主读取指令并触发，具体支持范围随宿主变化"
         ],
         "useCases": [
-          "集中处理团队沟通与任务",
-          "从客户邮件追踪后续任务和文档"
+          "为 Agent 开发任务建立一致流程",
+          "评估团队的测试与代码审查步骤"
         ],
-        "audience": "希望整合协作工具的小团队",
-        "caution": "README 为产品自述，跨模块体验、数据迁移和权限效果未独立实测；接入邮箱或客户数据前应检查服务条款、权限与数据导出能力。",
+        "audience": "编程 Agent 用户与研发团队",
+        "caution": "技能文本会影响 Agent 行为，安装前应审查指令与权限；项目自述的开发成效未经本页实测，流程成本也可能不适合短任务。",
         "status": "draft",
-        "commit": "f462bb24a89c417ba948fc078e7385b026dece40",
-        "researchedAt": "2026-10-29",
+        "commit": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+        "researchedAt": "2026-10-28",
         "workflow": [
-          "阅读 README 与对应模块文档",
-          "在测试工作区连接少量非敏感数据",
-          "建立邮件到任务的关联并检查搜索、权限和导出"
+          "按宿主安装并检查技能目录",
+          "从明确需求和设计开始，再进入任务计划与实施",
+          "核对实际测试、审查及最终产物"
         ],
-        "implementation": "README 说明各模块共享后端，文档与任务、消息与邮件等引用作为双向图关系保存；这是项目设计描述，未在本页验证实际部署。",
+        "implementation": "README 将基础流程列为 brainstorming、writing-plans、执行计划、测试驱动开发及完成前验证；using-superpowers 技能通过宿主读取的指令要求加载相关技能。",
         "sources": [
           {
             "label": "固定版本官方 README",
-            "url": "https://github.com/macro-inc/macro/blob/f462bb24a89c417ba948fc078e7385b026dece40/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 6,
-      "fullName": "Nutlope/hallmark",
-      "owner": "Nutlope",
-      "name": "hallmark",
-      "url": "https://github.com/Nutlope/hallmark",
-      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
-      "language": "CSS",
-      "stars": 40684,
-      "forks": 2111,
-      "starsToday": 2110,
-      "license": "MIT",
-      "topics": [],
-      "homepage": "https://www.usehallmark.com/",
-      "updatedAt": "2026-10-28T14:52:03Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-29T00:18:58.008Z",
-      "chinese": {
-        "title": "hallmark：AI 设计规范 Skill",
-        "summary": "面向 Claude Code、Cursor 和 Codex 的设计 Skill，用一组设计语言与约束帮助编码 Agent 产出更有辨识度的界面。它改善提示和审美方向，不能替代产品研究、可用性测试或真实内容。",
-        "highlights": [
-          "把设计原则和视觉约束装入编码 Agent",
-          "针对常见 AI 生成界面提供改进方向",
-          "适合在已有前端项目中作为设计规范参考"
-        ],
-        "useCases": [
-          "AI 辅助前端界面设计",
-          "组件和视觉风格统一"
-        ],
-        "audience": "前端开发者、设计工程师和产品原型团队",
-        "caution": "Skill 会影响生成结果但不保证事实、可访问性或响应式质量；安装前应审查其中指令和文件写入范围，本页未执行安装。",
-        "workflow": [
-          "阅读 Skill 内容并确认适用项目",
-          "在隔离分支让 Agent 生成小范围页面",
-          "用桌面、移动和可访问性检查结果迭代"
-        ],
-        "implementation": "README 将 hallmark 定位为可供 Claude Code、Cursor 和 Codex 使用的设计 Skill，并通过网站提供示例和说明；它位于提示与工作流层，不是独立渲染框架。",
-        "commit": "7ec868225c6caa040558c321ee0fefa0e73f83a8",
-        "status": "draft",
-        "researchedAt": "2026-10-25",
-        "sources": [
+            "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/README.md"
+          },
           {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/Nutlope/hallmark/blob/7ec868225c6caa040558c321ee0fefa0e73f83a8/README.md"
+            "label": "固定版本技能入口",
+            "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/using-superpowers/SKILL.md"
           }
         ]
       }
     },
     {
-      "rank": 7,
+      "rank": 3,
       "fullName": "pbakaus/impeccable",
       "owner": "pbakaus",
       "name": "impeccable",
       "url": "https://github.com/pbakaus/impeccable",
       "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
       "language": "Rust",
-      "stars": 92615,
-      "forks": 5478,
-      "starsToday": 1472,
+      "stars": 95287,
+      "forks": 5617,
+      "starsToday": 2870,
       "license": "Apache-2.0",
       "topics": [
         "agent-skills",
@@ -369,9 +151,9 @@
         "slop"
       ],
       "homepage": "https://impeccable.style",
-      "updatedAt": "2026-10-28T23:28:56Z",
+      "updatedAt": "2026-10-29T18:41:45Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-29T00:18:58.008Z",
+      "metadataCheckedAt": "2026-10-30T00:18:45.667Z",
       "chinese": {
         "title": "impeccable：面向 AI Harness 的设计语言",
         "summary": "一套让 AI 编程工具更擅长界面设计的设计语言与规则集合，目标是把布局、层级、字体、颜色和交互质量转化为 Agent 可执行的参考。适合改进原型质量，仍需人工验收成品。",
@@ -404,73 +186,134 @@
       }
     },
     {
-      "rank": 8,
-      "fullName": "makecindy/cindy",
-      "owner": "makecindy",
-      "name": "cindy",
-      "url": "https://github.com/makecindy/cindy",
-      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "rank": 4,
+      "fullName": "JetBrains/thinkrail",
+      "owner": "JetBrains",
+      "name": "thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
       "language": "TypeScript",
-      "stars": 8087,
-      "forks": 943,
-      "starsToday": 728,
+      "stars": 5991,
+      "forks": 323,
+      "starsToday": 1117,
       "license": "Apache-2.0",
       "topics": [
         "agent",
-        "ai-agent",
-        "ai-assistant",
-        "android",
-        "claude-code",
-        "codex",
-        "electron",
-        "ios"
+        "agent-skills",
+        "agentic-ai",
+        "agentic-workflow",
+        "ai-coding",
+        "ai-tools",
+        "pi-agent",
+        "pi-agent-extension"
       ],
-      "homepage": "https://cindy.app",
-      "updatedAt": "2026-10-29T00:08:38Z",
+      "homepage": "https://thinkrail.ai/",
+      "updatedAt": "2026-10-29T22:08:45Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-29T00:18:58.008Z",
+      "metadataCheckedAt": "2026-10-30T00:18:45.667Z",
       "chinese": {
-        "title": "Cindy：开箱即用的开源 AI Agent",
-        "summary": "面向桌面和移动端场景的开源 AI Agent，项目主题涵盖 Electron、Android、iOS、Claude Code 与 Codex。它试图把模型能力包装成可直接使用的助手，实际效果取决于模型、工具权限和平台集成。",
+        "title": "ThinkRail：围绕编程 Agent 的工作台",
+        "summary": "把 pi 编程 Agent、编辑器、终端、Git worktree、代码审阅和项目规格文档放在同一工作台。适合并行开发与追踪变更，但 Agent 的结果仍需人工审查和项目测试。",
         "highlights": [
-          "以开源 Agent 形式连接多种终端平台",
-          "覆盖桌面、移动端和编码工具相关入口",
-          "适合评估个人助手与开发工作流整合"
+          "每个任务可在独立 worktree 与分支中运行",
+          "SPEC.md 图谱承载可持续更新的项目知识",
+          "CLI 的 bootstrap 启动宿主服务并打开浏览器界面"
         ],
         "useCases": [
-          "个人 AI 助手原型",
-          "跨平台 Agent 交互研究"
+          "并行处理仓库开发任务",
+          "将代码、对话与规格文档并排审阅"
         ],
-        "audience": "AI 应用开发者、效率工具用户和跨平台工程师",
-        "caution": "跨平台 Agent 可能接触本地文件、账号和外部服务；安装前审查权限、依赖和数据流，许可证和模型服务条款需分别核验。",
-        "workflow": [
-          "阅读 README 确认平台和安装路径",
-          "在测试账号和非敏感目录中启动",
-          "逐项检查工具权限、网络请求和数据保存"
-        ],
-        "implementation": "README 将 Cindy 定位为开源、开箱即用的 AI Agent，并列出 Electron、Android、iOS 及编码 Agent 相关方向；具体能力由客户端、模型服务和工具适配层共同决定。",
-        "commit": "784e8c477e13ebf5cc9fb40874310e8b49366fff",
+        "audience": "经常使用编程 Agent 的开发者与团队",
+        "caution": "worktree 隔离的是 Git 工作目录，并非进程或凭据沙箱；发布、合并和 MCP 授权仍需逐项核对。本页未安装或运行 IDE。",
         "status": "draft",
-        "researchedAt": "2026-10-25",
+        "commit": "d299f20d2ba014f382ddbcc9b49f2aa63fada132",
+        "researchedAt": "2026-10-26",
+        "workflow": [
+          "安装桌面版或 CLI，并连接模型提供方",
+          "打开仓库，为任务创建独立 workspace",
+          "查看 Agent 对话、文件差异和测试后选择合入"
+        ],
+        "implementation": "README 将独立 worktree、pi 会话、SPEC.md 图谱与内置编辑器列为核心组件。apps/cli/src/bootstrap.ts 解析参数后调用服务端 bootHost，按可用端口暴露 Web 界面；这段入口不负责证明编辑或合并结果正确。",
         "sources": [
           {
             "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/makecindy/cindy/blob/784e8c477e13ebf5cc9fb40874310e8b49366fff/README.md"
+            "url": "https://github.com/JetBrains/thinkrail/blob/d299f20d2ba014f382ddbcc9b49f2aa63fada132/README.md"
+          },
+          {
+            "label": "固定版本 CLI 启动源码（实现依据）",
+            "url": "https://github.com/JetBrains/thinkrail/blob/d299f20d2ba014f382ddbcc9b49f2aa63fada132/apps/cli/src/bootstrap.ts"
           }
         ]
       }
     },
     {
-      "rank": 9,
+      "rank": 5,
+      "fullName": "milind-soni/OpenMausBot",
+      "owner": "milind-soni",
+      "name": "OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "stars": 7463,
+      "forks": 1112,
+      "starsToday": 1199,
+      "license": "Apache-2.0",
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "computer-use",
+        "docker",
+        "electron",
+        "expo",
+        "grok"
+      ],
+      "homepage": "https://www.openmausbot.com/",
+      "updatedAt": "2026-10-29T23:40:40Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-10-30T00:18:45.667Z",
+      "chinese": {
+        "title": "OpenMausBot：本机多 Agent 聊天工作台",
+        "summary": "以聊天联系人形式管理多个 Claude、Codex 等 CLI Agent，各 Bot 可配置模型、独立会话和电脑环境。",
+        "highlights": [
+          "本机 harness 在 127.0.0.1 管理 Agent 进程",
+          "聊天中显示命令、文件修改等审批卡片",
+          "可连接外部应用和独立电脑环境"
+        ],
+        "useCases": [
+          "在一个桌面界面管理多个编程 Agent",
+          "评估需要人工审批的 Agent 操作流程"
+        ],
+        "audience": "已使用 Agent CLI 的个人开发者和团队",
+        "caution": "README 的本地优先和权限边界是项目自述；连接应用与控制电脑涉及高权限，需核对具体平台支持及实际审批行为。主机控制仅在指定平台显式开启，Ubuntu Wayland 仍禁用。本页未安装实测。",
+        "status": "draft",
+        "commit": "0213b7435fc83a936f77c18475ba2a0d7b7c2de4",
+        "researchedAt": "2026-10-30",
+        "workflow": [
+          "从固定版本 README 核对平台及所需 CLI",
+          "安装桌面版本并配置 Agent 引擎",
+          "用非敏感任务检查审批、会话存储与应用权限"
+        ],
+        "implementation": "README 描述本机 harness 管理 Agent 子进程，会话和密钥位于 ~/.openmausbot；云电脑、本地 VM、主机控制是不同执行边界。",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/milind-soni/OpenMausBot/blob/0213b7435fc83a936f77c18475ba2a0d7b7c2de4/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 6,
       "fullName": "nightly-labs/openbot",
       "owner": "nightly-labs",
       "name": "openbot",
       "url": "https://github.com/nightly-labs/openbot",
       "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
       "language": "TypeScript",
-      "stars": 3236,
-      "forks": 315,
-      "starsToday": 1054,
+      "stars": 3866,
+      "forks": 361,
+      "starsToday": 709,
       "license": "NOASSERTION",
       "topics": [
         "ai-agents",
@@ -483,9 +326,9 @@
         "typescript"
       ],
       "homepage": "https://openbot.run/",
-      "updatedAt": "2026-10-29T00:15:32Z",
+      "updatedAt": "2026-10-30T00:16:41Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-29T00:18:58.008Z",
+      "metadataCheckedAt": "2026-10-30T00:18:45.667Z",
       "chinese": {
         "title": "OpenBot：本地优先的多 Agent 工作台",
         "summary": "在桌面应用中管理持久 Agent、独立工作区、任务队列、文件传递、浏览器和协作消息，连接 Codex、Claude 等模型工具。适合探索多 Agent 的持续任务组织。",
@@ -522,6 +365,171 @@
       }
     },
     {
+      "rank": 7,
+      "fullName": "elayadesign/ai-design-skills",
+      "owner": "elayadesign",
+      "name": "ai-design-skills",
+      "url": "https://github.com/elayadesign/ai-design-skills",
+      "description": "",
+      "language": null,
+      "stars": 12125,
+      "forks": 880,
+      "starsToday": 1187,
+      "license": "MIT",
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-10-27T16:02:10Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-10-30T00:18:45.667Z",
+      "chinese": {
+        "title": "AI Design Skills：落地页设计技能集",
+        "summary": "面向编程 Agent 的设计指令仓库，目前 README 只列出 landing-page-design，用需求澄清、页面结构、文案和视觉规则指导落地页制作。",
+        "highlights": [
+          "按单一转化目标组织受众、文案和页面结构",
+          "技能文件包含字体、间距、动效等视觉约束",
+          "可复制到不同 Agent 的项目规则位置"
+        ],
+        "useCases": [
+          "给编程 Agent 提供落地页设计约束",
+          "制作营销页面原型并检查内容完整性"
+        ],
+        "audience": "使用编程 Agent 制作营销页面的设计师和开发者",
+        "caution": "README 当前只列一个技能；指令不能保证转化效果，示例安装路径需按宿主核对，素材版权和实际页面质量仍需人工检查。本页未安装试用。",
+        "status": "draft",
+        "commit": "ded7efc9d5c02761c41a03caf3b78f9259ab8828",
+        "researchedAt": "2026-10-28",
+        "workflow": [
+          "从固定版本仓库选取 landing-page-design 并阅读技能文件",
+          "按 Agent 宿主复制到技能或规则目录",
+          "提供产品、受众与素材，检查输出页面和移动端效果"
+        ],
+        "implementation": "landing-page-design/SKILL.md 先收集转化目标、受众和证据，再规定页面段落及视觉系统；这是提示指令而非页面生成程序。",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/elayadesign/ai-design-skills/blob/ded7efc9d5c02761c41a03caf3b78f9259ab8828/README.md"
+          },
+          {
+            "label": "固定版本落地页技能",
+            "url": "https://github.com/elayadesign/ai-design-skills/blob/ded7efc9d5c02761c41a03caf3b78f9259ab8828/skills/landing-page-design/SKILL.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "fullName": "thedotmack/claude-mem",
+      "owner": "thedotmack",
+      "name": "claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "language": "TypeScript",
+      "stars": 104770,
+      "forks": 9240,
+      "starsToday": 336,
+      "license": "Apache-2.0",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-memory",
+        "anthropic",
+        "artificial-intelligence",
+        "chromadb",
+        "claude",
+        "claude-agent-sdk"
+      ],
+      "homepage": "https://claude-mem.ai",
+      "updatedAt": "2026-10-29T21:45:20Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-10-30T00:18:45.667Z",
+      "chinese": {
+        "title": "Claude-Mem：跨会话上下文记忆插件",
+        "summary": "通过捕获工具使用记录、压缩为观察摘要并供后续会话检索，帮助 Claude Code 等宿主延续项目上下文。",
+        "highlights": [
+          "安装器支持多个 IDE 和 Agent 宿主",
+          "观察记录可在后续会话中检索",
+          "安装流程提供托管观察器和显式选择的其他提供方"
+        ],
+        "useCases": [
+          "保留长期项目决策和修复线索",
+          "检索此前会话中的操作摘要"
+        ],
+        "audience": "需要跨会话上下文的编程 Agent 用户",
+        "caution": "默认安装流程可能引导在线登录和托管记忆试用；不希望上传记录应先核对 provider 及在线选项。摘要可能遗漏细节或包含敏感内容，不能代替原始代码和人工核验。本页未安装实测。",
+        "status": "draft",
+        "commit": "325afb60108d4ab04e24d715f244bd591ca33fbe",
+        "researchedAt": "2026-10-30",
+        "workflow": [
+          "核对宿主兼容性与 Node 要求",
+          "运行安装器时明确选择记忆提供方",
+          "用测试项目检查捕获、检索和清除数据的行为"
+        ],
+        "implementation": "README 描述工具调用观察、语义压缩和后续检索的流程；安装器按宿主注册集成，在线观察器与本地/自选 provider 的数据路径需分别核对。",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/thedotmack/claude-mem/blob/325afb60108d4ab04e24d715f244bd591ca33fbe/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "fullName": "CopilotKit/OpenBot",
+      "owner": "CopilotKit",
+      "name": "OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "language": "TypeScript",
+      "stars": 8135,
+      "forks": 1047,
+      "starsToday": 247,
+      "license": "MIT",
+      "topics": [
+        "ag-ui",
+        "agent-governance",
+        "ai-agents",
+        "browser-automation",
+        "copilotkit",
+        "generative-ui",
+        "mcp"
+      ],
+      "homepage": "https://www.copilotkit.ai/openbot",
+      "updatedAt": "2026-10-29T20:07:51Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-10-30T00:18:45.667Z",
+      "chinese": {
+        "title": "OpenBot：可自托管的 Agent 工作台模板",
+        "summary": "克隆并定制一套 Agent 工作台，以 AG-UI 接入不同框架的 Bot，并通过网关处理工具动作和审计。",
+        "highlights": [
+          "Docker Compose 启动应用、API 与 PostgreSQL",
+          "Agent 端点使用 AG-UI 协议",
+          "工具调用经过决策与审计网关"
+        ],
+        "useCases": [
+          "构建企业内部 Agent 工作台原型",
+          "评估 Agent 工具权限与审计流程"
+        ],
+        "audience": "有自托管能力的 Agent 平台团队",
+        "caution": "README 明确这是 beta 模板而非现成托管产品；示例环境的 OPENBOT_SINGLE_USER=true 允许所有请求以管理员身份进入，外部访问前必须配置登录。还需 Docker、Bun、模型密钥及 CopilotKit Intelligence 项目/许可。本页未部署实测。",
+        "status": "draft",
+        "commit": "ab9855c19848378c90a806426130d86699cc798c",
+        "researchedAt": "2026-10-30",
+        "workflow": [
+          "克隆仓库并按 README 配置环境和依赖",
+          "替换 examples 下的示例租户与 Bot",
+          "启动后检查登录、工具审批及 /admin/audit"
+        ],
+        "implementation": "README 的架构说明将 AG-UI Agent 请求送入服务端；工具动作回到网关进行策略判定、审计记录和执行，Bot 电脑使用独立容器。",
+        "sources": [
+          {
+            "label": "固定版本官方 README 与架构说明",
+            "url": "https://github.com/CopilotKit/OpenBot/blob/ab9855c19848378c90a806426130d86699cc798c/README.md"
+          }
+        ]
+      }
+    },
+    {
       "rank": 10,
       "fullName": "togg53192-cmd/jailbreaks",
       "owner": "togg53192-cmd",
@@ -529,15 +537,15 @@
       "url": "https://github.com/togg53192-cmd/jailbreaks",
       "description": "LIST OF ALL MY JAILBREAKS",
       "language": null,
-      "stars": 7082,
-      "forks": 1016,
-      "starsToday": 1477,
+      "stars": 9003,
+      "forks": 1236,
+      "starsToday": 1594,
       "license": null,
       "topics": [],
       "homepage": null,
       "updatedAt": "2026-10-28T12:31:33Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-29T00:18:58.008Z",
+      "metadataCheckedAt": "2026-10-30T00:18:45.667Z",
       "chinese": {
         "title": "Jailbreaks：模型提示词与 Agent 配置资料集",
         "summary": "整理面向不同模型和宿主的系统提示词、角色设定、AGENTS.md 及 Ollama Modelfile，供研究提示冲突和指令层级时参考。",
@@ -571,222 +579,57 @@
     },
     {
       "rank": 11,
-      "fullName": "hmjz100/LinkSwift",
-      "owner": "hmjz100",
-      "name": "LinkSwift",
-      "url": "https://github.com/hmjz100/LinkSwift",
-      "description": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
-      "language": "JavaScript",
-      "stars": 34589,
-      "forks": 2446,
-      "starsToday": 1616,
-      "license": "AGPL-3.0",
-      "topics": [
-        "123pan",
-        "aliyun-drive",
-        "aliyunpan",
-        "aria2",
-        "baidu",
-        "baidu-netdisk",
-        "baidunetdisk",
-        "baidupan"
-      ],
-      "homepage": "https://github.com/hmjz100/LinkSwift/raw/main/%EF%BC%88%E6%94%B9%EF%BC%89%E7%BD%91%E7%9B%98%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B.user.js",
-      "updatedAt": "2026-10-27T15:14:58Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-29T00:18:58.008Z",
-      "chinese": {
-        "title": "LinkSwift：网盘下载链接用户脚本",
-        "summary": "在受支持网盘网页中运行的浏览器用户脚本，调用服务商公开接口获取文件下载地址，并提供复制或交给下载器的操作。",
-        "highlights": [
-          "README 列出九类网盘适配范围",
-          "用户脚本通过页面匹配规则注入并请求网盘接口",
-          "可将获得的链接交给外部下载器"
-        ],
-        "useCases": [
-          "在合法访问的网盘页面获取下载地址",
-          "将文件下载交给已有下载工具"
-        ],
-        "audience": "使用网盘和浏览器脚本管理器的用户",
-        "caution": "项目明确不承诺破解限速；服务商接口与页面变化会使脚本失效。脚本包含跨域请求和页面访问权限，安装前应审查权限并仅从项目列出的渠道获取。本页未安装实测。",
-        "status": "draft",
-        "commit": "c62d10a3071b089c6ffef4e9fa56f05bbb03079c",
-        "researchedAt": "2026-10-29",
-        "workflow": [
-          "核对 README 的安装渠道和支持网盘",
-          "检查脚本管理器权限后安装用户脚本",
-          "在有权访问的网盘页面获取链接并验证实际下载"
-        ],
-        "implementation": "主用户脚本声明多网盘 @match、GM_xmlhttpRequest 和剪贴板等权限；页面注入与跨域请求依赖脚本管理器，下载结果受服务商接口策略约束。",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/hmjz100/LinkSwift/blob/c62d10a3071b089c6ffef4e9fa56f05bbb03079c/README.md"
-          },
-          {
-            "label": "固定版本用户脚本",
-            "url": "https://github.com/hmjz100/LinkSwift/blob/c62d10a3071b089c6ffef4e9fa56f05bbb03079c/%EF%BC%88%E6%94%B9%EF%BC%89%E7%BD%91%E7%9B%98%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B.user.js"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 12,
-      "fullName": "expo/skills",
-      "owner": "expo",
-      "name": "skills",
-      "url": "https://github.com/expo/skills",
-      "description": "A collection of AI agent skills for working with Expo projects and Expo Application Services",
+      "fullName": "Donchitos/Claude-Code-Game-Studios",
+      "owner": "Donchitos",
+      "name": "Claude-Code-Game-Studios",
+      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+      "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
       "language": "Shell",
-      "stars": 3567,
-      "forks": 227,
-      "starsToday": 90,
-      "license": "MIT",
-      "topics": [],
-      "homepage": null,
-      "updatedAt": "2026-10-28T20:08:40Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-29T00:18:58.008Z",
-      "chinese": {
-        "title": "Expo Skills：Expo 与 EAS 的 Agent 技能集",
-        "summary": "Expo 团队提供的编程 Agent 技能，按 Expo 应用开发、升级、调试及 EAS 发布任务加载对应指引。",
-        "highlights": [
-          "提供面向多个 Agent 宿主的安装路径",
-          "expo-overview 先识别任务再路由到具体技能",
-          "README 区分开源框架技能与可能涉及费用的服务技能"
-        ],
-        "useCases": [
-          "为 Expo 项目配置 Agent 开发指引",
-          "核对路由、原生界面和 EAS 工作流的实践步骤"
-        ],
-        "audience": "Expo、React Native 开发者和使用编程 Agent 的团队",
-        "caution": "技能是指令文本，Expo 文档、CLI 和 EAS CLI 仍是事实来源；版本与付费服务限制应按当前项目核对。本页未安装或执行技能。",
-        "status": "draft",
-        "commit": "05754e71d02abe0d2d7a2fb5259ccac41f5ea59c",
-        "researchedAt": "2026-10-29",
-        "workflow": [
-          "按宿主安装插件或通过 skills CLI 选择所需技能",
-          "让 Agent 先读取 expo-overview，再按任务加载具体 SKILL.md",
-          "对照项目 SDK 版本和 Expo 官方文档验证输出"
-        ],
-        "implementation": "plugins/expo/skills/expo-overview/SKILL.md 定义 Expo/EAS 识别条件、技能映射和共享配置规则；各叶子技能分别承担具体任务。",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/expo/skills/blob/05754e71d02abe0d2d7a2fb5259ccac41f5ea59c/README.md"
-          },
-          {
-            "label": "固定版本技能路由入口",
-            "url": "https://github.com/expo/skills/blob/05754e71d02abe0d2d7a2fb5259ccac41f5ea59c/plugins/expo/skills/expo-overview/SKILL.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 13,
-      "fullName": "ruvnet/RuView",
-      "owner": "ruvnet",
-      "name": "RuView",
-      "url": "https://github.com/ruvnet/RuView",
-      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
-      "language": "Rust",
-      "stars": 101033,
-      "forks": 13160,
-      "starsToday": 557,
+      "stars": 29161,
+      "forks": 4047,
+      "starsToday": 353,
       "license": "MIT",
       "topics": [
-        "awesome",
+        "ai-agents",
+        "ai-assisted-development",
+        "anthropic",
         "claude",
-        "densepose",
-        "esp32",
-        "firmware",
-        "home-assistant",
-        "home-automation",
-        "iot"
+        "claude-code",
+        "game-design",
+        "game-development",
+        "gamedev"
       ],
-      "homepage": "https://Cognitum.One/RuView",
-      "updatedAt": "2026-10-28T23:09:57Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-29T00:18:58.008Z",
-      "chinese": {
-        "title": "RuView：基于 WiFi 信号的空间感知平台",
-        "summary": "采集 WiFi CSI 等无线信号并用于存在、活动和体征推断；提供模拟数据、硬件接入、模型与可视化流程。",
-        "highlights": [
-          "可用 Docker 或源码启动模拟模式",
-          "ESP32-S3 等设备可采集实际 CSI",
-          "用户指南明确区分模拟展示与硬件实测能力"
-        ],
-        "useCases": [
-          "研究无线信号感知管线",
-          "在受控环境评估存在与活动检测"
-        ],
-        "audience": "无线感知研究者和边缘设备开发者",
-        "caution": "项目用户指南明确实时 17 关键点姿态能力尚未达到目标且未经验证；无硬件演示使用合成 CSI。体征、跌倒等涉及安全的宣称须用真实设备和独立数据验证，并注意隐私。本页未运行系统。",
-        "status": "draft",
-        "commit": "3686bc770f77eb6161d5379861dcd09d7d9a1e4b",
-        "researchedAt": "2026-10-29",
-        "workflow": [
-          "先按用户指南启动模拟模式确认接口与界面",
-          "准备兼容 CSI 设备并按硬件说明采集数据",
-          "用独立标注数据核对具体检测指标与误报"
-        ],
-        "implementation": "用户指南将 Docker、Rust 源码和 Python 旧版路径分开，并列出模拟、RSSI 与 ESP32-S3 CSI 数据源；这些路径的能力不可混同。",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/ruvnet/RuView/blob/3686bc770f77eb6161d5379861dcd09d7d9a1e4b/README.md"
-          },
-          {
-            "label": "固定版本用户指南与能力边界",
-            "url": "https://github.com/ruvnet/RuView/blob/3686bc770f77eb6161d5379861dcd09d7d9a1e4b/docs/user-guide.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 14,
-      "fullName": "xiaolai/the-craft-of-selfteaching",
-      "owner": "xiaolai",
-      "name": "the-craft-of-selfteaching",
-      "url": "https://github.com/xiaolai/the-craft-of-selfteaching",
-      "description": "One has no future if one couldn't teach themself.",
-      "language": "Jupyter Notebook",
-      "stars": 18488,
-      "forks": 17886,
-      "starsToday": 148,
-      "license": null,
-      "topics": [],
       "homepage": null,
-      "updatedAt": "2026-05-20T23:38:19Z",
+      "updatedAt": "2026-10-19T02:43:42Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-10-29T00:18:58.008Z",
+      "metadataCheckedAt": "2026-10-30T00:18:45.667Z",
       "chinese": {
-        "title": "自学是门手艺：以编程练习组织的开放读物",
-        "summary": "李笑来的自学与 Python 入门读物，以 Jupyter Notebook 章节组织阅读、练习和思考，也提供 Markdown 版本。",
+        "title": "Claude Code Game Studios：游戏开发流程模板",
+        "summary": "提供角色化 Agent、技能、Hooks、规则和文档模板，在 Claude Code 项目中组织设计、开发、QA 与发布流程。",
         "highlights": [
-          "README 列出从自学方法到 Python 基础的章节",
-          "Notebook 形式便于边读边练",
-          "附录提供 JupyterLab 安装与准备说明"
+          "README 列出 49 个 Agent 和 74 个技能",
+          "按 Godot、Unity、Unreal 配置引擎角色",
+          "可按 rigor 模式调整文档和流程强度"
         ],
         "useCases": [
-          "按章节学习 Python 基础",
-          "研究自学与刻意练习的方法"
+          "为游戏项目建立 Agent 分工与质量门禁",
+          "参考游戏设计和 QA 文档模板"
         ],
-        "audience": "编程初学者和自学者",
-        "caution": "这是读物而非维护中的软件课程；README 标注 CC-BY-NC-ND，转载和改编前应核对许可。工具安装步骤可能过时，本页未逐章核验或运行练习。",
+        "audience": "使用 Claude Code 的游戏开发者",
+        "caution": "仓库交付的是可克隆模板，不包含成品游戏；README 自述的游戏对比与质量效果未独立复核。完整流程可能产生较多文档和模型费用，需按项目规模调整。本页未运行游戏。",
         "status": "draft",
-        "commit": "987a8e8a9ce205b63886510e145437d14d8a13a4",
-        "researchedAt": "2026-10-29",
+        "commit": "05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418",
+        "researchedAt": "2026-10-30",
         "workflow": [
-          "先阅读 JupyterLab 安装附录并准备本地环境",
-          "依 README 目录阅读 Notebook 并运行练习",
-          "遇到旧版工具步骤时对照当前官方文档"
+          "按 README 核对 Claude Code、Python 与 Shell 前置条件",
+          "克隆模板并选择引擎及 rigor 配置",
+          "从小型原型检查 Hook、测试和实际画面验收"
         ],
-        "implementation": "仓库主要以 .ipynb 文件组织章节，README 提供阅读顺序、Markdown 入口和版权信息；不包含自动教学服务。",
+        "implementation": "README 将指令分布于 .claude/agents、skills、hooks 和 rules；角色前言指定模型，Hook 负责提交、资产和设计文档等校验。",
         "sources": [
           {
             "label": "固定版本官方 README",
-            "url": "https://github.com/xiaolai/the-craft-of-selfteaching/blob/987a8e8a9ce205b63886510e145437d14d8a13a4/README.md"
+            "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418/README.md"
           }
         ]
       }
