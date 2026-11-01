@@ -44,6 +44,7 @@ main { width: min(1580px, 100%); margin: 0 auto; background: white; }
 .search-control input { min-width: 0; flex: 1; border: 0; outline: 0; color: #1c2825; }
 .search-control button { width: 28px; height: 28px; padding: 0; display: grid; place-items: center; color: #687672; background: transparent; border: 0; }
 .select-control { height: 40px; padding-left: 10px; display: flex; align-items: center; gap: 5px; color: #66736f; background: white; border: 1px solid #c4cecb; border-radius: 5px; }
+.select-control:focus-within { border-color: #28735f; box-shadow: 0 0 0 3px rgba(40, 115, 95, .12); }
 .select-control select { height: 100%; padding: 0 28px 0 3px; color: #33403d; background: transparent; border: 0; outline: 0; }
 .segmented { height: 40px; padding: 3px; display: flex; background: #dde4e1; border-radius: 5px; }
 .segmented button { padding: 0 12px; color: #5b6864; background: transparent; border: 0; border-radius: 3px; font-size: 14px; }

@@ -1288,5 +1288,145 @@
         "url": "https://github.com/makecindy/cindy/blob/784e8c477e13ebf5cc9fb40874310e8b49366fff/README.md"
       }
     ]
+  },
+  "Orkas-AI/Orkas": {
+    "title": "Orkas：本地优先的多 Agent 桌面团队",
+    "summary": "通过 Commander 把目标拆成待办，并调度内置专家、Claude Code、Codex 等本机 Agent 持续完成项目；项目会保存规则、记忆和文件，也支持定时自动化。",
+    "highlights": [
+      "Commander 可规划任务并在具名专家与匿名 worker 间分派",
+      "项目、待办、自动推进和定时任务用于延续跨天工作",
+      "可使用自带模型密钥或本地 OpenAI 兼容端点"
+    ],
+    "useCases": [
+      "在桌面端协调研究、内容和编码 Agent",
+      "把重复的项目任务配置为定时自动化"
+    ],
+    "audience": "需要统一管理多个本机 Agent 的个人和小团队",
+    "caution": "源码版与打包版能力不同，共享项目、云同步和网页发布只在打包版提供；内置 Orkas 模型会经过托管服务，连接器和外部 CLI 也各有权限边界。首次运行会安装较多依赖，本页未安装实测。",
+    "workflow": [
+      "按固定版本 README 核对平台、模型和源码版能力边界",
+      "运行启动脚本并在设置中配置自有模型或本地端点",
+      "从非敏感小项目检查分派、待办推进和最终交付物"
+    ],
+    "implementation": "群聊消息总线按会话维护队列和执行状态，由调度器实施同一角色串行、会话 Agent 上限及具名任务门禁；Commander 再通过 dispatch、handoff 与隔离 worker 执行分派。",
+    "commit": "53894cf1b849e39dcdd975c7ef82ee341d7e0ad2",
+    "status": "draft",
+    "researchedAt": "2026-11-01",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/Orkas-AI/Orkas/blob/53894cf1b849e39dcdd975c7ef82ee341d7e0ad2/README.md"
+      },
+      {
+        "label": "固定版本消息总线实现",
+        "url": "https://github.com/Orkas-AI/Orkas/blob/53894cf1b849e39dcdd975c7ef82ee341d7e0ad2/src/main/features/group_chat/bus.ts"
+      }
+    ]
+  },
+  "THU-MAIC/OpenMAIC": {
+    "title": "OpenMAIC：多智能体互动课堂生成平台",
+    "summary": "把主题或资料生成包含幻灯片、讲解、测验和互动组件的课堂；当前版本由常驻服务端执行生成任务，并把课程、会话和媒体持久化。",
+    "highlights": [
+      "模型按对话、大纲、内容、语音和检索等槽位配置",
+      "生成任务分步保存，离开浏览器后仍可继续运行",
+      "支持资料库、互动课堂以及 PPTX 和离线 HTML 导出"
+    ],
+    "useCases": [
+      "把课程资料整理为可交互教学内容",
+      "研究多 Agent 课程生成与课堂编辑流程"
+    ],
+    "audience": "教师、课程设计者、学习工具开发者和自托管团队",
+    "caution": "1.2.0 起需要 PostgreSQL 和常驻 Node 服务，不再支持新版部署到 Vercel；共享部署若无访问码会暴露整个课程库。模型、检索和媒体生成会产生费用，生成内容仍需教师核验，本页未部署实测。",
+    "workflow": [
+      "安装依赖并从示例创建环境与 openmaic.yml 配置",
+      "启动 PostgreSQL 和常驻服务，设置至少一个模型槽位",
+      "从主题或资料生成课堂，复核大纲、场景、来源和导出结果"
+    ],
+    "implementation": "服务端生成引擎按检索、大纲确认、Agent 配置、逐场景内容与动作、讲解和媒体步骤执行；每步带重试、截止时间与事务检查点，失败会暂停在对应步骤而不是伪装完成。",
+    "commit": "fe2cf7dade345f4eaaf9afb1771e6734e17edaab",
+    "status": "draft",
+    "researchedAt": "2026-11-01",
+    "sources": [
+      {
+        "label": "固定版本中文 README",
+        "url": "https://github.com/THU-MAIC/OpenMAIC/blob/fe2cf7dade345f4eaaf9afb1771e6734e17edaab/README-zh.md"
+      },
+      {
+        "label": "固定版本服务端生成引擎",
+        "url": "https://github.com/THU-MAIC/OpenMAIC/blob/fe2cf7dade345f4eaaf9afb1771e6734e17edaab/lib/server/generation/run/engine.ts"
+      }
+    ]
+  },
+  "bregman-arie/devops-exercises": {
+    "title": "DevOps Exercises：运维与 SRE 练习题库",
+    "summary": "汇集 Linux、网络、云平台、容器、Kubernetes、CI/CD、可观测性等主题的问答和实操练习，可用于知识复盘和面试准备。",
+    "highlights": [
+      "README 标注收录 2,624 道问题与练习",
+      "按技术主题组织问答、练习和部分参考解答",
+      "包含随机抽题、题数统计和内容校验脚本"
+    ],
+    "useCases": [
+      "按主题复习 DevOps 与 SRE 基础",
+      "为学习小组或面试准备抽取练习"
+    ],
+    "audience": "DevOps、SRE、云平台学习者和面试准备者",
+    "caution": "仓库明确说明多数条目并不代表真实面试，也不应把掌握全部主题当作职业要求；部分答案、外链和工具版本可能过时。仓库元数据未给出明确许可证，复用内容前需核对授权。",
+    "workflow": [
+      "从 README 主题索引选择当前需要补强的领域",
+      "先独立回答问题或完成实操，再查看参考解答",
+      "对照当前官方文档核验易变的云服务与工具细节"
+    ],
+    "implementation": "仓库主要由 Markdown 题库、按主题拆分的练习与解答组成，scripts 目录提供题目统计、随机抽取和 CI 辅助；它不是自动评分或认证平台。",
+    "commit": "9e49ef97f16377d901db01f3562187394828ca6a",
+    "status": "draft",
+    "researchedAt": "2026-11-01",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/bregman-arie/devops-exercises/blob/9e49ef97f16377d901db01f3562187394828ca6a/README.md"
+      },
+      {
+        "label": "固定版本练习目录",
+        "url": "https://github.com/bregman-arie/devops-exercises/tree/9e49ef97f16377d901db01f3562187394828ca6a/topics"
+      }
+    ]
+  },
+  "vorssaint/vorssaint-utils": {
+    "title": "Vorssaint：模块化 macOS 菜单栏工具箱",
+    "summary": "把音量、系统监控、窗口管理、剪贴板、录屏、应用管理和显示控制等工具集中到一个菜单栏应用，并允许只安装需要的功能。",
+    "highlights": [
+      "功能中心可单独安装或卸载模块并保留设置",
+      "权限按功能请求，拒绝后其余工具仍可使用",
+      "无账号与遥测，README 列出的网络功能均需明确触发或启用"
+    ],
+    "useCases": [
+      "集中替代多款 macOS 菜单栏小工具",
+      "按需启用窗口、音频、监控和文件效率功能"
+    ],
+    "audience": "使用 Apple Silicon 与 macOS 14 以上系统的效率工具用户",
+    "caution": "部分能力需要辅助功能、屏幕录制、系统音频或应用管理等高权限；麦克风静音不是隐私锁，风扇控制仍标为 beta。官方构建只由维护者发布，GPL 源码不包含名称、图标和外观商标授权，本页未安装实测。",
+    "workflow": [
+      "通过 Homebrew 或签名安装包安装并核对系统要求",
+      "只选择所需模块，逐项理解并授予必要权限",
+      "先验证关键工具和数据流，再导出设置到其他 Mac"
+    ],
+    "implementation": "FeatureRuntime 用统一可用性门禁延迟加载模块；卸载会立即停用对应服务，重启后才释放已实例化单例。权限文档逐项说明降级行为，功能未安装时其服务不会在启动阶段运行。",
+    "commit": "a5da7633e09d0ebbf5b5607c0434ded28a239469",
+    "status": "draft",
+    "researchedAt": "2026-11-01",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/vorssaint/vorssaint-utils/blob/a5da7633e09d0ebbf5b5607c0434ded28a239469/README.md"
+      },
+      {
+        "label": "固定版本功能运行时实现",
+        "url": "https://github.com/vorssaint/vorssaint-utils/blob/a5da7633e09d0ebbf5b5607c0434ded28a239469/Sources/Vorssaint/App/FeatureRuntime.swift"
+      },
+      {
+        "label": "固定版本权限说明",
+        "url": "https://github.com/vorssaint/vorssaint-utils/blob/a5da7633e09d0ebbf5b5607c0434ded28a239469/docs/PERMISSIONS.md"
+      }
+    ]
   }
 }
