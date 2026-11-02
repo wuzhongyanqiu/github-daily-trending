@@ -1428,5 +1428,293 @@
         "url": "https://github.com/vorssaint/vorssaint-utils/blob/a5da7633e09d0ebbf5b5607c0434ded28a239469/docs/PERMISSIONS.md"
       }
     ]
+  },
+  "public-apis/public-apis": {
+    "title": "Public APIs：社区维护的公开 API 与 MCP 目录",
+    "summary": "以 README 表格汇集不同领域的公开 API，并单列可供 Agent 使用的 MCP 服务；每条记录标注认证、HTTPS、CORS 或传输方式，适合作为发现入口而不是统一调用网关。",
+    "highlights": [
+      "覆盖数十个主题的 API 链接、认证方式、HTTPS 和 CORS 信息",
+      "MCP 目录另列传输方式与可安装宿主",
+      "贡献规则要求公开文档、稳定性和明确描述"
+    ],
+    "useCases": [
+      "为原型寻找公开数据或第三方服务",
+      "比较 Agent 可调用的 MCP 服务入口"
+    ],
+    "audience": "应用开发者、数据工程师、教学者和 Agent 工具研究者",
+    "caution": "仓库是社区目录，不托管也不统一担保所列服务；免费额度、认证、CORS、可用性、隐私和许可会变化，采用前必须打开服务官方文档并自行测试。README 含 APILayer 推广内容和项目方网站的状态声明，本页未独立复核。",
+    "workflow": [
+      "按主题或 MCP 表筛选候选服务",
+      "打开服务官方文档核对认证、额度、许可和数据政策",
+      "用非敏感测试请求验证响应、错误处理和稳定性后再集成"
+    ],
+    "implementation": "固定版本 README 本身是主要数据载体：传统 API 使用 API、Description、Auth、HTTPS、CORS 列，MCP 服务使用 Auth、Transport、Install 列；CONTRIBUTING.md 规定新增与修改条目的审核格式。仓库不是通用 API SDK 或代理服务。",
+    "commit": "2676ca49d557ef14a0f478311506dae947639028",
+    "status": "draft",
+    "researchedAt": "2026-11-02",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/public-apis/public-apis/blob/2676ca49d557ef14a0f478311506dae947639028/README.md"
+      },
+      {
+        "label": "固定版本贡献规则",
+        "url": "https://github.com/public-apis/public-apis/blob/2676ca49d557ef14a0f478311506dae947639028/CONTRIBUTING.md"
+      }
+    ]
+  },
+  "cjpais/Handy": {
+    "title": "Handy：离线语音转文字与跨应用粘贴工具",
+    "summary": "通过全局快捷键录音，在本机用 Whisper 或 Parakeet 模型转写，再把文本送入当前应用；提供桌面界面、远程控制参数和无界面 WAV 转写入口。",
+    "highlights": [
+      "语音活动检测、转写和文本插入链路均可在本机运行",
+      "支持 Windows、macOS 与 Linux，并可选择多种 Whisper 或 Parakeet 模型",
+      "CLI 可控制运行实例，也可对已安装模型执行无界面文件转写"
+    ],
+    "useCases": [
+      "在任意文本框中离线语音输入",
+      "对隐私敏感的本地录音做批量转写"
+    ],
+    "audience": "需要跨应用语音输入的个人用户、无障碍用户和本地 AI 工具开发者",
+    "caution": "首次使用仍需下载模型并授予麦克风、辅助功能等系统权限。Linux 的全局快捷键和文本插入依赖显示服务器及 wtype、xdotool 或 dotool，录制浮层还可能抢焦点；剪贴板恢复时序、蓝牙麦克风和 GPU 兼容性需按目标设备测试。本页未安装实测。",
+    "workflow": [
+      "从签名发布包或系统包管理器安装并授予必要权限",
+      "下载并选择合适模型，设置录音快捷键和文本插入方式",
+      "在目标应用与显示服务器上核对转写、粘贴和剪贴板恢复结果"
+    ],
+    "implementation": "README 描述按快捷键录音、Silero VAD、Whisper/Parakeet 本地转写和跨应用粘贴的链路；Rust CLI 暴露运行实例控制、模型/设备枚举与 16 kHz 单声道 WAV 转写，main 先应用平台图形兼容设置，再启动隔离转写 worker 或 Tauri 应用。",
+    "commit": "7bfb2e2c934b798bcf6e3627653aed2439996f89",
+    "status": "draft",
+    "researchedAt": "2026-11-02",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/cjpais/Handy/blob/7bfb2e2c934b798bcf6e3627653aed2439996f89/README.md"
+      },
+      {
+        "label": "固定版本 CLI 参数实现",
+        "url": "https://github.com/cjpais/Handy/blob/7bfb2e2c934b798bcf6e3627653aed2439996f89/src-tauri/src/cli.rs"
+      },
+      {
+        "label": "固定版本应用入口",
+        "url": "https://github.com/cjpais/Handy/blob/7bfb2e2c934b798bcf6e3627653aed2439996f89/src-tauri/src/main.rs"
+      }
+    ]
+  },
+  "kornia/kornia": {
+    "title": "Kornia：基于 PyTorch 的可微计算机视觉库",
+    "summary": "把图像处理、几何视觉、数据增强、特征匹配和部分视觉模型实现为 PyTorch 张量算子，便于在批处理、自动微分和 GPU 工作流中组合使用。",
+    "highlights": [
+      "几何、增强、滤波和特征算子直接处理 PyTorch 张量",
+      "增强流水线可同步变换图像、掩码、框和关键点",
+      "项目公开记录编译、ONNX 导出、性能和半精度支持边界"
+    ],
+    "useCases": [
+      "训练流水线中的可微图像处理和数据增强",
+      "批量几何视觉、特征匹配与模型导出实验"
+    ],
+    "audience": "使用 PyTorch 的计算机视觉研究者、机器学习工程师和机器人开发者",
+    "caution": "Kornia 的主要优势是批量张量与 GPU/自动微分；单张 uint8 CPU 任务可能更适合 OpenCV。固定版本要求 Python 3.11+、PyTorch 2.5.1+，部分 ONNX 和模型能力需额外依赖；README 明确记录大量 CPU 半精度已知失败，且没有阻塞式 CUDA/MPS 半精度 CI，本页未运行算子或基准。",
+    "workflow": [
+      "按目标环境安装 PyTorch 与 kornia，并确认可选依赖",
+      "用小批量张量验证形状、设备、梯度和几何约定",
+      "在目标硬件与精度下运行数值对照、导出和性能测试"
+    ],
+    "implementation": "固定版本以 PyTorch 为核心依赖，并引入 kornia_rs；算子保持输入设备、批量维度和多数梯度路径，AugmentationSequential 负责对多种标注共享采样变换。README 同时区分不可微的鲁棒估计/特征提取路径和半精度、后端支持限制。",
+    "commit": "ff6774d332d98a7ba78a09d058bb40998d9774d4",
+    "status": "draft",
+    "researchedAt": "2026-11-02",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/kornia/kornia/blob/ff6774d332d98a7ba78a09d058bb40998d9774d4/README.md"
+      },
+      {
+        "label": "固定版本依赖与打包配置",
+        "url": "https://github.com/kornia/kornia/blob/ff6774d332d98a7ba78a09d058bb40998d9774d4/pyproject.toml"
+      }
+    ]
+  },
+  "beenuar/AiSOC": {
+    "title": "AiSOC：可自托管的 AI 安全运营中心",
+    "summary": "接入安全遥测后完成规范化、检测、关联、Agent 辅助调查和受控响应；提示、工具调用、引用、结论与成本写入调查账本，响应默认预演并由有权限的人批准。",
+    "highlights": [
+      "核心链路覆盖遥测接入、规则检测、事件关联、告警和本地模型分诊",
+      "Agent 只调用类型化工具，证据引用与执行权限有独立检查",
+      "提供 Docker 核心/完整部署、CLI、MCP 和离线沙箱入口"
+    ],
+    "useCases": [
+      "在自托管环境评估安全告警聚合与调查流程",
+      "研究可审计 Agent、检测规则迁移和人工批准响应"
+    ],
+    "audience": "安全运营团队、检测工程师、事件响应人员和安全平台开发者",
+    "caution": "项目明确不是 SIEM 的日志留存与合规搜索替代品，也不会发现未接入的数据。核心部署需 Docker Compose、约 8 GB 内存和 20 GB 磁盘，并首次下载约 2 GB 模型；样例与基准不等同真实事件准确率。响应自治需逐租户明确授权，生产接入前仍要独立做权限、隔离、规则和模型验收。本页未部署实测。",
+    "workflow": [
+      "在隔离主机运行 make doctor，核对资源、端口和生成凭据",
+      "启动 core 并用 make smoke 跟踪一条事件的完整链路",
+      "接入单一测试数据源，核对规范化、告警、调查账本和审批策略后再扩展"
+    ],
+    "implementation": "架构文档把事件依次送入 ingest、Kafka、fusion 检测与租户调优、事件关联、Postgres/实时界面和 agents；Agent 输入在调用模型前检查原始日志与密钥形态，结论引用再与证据核对。CLI 的 serve 委托 Docker Compose，submit 调用接入 API，replay 用历史人工结论评估同一分诊链路。",
+    "commit": "acb398be4c9e95aa034987a2e1c5f44f02ff3741",
+    "status": "draft",
+    "researchedAt": "2026-11-02",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/beenuar/AiSOC/blob/acb398be4c9e95aa034987a2e1c5f44f02ff3741/README.md"
+      },
+      {
+        "label": "固定版本架构说明",
+        "url": "https://github.com/beenuar/AiSOC/blob/acb398be4c9e95aa034987a2e1c5f44f02ff3741/docs/architecture/README.md"
+      },
+      {
+        "label": "固定版本 CLI 实现",
+        "url": "https://github.com/beenuar/AiSOC/blob/acb398be4c9e95aa034987a2e1c5f44f02ff3741/packages/aisoc-cli/src/aisoc_cli/main.py"
+      }
+    ]
+  },
+  "anomalyco/hex": {
+    "title": "Hex：本地优先的跨平台语音听写工具",
+    "summary": "按住快捷键录音，在本机模型中流式或离线转写，松开后把结果粘贴到当前应用；同时提供会议录制、模型控制和本地服务等扩展入口。",
+    "highlights": [
+      "稳定版覆盖 Apple Silicon macOS、Windows x64/ARM64 与 Linux x64/ARM64",
+      "模型首次下载后，README 声明日常转写不离开本机",
+      "转写引擎把模型、流式音频、降级重转写和空闲卸载串行管理"
+    ],
+    "useCases": [
+      "在桌面应用中进行本地语音输入",
+      "评估流式听写与本地会议转写工作流"
+    ],
+    "audience": "重视本地处理的语音输入用户、会议记录用户和桌面工具开发者",
+    "caution": "首次运行需要联网下载语音模型，并需要麦克风、全局快捷键和文本粘贴相关权限。项目 README 很简短，具体模型、资源占用、语言质量和平台兼容性需在目标设备核验；开发分支持续更新且项目不接受外部 PR。本页未安装或录音实测。",
+    "workflow": [
+      "从对应平台稳定版安装并核对发布来源",
+      "下载模型、设置快捷键并在非敏感文本中试录",
+      "检查转写延迟、语言质量、粘贴目标和本地数据保存后再日常使用"
+    ],
+    "implementation": "固定版本引擎由单独线程拥有 GGUF 或系统转写模型，按顺序处理流式音频、模型切换和离线回退；流式完成只解码末尾缓冲，异常时可用完整音频重转写，空闲策略可释放模型内存。CLI 还暴露持续听写、会议录制和模型路径等入口。",
+    "commit": "a47ba5632ae7bd305a6358eaf0ab117ec7142e4a",
+    "status": "draft",
+    "researchedAt": "2026-11-02",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/anomalyco/hex/blob/a47ba5632ae7bd305a6358eaf0ab117ec7142e4a/README.md"
+      },
+      {
+        "label": "固定版本转写引擎",
+        "url": "https://github.com/anomalyco/hex/blob/a47ba5632ae7bd305a6358eaf0ab117ec7142e4a/src/transcription/engine.rs"
+      },
+      {
+        "label": "固定版本命令行入口",
+        "url": "https://github.com/anomalyco/hex/blob/a47ba5632ae7bd305a6358eaf0ab117ec7142e4a/src/main.rs"
+      }
+    ]
+  },
+  "patchy631/ai-engineering-hub": {
+    "title": "AI Engineering Hub：按难度组织的 AI 项目教程集合",
+    "summary": "汇总 OCR、RAG、Agent、MCP、微调和多模态等主题的独立示例项目，并按入门、中级和高级分组，适合作为选题与动手练习索引。",
+    "highlights": [
+      "固定版本 README 索引 93 个以上独立项目",
+      "项目覆盖本地模型、托管 API、RAG、Agent 和微调等不同技术栈",
+      "学习路径从路线图和单组件示例逐步进入复杂系统"
+    ],
+    "useCases": [
+      "按主题选择 AI 工程练习或原型参考",
+      "比较同一能力在不同模型与框架中的实现方式"
+    ],
+    "audience": "AI 工程初学者、应用开发者和需要快速验证方案的团队",
+    "caution": "这是许多独立示例的集合，不是统一框架或经过一致生产验收的产品；README 的“production-ready”属于项目方表述。每个目录的依赖、密钥、模型许可、成本和安全边界不同，运行前需逐项阅读子项目说明并审查代码。本页未运行任何示例。",
+    "workflow": [
+      "按当前基础和目标从 README 选择一个项目目录",
+      "阅读该目录说明，核对模型、依赖、凭据和数据来源",
+      "在隔离环境完成最小示例，并用自己的数据与评价标准复核"
+    ],
+    "implementation": "仓库以目录承载互相独立的 Notebook、Python 应用和服务示例，顶层 README 负责难度分组和导航；实际运行入口、模型提供方和配置均由各子项目决定，因此不存在统一安装或统一质量门禁。",
+    "commit": "042aeb5067384981eeba6a07fa882f436bb1660d",
+    "status": "draft",
+    "researchedAt": "2026-11-02",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/patchy631/ai-engineering-hub/blob/042aeb5067384981eeba6a07fa882f436bb1660d/README.md"
+      }
+    ]
+  },
+  "FlashML-org/FreeToken": {
+    "title": "FreeToken：面向消费级硬件的 MoE 模型服务引擎",
+    "summary": "把 GPU、CPU、主存和互连组合成可调的推理资源池，通过专家缓存、CPU/GPU 协同、权重格式与 KV 缓存管理，在本机提供 OpenAI/Anthropic 兼容的 MoE 模型服务。",
+    "highlights": [
+      "针对 MoE 专家权重提供卸载、混合计算和 GPU 槽位缓存",
+      "运行时可在专家缓存与 KV 缓存之间重分配显存",
+      "CLI 覆盖服务、交互、控制、守护进程、模型转换和带宽基准"
+    ],
+    "useCases": [
+      "在 NVIDIA 消费级 GPU 工作站评估大规模开源 MoE 模型",
+      "为本机 Agent 提供兼容 OpenAI 或 Anthropic 协议的模型端点"
+    ],
+    "audience": "本地模型工程师、推理系统研究者和具备 NVIDIA GPU 的高级用户",
+    "caution": "项目自述的 290B+ 与交互速度不能脱离具体模型、量化、内存、PCIe 带宽和 GPU 复用。固定版本面向 NVIDIA RTX 30/40/50 系列，安装 accel 依赖和权重转换会占用大量磁盘、内存与时间；守护进程默认仅绑定回环地址，若对外开放必须配置令牌和模型 API key。本页未下载模型或运行基准。",
+    "workflow": [
+      "核对支持模型、GPU 架构、驱动、显存、主存和磁盘预算",
+      "安装加速依赖并用 ft bench bw 记录本机 CPU 与 PCIe 带宽",
+      "转换或下载兼容权重，以小上下文启动服务并验证健康、输出和资源占用"
+    ],
+    "implementation": "Engine 在加载权重后根据剩余显存规划 MoE 专家槽位、KV 页和状态池；offload/hybrid 路径把专家银行绑定到按格式拆分的缓存，并可依据带宽基准在 PCIe 拉取与 CPU 计算间分配。torch-free daemon 单独监管 ft serve，使 CUDA 或本地扩展崩溃不带走控制面，并记录而非默认无限重启。",
+    "commit": "ee43b2a11345d056ba349d22ee073c6828b1364b",
+    "status": "draft",
+    "researchedAt": "2026-11-02",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/FlashML-org/FreeToken/blob/ee43b2a11345d056ba349d22ee073c6828b1364b/README.md"
+      },
+      {
+        "label": "固定版本推理引擎",
+        "url": "https://github.com/FlashML-org/FreeToken/blob/ee43b2a11345d056ba349d22ee073c6828b1364b/python/freetoken/engine/engine.py"
+      },
+      {
+        "label": "固定版本守护进程设计",
+        "url": "https://github.com/FlashML-org/FreeToken/blob/ee43b2a11345d056ba349d22ee073c6828b1364b/python/freetoken/daemon/README.md"
+      }
+    ]
+  },
+  "hyprwm/Hyprland": {
+    "title": "Hyprland：高度可定制的动态平铺 Wayland 合成器",
+    "summary": "独立实现 Wayland 合成器，提供动态平铺、浮动与全屏窗口、动画、规则、工作区、插件、IPC 和 XWayland 兼容层，面向希望深度定制 Linux 桌面的用户。",
+    "highlights": [
+      "不依赖 wlroots、libweston、KWin 或 Mutter 的独立合成器实现",
+      "支持多种布局、窗口/显示器规则、动态配置和 socket IPC",
+      "入口可校验配置、安全模式启动并选择 DRM、Wayland 或 headless 后端"
+    ],
+    "useCases": [
+      "搭建键盘驱动且高度可定制的 Wayland 桌面",
+      "研究 Wayland 合成器、布局、插件和 IPC 实现"
+    ],
+    "audience": "熟悉 Linux、Wayland 和配置文件的桌面用户与图形系统开发者",
+    "caution": "项目主动采用快速迭代和前沿特性，升级、插件与显卡驱动组合可能带来兼容性变化；它是 Wayland 合成器，不是完整桌面环境。安装前应按发行版官方指引核对软件包与依赖，第三方插件需单独审计，本页未启动图形会话实测。",
+    "workflow": [
+      "按发行版与官方安装文档准备 Wayland 会话和必要组件",
+      "先用最小配置或 --verify-config 检查语法，再从安全模式启动",
+      "逐步增加布局、规则、IPC 与插件，并保留可回退配置"
+    ],
+    "implementation": "main.cpp 处理配置路径、Wayland socket、安全模式和配置校验等启动参数；CCompositor 创建 wl_display 与事件循环，通过 Aquamarine 选择 DRM、Wayland 或 headless 后端，再初始化监视器、窗口、XWayland、IPC 和插件等管理器。停止时终止 Wayland 循环并按依赖顺序清理资源。",
+    "commit": "d55a55d72a2ecfbb31b875b0b45c27559ce86691",
+    "status": "draft",
+    "researchedAt": "2026-11-02",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/hyprwm/Hyprland/blob/d55a55d72a2ecfbb31b875b0b45c27559ce86691/README.md"
+      },
+      {
+        "label": "固定版本合成器实现",
+        "url": "https://github.com/hyprwm/Hyprland/blob/d55a55d72a2ecfbb31b875b0b45c27559ce86691/src/Compositor.cpp"
+      },
+      {
+        "label": "固定版本启动入口",
+        "url": "https://github.com/hyprwm/Hyprland/blob/d55a55d72a2ecfbb31b875b0b45c27559ce86691/src/main.cpp"
+      }
+    ]
   }
 }

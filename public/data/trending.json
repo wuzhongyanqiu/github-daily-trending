@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-01T00:24:33.871Z",
+  "generatedAt": "2026-11-02T00:31:08.821Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "status": "success",
   "coverage": {
-    "researched": 14,
+    "researched": 17,
     "pendingResearch": [],
     "metadataFailures": []
   },
@@ -17,9 +17,9 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "language": "TypeScript",
-      "stars": 107851,
-      "forks": 9465,
-      "starsToday": 1723,
+      "stars": 109250,
+      "forks": 9565,
+      "starsToday": 1526,
       "license": "Apache-2.0",
       "topics": [
         "ai",
@@ -32,9 +32,9 @@
         "claude-agent-sdk"
       ],
       "homepage": "https://claude-mem.ai",
-      "updatedAt": "2026-10-31T08:56:15Z",
+      "updatedAt": "2026-11-01T21:01:59Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-01T00:24:33.871Z",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
       "chinese": {
         "title": "Claude-Mem：跨会话上下文记忆插件",
         "summary": "通过捕获工具使用记录、压缩为观察摘要并供后续会话检索，帮助 Claude Code 等宿主延续项目上下文。",
@@ -68,109 +68,105 @@
     },
     {
       "rank": 2,
-      "fullName": "mattpocock/skills",
-      "owner": "mattpocock",
-      "name": "skills",
-      "url": "https://github.com/mattpocock/skills",
-      "description": "Skills for Real Engineers. Straight from my .agents directory.",
-      "language": "Shell",
-      "stars": 308370,
-      "forks": 25945,
-      "starsToday": 883,
-      "license": "MIT",
-      "topics": [],
-      "homepage": "https://aihero.dev/skills",
-      "updatedAt": "2026-10-31T14:23:44Z",
+      "fullName": "lightpanda-io/browser",
+      "owner": "lightpanda-io",
+      "name": "browser",
+      "url": "https://github.com/lightpanda-io/browser",
+      "description": "Lightpanda: the headless browser designed for AI and automation",
+      "language": "Zig",
+      "stars": 40109,
+      "forks": 1961,
+      "starsToday": 825,
+      "license": "AGPL-3.0",
+      "topics": [
+        "browser",
+        "browser-automation",
+        "cdp",
+        "headless",
+        "lightpanda",
+        "playwright",
+        "puppeteer",
+        "zig"
+      ],
+      "homepage": "https://lightpanda.io",
+      "updatedAt": "2026-11-02T00:28:38Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-01T00:24:33.871Z",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
       "chinese": {
-        "title": "Skills for Real Engineers：可组合的工程 Agent 技能",
-        "summary": "Matt Pocock 分享的工程与效率技能集合，以独立 SKILL.md 指导需求澄清、规格实现和验证等任务，供多个编程 Agent 宿主选用。",
+        "title": "Lightpanda：面向自动化的 Zig 无头浏览器",
+        "summary": "从头开发的无头浏览器，提供网页抓取、CDP 服务和内置 Agent 操作入口，可接入 Puppeteer 等自动化客户端。",
         "highlights": [
-          "按宿主选择插件或可编辑文件安装",
-          "首次运行 setup 技能配置 issue 跟踪和文档位置",
-          "工程技能和效率技能可按任务单独加载"
+          "可下载 nightly、使用 Docker 或从源码构建",
+          "fetch 命令可输出 HTML、Markdown 和结构化数据",
+          "serve 暴露 CDP 或 WebDriver BiDi 接口"
         ],
         "useCases": [
-          "给编程 Agent 配置可审查的工作流程",
-          "参考需求澄清和规格实施指令"
+          "自动化抓取和结构化提取",
+          "评估非 Chromium 浏览器的 Agent 工作流"
         ],
-        "audience": "使用编程 Agent 的软件工程师",
-        "caution": "技能是操作指令，不保证代码质量；插件自动更新与 skills.sh 复制文件的更新方式不同，重复安装会出现双份技能。实施规格技能会要求创建分支和子 Agent，运行前应审查指令与权限。本页未安装实测。",
+        "audience": "浏览器自动化与数据采集开发者",
+        "caution": "README 的内存和速度数字来自项目自己的基准，未在本页同条件复现。nightly 与新浏览器兼容性需按目标站点测试；Linux 二进制需 glibc，Windows 通过 WSL 使用，服务端口应限制访问。本页未运行浏览器。",
         "status": "draft",
-        "commit": "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa",
+        "commit": "56980afdec3ad177072e7a180cb05da838bc1744",
         "researchedAt": "2026-10-31",
         "workflow": [
-          "按宿主选择一种安装方式并审查技能文件",
-          "运行 setup 技能配置项目约定",
-          "在小任务中检查触发、变更和测试结果"
+          "按平台选择 nightly 或容器并验证版本",
+          "先用 fetch 测试目标网页输出",
+          "在本机地址启动 serve，连接自动化客户端并核对页面兼容性"
         ],
-        "implementation": "README 把技能组织为小型可组合指令；implement-spec 技能读取规格和工单图，要求独立实现分支与审查，实际执行仍取决于宿主 Agent。",
+        "implementation": "README 展示 Zig 浏览器的 fetch、serve 和 agent 三种入口；serve 提供 CDP/BiDi，Agent 会把交互输出为可重放的 PandaScript。源码构建依赖 Zig、V8、libcurl 与 html5ever。",
         "sources": [
           {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/mattpocock/skills/blob/a496f5513d4a4cf889bc48e189e579f4b0bdf6aa/README.md"
-          },
-          {
-            "label": "固定版本 implement-spec 技能",
-            "url": "https://github.com/mattpocock/skills/blob/a496f5513d4a4cf889bc48e189e579f4b0bdf6aa/skills/engineering/implement-spec/SKILL.md"
+            "label": "固定版本官方 README 与使用说明",
+            "url": "https://github.com/lightpanda-io/browser/blob/56980afdec3ad177072e7a180cb05da838bc1744/README.md"
           }
         ]
       }
     },
     {
       "rank": 3,
-      "fullName": "Donchitos/Claude-Code-Game-Studios",
-      "owner": "Donchitos",
-      "name": "Claude-Code-Game-Studios",
-      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
-      "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
-      "language": "Shell",
-      "stars": 31160,
-      "forks": 4268,
-      "starsToday": 742,
+      "fullName": "shiyu-coder/Kronos",
+      "owner": "shiyu-coder",
+      "name": "Kronos",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "language": "Python",
+      "stars": 45372,
+      "forks": 7499,
+      "starsToday": 630,
       "license": "MIT",
-      "topics": [
-        "ai-agents",
-        "ai-assisted-development",
-        "anthropic",
-        "claude",
-        "claude-code",
-        "game-design",
-        "game-development",
-        "gamedev"
-      ],
+      "topics": [],
       "homepage": null,
-      "updatedAt": "2026-10-19T02:43:42Z",
+      "updatedAt": "2026-04-13T12:38:49Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-01T00:24:33.871Z",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
       "chinese": {
-        "title": "Claude Code Game Studios：游戏开发流程模板",
-        "summary": "提供角色化 Agent、技能、Hooks、规则和文档模板，在 Claude Code 项目中组织设计、开发、QA 与发布流程。",
+        "title": "Kronos：金融时序模型研究",
+        "summary": "围绕 K 线序列设计的 decoder-only 模型家族，将多维 OHLCV 数据量化成离散 token 后进行自回归建模。适合研究时序表示与预测实验，输出不是交易指令。",
         "highlights": [
-          "README 列出 49 个 Agent 和 74 个技能",
-          "按 Godot、Unity、Unreal 配置引擎角色",
-          "可按 rigor 模式调整文档和流程强度"
+          "核对时间戳、交易日和数据字段",
+          "固定训练/验证时间边界，运行离线预测",
+          "README 给出两阶段设计：专用 tokenizer 处理连续多维 K 线，再由自回归 Transformer 建模。"
         ],
         "useCases": [
-          "为游戏项目建立 Agent 分工与质量门禁",
-          "参考游戏设计和 QA 文档模板"
+          "时序模型研究",
+          "金融数据表征实验"
         ],
-        "audience": "使用 Claude Code 的游戏开发者",
-        "caution": "仓库交付的是可克隆模板，不包含成品游戏；README 自述的游戏对比与质量效果未独立复核。完整流程可能产生较多文档和模型费用，需按项目规模调整。本页未运行游戏。",
+        "audience": "量化研究与时序建模人员",
+        "caution": "预测误差、回测表现与真实盈利不是同一个指标；本页未运行模型、回测或提供投资建议。",
         "status": "draft",
-        "commit": "05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418",
-        "researchedAt": "2026-10-30",
+        "commit": "67b630e67f6a18c9e9be918d9b4337c960db1e9a",
+        "researchedAt": "2026-10-22",
         "workflow": [
-          "按 README 核对 Claude Code、Python 与 Shell 前置条件",
-          "克隆模板并选择引擎及 rigor 配置",
-          "从小型原型检查 Hook、测试和实际画面验收"
+          "核对时间戳、交易日和数据字段",
+          "固定训练/验证时间边界，运行离线预测",
+          "对照简单基线并检查数据泄漏和成本假设"
         ],
-        "implementation": "README 将指令分布于 .claude/agents、skills、hooks 和 rules；角色前言指定模型，Hook 负责提交、资产和设计文档等校验。",
+        "implementation": "README 给出两阶段设计：专用 tokenizer 处理连续多维 K 线，再由自回归 Transformer 建模。应独立核对数据切分和公开权重适用范围，不能凭演示曲线判断可交易性。",
         "sources": [
           {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418/README.md"
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/shiyu-coder/Kronos/blob/67b630e67f6a18c9e9be918d9b4337c960db1e9a/README.md"
           }
         ]
       }
@@ -183,15 +179,15 @@
       "url": "https://github.com/pingdotgg/t3code",
       "description": "",
       "language": "TypeScript",
-      "stars": 35547,
-      "forks": 8780,
-      "starsToday": 1148,
+      "stars": 37971,
+      "forks": 8915,
+      "starsToday": 3094,
       "license": "MIT",
       "topics": [],
       "homepage": "https://t3.codes",
-      "updatedAt": "2026-11-01T00:07:21Z",
+      "updatedAt": "2026-11-02T00:30:08Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-01T00:24:33.871Z",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
       "chinese": {
         "title": "T3 Code：本机编程 Agent 的跨设备控制台",
         "summary": "通过命令行服务、网页、桌面和手机应用连接本机已安装的编程 Agent，让用户从不同设备查看和控制会话。",
@@ -233,72 +229,15 @@
     },
     {
       "rank": 5,
-      "fullName": "Renhuai123/ziwei-doushu",
-      "owner": "Renhuai123",
-      "name": "ziwei-doushu",
-      "url": "https://github.com/Renhuai123/ziwei-doushu",
-      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
-      "language": "TypeScript",
-      "stars": 12259,
-      "forks": 2410,
-      "starsToday": 1092,
-      "license": "MIT",
-      "topics": [
-        "bazi",
-        "chinese-astrology",
-        "divination",
-        "fortune-telling",
-        "nextjs",
-        "open-source",
-        "purple-star-astrology",
-        "typescript"
-      ],
-      "homepage": "https://ouranic.cn/?from=gh-about",
-      "updatedAt": "2026-10-31T00:10:01Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-01T00:24:33.871Z",
-      "chinese": {
-        "title": "紫微斗数：开源排盘引擎与解读数据",
-        "summary": "基于倪海厦《天纪》体系的中文排盘项目，包含排盘算法、四化、格局知识库、古籍数据和大规模解读数据集。它是传统术数软件与资料库，不是经过科学验证的预测工具。",
-        "highlights": [
-          "按出生日期、时辰和性别生成命盘",
-          "处理真太阳时、中国夏令时和农历边界",
-          "从固定版本数据集读取多维解读内容"
-        ],
-        "useCases": [
-          "研究排盘算法和历法边界",
-          "搭建传统术数学习或展示界面"
-        ],
-        "audience": "中文应用开发者、资料研究者与术数学习者",
-        "caution": "README 明确六亲等部分存在局限，数据与古籍引文有不同授权；解读仅供参考，不能代替医疗、法律或财务判断。大数据集体积很大，本页未下载或运行。",
-        "status": "draft",
-        "commit": "e478393ad6c865ad6270e978a3164d2f2cb5315b",
-        "researchedAt": "2026-10-24",
-        "workflow": [
-          "按项目文档准备公历日期、时辰和性别",
-          "调用排盘引擎生成星曜与宫位",
-          "按数据集许可读取解读并展示出处"
-        ],
-        "implementation": "README 列出 algorithm、真太阳时、农历转换、夏令时和流派配置等模块，并说明 v4.0 数据集按年份提供 JSON Lines；资料阅读未安装或验证排盘结果。",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/Renhuai123/ziwei-doushu/blob/e478393ad6c865ad6270e978a3164d2f2cb5315b/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 6,
       "fullName": "milind-soni/OpenMausBot",
       "owner": "milind-soni",
       "name": "OpenMausBot",
       "url": "https://github.com/milind-soni/OpenMausBot",
       "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
       "language": "TypeScript",
-      "stars": 9605,
-      "forks": 1329,
-      "starsToday": 1303,
+      "stars": 10510,
+      "forks": 1457,
+      "starsToday": 922,
       "license": "Apache-2.0",
       "topics": [
         "ai-agents",
@@ -311,9 +250,9 @@
         "grok"
       ],
       "homepage": "https://www.openmausbot.com/",
-      "updatedAt": "2026-10-31T23:27:11Z",
+      "updatedAt": "2026-11-01T19:48:30Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-01T00:24:33.871Z",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
       "chinese": {
         "title": "OpenMausBot：本机多 Agent 聊天工作台",
         "summary": "以聊天联系人形式管理多个 Claude、Codex 等 CLI Agent，各 Bot 可配置模型、独立会话和电脑环境。",
@@ -346,473 +285,713 @@
       }
     },
     {
-      "rank": 7,
-      "fullName": "pbakaus/impeccable",
-      "owner": "pbakaus",
-      "name": "impeccable",
-      "url": "https://github.com/pbakaus/impeccable",
-      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
-      "language": "Rust",
-      "stars": 98267,
-      "forks": 5793,
-      "starsToday": 1338,
-      "license": "Apache-2.0",
+      "rank": 6,
+      "fullName": "public-apis/public-apis",
+      "owner": "public-apis",
+      "name": "public-apis",
+      "url": "https://github.com/public-apis/public-apis",
+      "description": "A collective list of free APIs",
+      "language": "Python",
+      "stars": 494591,
+      "forks": 55205,
+      "starsToday": 324,
+      "license": "MIT",
       "topics": [
-        "agent-skills",
-        "ai",
-        "anti-slop",
-        "design",
-        "slop"
+        "api",
+        "apis",
+        "dataset",
+        "development",
+        "free",
+        "list",
+        "lists",
+        "open-source"
       ],
-      "homepage": "https://impeccable.style",
-      "updatedAt": "2026-10-31T18:59:12Z",
+      "homepage": "https://APILayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo",
+      "updatedAt": "2026-11-01T18:22:08Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-01T00:24:33.871Z",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
       "chinese": {
-        "title": "impeccable：面向 AI Harness 的设计语言",
-        "summary": "一套让 AI 编程工具更擅长界面设计的设计语言与规则集合，目标是把布局、层级、字体、颜色和交互质量转化为 Agent 可执行的参考。适合改进原型质量，仍需人工验收成品。",
+        "title": "Public APIs：社区维护的公开 API 与 MCP 目录",
+        "summary": "以 README 表格汇集不同领域的公开 API，并单列可供 Agent 使用的 MCP 服务；每条记录标注认证、HTTPS、CORS 或传输方式，适合作为发现入口而不是统一调用网关。",
         "highlights": [
-          "提供可复用的界面设计原则和术语",
-          "用于指导 AI Agent 生成或重构前端界面",
-          "可结合实际页面截图和组件库持续校验"
+          "覆盖数十个主题的 API 链接、认证方式、HTTPS 和 CORS 信息",
+          "MCP 目录另列传输方式与可安装宿主",
+          "贡献规则要求公开文档、稳定性和明确描述"
         ],
         "useCases": [
-          "AI 生成网页的视觉改进",
-          "设计系统和提示规范整理"
+          "为原型寻找公开数据或第三方服务",
+          "比较 Agent 可调用的 MCP 服务入口"
         ],
-        "audience": "产品设计工程师、前端开发者和 AI 工具用户",
-        "caution": "设计语言不能证明交互可用或满足品牌、无障碍要求；需要结合真实设备和用户任务复核，本页未运行其工具链。",
+        "audience": "应用开发者、数据工程师、教学者和 Agent 工具研究者",
+        "caution": "仓库是社区目录，不托管也不统一担保所列服务；免费额度、认证、CORS、可用性、隐私和许可会变化，采用前必须打开服务官方文档并自行测试。README 含 APILayer 推广内容和项目方网站的状态声明，本页未独立复核。",
         "workflow": [
-          "选定页面和目标用户任务",
-          "把设计规则用于一轮生成或重构",
-          "检查信息层级、交互、移动端和无障碍"
+          "按主题或 MCP 表筛选候选服务",
+          "打开服务官方文档核对认证、额度、许可和数据政策",
+          "用非敏感测试请求验证响应、错误处理和稳定性后再集成"
         ],
-        "implementation": "README 将项目描述为供 AI harness 使用的 design language，核心产物是可供 Agent 读取的设计规则和示例，而非必须安装的运行时服务。",
-        "commit": "936867543ac2576920d663cc9803597f6044f3ac",
+        "implementation": "固定版本 README 本身是主要数据载体：传统 API 使用 API、Description、Auth、HTTPS、CORS 列，MCP 服务使用 Auth、Transport、Install 列；CONTRIBUTING.md 规定新增与修改条目的审核格式。仓库不是通用 API SDK 或代理服务。",
+        "commit": "2676ca49d557ef14a0f478311506dae947639028",
         "status": "draft",
-        "researchedAt": "2026-10-25",
+        "researchedAt": "2026-11-02",
         "sources": [
           {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/pbakaus/impeccable/blob/936867543ac2576920d663cc9803597f6044f3ac/README.md"
+            "label": "固定版本官方 README",
+            "url": "https://github.com/public-apis/public-apis/blob/2676ca49d557ef14a0f478311506dae947639028/README.md"
+          },
+          {
+            "label": "固定版本贡献规则",
+            "url": "https://github.com/public-apis/public-apis/blob/2676ca49d557ef14a0f478311506dae947639028/CONTRIBUTING.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "fullName": "cjpais/Handy",
+      "owner": "cjpais",
+      "name": "Handy",
+      "url": "https://github.com/cjpais/Handy",
+      "description": "A free, open source, and extensible speech-to-text application that works completely offline.",
+      "language": "Rust",
+      "stars": 36537,
+      "forks": 3451,
+      "starsToday": 339,
+      "license": "MIT",
+      "topics": [
+        "accessibility",
+        "cross-platform",
+        "speech-to-text",
+        "tauri-v2"
+      ],
+      "homepage": "https://handy.computer",
+      "updatedAt": "2026-10-27T09:23:19Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
+      "chinese": {
+        "title": "Handy：离线语音转文字与跨应用粘贴工具",
+        "summary": "通过全局快捷键录音，在本机用 Whisper 或 Parakeet 模型转写，再把文本送入当前应用；提供桌面界面、远程控制参数和无界面 WAV 转写入口。",
+        "highlights": [
+          "语音活动检测、转写和文本插入链路均可在本机运行",
+          "支持 Windows、macOS 与 Linux，并可选择多种 Whisper 或 Parakeet 模型",
+          "CLI 可控制运行实例，也可对已安装模型执行无界面文件转写"
+        ],
+        "useCases": [
+          "在任意文本框中离线语音输入",
+          "对隐私敏感的本地录音做批量转写"
+        ],
+        "audience": "需要跨应用语音输入的个人用户、无障碍用户和本地 AI 工具开发者",
+        "caution": "首次使用仍需下载模型并授予麦克风、辅助功能等系统权限。Linux 的全局快捷键和文本插入依赖显示服务器及 wtype、xdotool 或 dotool，录制浮层还可能抢焦点；剪贴板恢复时序、蓝牙麦克风和 GPU 兼容性需按目标设备测试。本页未安装实测。",
+        "workflow": [
+          "从签名发布包或系统包管理器安装并授予必要权限",
+          "下载并选择合适模型，设置录音快捷键和文本插入方式",
+          "在目标应用与显示服务器上核对转写、粘贴和剪贴板恢复结果"
+        ],
+        "implementation": "README 描述按快捷键录音、Silero VAD、Whisper/Parakeet 本地转写和跨应用粘贴的链路；Rust CLI 暴露运行实例控制、模型/设备枚举与 16 kHz 单声道 WAV 转写，main 先应用平台图形兼容设置，再启动隔离转写 worker 或 Tauri 应用。",
+        "commit": "7bfb2e2c934b798bcf6e3627653aed2439996f89",
+        "status": "draft",
+        "researchedAt": "2026-11-02",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/cjpais/Handy/blob/7bfb2e2c934b798bcf6e3627653aed2439996f89/README.md"
+          },
+          {
+            "label": "固定版本 CLI 参数实现",
+            "url": "https://github.com/cjpais/Handy/blob/7bfb2e2c934b798bcf6e3627653aed2439996f89/src-tauri/src/cli.rs"
+          },
+          {
+            "label": "固定版本应用入口",
+            "url": "https://github.com/cjpais/Handy/blob/7bfb2e2c934b798bcf6e3627653aed2439996f89/src-tauri/src/main.rs"
           }
         ]
       }
     },
     {
       "rank": 8,
-      "fullName": "obra/superpowers",
-      "owner": "obra",
-      "name": "superpowers",
-      "url": "https://github.com/obra/superpowers",
-      "description": "An agentic skills framework & software development methodology that works.",
+      "fullName": "Donchitos/Claude-Code-Game-Studios",
+      "owner": "Donchitos",
+      "name": "Claude-Code-Game-Studios",
+      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+      "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
       "language": "Shell",
-      "stars": 310058,
-      "forks": 27583,
-      "starsToday": 665,
+      "stars": 32260,
+      "forks": 4398,
+      "starsToday": 967,
       "license": "MIT",
       "topics": [
-        "ai",
-        "brainstorming",
-        "coding",
-        "obra",
-        "sdlc",
-        "skills",
-        "subagent-driven-development",
-        "superpowers"
+        "ai-agents",
+        "ai-assisted-development",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "game-design",
+        "game-development",
+        "gamedev"
       ],
       "homepage": null,
-      "updatedAt": "2026-10-29T23:35:34Z",
+      "updatedAt": "2026-10-19T02:43:42Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-01T00:24:33.871Z",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
       "chinese": {
-        "title": "Superpowers：编程 Agent 技能流程",
-        "summary": "通过可组合技能与宿主安装入口，让编程 Agent 按需求讨论、设计、计划、测试和验证的阶段推进软件开发。",
+        "title": "Claude Code Game Studios：游戏开发流程模板",
+        "summary": "提供角色化 Agent、技能、Hooks、规则和文档模板，在 Claude Code 项目中组织设计、开发、QA 与发布流程。",
         "highlights": [
-          "为不同 Agent 宿主提供各自的安装方式",
-          "基础流程涵盖 brainstorm、计划、实施与验证",
-          "技能依赖宿主读取指令并触发，具体支持范围随宿主变化"
+          "README 列出 49 个 Agent 和 74 个技能",
+          "按 Godot、Unity、Unreal 配置引擎角色",
+          "可按 rigor 模式调整文档和流程强度"
         ],
         "useCases": [
-          "为 Agent 开发任务建立一致流程",
-          "评估团队的测试与代码审查步骤"
+          "为游戏项目建立 Agent 分工与质量门禁",
+          "参考游戏设计和 QA 文档模板"
         ],
-        "audience": "编程 Agent 用户与研发团队",
-        "caution": "技能文本会影响 Agent 行为，安装前应审查指令与权限；项目自述的开发成效未经本页实测，流程成本也可能不适合短任务。",
+        "audience": "使用 Claude Code 的游戏开发者",
+        "caution": "仓库交付的是可克隆模板，不包含成品游戏；README 自述的游戏对比与质量效果未独立复核。完整流程可能产生较多文档和模型费用，需按项目规模调整。本页未运行游戏。",
         "status": "draft",
-        "commit": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
-        "researchedAt": "2026-10-28",
+        "commit": "05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418",
+        "researchedAt": "2026-10-30",
         "workflow": [
-          "按宿主安装并检查技能目录",
-          "从明确需求和设计开始，再进入任务计划与实施",
-          "核对实际测试、审查及最终产物"
+          "按 README 核对 Claude Code、Python 与 Shell 前置条件",
+          "克隆模板并选择引擎及 rigor 配置",
+          "从小型原型检查 Hook、测试和实际画面验收"
         ],
-        "implementation": "README 将基础流程列为 brainstorming、writing-plans、执行计划、测试驱动开发及完成前验证；using-superpowers 技能通过宿主读取的指令要求加载相关技能。",
+        "implementation": "README 将指令分布于 .claude/agents、skills、hooks 和 rules；角色前言指定模型，Hook 负责提交、资产和设计文档等校验。",
         "sources": [
           {
             "label": "固定版本官方 README",
-            "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/README.md"
-          },
-          {
-            "label": "固定版本技能入口",
-            "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/using-superpowers/SKILL.md"
+            "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418/README.md"
           }
         ]
       }
     },
     {
       "rank": 9,
-      "fullName": "lightpanda-io/browser",
-      "owner": "lightpanda-io",
-      "name": "browser",
-      "url": "https://github.com/lightpanda-io/browser",
-      "description": "Lightpanda: the headless browser designed for AI and automation",
-      "language": "Zig",
-      "stars": 39239,
-      "forks": 1907,
-      "starsToday": 929,
-      "license": "AGPL-3.0",
+      "fullName": "kornia/kornia",
+      "owner": "kornia",
+      "name": "kornia",
+      "url": "https://github.com/kornia/kornia",
+      "description": "🐍 Geometric Computer Vision Library for Spatial AI",
+      "language": "Python",
+      "stars": 11782,
+      "forks": 1466,
+      "starsToday": 101,
+      "license": "Apache-2.0",
       "topics": [
-        "browser",
-        "browser-automation",
-        "cdp",
-        "headless",
-        "lightpanda",
-        "playwright",
-        "puppeteer",
-        "zig"
+        "artificial-intelligence",
+        "computer-vision",
+        "deep-learning",
+        "hacktoberfest",
+        "image-processing",
+        "machine-learning",
+        "neural-network",
+        "python"
       ],
-      "homepage": "https://lightpanda.io",
-      "updatedAt": "2026-10-31T23:42:27Z",
+      "homepage": "https://kornia.readthedocs.io",
+      "updatedAt": "2026-11-01T18:28:07Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-01T00:24:33.871Z",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
       "chinese": {
-        "title": "Lightpanda：面向自动化的 Zig 无头浏览器",
-        "summary": "从头开发的无头浏览器，提供网页抓取、CDP 服务和内置 Agent 操作入口，可接入 Puppeteer 等自动化客户端。",
+        "title": "Kornia：基于 PyTorch 的可微计算机视觉库",
+        "summary": "把图像处理、几何视觉、数据增强、特征匹配和部分视觉模型实现为 PyTorch 张量算子，便于在批处理、自动微分和 GPU 工作流中组合使用。",
         "highlights": [
-          "可下载 nightly、使用 Docker 或从源码构建",
-          "fetch 命令可输出 HTML、Markdown 和结构化数据",
-          "serve 暴露 CDP 或 WebDriver BiDi 接口"
+          "几何、增强、滤波和特征算子直接处理 PyTorch 张量",
+          "增强流水线可同步变换图像、掩码、框和关键点",
+          "项目公开记录编译、ONNX 导出、性能和半精度支持边界"
         ],
         "useCases": [
-          "自动化抓取和结构化提取",
-          "评估非 Chromium 浏览器的 Agent 工作流"
+          "训练流水线中的可微图像处理和数据增强",
+          "批量几何视觉、特征匹配与模型导出实验"
         ],
-        "audience": "浏览器自动化与数据采集开发者",
-        "caution": "README 的内存和速度数字来自项目自己的基准，未在本页同条件复现。nightly 与新浏览器兼容性需按目标站点测试；Linux 二进制需 glibc，Windows 通过 WSL 使用，服务端口应限制访问。本页未运行浏览器。",
-        "status": "draft",
-        "commit": "56980afdec3ad177072e7a180cb05da838bc1744",
-        "researchedAt": "2026-10-31",
+        "audience": "使用 PyTorch 的计算机视觉研究者、机器学习工程师和机器人开发者",
+        "caution": "Kornia 的主要优势是批量张量与 GPU/自动微分；单张 uint8 CPU 任务可能更适合 OpenCV。固定版本要求 Python 3.11+、PyTorch 2.5.1+，部分 ONNX 和模型能力需额外依赖；README 明确记录大量 CPU 半精度已知失败，且没有阻塞式 CUDA/MPS 半精度 CI，本页未运行算子或基准。",
         "workflow": [
-          "按平台选择 nightly 或容器并验证版本",
-          "先用 fetch 测试目标网页输出",
-          "在本机地址启动 serve，连接自动化客户端并核对页面兼容性"
+          "按目标环境安装 PyTorch 与 kornia，并确认可选依赖",
+          "用小批量张量验证形状、设备、梯度和几何约定",
+          "在目标硬件与精度下运行数值对照、导出和性能测试"
         ],
-        "implementation": "README 展示 Zig 浏览器的 fetch、serve 和 agent 三种入口；serve 提供 CDP/BiDi，Agent 会把交互输出为可重放的 PandaScript。源码构建依赖 Zig、V8、libcurl 与 html5ever。",
+        "implementation": "固定版本以 PyTorch 为核心依赖，并引入 kornia_rs；算子保持输入设备、批量维度和多数梯度路径，AugmentationSequential 负责对多种标注共享采样变换。README 同时区分不可微的鲁棒估计/特征提取路径和半精度、后端支持限制。",
+        "commit": "ff6774d332d98a7ba78a09d058bb40998d9774d4",
+        "status": "draft",
+        "researchedAt": "2026-11-02",
         "sources": [
           {
-            "label": "固定版本官方 README 与使用说明",
-            "url": "https://github.com/lightpanda-io/browser/blob/56980afdec3ad177072e7a180cb05da838bc1744/README.md"
+            "label": "固定版本官方 README",
+            "url": "https://github.com/kornia/kornia/blob/ff6774d332d98a7ba78a09d058bb40998d9774d4/README.md"
+          },
+          {
+            "label": "固定版本依赖与打包配置",
+            "url": "https://github.com/kornia/kornia/blob/ff6774d332d98a7ba78a09d058bb40998d9774d4/pyproject.toml"
           }
         ]
       }
     },
     {
       "rank": 10,
-      "fullName": "HKUDS/DeepTutor",
-      "owner": "HKUDS",
-      "name": "DeepTutor",
-      "url": "https://github.com/HKUDS/DeepTutor",
-      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "fullName": "beenuar/AiSOC",
+      "owner": "beenuar",
+      "name": "AiSOC",
+      "url": "https://github.com/beenuar/AiSOC",
+      "description": "Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with no API keys, MIT licensed. Ships an MCP server for Claude, Cursor and Continue.",
       "language": "Python",
-      "stars": 52797,
-      "forks": 6461,
-      "starsToday": 1034,
-      "license": "Apache-2.0",
+      "stars": 6213,
+      "forks": 643,
+      "starsToday": 446,
+      "license": "MIT",
       "topics": [
-        "ai-agents",
-        "ai-tutor",
-        "clawbot",
-        "cli-tool",
-        "deepresearch",
-        "interactive-learning",
-        "learning",
-        "multi-agent-systems"
+        "agentic-ai",
+        "ai-security",
+        "alert-triage",
+        "blue-team",
+        "cybersecurity",
+        "detection-engineering",
+        "incident-response",
+        "langgraph"
       ],
-      "homepage": "http://arxiv.org/abs/2604.26962",
-      "updatedAt": "2026-10-31T16:51:35Z",
+      "homepage": "https://beenuar.github.io/AiSOC/",
+      "updatedAt": "2026-11-02T00:29:55Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-01T00:24:33.871Z",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
       "chinese": {
-        "title": "DeepTutor：个性化学习工作台",
-        "summary": "提供聊天、问答、测验、研究、阅读和知识库等学习能力；本地 Web 应用与 CLI 共用运行环境，可配置模型和检索提供方。",
+        "title": "AiSOC：可自托管的 AI 安全运营中心",
+        "summary": "接入安全遥测后完成规范化、检测、关联、Agent 辅助调查和受控响应；提示、工具调用、引用、结论与成本写入调查账本，响应默认预演并由有权限的人批准。",
         "highlights": [
-          "多种学习模式共用能力运行时与会话上下文",
-          "支持本地安装、初始化模型配置后启动前后端",
-          "知识库检索和部分功能依赖另配模型或服务"
+          "核心链路覆盖遥测接入、规则检测、事件关联、告警和本地模型分诊",
+          "Agent 只调用类型化工具，证据引用与执行权限有独立检查",
+          "提供 Docker 核心/完整部署、CLI、MCP 和离线沙箱入口"
         ],
         "useCases": [
-          "围绕资料建立个人学习空间",
-          "用问答和测验辅助学习复盘"
+          "在自托管环境评估安全告警聚合与调查流程",
+          "研究可审计 Agent、检测规则迁移和人工批准响应"
         ],
-        "audience": "自主学习者、教育工具开发者与自托管用户",
-        "caution": "需要配置模型凭据与运行环境，回答和测验质量取决于模型与资料；学习结果不能替代教师或权威教材核验。本页仅阅读资料与入口实现，未安装实测。",
-        "status": "draft",
-        "commit": "a31d82624c27d75f4e771d4fcb78dce16470b383",
-        "researchedAt": "2026-10-28",
+        "audience": "安全运营团队、检测工程师、事件响应人员和安全平台开发者",
+        "caution": "项目明确不是 SIEM 的日志留存与合规搜索替代品，也不会发现未接入的数据。核心部署需 Docker Compose、约 8 GB 内存和 20 GB 磁盘，并首次下载约 2 GB 模型；样例与基准不等同真实事件准确率。响应自治需逐租户明确授权，生产接入前仍要独立做权限、隔离、规则和模型验收。本页未部署实测。",
         "workflow": [
-          "核对 Python、Node 和部署方式",
-          "安装后运行 deeptutor init 配置模型，再执行 deeptutor start",
-          "导入资料建立知识库，检查问答引用与测验结果"
+          "在隔离主机运行 make doctor，核对资源、端口和生成凭据",
+          "启动 core 并用 make smoke 跟踪一条事件的完整链路",
+          "接入单一测试数据源，核对规范化、告警、调查账本和审批策略后再扩展"
         ],
-        "implementation": "README 描述统一能力运行时和会话上下文；deeptutor/agents/chat/agentic_pipeline.py 是聊天 Agent 流程入口，具体教学效果仍需使用场景验证。",
+        "implementation": "架构文档把事件依次送入 ingest、Kafka、fusion 检测与租户调优、事件关联、Postgres/实时界面和 agents；Agent 输入在调用模型前检查原始日志与密钥形态，结论引用再与证据核对。CLI 的 serve 委托 Docker Compose，submit 调用接入 API，replay 用历史人工结论评估同一分诊链路。",
+        "commit": "acb398be4c9e95aa034987a2e1c5f44f02ff3741",
+        "status": "draft",
+        "researchedAt": "2026-11-02",
         "sources": [
           {
             "label": "固定版本官方 README",
-            "url": "https://github.com/HKUDS/DeepTutor/blob/a31d82624c27d75f4e771d4fcb78dce16470b383/README.md"
+            "url": "https://github.com/beenuar/AiSOC/blob/acb398be4c9e95aa034987a2e1c5f44f02ff3741/README.md"
           },
           {
-            "label": "固定版本聊天流程入口",
-            "url": "https://github.com/HKUDS/DeepTutor/blob/a31d82624c27d75f4e771d4fcb78dce16470b383/deeptutor/agents/chat/agentic_pipeline.py"
+            "label": "固定版本架构说明",
+            "url": "https://github.com/beenuar/AiSOC/blob/acb398be4c9e95aa034987a2e1c5f44f02ff3741/docs/architecture/README.md"
+          },
+          {
+            "label": "固定版本 CLI 实现",
+            "url": "https://github.com/beenuar/AiSOC/blob/acb398be4c9e95aa034987a2e1c5f44f02ff3741/packages/aisoc-cli/src/aisoc_cli/main.py"
           }
         ]
       }
     },
     {
       "rank": 11,
-      "fullName": "Orkas-AI/Orkas",
-      "owner": "Orkas-AI",
-      "name": "Orkas",
-      "url": "https://github.com/Orkas-AI/Orkas",
-      "description": "Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus Claude Code, Codex, OpenCode, OpenClaw and Hermes, with projects, scheduled automations and connectors. Free app for macOS & Windows; built-in models or your own keys.",
-      "language": "JavaScript",
-      "stars": 6180,
-      "forks": 373,
-      "starsToday": 1044,
+      "fullName": "Renhuai123/ziwei-doushu",
+      "owner": "Renhuai123",
+      "name": "ziwei-doushu",
+      "url": "https://github.com/Renhuai123/ziwei-doushu",
+      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "language": "TypeScript",
+      "stars": 13093,
+      "forks": 2558,
+      "starsToday": 941,
       "license": "MIT",
       "topics": [
-        "agent-collaboration",
-        "agent-harness",
-        "agent-orchestration",
-        "agent-team",
-        "agent-workflow",
-        "ai-assistant",
-        "ai-automation",
-        "ai-employee"
+        "bazi",
+        "chinese-astrology",
+        "divination",
+        "fortune-telling",
+        "nextjs",
+        "open-source",
+        "purple-star-astrology",
+        "typescript"
       ],
-      "homepage": "https://orkas.ai?source=gh-orkas",
-      "updatedAt": "2026-10-31T03:36:24Z",
+      "homepage": "https://ouranic.cn/?from=gh-about",
+      "updatedAt": "2026-10-31T00:10:01Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-01T00:24:33.871Z",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
       "chinese": {
-        "title": "Orkas：本地优先的多 Agent 桌面团队",
-        "summary": "通过 Commander 把目标拆成待办，并调度内置专家、Claude Code、Codex 等本机 Agent 持续完成项目；项目会保存规则、记忆和文件，也支持定时自动化。",
+        "title": "紫微斗数：开源排盘引擎与解读数据",
+        "summary": "基于倪海厦《天纪》体系的中文排盘项目，包含排盘算法、四化、格局知识库、古籍数据和大规模解读数据集。它是传统术数软件与资料库，不是经过科学验证的预测工具。",
         "highlights": [
-          "Commander 可规划任务并在具名专家与匿名 worker 间分派",
-          "项目、待办、自动推进和定时任务用于延续跨天工作",
-          "可使用自带模型密钥或本地 OpenAI 兼容端点"
+          "按出生日期、时辰和性别生成命盘",
+          "处理真太阳时、中国夏令时和农历边界",
+          "从固定版本数据集读取多维解读内容"
         ],
         "useCases": [
-          "在桌面端协调研究、内容和编码 Agent",
-          "把重复的项目任务配置为定时自动化"
+          "研究排盘算法和历法边界",
+          "搭建传统术数学习或展示界面"
         ],
-        "audience": "需要统一管理多个本机 Agent 的个人和小团队",
-        "caution": "源码版与打包版能力不同，共享项目、云同步和网页发布只在打包版提供；内置 Orkas 模型会经过托管服务，连接器和外部 CLI 也各有权限边界。首次运行会安装较多依赖，本页未安装实测。",
-        "workflow": [
-          "按固定版本 README 核对平台、模型和源码版能力边界",
-          "运行启动脚本并在设置中配置自有模型或本地端点",
-          "从非敏感小项目检查分派、待办推进和最终交付物"
-        ],
-        "implementation": "群聊消息总线按会话维护队列和执行状态，由调度器实施同一角色串行、会话 Agent 上限及具名任务门禁；Commander 再通过 dispatch、handoff 与隔离 worker 执行分派。",
-        "commit": "53894cf1b849e39dcdd975c7ef82ee341d7e0ad2",
+        "audience": "中文应用开发者、资料研究者与术数学习者",
+        "caution": "README 明确六亲等部分存在局限，数据与古籍引文有不同授权；解读仅供参考，不能代替医疗、法律或财务判断。大数据集体积很大，本页未下载或运行。",
         "status": "draft",
-        "researchedAt": "2026-11-01",
+        "commit": "e478393ad6c865ad6270e978a3164d2f2cb5315b",
+        "researchedAt": "2026-10-24",
+        "workflow": [
+          "按项目文档准备公历日期、时辰和性别",
+          "调用排盘引擎生成星曜与宫位",
+          "按数据集许可读取解读并展示出处"
+        ],
+        "implementation": "README 列出 algorithm、真太阳时、农历转换、夏令时和流派配置等模块，并说明 v4.0 数据集按年份提供 JSON Lines；资料阅读未安装或验证排盘结果。",
         "sources": [
           {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/Orkas-AI/Orkas/blob/53894cf1b849e39dcdd975c7ef82ee341d7e0ad2/README.md"
-          },
-          {
-            "label": "固定版本消息总线实现",
-            "url": "https://github.com/Orkas-AI/Orkas/blob/53894cf1b849e39dcdd975c7ef82ee341d7e0ad2/src/main/features/group_chat/bus.ts"
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/Renhuai123/ziwei-doushu/blob/e478393ad6c865ad6270e978a3164d2f2cb5315b/README.md"
           }
         ]
       }
     },
     {
       "rank": 12,
-      "fullName": "THU-MAIC/OpenMAIC",
-      "owner": "THU-MAIC",
-      "name": "OpenMAIC",
-      "url": "https://github.com/THU-MAIC/OpenMAIC",
-      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
-      "language": "TypeScript",
-      "stars": 42180,
-      "forks": 6511,
-      "starsToday": 116,
+      "fullName": "anomalyco/hex",
+      "owner": "anomalyco",
+      "name": "hex",
+      "url": "https://github.com/anomalyco/hex",
+      "description": "Local voice dictation for mac, windows and linux",
+      "language": "Rust",
+      "stars": 3254,
+      "forks": 189,
+      "starsToday": 1179,
       "license": "MIT",
-      "topics": [],
-      "homepage": null,
-      "updatedAt": "2026-10-31T16:24:41Z",
+      "topics": [
+        "dictation",
+        "linux",
+        "local-first",
+        "macos",
+        "rust",
+        "speech-recognition",
+        "speech-to-text",
+        "voice-control"
+      ],
+      "homepage": "https://anoma.ly/hex",
+      "updatedAt": "2026-11-02T00:22:22Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-01T00:24:33.871Z",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
       "chinese": {
-        "title": "OpenMAIC：多智能体互动课堂生成平台",
-        "summary": "把主题或资料生成包含幻灯片、讲解、测验和互动组件的课堂；当前版本由常驻服务端执行生成任务，并把课程、会话和媒体持久化。",
+        "title": "Hex：本地优先的跨平台语音听写工具",
+        "summary": "按住快捷键录音，在本机模型中流式或离线转写，松开后把结果粘贴到当前应用；同时提供会议录制、模型控制和本地服务等扩展入口。",
         "highlights": [
-          "模型按对话、大纲、内容、语音和检索等槽位配置",
-          "生成任务分步保存，离开浏览器后仍可继续运行",
-          "支持资料库、互动课堂以及 PPTX 和离线 HTML 导出"
+          "稳定版覆盖 Apple Silicon macOS、Windows x64/ARM64 与 Linux x64/ARM64",
+          "模型首次下载后，README 声明日常转写不离开本机",
+          "转写引擎把模型、流式音频、降级重转写和空闲卸载串行管理"
         ],
         "useCases": [
-          "把课程资料整理为可交互教学内容",
-          "研究多 Agent 课程生成与课堂编辑流程"
+          "在桌面应用中进行本地语音输入",
+          "评估流式听写与本地会议转写工作流"
         ],
-        "audience": "教师、课程设计者、学习工具开发者和自托管团队",
-        "caution": "1.2.0 起需要 PostgreSQL 和常驻 Node 服务，不再支持新版部署到 Vercel；共享部署若无访问码会暴露整个课程库。模型、检索和媒体生成会产生费用，生成内容仍需教师核验，本页未部署实测。",
+        "audience": "重视本地处理的语音输入用户、会议记录用户和桌面工具开发者",
+        "caution": "首次运行需要联网下载语音模型，并需要麦克风、全局快捷键和文本粘贴相关权限。项目 README 很简短，具体模型、资源占用、语言质量和平台兼容性需在目标设备核验；开发分支持续更新且项目不接受外部 PR。本页未安装或录音实测。",
         "workflow": [
-          "安装依赖并从示例创建环境与 openmaic.yml 配置",
-          "启动 PostgreSQL 和常驻服务，设置至少一个模型槽位",
-          "从主题或资料生成课堂，复核大纲、场景、来源和导出结果"
+          "从对应平台稳定版安装并核对发布来源",
+          "下载模型、设置快捷键并在非敏感文本中试录",
+          "检查转写延迟、语言质量、粘贴目标和本地数据保存后再日常使用"
         ],
-        "implementation": "服务端生成引擎按检索、大纲确认、Agent 配置、逐场景内容与动作、讲解和媒体步骤执行；每步带重试、截止时间与事务检查点，失败会暂停在对应步骤而不是伪装完成。",
-        "commit": "fe2cf7dade345f4eaaf9afb1771e6734e17edaab",
+        "implementation": "固定版本引擎由单独线程拥有 GGUF 或系统转写模型，按顺序处理流式音频、模型切换和离线回退；流式完成只解码末尾缓冲，异常时可用完整音频重转写，空闲策略可释放模型内存。CLI 还暴露持续听写、会议录制和模型路径等入口。",
+        "commit": "a47ba5632ae7bd305a6358eaf0ab117ec7142e4a",
         "status": "draft",
-        "researchedAt": "2026-11-01",
+        "researchedAt": "2026-11-02",
         "sources": [
           {
-            "label": "固定版本中文 README",
-            "url": "https://github.com/THU-MAIC/OpenMAIC/blob/fe2cf7dade345f4eaaf9afb1771e6734e17edaab/README-zh.md"
+            "label": "固定版本官方 README",
+            "url": "https://github.com/anomalyco/hex/blob/a47ba5632ae7bd305a6358eaf0ab117ec7142e4a/README.md"
           },
           {
-            "label": "固定版本服务端生成引擎",
-            "url": "https://github.com/THU-MAIC/OpenMAIC/blob/fe2cf7dade345f4eaaf9afb1771e6734e17edaab/lib/server/generation/run/engine.ts"
+            "label": "固定版本转写引擎",
+            "url": "https://github.com/anomalyco/hex/blob/a47ba5632ae7bd305a6358eaf0ab117ec7142e4a/src/transcription/engine.rs"
+          },
+          {
+            "label": "固定版本命令行入口",
+            "url": "https://github.com/anomalyco/hex/blob/a47ba5632ae7bd305a6358eaf0ab117ec7142e4a/src/main.rs"
           }
         ]
       }
     },
     {
       "rank": 13,
-      "fullName": "bregman-arie/devops-exercises",
-      "owner": "bregman-arie",
-      "name": "devops-exercises",
-      "url": "https://github.com/bregman-arie/devops-exercises",
-      "description": "Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes, Terraform, OpenStack, SQL, NoSQL, Azure, GCP, DNS, Elastic, Network, Virtualization. DevOps Interview Questions",
-      "language": "Python",
-      "stars": 85976,
-      "forks": 20546,
-      "starsToday": 342,
-      "license": "NOASSERTION",
+      "fullName": "CopilotKit/OpenBot",
+      "owner": "CopilotKit",
+      "name": "OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "language": "TypeScript",
+      "stars": 9514,
+      "forks": 1189,
+      "starsToday": 175,
+      "license": "MIT",
       "topics": [
-        "ansible",
-        "aws",
-        "azure",
-        "coding",
-        "containers",
-        "devops",
-        "docker",
-        "git"
+        "ag-ui",
+        "agent-governance",
+        "ai-agents",
+        "browser-automation",
+        "copilotkit",
+        "generative-ui",
+        "mcp"
       ],
-      "homepage": null,
-      "updatedAt": "2025-12-27T14:22:30Z",
+      "homepage": "https://www.copilotkit.ai/openbot",
+      "updatedAt": "2026-11-01T18:47:13Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-01T00:24:33.871Z",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
       "chinese": {
-        "title": "DevOps Exercises：运维与 SRE 练习题库",
-        "summary": "汇集 Linux、网络、云平台、容器、Kubernetes、CI/CD、可观测性等主题的问答和实操练习，可用于知识复盘和面试准备。",
+        "title": "OpenBot：可自托管的 Agent 工作台模板",
+        "summary": "克隆并定制一套 Agent 工作台，以 AG-UI 接入不同框架的 Bot，并通过网关处理工具动作和审计。",
         "highlights": [
-          "README 标注收录 2,624 道问题与练习",
-          "按技术主题组织问答、练习和部分参考解答",
-          "包含随机抽题、题数统计和内容校验脚本"
+          "Docker Compose 启动应用、API 与 PostgreSQL",
+          "Agent 端点使用 AG-UI 协议",
+          "工具调用经过决策与审计网关"
         ],
         "useCases": [
-          "按主题复习 DevOps 与 SRE 基础",
-          "为学习小组或面试准备抽取练习"
+          "构建企业内部 Agent 工作台原型",
+          "评估 Agent 工具权限与审计流程"
         ],
-        "audience": "DevOps、SRE、云平台学习者和面试准备者",
-        "caution": "仓库明确说明多数条目并不代表真实面试，也不应把掌握全部主题当作职业要求；部分答案、外链和工具版本可能过时。仓库元数据未给出明确许可证，复用内容前需核对授权。",
-        "workflow": [
-          "从 README 主题索引选择当前需要补强的领域",
-          "先独立回答问题或完成实操，再查看参考解答",
-          "对照当前官方文档核验易变的云服务与工具细节"
-        ],
-        "implementation": "仓库主要由 Markdown 题库、按主题拆分的练习与解答组成，scripts 目录提供题目统计、随机抽取和 CI 辅助；它不是自动评分或认证平台。",
-        "commit": "9e49ef97f16377d901db01f3562187394828ca6a",
+        "audience": "有自托管能力的 Agent 平台团队",
+        "caution": "README 明确这是 beta 模板而非现成托管产品；示例环境的 OPENBOT_SINGLE_USER=true 允许所有请求以管理员身份进入，外部访问前必须配置登录。还需 Docker、Bun、模型密钥及 CopilotKit Intelligence 项目/许可。本页未部署实测。",
         "status": "draft",
-        "researchedAt": "2026-11-01",
+        "commit": "ab9855c19848378c90a806426130d86699cc798c",
+        "researchedAt": "2026-10-30",
+        "workflow": [
+          "克隆仓库并按 README 配置环境和依赖",
+          "替换 examples 下的示例租户与 Bot",
+          "启动后检查登录、工具审批及 /admin/audit"
+        ],
+        "implementation": "README 的架构说明将 AG-UI Agent 请求送入服务端；工具动作回到网关进行策略判定、审计记录和执行，Bot 电脑使用独立容器。",
         "sources": [
           {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/bregman-arie/devops-exercises/blob/9e49ef97f16377d901db01f3562187394828ca6a/README.md"
-          },
-          {
-            "label": "固定版本练习目录",
-            "url": "https://github.com/bregman-arie/devops-exercises/tree/9e49ef97f16377d901db01f3562187394828ca6a/topics"
+            "label": "固定版本官方 README 与架构说明",
+            "url": "https://github.com/CopilotKit/OpenBot/blob/ab9855c19848378c90a806426130d86699cc798c/README.md"
           }
         ]
       }
     },
     {
       "rank": 14,
-      "fullName": "vorssaint/vorssaint-utils",
-      "owner": "vorssaint",
-      "name": "vorssaint-utils",
-      "url": "https://github.com/vorssaint/vorssaint-utils",
-      "description": "Free and open-source macOS menu bar toolkit.",
-      "language": "Swift",
-      "stars": 31895,
-      "forks": 1537,
-      "starsToday": 501,
-      "license": "GPL-3.0",
-      "topics": [
-        "alt-tab",
-        "app-uninstaller",
-        "appkit",
-        "finder",
-        "free",
-        "keep-awake",
-        "mac-os",
-        "menu-bar"
-      ],
-      "homepage": "https://vorssaint.com",
-      "updatedAt": "2026-10-30T02:38:26Z",
+      "fullName": "togg53192-cmd/jailbreaks",
+      "owner": "togg53192-cmd",
+      "name": "jailbreaks",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "language": null,
+      "stars": 12947,
+      "forks": 1944,
+      "starsToday": 726,
+      "license": null,
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-11-01T12:50:31Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-01T00:24:33.871Z",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
       "chinese": {
-        "title": "Vorssaint：模块化 macOS 菜单栏工具箱",
-        "summary": "把音量、系统监控、窗口管理、剪贴板、录屏、应用管理和显示控制等工具集中到一个菜单栏应用，并允许只安装需要的功能。",
+        "title": "Jailbreaks：模型提示词与 Agent 配置资料集",
+        "summary": "整理面向不同模型和宿主的系统提示词、角色设定、AGENTS.md 及 Ollama Modelfile，供研究提示冲突和指令层级时参考。",
         "highlights": [
-          "功能中心可单独安装或卸载模块并保留设置",
-          "权限按功能请求，拒绝后其余工具仍可使用",
-          "无账号与遥测，README 列出的网络功能均需明确触发或启用"
+          "README 按模型家族列出独立文件",
+          "包含工作区指令、系统提示词和 Modelfile 等格式",
+          "资料为静态提示文本，不提供统一执行引擎"
         ],
         "useCases": [
-          "集中替代多款 macOS 菜单栏小工具",
-          "按需启用窗口、音频、监控和文件效率功能"
+          "研究提示注入与指令冲突",
+          "对比不同 Agent 配置格式"
         ],
-        "audience": "使用 Apple Silicon 与 macOS 14 以上系统的效率工具用户",
-        "caution": "部分能力需要辅助功能、屏幕录制、系统音频或应用管理等高权限；麦克风静音不是隐私锁，风扇控制仍标为 beta。官方构建只由维护者发布，GPL 源码不包含名称、图标和外观商标授权，本页未安装实测。",
-        "workflow": [
-          "通过 Homebrew 或签名安装包安装并核对系统要求",
-          "只选择所需模块，逐项理解并授予必要权限",
-          "先验证关键工具和数据流，再导出设置到其他 Mac"
-        ],
-        "implementation": "FeatureRuntime 用统一可用性门禁延迟加载模块；卸载会立即停用对应服务，重启后才释放已实例化单例。权限文档逐项说明降级行为，功能未安装时其服务不会在启动阶段运行。",
-        "commit": "a5da7633e09d0ebbf5b5607c0434ded28a239469",
+        "audience": "模型安全研究者与 Agent 平台维护者",
+        "caution": "仓库未标注许可证；提示内容可能违反平台条款，且有效性随模型版本变化。不要把第三方提示直接放进生产环境；本页未尝试绕过任何模型限制。",
         "status": "draft",
-        "researchedAt": "2026-11-01",
+        "commit": "8b9719913b2bd563246fea9880d2201acf70330b",
+        "researchedAt": "2026-10-28",
+        "workflow": [
+          "按 README 索引选择模型和文件类型",
+          "在隔离环境阅读并评估提示内容与适用条款",
+          "记录模型版本及观察结果，不将文本当作可复现保证"
+        ],
+        "implementation": "README 把文件按模型和配置格式索引，并说明不同宿主的放置位置；仓库核心是提示文本集合，没有统一运行器。",
         "sources": [
           {
             "label": "固定版本官方 README",
-            "url": "https://github.com/vorssaint/vorssaint-utils/blob/a5da7633e09d0ebbf5b5607c0434ded28a239469/README.md"
+            "url": "https://github.com/togg53192-cmd/jailbreaks/blob/8b9719913b2bd563246fea9880d2201acf70330b/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "fullName": "patchy631/ai-engineering-hub",
+      "owner": "patchy631",
+      "name": "ai-engineering-hub",
+      "url": "https://github.com/patchy631/ai-engineering-hub",
+      "description": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications.",
+      "language": "Jupyter Notebook",
+      "stars": 40223,
+      "forks": 6483,
+      "starsToday": 1191,
+      "license": "MIT",
+      "topics": [
+        "agents",
+        "ai",
+        "llms",
+        "machine-learning",
+        "mcp",
+        "rag"
+      ],
+      "homepage": "https://join.dailydoseofds.com",
+      "updatedAt": "2026-11-01T04:39:16Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
+      "chinese": {
+        "title": "AI Engineering Hub：按难度组织的 AI 项目教程集合",
+        "summary": "汇总 OCR、RAG、Agent、MCP、微调和多模态等主题的独立示例项目，并按入门、中级和高级分组，适合作为选题与动手练习索引。",
+        "highlights": [
+          "固定版本 README 索引 93 个以上独立项目",
+          "项目覆盖本地模型、托管 API、RAG、Agent 和微调等不同技术栈",
+          "学习路径从路线图和单组件示例逐步进入复杂系统"
+        ],
+        "useCases": [
+          "按主题选择 AI 工程练习或原型参考",
+          "比较同一能力在不同模型与框架中的实现方式"
+        ],
+        "audience": "AI 工程初学者、应用开发者和需要快速验证方案的团队",
+        "caution": "这是许多独立示例的集合，不是统一框架或经过一致生产验收的产品；README 的“production-ready”属于项目方表述。每个目录的依赖、密钥、模型许可、成本和安全边界不同，运行前需逐项阅读子项目说明并审查代码。本页未运行任何示例。",
+        "workflow": [
+          "按当前基础和目标从 README 选择一个项目目录",
+          "阅读该目录说明，核对模型、依赖、凭据和数据来源",
+          "在隔离环境完成最小示例，并用自己的数据与评价标准复核"
+        ],
+        "implementation": "仓库以目录承载互相独立的 Notebook、Python 应用和服务示例，顶层 README 负责难度分组和导航；实际运行入口、模型提供方和配置均由各子项目决定，因此不存在统一安装或统一质量门禁。",
+        "commit": "042aeb5067384981eeba6a07fa882f436bb1660d",
+        "status": "draft",
+        "researchedAt": "2026-11-02",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/patchy631/ai-engineering-hub/blob/042aeb5067384981eeba6a07fa882f436bb1660d/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 16,
+      "fullName": "FlashML-org/FreeToken",
+      "owner": "FlashML-org",
+      "name": "FreeToken",
+      "url": "https://github.com/FlashML-org/FreeToken",
+      "description": "FreeToken brings datacenter-scale model serving to your desktop. Run massive models locally, fast and efficiently.",
+      "language": "Python",
+      "stars": 15397,
+      "forks": 1549,
+      "starsToday": 242,
+      "license": "Apache-2.0",
+      "topics": [
+        "deepseek-v4",
+        "edge",
+        "glm",
+        "inference",
+        "minimax",
+        "moe",
+        "qwen",
+        "transformer"
+      ],
+      "homepage": "flashml.ai",
+      "updatedAt": "2026-10-30T11:19:15Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
+      "chinese": {
+        "title": "FreeToken：面向消费级硬件的 MoE 模型服务引擎",
+        "summary": "把 GPU、CPU、主存和互连组合成可调的推理资源池，通过专家缓存、CPU/GPU 协同、权重格式与 KV 缓存管理，在本机提供 OpenAI/Anthropic 兼容的 MoE 模型服务。",
+        "highlights": [
+          "针对 MoE 专家权重提供卸载、混合计算和 GPU 槽位缓存",
+          "运行时可在专家缓存与 KV 缓存之间重分配显存",
+          "CLI 覆盖服务、交互、控制、守护进程、模型转换和带宽基准"
+        ],
+        "useCases": [
+          "在 NVIDIA 消费级 GPU 工作站评估大规模开源 MoE 模型",
+          "为本机 Agent 提供兼容 OpenAI 或 Anthropic 协议的模型端点"
+        ],
+        "audience": "本地模型工程师、推理系统研究者和具备 NVIDIA GPU 的高级用户",
+        "caution": "项目自述的 290B+ 与交互速度不能脱离具体模型、量化、内存、PCIe 带宽和 GPU 复用。固定版本面向 NVIDIA RTX 30/40/50 系列，安装 accel 依赖和权重转换会占用大量磁盘、内存与时间；守护进程默认仅绑定回环地址，若对外开放必须配置令牌和模型 API key。本页未下载模型或运行基准。",
+        "workflow": [
+          "核对支持模型、GPU 架构、驱动、显存、主存和磁盘预算",
+          "安装加速依赖并用 ft bench bw 记录本机 CPU 与 PCIe 带宽",
+          "转换或下载兼容权重，以小上下文启动服务并验证健康、输出和资源占用"
+        ],
+        "implementation": "Engine 在加载权重后根据剩余显存规划 MoE 专家槽位、KV 页和状态池；offload/hybrid 路径把专家银行绑定到按格式拆分的缓存，并可依据带宽基准在 PCIe 拉取与 CPU 计算间分配。torch-free daemon 单独监管 ft serve，使 CUDA 或本地扩展崩溃不带走控制面，并记录而非默认无限重启。",
+        "commit": "ee43b2a11345d056ba349d22ee073c6828b1364b",
+        "status": "draft",
+        "researchedAt": "2026-11-02",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/FlashML-org/FreeToken/blob/ee43b2a11345d056ba349d22ee073c6828b1364b/README.md"
           },
           {
-            "label": "固定版本功能运行时实现",
-            "url": "https://github.com/vorssaint/vorssaint-utils/blob/a5da7633e09d0ebbf5b5607c0434ded28a239469/Sources/Vorssaint/App/FeatureRuntime.swift"
+            "label": "固定版本推理引擎",
+            "url": "https://github.com/FlashML-org/FreeToken/blob/ee43b2a11345d056ba349d22ee073c6828b1364b/python/freetoken/engine/engine.py"
           },
           {
-            "label": "固定版本权限说明",
-            "url": "https://github.com/vorssaint/vorssaint-utils/blob/a5da7633e09d0ebbf5b5607c0434ded28a239469/docs/PERMISSIONS.md"
+            "label": "固定版本守护进程设计",
+            "url": "https://github.com/FlashML-org/FreeToken/blob/ee43b2a11345d056ba349d22ee073c6828b1364b/python/freetoken/daemon/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 17,
+      "fullName": "hyprwm/Hyprland",
+      "owner": "hyprwm",
+      "name": "Hyprland",
+      "url": "https://github.com/hyprwm/Hyprland",
+      "description": "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.",
+      "language": "C++",
+      "stars": 39367,
+      "forks": 2129,
+      "starsToday": 38,
+      "license": "BSD-3-Clause",
+      "topics": [
+        "compositor",
+        "cpp26",
+        "wayland",
+        "wayland-compositor"
+      ],
+      "homepage": "https://hypr.land",
+      "updatedAt": "2026-11-01T18:25:52Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-02T00:31:08.821Z",
+      "chinese": {
+        "title": "Hyprland：高度可定制的动态平铺 Wayland 合成器",
+        "summary": "独立实现 Wayland 合成器，提供动态平铺、浮动与全屏窗口、动画、规则、工作区、插件、IPC 和 XWayland 兼容层，面向希望深度定制 Linux 桌面的用户。",
+        "highlights": [
+          "不依赖 wlroots、libweston、KWin 或 Mutter 的独立合成器实现",
+          "支持多种布局、窗口/显示器规则、动态配置和 socket IPC",
+          "入口可校验配置、安全模式启动并选择 DRM、Wayland 或 headless 后端"
+        ],
+        "useCases": [
+          "搭建键盘驱动且高度可定制的 Wayland 桌面",
+          "研究 Wayland 合成器、布局、插件和 IPC 实现"
+        ],
+        "audience": "熟悉 Linux、Wayland 和配置文件的桌面用户与图形系统开发者",
+        "caution": "项目主动采用快速迭代和前沿特性，升级、插件与显卡驱动组合可能带来兼容性变化；它是 Wayland 合成器，不是完整桌面环境。安装前应按发行版官方指引核对软件包与依赖，第三方插件需单独审计，本页未启动图形会话实测。",
+        "workflow": [
+          "按发行版与官方安装文档准备 Wayland 会话和必要组件",
+          "先用最小配置或 --verify-config 检查语法，再从安全模式启动",
+          "逐步增加布局、规则、IPC 与插件，并保留可回退配置"
+        ],
+        "implementation": "main.cpp 处理配置路径、Wayland socket、安全模式和配置校验等启动参数；CCompositor 创建 wl_display 与事件循环，通过 Aquamarine 选择 DRM、Wayland 或 headless 后端，再初始化监视器、窗口、XWayland、IPC 和插件等管理器。停止时终止 Wayland 循环并按依赖顺序清理资源。",
+        "commit": "d55a55d72a2ecfbb31b875b0b45c27559ce86691",
+        "status": "draft",
+        "researchedAt": "2026-11-02",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/hyprwm/Hyprland/blob/d55a55d72a2ecfbb31b875b0b45c27559ce86691/README.md"
+          },
+          {
+            "label": "固定版本合成器实现",
+            "url": "https://github.com/hyprwm/Hyprland/blob/d55a55d72a2ecfbb31b875b0b45c27559ce86691/src/Compositor.cpp"
+          },
+          {
+            "label": "固定版本启动入口",
+            "url": "https://github.com/hyprwm/Hyprland/blob/d55a55d72a2ecfbb31b875b0b45c27559ce86691/src/main.cpp"
           }
         ]
       }
