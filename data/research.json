@@ -1716,5 +1716,231 @@
         "url": "https://github.com/hyprwm/Hyprland/blob/d55a55d72a2ecfbb31b875b0b45c27559ce86691/src/main.cpp"
       }
     ]
+  },
+  "vercel-labs/agent-desktop": {
+    "title": "agent-desktop：基于系统无障碍树的桌面操作 CLI",
+    "summary": "为 macOS、Windows 与 Linux 提供桌面快照和引用式操作接口，让 Agent 读取系统无障碍树、对快照内元素执行动作，再重新观察结果。",
+    "highlights": [
+      "快照为可操作元素分配带 snapshot id 的 ref",
+      "CLI 每次调用输出统一 JSON envelope",
+      "支持命令行与随发布包提供的 C FFI"
+    ],
+    "useCases": [
+      "让 Agent 操作原生桌面应用并保留结构化证据",
+      "在无像素匹配的前提下测试跨平台辅助功能自动化"
+    ],
+    "audience": "构建桌面 Agent、辅助功能自动化和原生应用测试工具的开发者",
+    "caution": "必须按平台授予相应辅助功能权限，Linux 还受 X11、Wayland 和 AT-SPI 能力差异影响。快照、剪贴板、截图、命令输出和调试产物可能包含私密桌面内容；ref 只对所属快照有效，界面变化后必须重新观察。本页未安装或操作桌面应用。",
+    "workflow": [
+      "安装后先核对版本、平台能力与权限状态",
+      "用 snapshot 获取带完整 snapshot id 的元素 ref",
+      "对 ref 执行动作并再次 snapshot 验证结果"
+    ],
+    "implementation": "固定版本实现把 ref 动作送入统一管线：加载 RefStore、在 RefMap 查找、严格解析实时元素、执行可操作性预检后再分发。裸 @eN 会被拒绝；语义动作默认遵守严格无头策略，调用方只能在明确策略下启用焦点回退或 headed 输入。",
+    "commit": "060c83af4be63096de33fc22d79fb9c4d02f528e",
+    "status": "draft",
+    "researchedAt": "2026-11-03",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/vercel-labs/agent-desktop/blob/060c83af4be63096de33fc22d79fb9c4d02f528e/README.md"
+      },
+      {
+        "label": "固定版本 ref 动作入口",
+        "url": "https://github.com/vercel-labs/agent-desktop/blob/060c83af4be63096de33fc22d79fb9c4d02f528e/crates/core/src/commands/execute_by_ref.rs"
+      }
+    ]
+  },
+  "D4Vinci/Scrapling": {
+    "title": "Scrapling：覆盖请求、浏览器与并发爬虫的 Python 抓取框架",
+    "summary": "把 HTTP 请求、JavaScript 浏览器、选择器解析、并发 Spider、代理轮换、断点续爬、导出和 Agent 接口放入同一个 Python 抓取工具链。",
+    "highlights": [
+      "Fetcher 与浏览器 Session 覆盖静态和动态页面",
+      "Spider 支持并发、限速、重试、断点续爬和流式结果",
+      "提供 CLI、MCP Server、Agent Skill 与 Markdown 输出"
+    ],
+    "useCases": [
+      "从单页字段提取扩展到可恢复的网站爬取",
+      "为检索或 Agent 工作流准备结构化数据与清洗后的 Markdown"
+    ],
+    "audience": "网页数据采集开发者、研究工程师和需要浏览器抓取能力的 Agent 团队",
+    "caution": "抓取前仍须遵守目标站点条款、robots.txt、隐私与适用法律，并控制频率；代理、指纹伪装和反机器人功能不保证成功，也不能替代访问授权。README 中的速度、覆盖率与绕过能力属于项目方自述，未在本页同条件复现；MCP 浏览器会扩大网络与页面内容暴露面。本页未运行抓取。",
+    "workflow": [
+      "先用 Fetcher 对公开测试页验证选择器和输出",
+      "需要渲染时再切换浏览器 Session，并限制域名、凭据和资源",
+      "扩展为 Spider 后配置限速、重试、crawldir 与导出，再核对完整性"
+    ],
+    "implementation": "README 展示同一选择器接口可用于一次性 HTTP、持久 Session 和浏览器响应；Spider 通过 Request/Response 与异步 parse 产生条目或后续请求，crawldir 保存待处理请求和已见 URL。浏览器路径还可记录后台 API 响应，使用时需单独管理会话状态和敏感数据。",
+    "commit": "95cf9019ab5a5d6f3e9654b7ef1c6a26e29dc5c0",
+    "status": "draft",
+    "researchedAt": "2026-11-03",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/D4Vinci/Scrapling/blob/95cf9019ab5a5d6f3e9654b7ef1c6a26e29dc5c0/README.md"
+      }
+    ]
+  },
+  "JustVugg/colibri": {
+    "title": "colibri：从磁盘流式读取 MoE 专家的本地推理引擎",
+    "summary": "用纯 C 引擎把稠密层和热点专家放入内存或 GPU，同时按路由需要从磁盘读取其他 MoE 专家，以较少快速内存运行体积很大的开放模型。",
+    "highlights": [
+      "安装器检测 RAM、磁盘、CPU 与 GPU 后推荐可运行模型",
+      "支持 CPU、Vulkan、CUDA 以及已发布的 GGUF 权重",
+      "本机服务提供网页、OpenAI 与 Anthropic 兼容入口"
+    ],
+    "useCases": [
+      "在消费级工作站评估大规模 MoE 模型的本地推理",
+      "研究专家缓存、磁盘带宽和异构内存对推理速度的影响"
+    ],
+    "audience": "本地模型高级用户、推理系统研究者和具备大容量磁盘的开发者",
+    "caution": "最低方案也需要约 8 GB RAM 和 22 GB 空闲磁盘，部分模型需要数百 GB 到 TB 级存储；磁盘流式方案可能非常慢。README 的速度来自项目列出的特定机器，未在本页复现。模型各自的许可、量化与硬件要求不同，安装脚本会下载权重或构建原生代码，执行前应确认来源、空间与命令。本页未下载模型。",
+    "workflow": [
+      "先用 --list 核对机器能力、模型许可和下载体积",
+      "选择独立模型目录并确认后端，再运行可恢复的安装下载",
+      "从本机回环地址验证聊天与兼容 API，并记录速度和资源占用"
+    ],
+    "implementation": "README 说明稠密部分常驻 RAM，路由专家留在磁盘并进入随工作负载变化的缓存，GPU 可保存热点专家和稠密层。setup 根据机器清单选择 CPU、Vulkan 或 CUDA 构建；内存不足主要降低速度，不应静默改变模型精度或路由语义。",
+    "commit": "0a5504a1dc64f86fcd0fe7db298b0448c730e7e6",
+    "status": "draft",
+    "researchedAt": "2026-11-03",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/JustVugg/colibri/blob/0a5504a1dc64f86fcd0fe7db298b0448c730e7e6/README.md"
+      }
+    ]
+  },
+  "max-sixty/worktrunk": {
+    "title": "Worktrunk：面向并行 Agent 的 Git worktree 管理 CLI",
+    "summary": "把创建、切换、列出、合并和移除 Git worktree 封装成较短的 wt 命令，并用 Hooks、缓存与状态预览支持多个并行开发任务。",
+    "highlights": [
+      "wt switch 可创建分支与 worktree 并启动指定命令",
+      "wt list 汇总差异、提交、CI 与 PR 等上下文",
+      "wt merge 和 remove 组织本地合并与清理流程"
+    ],
+    "useCases": [
+      "为多个编程 Agent 建立互相隔离的工作目录",
+      "统一 worktree 初始化、开发服务和合并清理 Hook"
+    ],
+    "audience": "并行处理多分支任务的开发者和使用编程 Agent 的团队",
+    "caution": "工具简化的是 Git worktree 操作，不会替用户判断分支、远端、未提交改动或合并策略；merge、remove 和 Hook 可能改动仓库或运行任意命令。LLM 提交信息、PR 状态和外部 CLI 集成需单独配置与审查。本页未安装或执行 wt。",
+    "workflow": [
+      "在干净仓库核对主分支和 worktree 目录策略",
+      "用 wt switch --create 建立一个测试分支并检查 Hook",
+      "完成验证后选择 PR 流程或本地 merge，再确认安全清理"
+    ],
+    "implementation": "README 将 switch、list、merge、remove 作为核心命令；-x 可在切换后启动 Agent，参数在 -- 之后传入。Hook 用于安装依赖、启动服务等初始化，交互选择器可补充 diff、日志、CI 和 PR 上下文，但最终 Git 操作仍需按仓库规则复核。",
+    "commit": "f478bb3885b2c40120d511a0b3dfd1d14ba36bb7",
+    "status": "draft",
+    "researchedAt": "2026-11-03",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/max-sixty/worktrunk/blob/f478bb3885b2c40120d511a0b3dfd1d14ba36bb7/README.md"
+      }
+    ]
+  },
+  "paperclipai/paperclip": {
+    "title": "Paperclip：多 Agent 团队的任务、预算与治理控制面",
+    "summary": "以 Node.js 服务和 React 界面统一管理不同 Agent 的组织角色、目标、任务、心跳执行、权限、预算、审批、工作区与运行历史。",
+    "highlights": [
+      "用任务、项目和公司目标组织 Agent 工作",
+      "心跳队列结合 checkout、预算和适配器执行",
+      "提供审批、权限、成本、例程和多组织边界"
+    ],
+    "useCases": [
+      "集中协调多个提供方的编程或业务 Agent",
+      "为长期 Agent 任务建立预算、审批和审计记录"
+    ],
+    "audience": "需要自托管多 Agent 控制面的平台团队和高级个人用户",
+    "caution": "控制面只能编排和记录 Agent，不能保证其输出正确。README 明确预算执行依赖已记录花费，在途工作可能延迟停机；默认快速上手使用可信本机回环模式，远程访问应改用认证与私网绑定。运行会接触代码、密钥、连接和高权限 Agent，应逐项收紧适配器与网关权限。本页未部署。",
+    "workflow": [
+      "先在回环地址完成 onboard，并只接入测试 Agent 与测试仓库",
+      "配置角色、任务、预算和审批后验证一次受控心跳运行",
+      "确认日志、停止、恢复和权限边界，再考虑认证私网部署"
+    ],
+    "implementation": "固定版本执行文档把父子结构、阻塞依赖、责任归属和活跃执行分成四个概念。Agent 拥有的 in_progress 任务要求执行路径，checkout 连接所有权与运行；阻塞状态必须有可路由的依赖、交互或明确 owner/action，避免仅靠文字形成无人处理的等待。",
+    "commit": "16643a6e03160cc09a233f026d59fa2844bfc01d",
+    "status": "draft",
+    "researchedAt": "2026-11-03",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/paperclipai/paperclip/blob/16643a6e03160cc09a233f026d59fa2844bfc01d/README.md"
+      },
+      {
+        "label": "固定版本执行语义",
+        "url": "https://github.com/paperclipai/paperclip/blob/16643a6e03160cc09a233f026d59fa2844bfc01d/doc/execution-semantics.md"
+      }
+    ]
+  },
+  "karpathy/nanochat": {
+    "title": "nanochat：从分词、预训练到对话的最小 LLM 实验链路",
+    "summary": "以单节点 PyTorch 代码覆盖 tokenizer、基础模型预训练、SFT、评测、推理和聊天，用 depth 一个主要尺度参数组织可复现实验。",
+    "highlights": [
+      "speedrun 脚本串联数据、tokenizer、预训练、SFT 和评测",
+      "模型实现包含 RoPE、QK norm、GQA 与滑动窗口注意力",
+      "CORE 与 bits-per-byte 用于跟踪训练能力和损失"
+    ],
+    "useCases": [
+      "学习小型语言模型的端到端训练流程",
+      "在统一脚本和指标下比较预训练实现改动"
+    ],
+    "audience": "具备 PyTorch 与 GPU 训练经验的语言模型研究者和工程师",
+    "caution": "README 的成本、时间和 GPT-2 能力数字依赖特定 8xH100、数据、精度与云价格，未在本页复现；单 GPU 可运行但耗时显著增加，低显存还需调参。speedrun 会安装依赖、下载大量数据并占用 ~/.cache，模型输出仍可能产生事实错误。项目明确是可读实验基线，不是高度可配置的生产训练框架。本页未训练模型。",
+    "workflow": [
+      "用 uv 创建隔离环境并先运行 CPU/MPS 小例子核对链路",
+      "记录硬件、数据、commit 和成本后再执行 speedrun 或缩小实验",
+      "同时比较 val_bpb、CORE、吞吐和生成样例，保存完整配置"
+    ],
+    "implementation": "speedrun 先下载数据并训练 32768 词表 tokenizer，再以 torchrun 完成基础训练与 CORE/BPB 评测，随后进行 SFT 和聊天评测。GPT 实现使用显式计算 dtype、RoPE、QK norm、GQA、FA3/SDPA 回退与分层滑动窗口，depth 会进一步决定宽度和训练超参数。",
+    "commit": "92d63d4e8bb4df75c3b71618f31ddde2378b2bcd",
+    "status": "draft",
+    "researchedAt": "2026-11-03",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/README.md"
+      },
+      {
+        "label": "固定版本 speedrun 脚本",
+        "url": "https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/runs/speedrun.sh"
+      },
+      {
+        "label": "固定版本 GPT 实现",
+        "url": "https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/nanochat/gpt.py"
+      }
+    ]
+  },
+  "p-e-w/heretic": {
+    "title": "Heretic：用可配置评分和消融方法修改本地语言模型",
+    "summary": "不进行常规再训练，而是组合模型修改器、评分插件和 Optuna 参数搜索，对可本地加载的语言模型行为进行定向改变。",
+    "highlights": [
+      "默认流程以拒答率和 KL divergence 共同评分",
+      "支持 ARA 与方向消融等修改器",
+      "可保存配置、环境清单和权重哈希用于复现"
+    ],
+    "useCases": [
+      "研究语言模型内部方向与行为修改方法",
+      "在受控离线评测中比较不同评分器和修改参数"
+    ],
+    "audience": "语言模型安全、可解释性和模型编辑研究人员",
+    "caution": "默认配置旨在压制拒答，会削弱模型原有安全行为，生成或发布修改权重前必须做滥用、安全、许可和下游影响评估。项目方的质量、耗时和基准比较未在本页复现；4-bit 量化会带来精度代价，复现还依赖一致硬件、驱动和软件栈。插件会执行 Python 代码，只应使用可信实现。本页未处理任何模型。",
+    "workflow": [
+      "在隔离环境选择许可允许的测试模型并记录原始基线",
+      "审查配置、评分器和修改器，以小规模参数搜索运行",
+      "同时复核能力、安全与回归指标，再决定是否保存或发布"
+    ],
+    "implementation": "README 描述修改器生成候选模型，多个 scorer 计算拒答率、KL divergence 等目标，再由 Optuna 的 TPE 搜索参数。当前一次运行只允许一个修改器；复现清单记录环境和权重哈希，但 PyTorch 仍不保证跨硬件与软件栈字节一致。",
+    "commit": "0db5c31e10ecc426440b6fb0ce4bf85352faf1a7",
+    "status": "draft",
+    "researchedAt": "2026-11-03",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/p-e-w/heretic/blob/0db5c31e10ecc426440b6fb0ce4bf85352faf1a7/README.md"
+      }
+    ]
   }
 }
