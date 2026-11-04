@@ -1942,5 +1942,115 @@
         "url": "https://github.com/p-e-w/heretic/blob/0db5c31e10ecc426440b6fb0ce4bf85352faf1a7/README.md"
       }
     ]
+  },
+  "spotify/portal-ai-plugins": {
+    "title": "Spotify Portal AI Plugins：把内部开发者门户接入编程 Agent",
+    "summary": "为 Claude Code、Codex、Cursor 与 pi 提供围绕 Spotify Portal CLI 的任务流程，用于认证、目录与文档检索、服务简报、诊断以及受控执行 Portal 动作。",
+    "highlights": [
+      "覆盖 Portal CLI 安装认证与只读就绪诊断",
+      "可检索软件目录并汇总负责人、运行状态、事故和文档",
+      "变更动作要求先查看帮助、dry-run 和确认后再执行"
+    ],
+    "useCases": [
+      "在编程 Agent 中查询内部服务负责人、运行手册与健康信息",
+      "通过受控工作流预览并执行 Portal 或 Fleetshift 动作"
+    ],
+    "audience": "已经部署 Spotify Portal、希望从编程 Agent 使用内部开发者门户的工程团队",
+    "caution": "插件依赖目标组织可用的 Portal 实例、CLI、认证和已注册动作，不是独立的软件目录或监控系统；某个维度不可用不能解释为服务健康。变更动作可能影响内部服务或创建 PR，必须核对生成的帮助和 dry-run，并在用户明确授权后执行；dry-run 不代表执行成功。本页未连接任何 Portal 实例。",
+    "workflow": [
+      "按宿主安装插件并运行 setup，核对 CLI、认证与动作可用性",
+      "先用 doctor 或只读 search、owner、service 命令确认实体引用和来源",
+      "确需变更时检查动作帮助，预览精确输入并获得授权后执行，再读取实际结果"
+    ],
+    "implementation": "仓库主要以 SKILL.md 封装 Portal CLI 工作流：服务简报先解析规范实体引用，再分别读取 owner、status 与 docs；actions 流程优先使用专用只读命令，变更则强制经过 help、--dry-run --json、影响展示和用户确认。最终事实仍来自所连接 Portal 实例及其动作注册表。",
+    "commit": "aa252eb21df5bbf32b0beb45f84a2c03341ccad8",
+    "status": "draft",
+    "researchedAt": "2026-11-04",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/spotify/portal-ai-plugins/blob/aa252eb21df5bbf32b0beb45f84a2c03341ccad8/README.md"
+      },
+      {
+        "label": "固定版本 Portal 动作技能",
+        "url": "https://github.com/spotify/portal-ai-plugins/blob/aa252eb21df5bbf32b0beb45f84a2c03341ccad8/skills/actions/SKILL.md"
+      },
+      {
+        "label": "固定版本服务简报技能",
+        "url": "https://github.com/spotify/portal-ai-plugins/blob/aa252eb21df5bbf32b0beb45f84a2c03341ccad8/skills/service/SKILL.md"
+      }
+    ]
+  },
+  "floci-io/floci": {
+    "title": "Floci：本地开发与测试用的 AWS 兼容模拟器",
+    "summary": "在本机 4566 端口提供多种 AWS 形态的服务，让 SDK、CLI、Terraform、OpenTofu 和测试套件通过改写 endpoint 运行；部分服务进程内模拟，部分用真实容器承载。",
+    "highlights": [
+      "兼容多种 AWS SDK、CLI 与基础设施即代码工作流",
+      "支持内存、持久化、混合与预写日志存储模式",
+      "Lambda、数据库、消息与计算等部分服务使用 Docker 后端"
+    ],
+    "useCases": [
+      "在开发机或 CI 中验证 AWS 集成而不访问真实云账号",
+      "为集成测试启动隔离的 S3、SQS、DynamoDB 或容器化服务环境"
+    ],
+    "audience": "开发和测试 AWS 应用、基础设施代码与 SDK 集成的工程团队",
+    "caution": "本地 AWS 形态不等于真实云的完整行为、配额、安全边界或性能，采用前应按具体服务核对支持表并保留真实环境验收。容器后端和可选 Web 控制台可能需要 Docker socket、下载额外镜像并开放端口；持久化数据与测试凭据也需隔离。项目方的启动、内存、兼容测试和替代品对比数字未在本页复现，本页未运行模拟器。",
+    "workflow": [
+      "选择固定版本镜像或原生二进制，在隔离环境启动 Floci",
+      "把 AWS SDK 或 CLI endpoint 指向 http://localhost:4566，并先验证一个最小资源生命周期",
+      "按所需服务检查兼容矩阵、存储和 Docker 配置，再放入集成测试与 CI"
+    ],
+    "implementation": "固定版本通过 JAX-RS/Vert.x 入口识别 AWS JSON、Query、CBOR 与 REST 等线协议，再把请求路由到服务实现；无状态与部分有状态服务使用进程内存储后端，Lambda、RDS、ECS 等由 Docker 承载。协议过滤器把识别结果写入请求上下文，并可拒绝未知服务签名，避免错误落入 S3 通配路由。",
+    "commit": "64a72bfc20f1143ccd496bc2dc62ff45f7f3bfec",
+    "status": "draft",
+    "researchedAt": "2026-11-04",
+    "sources": [
+      {
+        "label": "固定版本官方 README 与架构说明",
+        "url": "https://github.com/floci-io/floci/blob/64a72bfc20f1143ccd496bc2dc62ff45f7f3bfec/README.md"
+      },
+      {
+        "label": "固定版本 AWS 协议识别过滤器",
+        "url": "https://github.com/floci-io/floci/blob/64a72bfc20f1143ccd496bc2dc62ff45f7f3bfec/src/main/java/io/github/hectorvent/floci/core/common/AwsProtocolClaimFilter.java"
+      },
+      {
+        "label": "固定版本线协议定义",
+        "url": "https://github.com/floci-io/floci/blob/64a72bfc20f1143ccd496bc2dc62ff45f7f3bfec/src/main/java/io/github/hectorvent/floci/core/common/WireProtocol.java"
+      }
+    ]
+  },
+  "Usagi-org/ai-goofish-monitor": {
+    "title": "闲鱼智能监控系统：多任务商品抓取与分析工作台",
+    "summary": "通过 Web 界面配置关键词、价格、区域、账号和定时任务，用 Playwright 抓取闲鱼商品与卖家信息，再以关键词规则或多模态模型分析并将推荐结果发送到通知渠道。",
+    "highlights": [
+      "支持多任务、定时调度、账号与代理轮换",
+      "商品结果、任务与价格历史保存到 SQLite",
+      "分析链路覆盖卖家信息、商品图片、规则或 AI 判断及多渠道通知"
+    ],
+    "useCases": [
+      "在明确授权和合理频率下追踪特定二手商品条件",
+      "用关键词规则或图文模型辅助筛选大量新增商品"
+    ],
+    "audience": "熟悉自托管、浏览器自动化与闲鱼使用边界的个人研究者和开发者",
+    "caution": "运行需要导入闲鱼登录态，并可能把商品、卖家和图片发送到所配置的模型接口或通知服务；应保护 cookie、API Key、数据库与日志，核对第三方数据处理范围。默认 Web 账号密码必须修改，服务应限制在可信网络。抓取需遵守平台条款、robots.txt、频率限制和适用法律，账号或代理轮换不能规避平台规则；AI 推荐也不能替代商品真伪、价格与交易风险判断。本页未登录、抓取或调用模型。",
+    "workflow": [
+      "在隔离主机配置模型、Web 认证和持久化目录并启动服务",
+      "导入专用测试账号登录态，先用低频关键词任务验证抓取与 SQLite 结果",
+      "再启用图片分析和单一通知渠道，核对隐私、误报、限频与失败保护后扩展"
+    ],
+    "implementation": "主服务按手动操作或 Cron 启动抓取任务，Playwright 搜索新商品并采集详情；ItemAnalysisDispatcher 以信号量限制并发，补充卖家信息后选择关键词规则或 AI 图文分析，先保存结果再仅对推荐项通知，临时图片在分析后清理。任务、结果和价格历史以 SQLite 为主存储，登录态和日志仍保留在文件系统。",
+    "commit": "77f8d75869acd65f9dba72731b95c7c49ea67bdf",
+    "status": "draft",
+    "researchedAt": "2026-11-04",
+    "sources": [
+      {
+        "label": "固定版本官方 README",
+        "url": "https://github.com/Usagi-org/ai-goofish-monitor/blob/77f8d75869acd65f9dba72731b95c7c49ea67bdf/README.md"
+      },
+      {
+        "label": "固定版本商品分析分发器",
+        "url": "https://github.com/Usagi-org/ai-goofish-monitor/blob/77f8d75869acd65f9dba72731b95c7c49ea67bdf/src/services/item_analysis_dispatcher.py"
+      }
+    ]
   }
 }
