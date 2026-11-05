@@ -1,4 +1,46 @@
 {
+  "NVIDIA/auto-ontology": {
+    "title": "Auto Ontology：企业数据的语义图与可核验问答层",
+    "summary": "从数据库元数据构建术语、SQL 属性和关系图，再把经过认证的业务语义提供给聊天、API、CLI 与 MCP，用于约束自然语言转 SQL。",
+    "highlights": ["采集结构、样例值和查询信息生成语义目录", "以 Postgres 与 pgvector 保存术语、关系和检索向量", "回答附带 SQL、执行步骤与来源线索供复核"],
+    "useCases": ["统一企业指标定义并辅助数据问答", "给 Agent 提供只读的语义检索与问答工具"],
+    "audience": "拥有结构化数据、语义治理和自托管能力的数据平台团队",
+    "caution": "可靠性依赖数据接入、人工认证和模型配置，自动生成的本体不能直接视为可信业务口径。快速开始需要 Docker、Postgres、NVIDIA 推理端点与密钥；README 要求后端和摄取服务留在私网，因为内部身份头和管理端点不能直接暴露。本页未部署或复现项目基准。",
+    "status": "draft",
+    "commit": "2a24f5d34ef6b6e168a7f22d308504d3ab36a198",
+    "researchedAt": "2026-11-05",
+    "workflow": ["配置模型端点、数据库凭据和部署密钥", "启动 Postgres 与应用栈，摄取数据并启用语义编译", "用真实问题认证术语和 SQL 属性，再通过 UI 或 MCP 检查 SQL 与结果"],
+    "implementation": "摄取层读取数据库结构、分布和样例值并生成术语、关系与 SQL 属性；交互协调器合并澄清和知识库证据，文本转 SQL 图再执行候选检索、校验、修复和查询。MCP 只读工具经 Web 应用权限层访问这些能力。",
+    "sources": [{"label": "固定版本官方 README 与部署边界", "url": "https://github.com/NVIDIA/auto-ontology/blob/2a24f5d34ef6b6e168a7f22d308504d3ab36a198/README.md"}, {"label": "固定版本交互问答协调器", "url": "https://github.com/NVIDIA/auto-ontology/blob/2a24f5d34ef6b6e168a7f22d308504d3ab36a198/auto_ontology/retrieval/interactive/coordinator.py"}, {"label": "固定版本文本转 SQL 入口", "url": "https://github.com/NVIDIA/auto-ontology/blob/2a24f5d34ef6b6e168a7f22d308504d3ab36a198/auto_ontology/retrieval/text_to_sql/main.py"}]
+  },
+  "github/spec-kit": {
+    "title": "Spec Kit：可组合的 Agent 规格驱动开发流程",
+    "summary": "为编程 Agent 提供从规格、计划、任务到实现的结构化流程，并可按需安装缺陷修复、想法评估、扩展和组织级预设。",
+    "highlights": ["核心 SDD 将需求、技术计划和任务清单逐步细化", "支持多种编程 Agent 集成与项目内初始化", "扩展、工作流步骤和预设可组合或覆盖默认流程"],
+    "useCases": ["用可审查规格推进新功能或现有项目改造", "把团队质量门禁和术语约定固化为 Agent 流程"],
+    "audience": "希望为 AI 编程建立明确产物与审查节点的研发团队",
+    "caution": "结构化命令并不保证需求正确或实现质量，产物仍需人工审查和测试。官方文档明确不规定需求变化后 spec.md、plan.md 与 tasks.md 的持续维护方式；扩展还能运行事件与前后置钩子，安装前应审查脚本、权限和更新来源。本页未运行 CLI。",
+    "status": "draft",
+    "commit": "ec9a6f3b94c0aa856f77e550785a1ddde1993de1",
+    "researchedAt": "2026-11-05",
+    "workflow": ["安装 specify-cli，并为目标编程 Agent 初始化项目", "先写约束与规格，再依次生成计划和可执行任务", "让 Agent 分阶段实现，逐项核对规格、测试和需求变更"],
+    "implementation": "CLI 按所选集成安装命令、模板和项目资产；核心 SDD 以规格、计划、任务和实现命令串联产物。扩展与预设由清单、命令及脚本组成，可从目录解析并覆盖项目流程。",
+    "sources": [{"label": "固定版本官方 README 与快速开始", "url": "https://github.com/github/spec-kit/blob/ec9a6f3b94c0aa856f77e550785a1ddde1993de1/README.md"}, {"label": "固定版本 SDD 方法说明", "url": "https://github.com/github/spec-kit/blob/ec9a6f3b94c0aa856f77e550785a1ddde1993de1/docs/how-to/sdd.md"}, {"label": "固定版本项目初始化实现", "url": "https://github.com/github/spec-kit/blob/ec9a6f3b94c0aa856f77e550785a1ddde1993de1/src/specify_cli/command_init.py"}]
+  },
+  "harry0703/MoneyPrinterTurbo": {
+    "title": "MoneyPrinterTurbo：从主题到短视频的自动化流水线",
+    "summary": "把主题或脚本依次转成文案、配音、素材、字幕、配乐和成片，并通过 Agent Skill、WebUI、API 或 CLI 运行与交付。",
+    "highlights": ["支持本地、库存素材和多种付费生成服务", "任务层分阶段记录进度、失败位置和中间产物", "可输出竖屏、横屏或方形成片并批量生成"],
+    "useCases": ["快速制作带旁白和字幕的知识短视频", "把脚本、素材检索与视频合成接入自动化流程"],
+    "audience": "需要批量短视频原型、且能管理模型与素材服务凭据的内容团队",
+    "caution": "许多模型、素材和视频生成提供方需要独立密钥并可能按请求收费，Agent Skill 对付费视频任务要求显式确认。库存或生成素材的版权、人物一致性和发布资格仍需人工核验；自动成片不等于内容事实、画面质量或平台合规已验收。本页未生成视频。",
+    "status": "draft",
+    "commit": "c8dbf96e9dfee43b30f7c3f440175d6bd4de61de",
+    "researchedAt": "2026-11-05",
+    "workflow": ["选择 WebUI、CLI 或 Agent Skill，并配置实际需要的模型与素材凭据", "输入主题或脚本，生成文案、搜索词、配音、字幕和素材", "合成成片后人工检查事实、版权、画面与平台要求再发布"],
+    "implementation": "任务服务按脚本、搜索词、语音、字幕、素材下载和最终合成拆分阶段，并持久化进度与失败阶段；视频层使用 MoviePy 与 FFmpeg 处理片段、字幕、音频和编码。Skill 辅助器负责安装、复用配置、等待任务与返回最终 MP4。",
+    "sources": [{"label": "固定版本官方 README 与部署说明", "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/README.md"}, {"label": "固定版本 Agent Skill", "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/docs/skill/SKILL.md"}, {"label": "固定版本任务编排实现", "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/app/services/task.py"}, {"label": "固定版本视频合成实现", "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/app/services/video.py"}]
+  },
   "mattpocock/skills": {
     "title": "Skills for Real Engineers：可组合的工程 Agent 技能",
     "summary": "Matt Pocock 分享的工程与效率技能集合，以独立 SKILL.md 指导需求澄清、规格实现和验证等任务，供多个编程 Agent 宿主选用。",
