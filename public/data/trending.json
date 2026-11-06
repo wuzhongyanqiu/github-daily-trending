@@ -1,18 +1,16 @@
 {
-  "generatedAt": "2026-11-05T00:30:07.214Z",
+  "generatedAt": "2026-11-06T01:09:38.464Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "status": "success",
   "coverage": {
-    "researched": 9,
+    "researched": 10,
     "pendingResearch": [
-      "The-PR-Agent/pr-agent",
-      "garrytan/gstack",
-      "FareedKhan-dev/kimi-k3-in-c",
-      "JiaFeiMiao-K-Cat/DiscImageStudio",
-      "MichaelCade/90DaysOfDevOps",
-      "Thysrael/Horizon",
-      "scenario-labs/skills"
+      "vercel-labs/agent-browser",
+      "scenario-labs/skills",
+      "ConardLi/garden-skills",
+      "microsoft/VibeVoice",
+      "JiaFeiMiao-K-Cat/DiscImageStudio"
     ],
     "metadataFailures": []
   },
@@ -25,15 +23,15 @@
       "url": "https://github.com/NVIDIA/auto-ontology",
       "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
       "language": "Python",
-      "stars": 4954,
-      "forks": 395,
-      "starsToday": 2050,
+      "stars": 7353,
+      "forks": 585,
+      "starsToday": 2679,
       "license": "Apache-2.0",
       "topics": [],
       "homepage": null,
-      "updatedAt": "2026-11-04T19:31:19Z",
+      "updatedAt": "2026-11-05T14:45:30Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
       "chinese": {
         "title": "Auto Ontology：企业数据的语义图与可核验问答层",
         "summary": "从数据库元数据构建术语、SQL 属性和关系图，再把经过认证的业务语义提供给聊天、API、CLI 与 MCP，用于约束自然语言转 SQL。",
@@ -75,76 +73,21 @@
     },
     {
       "rank": 2,
-      "fullName": "max-sixty/worktrunk",
-      "owner": "max-sixty",
-      "name": "worktrunk",
-      "url": "https://github.com/max-sixty/worktrunk",
-      "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
-      "language": "Rust",
-      "stars": 11018,
-      "forks": 411,
-      "starsToday": 531,
-      "license": "NOASSERTION",
-      "topics": [
-        "agents",
-        "claude-code",
-        "codex",
-        "developer-tools",
-        "git",
-        "worktrees"
-      ],
-      "homepage": "https://worktrunk.dev",
-      "updatedAt": "2026-11-04T14:07:58Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
-      "chinese": {
-        "title": "Worktrunk：面向并行 Agent 的 Git worktree 管理 CLI",
-        "summary": "把创建、切换、列出、合并和移除 Git worktree 封装成较短的 wt 命令，并用 Hooks、缓存与状态预览支持多个并行开发任务。",
-        "highlights": [
-          "wt switch 可创建分支与 worktree 并启动指定命令",
-          "wt list 汇总差异、提交、CI 与 PR 等上下文",
-          "wt merge 和 remove 组织本地合并与清理流程"
-        ],
-        "useCases": [
-          "为多个编程 Agent 建立互相隔离的工作目录",
-          "统一 worktree 初始化、开发服务和合并清理 Hook"
-        ],
-        "audience": "并行处理多分支任务的开发者和使用编程 Agent 的团队",
-        "caution": "工具简化的是 Git worktree 操作，不会替用户判断分支、远端、未提交改动或合并策略；merge、remove 和 Hook 可能改动仓库或运行任意命令。LLM 提交信息、PR 状态和外部 CLI 集成需单独配置与审查。本页未安装或执行 wt。",
-        "workflow": [
-          "在干净仓库核对主分支和 worktree 目录策略",
-          "用 wt switch --create 建立一个测试分支并检查 Hook",
-          "完成验证后选择 PR 流程或本地 merge，再确认安全清理"
-        ],
-        "implementation": "README 将 switch、list、merge、remove 作为核心命令；-x 可在切换后启动 Agent，参数在 -- 之后传入。Hook 用于安装依赖、启动服务等初始化，交互选择器可补充 diff、日志、CI 和 PR 上下文，但最终 Git 操作仍需按仓库规则复核。",
-        "commit": "f478bb3885b2c40120d511a0b3dfd1d14ba36bb7",
-        "status": "draft",
-        "researchedAt": "2026-11-03",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/max-sixty/worktrunk/blob/f478bb3885b2c40120d511a0b3dfd1d14ba36bb7/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 3,
       "fullName": "mattpocock/skills",
       "owner": "mattpocock",
       "name": "skills",
       "url": "https://github.com/mattpocock/skills",
       "description": "Skills for Real Engineers. Straight from my .agents directory.",
       "language": "Shell",
-      "stars": 313298,
-      "forks": 26280,
-      "starsToday": 1379,
+      "stars": 315241,
+      "forks": 26399,
+      "starsToday": 2071,
       "license": "MIT",
       "topics": [],
       "homepage": "https://aihero.dev/skills",
-      "updatedAt": "2026-11-04T11:45:30Z",
+      "updatedAt": "2026-11-05T10:40:01Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
       "chinese": {
         "title": "Skills for Real Engineers：可组合的工程 Agent 技能",
         "summary": "Matt Pocock 分享的工程与效率技能集合，以独立 SKILL.md 指导需求澄清、规格实现和验证等任务，供多个编程 Agent 宿主选用。",
@@ -181,16 +124,586 @@
       }
     },
     {
+      "rank": 3,
+      "fullName": "garrytan/gstack",
+      "owner": "garrytan",
+      "name": "gstack",
+      "url": "https://github.com/garrytan/gstack",
+      "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+      "language": "TypeScript",
+      "stars": 139948,
+      "forks": 20699,
+      "starsToday": 612,
+      "license": "MIT",
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-11-06T01:01:37Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "chinese": {
+        "title": "gstack：把编程 Agent 组织成端到端工程团队",
+        "summary": "以一组有顺序的 Agent Skills 覆盖产品澄清、架构、设计、代码审查、浏览器 QA、安全、发布和复盘，并为多种编程 Agent 提供安装与宿主适配。",
+        "highlights": [
+          "从 office-hours、计划评审到 review、qa、ship 串联同一轮产物",
+          "可按宿主安装到 Claude Code、Codex 等环境并检查安装状态",
+          "包含浏览器驱动、Hook、升级通道和团队仓库引导工具"
+        ],
+        "useCases": [
+          "为 AI 辅助开发建立可重复的评审、验证与发布流程",
+          "给技术创始人或小团队配置分角色的工程检查清单"
+        ],
+        "audience": "愿意审查 Agent 指令、安装脚本和执行权限的技术负责人及高级开发者",
+        "caution": "安装脚本会写入宿主的技能目录和配置，按选择注册 Hook，并可能构建或下载浏览器组件；团队模式还会修改项目内配置并建议提交。部分技能可运行测试、控制已登录浏览器、修改代码、推送或创建 PR，跨模型复核也依赖额外 CLI 登录。Codex 等非 Claude 宿主在固定版本中标为 experimental，安全约束可能只是建议而非强制。采用前应在隔离环境审查 setup、Hook、更新通道和每个将启用的技能；本页未安装或执行 gstack。",
+        "status": "draft",
+        "commit": "eaf1701da2d68b5c03136ff530aa228013eedb7c",
+        "researchedAt": "2026-11-06",
+        "workflow": [
+          "在隔离环境固定版本，审查 setup、宿主适配、Hook 与更新策略",
+          "只安装一个目标宿主，先运行状态检查和低风险的产品/计划技能",
+          "逐项授权 review、qa 与 ship，核对代码改动、浏览器会话、Git 远端和发布门禁"
+        ],
+        "implementation": "仓库以独立 SKILL.md 和分段模板定义角色流程，前序技能生成的设计、计划与测试产物供后序技能读取。setup 校验 Bun 等前置条件，按宿主渲染或复制技能，维护安装登记并选择性注册 Hook；浏览器和发布能力由配套 bin 工具提供。团队模式用 SessionStart 更新检查跟随 stable 或 main 通道，并可在仓库中加入必需或可选的 gstack 引导。",
+        "sources": [
+          {
+            "label": "固定版本官方 README 与工作流",
+            "url": "https://github.com/garrytan/gstack/blob/eaf1701da2d68b5c03136ff530aa228013eedb7c/README.md"
+          },
+          {
+            "label": "固定版本安装实现",
+            "url": "https://github.com/garrytan/gstack/blob/eaf1701da2d68b5c03136ff530aa228013eedb7c/setup"
+          },
+          {
+            "label": "固定版本安装与 Hook 说明",
+            "url": "https://github.com/garrytan/gstack/blob/eaf1701da2d68b5c03136ff530aa228013eedb7c/docs/install.md"
+          }
+        ]
+      }
+    },
+    {
       "rank": 4,
+      "fullName": "Usagi-org/ai-goofish-monitor",
+      "owner": "Usagi-org",
+      "name": "ai-goofish-monitor",
+      "url": "https://github.com/Usagi-org/ai-goofish-monitor",
+      "description": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+      "language": "Python",
+      "stars": 17540,
+      "forks": 2945,
+      "starsToday": 240,
+      "license": "MIT",
+      "topics": [
+        "ai",
+        "ai-assistant",
+        "ai-tools",
+        "automation",
+        "gemini",
+        "goofish",
+        "open-source",
+        "openai"
+      ],
+      "homepage": null,
+      "updatedAt": "2026-10-10T07:39:16Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "chinese": {
+        "title": "闲鱼智能监控系统：多任务商品抓取与分析工作台",
+        "summary": "通过 Web 界面配置关键词、价格、区域、账号和定时任务，用 Playwright 抓取闲鱼商品与卖家信息，再以关键词规则或多模态模型分析并将推荐结果发送到通知渠道。",
+        "highlights": [
+          "支持多任务、定时调度、账号与代理轮换",
+          "商品结果、任务与价格历史保存到 SQLite",
+          "分析链路覆盖卖家信息、商品图片、规则或 AI 判断及多渠道通知"
+        ],
+        "useCases": [
+          "在明确授权和合理频率下追踪特定二手商品条件",
+          "用关键词规则或图文模型辅助筛选大量新增商品"
+        ],
+        "audience": "熟悉自托管、浏览器自动化与闲鱼使用边界的个人研究者和开发者",
+        "caution": "运行需要导入闲鱼登录态，并可能把商品、卖家和图片发送到所配置的模型接口或通知服务；应保护 cookie、API Key、数据库与日志，核对第三方数据处理范围。默认 Web 账号密码必须修改，服务应限制在可信网络。抓取需遵守平台条款、robots.txt、频率限制和适用法律，账号或代理轮换不能规避平台规则；AI 推荐也不能替代商品真伪、价格与交易风险判断。本页未登录、抓取或调用模型。",
+        "workflow": [
+          "在隔离主机配置模型、Web 认证和持久化目录并启动服务",
+          "导入专用测试账号登录态，先用低频关键词任务验证抓取与 SQLite 结果",
+          "再启用图片分析和单一通知渠道，核对隐私、误报、限频与失败保护后扩展"
+        ],
+        "implementation": "主服务按手动操作或 Cron 启动抓取任务，Playwright 搜索新商品并采集详情；ItemAnalysisDispatcher 以信号量限制并发，补充卖家信息后选择关键词规则或 AI 图文分析，先保存结果再仅对推荐项通知，临时图片在分析后清理。任务、结果和价格历史以 SQLite 为主存储，登录态和日志仍保留在文件系统。",
+        "commit": "77f8d75869acd65f9dba72731b95c7c49ea67bdf",
+        "status": "draft",
+        "researchedAt": "2026-11-04",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/Usagi-org/ai-goofish-monitor/blob/77f8d75869acd65f9dba72731b95c7c49ea67bdf/README.md"
+          },
+          {
+            "label": "固定版本商品分析分发器",
+            "url": "https://github.com/Usagi-org/ai-goofish-monitor/blob/77f8d75869acd65f9dba72731b95c7c49ea67bdf/src/services/item_analysis_dispatcher.py"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "fullName": "D4Vinci/Scrapling",
+      "owner": "D4Vinci",
+      "name": "Scrapling",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+      "language": "Python",
+      "stars": 97990,
+      "forks": 10263,
+      "starsToday": 1655,
+      "license": "BSD-3-Clause",
+      "topics": [
+        "ai",
+        "ai-scraping",
+        "automation",
+        "crawler",
+        "crawling",
+        "crawling-python",
+        "data",
+        "data-extraction"
+      ],
+      "homepage": "https://scrapling.readthedocs.io/en/latest/",
+      "updatedAt": "2026-11-05T18:01:47Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "chinese": {
+        "title": "Scrapling：覆盖请求、浏览器与并发爬虫的 Python 抓取框架",
+        "summary": "把 HTTP 请求、JavaScript 浏览器、选择器解析、并发 Spider、代理轮换、断点续爬、导出和 Agent 接口放入同一个 Python 抓取工具链。",
+        "highlights": [
+          "Fetcher 与浏览器 Session 覆盖静态和动态页面",
+          "Spider 支持并发、限速、重试、断点续爬和流式结果",
+          "提供 CLI、MCP Server、Agent Skill 与 Markdown 输出"
+        ],
+        "useCases": [
+          "从单页字段提取扩展到可恢复的网站爬取",
+          "为检索或 Agent 工作流准备结构化数据与清洗后的 Markdown"
+        ],
+        "audience": "网页数据采集开发者、研究工程师和需要浏览器抓取能力的 Agent 团队",
+        "caution": "抓取前仍须遵守目标站点条款、robots.txt、隐私与适用法律，并控制频率；代理、指纹伪装和反机器人功能不保证成功，也不能替代访问授权。README 中的速度、覆盖率与绕过能力属于项目方自述，未在本页同条件复现；MCP 浏览器会扩大网络与页面内容暴露面。本页未运行抓取。",
+        "workflow": [
+          "先用 Fetcher 对公开测试页验证选择器和输出",
+          "需要渲染时再切换浏览器 Session，并限制域名、凭据和资源",
+          "扩展为 Spider 后配置限速、重试、crawldir 与导出，再核对完整性"
+        ],
+        "implementation": "README 展示同一选择器接口可用于一次性 HTTP、持久 Session 和浏览器响应；Spider 通过 Request/Response 与异步 parse 产生条目或后续请求，crawldir 保存待处理请求和已见 URL。浏览器路径还可记录后台 API 响应，使用时需单独管理会话状态和敏感数据。",
+        "commit": "95cf9019ab5a5d6f3e9654b7ef1c6a26e29dc5c0",
+        "status": "draft",
+        "researchedAt": "2026-11-03",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/D4Vinci/Scrapling/blob/95cf9019ab5a5d6f3e9654b7ef1c6a26e29dc5c0/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "fullName": "vercel-labs/agent-desktop",
+      "owner": "vercel-labs",
+      "name": "agent-desktop",
+      "url": "https://github.com/vercel-labs/agent-desktop",
+      "description": "Computer use CLI for AI agents",
+      "language": "Rust",
+      "stars": 16860,
+      "forks": 1189,
+      "starsToday": 2173,
+      "license": "Apache-2.0",
+      "topics": [
+        "accessibility",
+        "accessibility-api",
+        "ai-agents",
+        "automation",
+        "cli",
+        "computer-use",
+        "computer-use-agent",
+        "computer-use-agents"
+      ],
+      "homepage": "https://agent-browser.dev/desktop",
+      "updatedAt": "2026-11-05T06:31:12Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "chinese": {
+        "title": "agent-desktop：基于系统无障碍树的桌面操作 CLI",
+        "summary": "为 macOS、Windows 与 Linux 提供桌面快照和引用式操作接口，让 Agent 读取系统无障碍树、对快照内元素执行动作，再重新观察结果。",
+        "highlights": [
+          "快照为可操作元素分配带 snapshot id 的 ref",
+          "CLI 每次调用输出统一 JSON envelope",
+          "支持命令行与随发布包提供的 C FFI"
+        ],
+        "useCases": [
+          "让 Agent 操作原生桌面应用并保留结构化证据",
+          "在无像素匹配的前提下测试跨平台辅助功能自动化"
+        ],
+        "audience": "构建桌面 Agent、辅助功能自动化和原生应用测试工具的开发者",
+        "caution": "必须按平台授予相应辅助功能权限，Linux 还受 X11、Wayland 和 AT-SPI 能力差异影响。快照、剪贴板、截图、命令输出和调试产物可能包含私密桌面内容；ref 只对所属快照有效，界面变化后必须重新观察。本页未安装或操作桌面应用。",
+        "workflow": [
+          "安装后先核对版本、平台能力与权限状态",
+          "用 snapshot 获取带完整 snapshot id 的元素 ref",
+          "对 ref 执行动作并再次 snapshot 验证结果"
+        ],
+        "implementation": "固定版本实现把 ref 动作送入统一管线：加载 RefStore、在 RefMap 查找、严格解析实时元素、执行可操作性预检后再分发。裸 @eN 会被拒绝；语义动作默认遵守严格无头策略，调用方只能在明确策略下启用焦点回退或 headed 输入。",
+        "commit": "060c83af4be63096de33fc22d79fb9c4d02f528e",
+        "status": "draft",
+        "researchedAt": "2026-11-03",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/vercel-labs/agent-desktop/blob/060c83af4be63096de33fc22d79fb9c4d02f528e/README.md"
+          },
+          {
+            "label": "固定版本 ref 动作入口",
+            "url": "https://github.com/vercel-labs/agent-desktop/blob/060c83af4be63096de33fc22d79fb9c4d02f528e/crates/core/src/commands/execute_by_ref.rs"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "fullName": "max-sixty/worktrunk",
+      "owner": "max-sixty",
+      "name": "worktrunk",
+      "url": "https://github.com/max-sixty/worktrunk",
+      "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+      "language": "Rust",
+      "stars": 11518,
+      "forks": 439,
+      "starsToday": 546,
+      "license": "NOASSERTION",
+      "topics": [
+        "agents",
+        "claude-code",
+        "codex",
+        "developer-tools",
+        "git",
+        "worktrees"
+      ],
+      "homepage": "https://worktrunk.dev",
+      "updatedAt": "2026-11-06T00:31:20Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "chinese": {
+        "title": "Worktrunk：面向并行 Agent 的 Git worktree 管理 CLI",
+        "summary": "把创建、切换、列出、合并和移除 Git worktree 封装成较短的 wt 命令，并用 Hooks、缓存与状态预览支持多个并行开发任务。",
+        "highlights": [
+          "wt switch 可创建分支与 worktree 并启动指定命令",
+          "wt list 汇总差异、提交、CI 与 PR 等上下文",
+          "wt merge 和 remove 组织本地合并与清理流程"
+        ],
+        "useCases": [
+          "为多个编程 Agent 建立互相隔离的工作目录",
+          "统一 worktree 初始化、开发服务和合并清理 Hook"
+        ],
+        "audience": "并行处理多分支任务的开发者和使用编程 Agent 的团队",
+        "caution": "工具简化的是 Git worktree 操作，不会替用户判断分支、远端、未提交改动或合并策略；merge、remove 和 Hook 可能改动仓库或运行任意命令。LLM 提交信息、PR 状态和外部 CLI 集成需单独配置与审查。本页未安装或执行 wt。",
+        "workflow": [
+          "在干净仓库核对主分支和 worktree 目录策略",
+          "用 wt switch --create 建立一个测试分支并检查 Hook",
+          "完成验证后选择 PR 流程或本地 merge，再确认安全清理"
+        ],
+        "implementation": "README 将 switch、list、merge、remove 作为核心命令；-x 可在切换后启动 Agent，参数在 -- 之后传入。Hook 用于安装依赖、启动服务等初始化，交互选择器可补充 diff、日志、CI 和 PR 上下文，但最终 Git 操作仍需按仓库规则复核。",
+        "commit": "f478bb3885b2c40120d511a0b3dfd1d14ba36bb7",
+        "status": "draft",
+        "researchedAt": "2026-11-03",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/max-sixty/worktrunk/blob/f478bb3885b2c40120d511a0b3dfd1d14ba36bb7/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "fullName": "lz4/lz4",
+      "owner": "lz4",
+      "name": "lz4",
+      "url": "https://github.com/lz4/lz4",
+      "description": "Extremely Fast Compression algorithm",
+      "language": "C",
+      "stars": 12387,
+      "forks": 1634,
+      "starsToday": 23,
+      "license": "NOASSERTION",
+      "topics": [
+        "c",
+        "compression",
+        "lz4"
+      ],
+      "homepage": "http://www.lz4.org",
+      "updatedAt": "2026-11-06T00:00:14Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "chinese": {
+        "title": "LZ4：面向低延迟场景的高速无损压缩库与 CLI",
+        "summary": "提供 C 语言的内存块压缩、流式与 Frame API，以及兼容 gzip 风格用法的命令行工具；可在压缩速度、压缩率和多线程内存预算之间调节。",
+        "highlights": [
+          "默认模式强调高速压缩与接近内存带宽的解压",
+          "LZ4_HC 用更多 CPU 换取压缩率，解压路径保持兼容",
+          "Frame 格式封装块、尺寸、校验和与字典标识，适合可移植文件和数据流"
+        ],
+        "useCases": [
+          "日志、缓存、数据库或 RPC 中对延迟敏感的压缩",
+          "用 CLI 压缩文件并以校验和或字典增强特定工作负载"
+        ],
+        "audience": "需要在系统软件、存储或数据管道中权衡吞吐、内存与压缩率的工程团队",
+        "caution": "README 性能数字来自特定 CPU、编译器和 Silesia 语料，不能替代目标数据与硬件基准。裸 block API 不携带压缩尺寸和解压上限，调用方必须可靠保存这些元数据并使用安全解压接口；需要自包含与互操作时应使用 Frame API。多线程 Frame 压缩仍标为 experimental，字典只使用输入末尾 64 KiB。库采用 BSD-2-Clause，CLI 采用 GPL-2.0-or-later，分发时须分别核对；压缩和校验也不提供加密或真实性保证。本页未编译或跑基准。",
+        "status": "draft",
+        "commit": "7f3d45e7fd68d340585b4650eca4cda5432c08ba",
+        "researchedAt": "2026-11-06",
+        "workflow": [
+          "按目标平台用 Make、CMake、Meson 或包管理器固定版本构建",
+          "先用代表性数据比较默认、HC、字典与 Frame 参数的吞吐、比例和内存",
+          "集成安全解压与错误处理，并用损坏输入、容量不足和跨实现文件验证边界"
+        ],
+        "implementation": "lz4.h 暴露单次、上下文复用和流式 block API；LZ4_compress_default 在目标容量不足时返回 0，LZ4_decompress_safe 以压缩大小和目标容量限制读写并返回负错误码。lz4frame.h 在块之上加入 Frame 元数据、校验和、链接模式、字典 ID 与可选工作线程；CLI 只处理 Frame，并将文件、递归、校验、字典和基准参数映射到库接口。",
+        "sources": [
+          {
+            "label": "固定版本官方 README 与许可、基准",
+            "url": "https://github.com/lz4/lz4/blob/7f3d45e7fd68d340585b4650eca4cda5432c08ba/README.md"
+          },
+          {
+            "label": "固定版本 block API 与安全边界",
+            "url": "https://github.com/lz4/lz4/blob/7f3d45e7fd68d340585b4650eca4cda5432c08ba/lib/lz4.h"
+          },
+          {
+            "label": "固定版本 Frame API 与多线程边界",
+            "url": "https://github.com/lz4/lz4/blob/7f3d45e7fd68d340585b4650eca4cda5432c08ba/lib/lz4frame.h"
+          },
+          {
+            "label": "固定版本 CLI 说明",
+            "url": "https://github.com/lz4/lz4/blob/7f3d45e7fd68d340585b4650eca4cda5432c08ba/programs/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "fullName": "google/skills",
+      "owner": "google",
+      "name": "skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "language": "Python",
+      "stars": 22381,
+      "forks": 1893,
+      "starsToday": 211,
+      "license": "Apache-2.0",
+      "topics": [
+        "google",
+        "googlecloud",
+        "skills"
+      ],
+      "homepage": null,
+      "updatedAt": "2026-11-05T22:00:15Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "chinese": {
+        "title": "Google Agent Skills：Google 产品的可安装任务知识库",
+        "summary": "把 Google Cloud、Gemini、GKE、数据、安全、身份、广告等产品的操作流程拆成可选择安装的 Agent Skills，并提供目录索引、辅助资源和部分宿主插件。",
+        "highlights": [
+          "固定版本 index.json 收录 186 个技能入口与路由描述",
+          "可通过 npx skills 选择技能、目标 Agent 和项目或全局作用域",
+          "技能可携带参考资料、脚本与输出模板，部分插件还组合 MCP 服务"
+        ],
+        "useCases": [
+          "为 Agent 按需补充 Google 产品的官方流程和边界",
+          "在团队项目中固定云架构、故障排查或 API 集成操作规范"
+        ],
+        "audience": "使用 Google 产品并能审查 Agent 指令、云权限和命令副作用的平台与应用团队",
+        "caution": "仓库由 Google 维护不等于每个技能适合当前账号、区域、版本或生产环境；目录中的描述只用于路由，真正执行前仍应读取完整 SKILL.md、引用资料和脚本。安装依赖 npx skills 并会写入所选 Agent 的项目或全局技能目录；部分技能可能调用 gcloud、REST、MCP 或修改云资源，应使用最小权限、确认计费与地域并保留人工审批。目录和入口会更新，固定版本研究不能替代安装时复核。本页未安装技能或调用 Google 服务。",
+        "status": "draft",
+        "commit": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+        "researchedAt": "2026-11-06",
+        "workflow": [
+          "从固定版本目录按描述筛出最多几个与任务直接相关的技能",
+          "审查对应 SKILL.md、引用文件、脚本、认证和资源修改范围",
+          "在项目作用域安装并用低权限测试账号验证，再决定是否更新或扩大到全局"
+        ],
+        "implementation": "README 提供 npx skills 的选择式安装与更新入口；index.json 将技能名、触发描述和原始 SKILL.md 地址组成机器可读目录。Skill Finder 先拉取并校验目录，再最多选择三个匹配项、按需读取入口；具体技能通过同目录 references、scripts 与 assets 逐步加载产品资料和执行辅助。插件目录则把技能与 MCP 服务按宿主安装方式组合。",
+        "sources": [
+          {
+            "label": "固定版本官方 README 与安装方式",
+            "url": "https://github.com/google/skills/blob/c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2/README.md"
+          },
+          {
+            "label": "固定版本技能目录",
+            "url": "https://github.com/google/skills/blob/c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2/index.json"
+          },
+          {
+            "label": "固定版本按需路由技能",
+            "url": "https://github.com/google/skills/blob/c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2/skills/developers/finding-google-skills/SKILL.md"
+          },
+          {
+            "label": "固定版本开发者知识技能示例",
+            "url": "https://github.com/google/skills/blob/c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2/skills/developers/retrieving-developer-knowledge/SKILL.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "fullName": "vercel-labs/agent-browser",
+      "owner": "vercel-labs",
+      "name": "agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "language": "Rust",
+      "stars": 45893,
+      "forks": 3148,
+      "starsToday": 150,
+      "license": "Apache-2.0",
+      "topics": [],
+      "homepage": "https://agent-browser.dev",
+      "updatedAt": "2026-11-06T01:02:45Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "chinese": {
+        "title": "agent-browser",
+        "summary": "Browser automation CLI for AI agents。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 150 Star",
+          "主要使用 Rust，当前累计 45,893 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 11,
+      "fullName": "scenario-labs/skills",
+      "owner": "scenario-labs",
+      "name": "skills",
+      "url": "https://github.com/scenario-labs/skills",
+      "description": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.",
+      "language": "Python",
+      "stars": 3062,
+      "forks": 271,
+      "starsToday": 667,
+      "license": "MIT",
+      "topics": [
+        "3d-models",
+        "agent-skills",
+        "ai-agents",
+        "ai-art",
+        "blender",
+        "claude-code",
+        "claude-skills",
+        "codex"
+      ],
+      "homepage": "https://www.skills.sh/scenario-labs/skills",
+      "updatedAt": "2026-11-05T23:21:04Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "chinese": {
+        "title": "skills",
+        "summary": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 667 Star",
+          "主要使用 Python，当前累计 3,062 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 12,
+      "fullName": "ConardLi/garden-skills",
+      "owner": "ConardLi",
+      "name": "garden-skills",
+      "url": "https://github.com/ConardLi/garden-skills",
+      "description": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
+      "language": "JavaScript",
+      "stars": 14138,
+      "forks": 1648,
+      "starsToday": 175,
+      "license": "MIT",
+      "topics": [
+        "agent",
+        "claude",
+        "gpt-image-2",
+        "rag",
+        "skills",
+        "web-design"
+      ],
+      "homepage": "https://github.com/ConardLi/garden-skills",
+      "updatedAt": "2026-10-25T13:45:33Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "chinese": {
+        "title": "garden-skills",
+        "summary": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 175 Star",
+          "主要使用 JavaScript，当前累计 14,138 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 13,
+      "fullName": "microsoft/VibeVoice",
+      "owner": "microsoft",
+      "name": "VibeVoice",
+      "url": "https://github.com/microsoft/VibeVoice",
+      "description": "Open-Source Frontier Voice AI",
+      "language": "Python",
+      "stars": 55941,
+      "forks": 6296,
+      "starsToday": 223,
+      "license": "MIT",
+      "topics": [],
+      "homepage": "https://microsoft.github.io/VibeVoice/",
+      "updatedAt": "2026-10-08T05:29:29Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "chinese": {
+        "title": "VibeVoice",
+        "summary": "Open-Source Frontier Voice AI。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 223 Star",
+          "主要使用 Python，当前累计 55,941 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 14,
       "fullName": "floci-io/floci",
       "owner": "floci-io",
       "name": "floci",
       "url": "https://github.com/floci-io/floci",
       "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
       "language": "Java",
-      "stars": 29602,
-      "forks": 3274,
-      "starsToday": 1090,
+      "stars": 30419,
+      "forks": 3333,
+      "starsToday": 779,
       "license": "MIT",
       "topics": [
         "aws",
@@ -203,9 +716,9 @@
         "s3"
       ],
       "homepage": "https://floci.io/floci/",
-      "updatedAt": "2026-11-05T00:14:17Z",
+      "updatedAt": "2026-11-05T21:02:20Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
       "chinese": {
         "title": "Floci：本地开发与测试用的 AWS 兼容模拟器",
         "summary": "在本机 4566 端口提供多种 AWS 形态的服务，让 SDK、CLI、Terraform、OpenTofu 和测试套件通过改写 endpoint 运行；部分服务进程内模拟，部分用真实容器承载。",
@@ -246,586 +759,29 @@
       }
     },
     {
-      "rank": 5,
-      "fullName": "thedotmack/claude-mem",
-      "owner": "thedotmack",
-      "name": "claude-mem",
-      "url": "https://github.com/thedotmack/claude-mem",
-      "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-      "language": "TypeScript",
-      "stars": 112837,
-      "forks": 9800,
-      "starsToday": 1172,
-      "license": "Apache-2.0",
-      "topics": [
-        "ai",
-        "ai-agents",
-        "ai-memory",
-        "anthropic",
-        "artificial-intelligence",
-        "chromadb",
-        "claude",
-        "claude-agent-sdk"
-      ],
-      "homepage": "https://claude-mem.ai",
-      "updatedAt": "2026-11-05T00:18:51Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
-      "chinese": {
-        "title": "Claude-Mem：跨会话上下文记忆插件",
-        "summary": "通过捕获工具使用记录、压缩为观察摘要并供后续会话检索，帮助 Claude Code 等宿主延续项目上下文。",
-        "highlights": [
-          "安装器支持多个 IDE 和 Agent 宿主",
-          "观察记录可在后续会话中检索",
-          "安装流程提供托管观察器和显式选择的其他提供方"
-        ],
-        "useCases": [
-          "保留长期项目决策和修复线索",
-          "检索此前会话中的操作摘要"
-        ],
-        "audience": "需要跨会话上下文的编程 Agent 用户",
-        "caution": "默认安装流程可能引导在线登录和托管记忆试用；不希望上传记录应先核对 provider 及在线选项。摘要可能遗漏细节或包含敏感内容，不能代替原始代码和人工核验。本页未安装实测。",
-        "status": "draft",
-        "commit": "325afb60108d4ab04e24d715f244bd591ca33fbe",
-        "researchedAt": "2026-10-30",
-        "workflow": [
-          "核对宿主兼容性与 Node 要求",
-          "运行安装器时明确选择记忆提供方",
-          "用测试项目检查捕获、检索和清除数据的行为"
-        ],
-        "implementation": "README 描述工具调用观察、语义压缩和后续检索的流程；安装器按宿主注册集成，在线观察器与本地/自选 provider 的数据路径需分别核对。",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/thedotmack/claude-mem/blob/325afb60108d4ab04e24d715f244bd591ca33fbe/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 6,
-      "fullName": "vercel-labs/agent-desktop",
-      "owner": "vercel-labs",
-      "name": "agent-desktop",
-      "url": "https://github.com/vercel-labs/agent-desktop",
-      "description": "Computer use CLI for AI agents",
-      "language": "Rust",
-      "stars": 15064,
-      "forks": 1043,
-      "starsToday": 2470,
-      "license": "Apache-2.0",
-      "topics": [
-        "accessibility",
-        "accessibility-api",
-        "ai-agents",
-        "automation",
-        "cli",
-        "computer-use",
-        "computer-use-agent",
-        "computer-use-agents"
-      ],
-      "homepage": "https://agent-browser.dev/desktop",
-      "updatedAt": "2026-11-04T19:44:11Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
-      "chinese": {
-        "title": "agent-desktop：基于系统无障碍树的桌面操作 CLI",
-        "summary": "为 macOS、Windows 与 Linux 提供桌面快照和引用式操作接口，让 Agent 读取系统无障碍树、对快照内元素执行动作，再重新观察结果。",
-        "highlights": [
-          "快照为可操作元素分配带 snapshot id 的 ref",
-          "CLI 每次调用输出统一 JSON envelope",
-          "支持命令行与随发布包提供的 C FFI"
-        ],
-        "useCases": [
-          "让 Agent 操作原生桌面应用并保留结构化证据",
-          "在无像素匹配的前提下测试跨平台辅助功能自动化"
-        ],
-        "audience": "构建桌面 Agent、辅助功能自动化和原生应用测试工具的开发者",
-        "caution": "必须按平台授予相应辅助功能权限，Linux 还受 X11、Wayland 和 AT-SPI 能力差异影响。快照、剪贴板、截图、命令输出和调试产物可能包含私密桌面内容；ref 只对所属快照有效，界面变化后必须重新观察。本页未安装或操作桌面应用。",
-        "workflow": [
-          "安装后先核对版本、平台能力与权限状态",
-          "用 snapshot 获取带完整 snapshot id 的元素 ref",
-          "对 ref 执行动作并再次 snapshot 验证结果"
-        ],
-        "implementation": "固定版本实现把 ref 动作送入统一管线：加载 RefStore、在 RefMap 查找、严格解析实时元素、执行可操作性预检后再分发。裸 @eN 会被拒绝；语义动作默认遵守严格无头策略，调用方只能在明确策略下启用焦点回退或 headed 输入。",
-        "commit": "060c83af4be63096de33fc22d79fb9c4d02f528e",
-        "status": "draft",
-        "researchedAt": "2026-11-03",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/vercel-labs/agent-desktop/blob/060c83af4be63096de33fc22d79fb9c4d02f528e/README.md"
-          },
-          {
-            "label": "固定版本 ref 动作入口",
-            "url": "https://github.com/vercel-labs/agent-desktop/blob/060c83af4be63096de33fc22d79fb9c4d02f528e/crates/core/src/commands/execute_by_ref.rs"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 7,
-      "fullName": "github/spec-kit",
-      "owner": "github",
-      "name": "spec-kit",
-      "url": "https://github.com/github/spec-kit",
-      "description": "💫 Toolkit to help you get started with SDD or any other process!",
-      "language": "Python",
-      "stars": 147296,
-      "forks": 13213,
-      "starsToday": 808,
-      "license": "MIT",
-      "topics": [
-        "ai",
-        "copilot",
-        "development",
-        "engineering",
-        "prd",
-        "spec",
-        "spec-driven"
-      ],
-      "homepage": "https://github.github.com/spec-kit/",
-      "updatedAt": "2026-11-04T22:34:18Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
-      "chinese": {
-        "title": "Spec Kit：可组合的 Agent 规格驱动开发流程",
-        "summary": "为编程 Agent 提供从规格、计划、任务到实现的结构化流程，并可按需安装缺陷修复、想法评估、扩展和组织级预设。",
-        "highlights": [
-          "核心 SDD 将需求、技术计划和任务清单逐步细化",
-          "支持多种编程 Agent 集成与项目内初始化",
-          "扩展、工作流步骤和预设可组合或覆盖默认流程"
-        ],
-        "useCases": [
-          "用可审查规格推进新功能或现有项目改造",
-          "把团队质量门禁和术语约定固化为 Agent 流程"
-        ],
-        "audience": "希望为 AI 编程建立明确产物与审查节点的研发团队",
-        "caution": "结构化命令并不保证需求正确或实现质量，产物仍需人工审查和测试。官方文档明确不规定需求变化后 spec.md、plan.md 与 tasks.md 的持续维护方式；扩展还能运行事件与前后置钩子，安装前应审查脚本、权限和更新来源。本页未运行 CLI。",
-        "status": "draft",
-        "commit": "ec9a6f3b94c0aa856f77e550785a1ddde1993de1",
-        "researchedAt": "2026-11-05",
-        "workflow": [
-          "安装 specify-cli，并为目标编程 Agent 初始化项目",
-          "先写约束与规格，再依次生成计划和可执行任务",
-          "让 Agent 分阶段实现，逐项核对规格、测试和需求变更"
-        ],
-        "implementation": "CLI 按所选集成安装命令、模板和项目资产；核心 SDD 以规格、计划、任务和实现命令串联产物。扩展与预设由清单、命令及脚本组成，可从目录解析并覆盖项目流程。",
-        "sources": [
-          {
-            "label": "固定版本官方 README 与快速开始",
-            "url": "https://github.com/github/spec-kit/blob/ec9a6f3b94c0aa856f77e550785a1ddde1993de1/README.md"
-          },
-          {
-            "label": "固定版本 SDD 方法说明",
-            "url": "https://github.com/github/spec-kit/blob/ec9a6f3b94c0aa856f77e550785a1ddde1993de1/docs/how-to/sdd.md"
-          },
-          {
-            "label": "固定版本项目初始化实现",
-            "url": "https://github.com/github/spec-kit/blob/ec9a6f3b94c0aa856f77e550785a1ddde1993de1/src/specify_cli/command_init.py"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 8,
-      "fullName": "The-PR-Agent/pr-agent",
-      "owner": "The-PR-Agent",
-      "name": "pr-agent",
-      "url": "https://github.com/The-PR-Agent/pr-agent",
-      "description": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
-      "language": "Python",
-      "stars": 14749,
-      "forks": 2094,
-      "starsToday": 280,
-      "license": "MIT",
-      "topics": [
-        "ai",
-        "anthropic",
-        "code-review",
-        "coding-assistant",
-        "devtools",
-        "ollama",
-        "openai",
-        "pull-request"
-      ],
-      "homepage": "https://www.pr-agent.ai",
-      "updatedAt": "2026-11-05T00:12:31Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
-      "chinese": {
-        "title": "pr-agent",
-        "summary": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 280 Star",
-          "主要使用 Python，当前累计 14,749 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 9,
-      "fullName": "harry0703/MoneyPrinterTurbo",
-      "owner": "harry0703",
-      "name": "MoneyPrinterTurbo",
-      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
-      "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
-      "language": "Python",
-      "stars": 138946,
-      "forks": 22169,
-      "starsToday": 617,
-      "license": "MIT",
-      "topics": [
-        "ai-video-generator",
-        "content-creation",
-        "ffmpeg",
-        "instagram-reels",
-        "llm",
-        "python",
-        "short-video",
-        "subtitles"
-      ],
-      "homepage": null,
-      "updatedAt": "2026-11-04T02:11:21Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
-      "chinese": {
-        "title": "MoneyPrinterTurbo：从主题到短视频的自动化流水线",
-        "summary": "把主题或脚本依次转成文案、配音、素材、字幕、配乐和成片，并通过 Agent Skill、WebUI、API 或 CLI 运行与交付。",
-        "highlights": [
-          "支持本地、库存素材和多种付费生成服务",
-          "任务层分阶段记录进度、失败位置和中间产物",
-          "可输出竖屏、横屏或方形成片并批量生成"
-        ],
-        "useCases": [
-          "快速制作带旁白和字幕的知识短视频",
-          "把脚本、素材检索与视频合成接入自动化流程"
-        ],
-        "audience": "需要批量短视频原型、且能管理模型与素材服务凭据的内容团队",
-        "caution": "许多模型、素材和视频生成提供方需要独立密钥并可能按请求收费，Agent Skill 对付费视频任务要求显式确认。库存或生成素材的版权、人物一致性和发布资格仍需人工核验；自动成片不等于内容事实、画面质量或平台合规已验收。本页未生成视频。",
-        "status": "draft",
-        "commit": "c8dbf96e9dfee43b30f7c3f440175d6bd4de61de",
-        "researchedAt": "2026-11-05",
-        "workflow": [
-          "选择 WebUI、CLI 或 Agent Skill，并配置实际需要的模型与素材凭据",
-          "输入主题或脚本，生成文案、搜索词、配音、字幕和素材",
-          "合成成片后人工检查事实、版权、画面与平台要求再发布"
-        ],
-        "implementation": "任务服务按脚本、搜索词、语音、字幕、素材下载和最终合成拆分阶段，并持久化进度与失败阶段；视频层使用 MoviePy 与 FFmpeg 处理片段、字幕、音频和编码。Skill 辅助器负责安装、复用配置、等待任务与返回最终 MP4。",
-        "sources": [
-          {
-            "label": "固定版本官方 README 与部署说明",
-            "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/README.md"
-          },
-          {
-            "label": "固定版本 Agent Skill",
-            "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/docs/skill/SKILL.md"
-          },
-          {
-            "label": "固定版本任务编排实现",
-            "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/app/services/task.py"
-          },
-          {
-            "label": "固定版本视频合成实现",
-            "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/app/services/video.py"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 10,
-      "fullName": "garrytan/gstack",
-      "owner": "garrytan",
-      "name": "gstack",
-      "url": "https://github.com/garrytan/gstack",
-      "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
-      "language": "TypeScript",
-      "stars": 139327,
-      "forks": 20631,
-      "starsToday": 290,
-      "license": "MIT",
-      "topics": [],
-      "homepage": null,
-      "updatedAt": "2026-11-05T00:29:29Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
-      "chinese": {
-        "title": "gstack",
-        "summary": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 290 Star",
-          "主要使用 TypeScript，当前累计 139,327 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 11,
-      "fullName": "FareedKhan-dev/kimi-k3-in-c",
-      "owner": "FareedKhan-dev",
-      "name": "kimi-k3-in-c",
-      "url": "https://github.com/FareedKhan-dev/kimi-k3-in-c",
-      "description": "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.",
-      "language": "C",
-      "stars": 10285,
-      "forks": 1628,
-      "starsToday": 351,
-      "license": "Apache-2.0",
-      "topics": [
-        "avx2",
-        "c99",
-        "cpu-inference",
-        "deep-learning",
-        "from-scratch",
-        "inference-engine",
-        "kimi-k3",
-        "linear-attention"
-      ],
-      "homepage": "https://medium.com/@fareedkhandev/building-kimi-k3-in-c-to-run-a-2-8t-model-on-consumer-hardware-a5792cbf3b59",
-      "updatedAt": "2026-10-02T04:51:44Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
-      "chinese": {
-        "title": "kimi-k3-in-c",
-        "summary": "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 351 Star",
-          "主要使用 C，当前累计 10,285 Star",
-          "仓库标注 Apache-2.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 12,
+      "rank": 15,
       "fullName": "JiaFeiMiao-K-Cat/DiscImageStudio",
       "owner": "JiaFeiMiao-K-Cat",
       "name": "DiscImageStudio",
       "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
       "description": "",
       "language": "C#",
-      "stars": 6595,
-      "forks": 235,
-      "starsToday": 1778,
+      "stars": 7270,
+      "forks": 260,
+      "starsToday": 984,
       "license": "GPL-3.0",
       "topics": [],
       "homepage": null,
-      "updatedAt": "2026-11-04T17:25:45Z",
+      "updatedAt": "2026-11-05T17:24:40Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
+      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
       "chinese": {
         "title": "DiscImageStudio",
         "summary": "JiaFeiMiao-K-Cat/DiscImageStudio 开源仓库。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 1,778 Star",
-          "主要使用 C#，当前累计 6,595 Star",
+          "今日新增 984 Star",
+          "主要使用 C#，当前累计 7,270 Star",
           "仓库标注 GPL-3.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 13,
-      "fullName": "MichaelCade/90DaysOfDevOps",
-      "owner": "MichaelCade",
-      "name": "90DaysOfDevOps",
-      "url": "https://github.com/MichaelCade/90DaysOfDevOps",
-      "description": "This repository started out as a learning in public project for myself and has now become a structured learning map for many in the community. We have 3 years under our belt covering all things DevOps, including Principles, Processes, Tooling and Use Cases surrounding this vast topic. ",
-      "language": "Shell",
-      "stars": 30412,
-      "forks": 6791,
-      "starsToday": 97,
-      "license": "NOASSERTION",
-      "topics": [
-        "ansible",
-        "backup",
-        "containers",
-        "devops",
-        "iac",
-        "kubernetes",
-        "networking",
-        "terraform"
-      ],
-      "homepage": "https://www.90daysofdevops.com/",
-      "updatedAt": "2026-06-24T15:29:07Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
-      "chinese": {
-        "title": "90DaysOfDevOps",
-        "summary": "This repository started out as a learning in public project for myself and has now become a structured learning map for many in the community. We have 3 years under our belt covering all things DevOps, including Principles, Processes, Tooling and Use Cases surrounding this vast topic. 。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 97 Star",
-          "主要使用 Shell，当前累计 30,412 Star",
-          "仓库标注 NOASSERTION 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 14,
-      "fullName": "D4Vinci/Scrapling",
-      "owner": "D4Vinci",
-      "name": "Scrapling",
-      "url": "https://github.com/D4Vinci/Scrapling",
-      "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
-      "language": "Python",
-      "stars": 96515,
-      "forks": 10105,
-      "starsToday": 2005,
-      "license": "BSD-3-Clause",
-      "topics": [
-        "ai",
-        "ai-scraping",
-        "automation",
-        "crawler",
-        "crawling",
-        "crawling-python",
-        "data",
-        "data-extraction"
-      ],
-      "homepage": "https://scrapling.readthedocs.io/en/latest/",
-      "updatedAt": "2026-11-04T20:30:31Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
-      "chinese": {
-        "title": "Scrapling：覆盖请求、浏览器与并发爬虫的 Python 抓取框架",
-        "summary": "把 HTTP 请求、JavaScript 浏览器、选择器解析、并发 Spider、代理轮换、断点续爬、导出和 Agent 接口放入同一个 Python 抓取工具链。",
-        "highlights": [
-          "Fetcher 与浏览器 Session 覆盖静态和动态页面",
-          "Spider 支持并发、限速、重试、断点续爬和流式结果",
-          "提供 CLI、MCP Server、Agent Skill 与 Markdown 输出"
-        ],
-        "useCases": [
-          "从单页字段提取扩展到可恢复的网站爬取",
-          "为检索或 Agent 工作流准备结构化数据与清洗后的 Markdown"
-        ],
-        "audience": "网页数据采集开发者、研究工程师和需要浏览器抓取能力的 Agent 团队",
-        "caution": "抓取前仍须遵守目标站点条款、robots.txt、隐私与适用法律，并控制频率；代理、指纹伪装和反机器人功能不保证成功，也不能替代访问授权。README 中的速度、覆盖率与绕过能力属于项目方自述，未在本页同条件复现；MCP 浏览器会扩大网络与页面内容暴露面。本页未运行抓取。",
-        "workflow": [
-          "先用 Fetcher 对公开测试页验证选择器和输出",
-          "需要渲染时再切换浏览器 Session，并限制域名、凭据和资源",
-          "扩展为 Spider 后配置限速、重试、crawldir 与导出，再核对完整性"
-        ],
-        "implementation": "README 展示同一选择器接口可用于一次性 HTTP、持久 Session 和浏览器响应；Spider 通过 Request/Response 与异步 parse 产生条目或后续请求，crawldir 保存待处理请求和已见 URL。浏览器路径还可记录后台 API 响应，使用时需单独管理会话状态和敏感数据。",
-        "commit": "95cf9019ab5a5d6f3e9654b7ef1c6a26e29dc5c0",
-        "status": "draft",
-        "researchedAt": "2026-11-03",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/D4Vinci/Scrapling/blob/95cf9019ab5a5d6f3e9654b7ef1c6a26e29dc5c0/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 15,
-      "fullName": "Thysrael/Horizon",
-      "owner": "Thysrael",
-      "name": "Horizon",
-      "url": "https://github.com/Thysrael/Horizon",
-      "description": "📡 Your own AI-powered news radar. Generates daily briefings in English & Chinese. | 用 AI 构建你专属的新闻雷达",
-      "language": "Python",
-      "stars": 12482,
-      "forks": 1817,
-      "starsToday": 121,
-      "license": "MIT",
-      "topics": [
-        "aggregator",
-        "feishu-bot",
-        "llm",
-        "mcp",
-        "news",
-        "openclaw",
-        "python",
-        "webhook"
-      ],
-      "homepage": "https://www.horizon1123.top",
-      "updatedAt": "2026-11-03T17:20:32Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
-      "chinese": {
-        "title": "Horizon",
-        "summary": "📡 Your own AI-powered news radar. Generates daily briefings in English & Chinese. | 用 AI 构建你专属的新闻雷达。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 121 Star",
-          "主要使用 Python，当前累计 12,482 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 16,
-      "fullName": "scenario-labs/skills",
-      "owner": "scenario-labs",
-      "name": "skills",
-      "url": "https://github.com/scenario-labs/skills",
-      "description": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.",
-      "language": "Python",
-      "stars": 2424,
-      "forks": 245,
-      "starsToday": 224,
-      "license": "MIT",
-      "topics": [
-        "3d-models",
-        "agent-skills",
-        "ai-agents",
-        "ai-art",
-        "blender",
-        "claude-code",
-        "claude-skills",
-        "codex"
-      ],
-      "homepage": "https://www.skills.sh/scenario-labs/skills",
-      "updatedAt": "2026-11-04T23:47:13Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-05T00:30:07.214Z",
-      "chinese": {
-        "title": "skills",
-        "summary": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 224 Star",
-          "主要使用 Python，当前累计 2,424 Star",
-          "仓库标注 MIT 许可证"
         ],
         "useCases": [
           "了解近期开发者关注方向",

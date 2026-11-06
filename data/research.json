@@ -1,4 +1,46 @@
 {
+  "garrytan/gstack": {
+    "title": "gstack：把编程 Agent 组织成端到端工程团队",
+    "summary": "以一组有顺序的 Agent Skills 覆盖产品澄清、架构、设计、代码审查、浏览器 QA、安全、发布和复盘，并为多种编程 Agent 提供安装与宿主适配。",
+    "highlights": ["从 office-hours、计划评审到 review、qa、ship 串联同一轮产物", "可按宿主安装到 Claude Code、Codex 等环境并检查安装状态", "包含浏览器驱动、Hook、升级通道和团队仓库引导工具"],
+    "useCases": ["为 AI 辅助开发建立可重复的评审、验证与发布流程", "给技术创始人或小团队配置分角色的工程检查清单"],
+    "audience": "愿意审查 Agent 指令、安装脚本和执行权限的技术负责人及高级开发者",
+    "caution": "安装脚本会写入宿主的技能目录和配置，按选择注册 Hook，并可能构建或下载浏览器组件；团队模式还会修改项目内配置并建议提交。部分技能可运行测试、控制已登录浏览器、修改代码、推送或创建 PR，跨模型复核也依赖额外 CLI 登录。Codex 等非 Claude 宿主在固定版本中标为 experimental，安全约束可能只是建议而非强制。采用前应在隔离环境审查 setup、Hook、更新通道和每个将启用的技能；本页未安装或执行 gstack。",
+    "status": "draft",
+    "commit": "eaf1701da2d68b5c03136ff530aa228013eedb7c",
+    "researchedAt": "2026-11-06",
+    "workflow": ["在隔离环境固定版本，审查 setup、宿主适配、Hook 与更新策略", "只安装一个目标宿主，先运行状态检查和低风险的产品/计划技能", "逐项授权 review、qa 与 ship，核对代码改动、浏览器会话、Git 远端和发布门禁"],
+    "implementation": "仓库以独立 SKILL.md 和分段模板定义角色流程，前序技能生成的设计、计划与测试产物供后序技能读取。setup 校验 Bun 等前置条件，按宿主渲染或复制技能，维护安装登记并选择性注册 Hook；浏览器和发布能力由配套 bin 工具提供。团队模式用 SessionStart 更新检查跟随 stable 或 main 通道，并可在仓库中加入必需或可选的 gstack 引导。",
+    "sources": [{"label": "固定版本官方 README 与工作流", "url": "https://github.com/garrytan/gstack/blob/eaf1701da2d68b5c03136ff530aa228013eedb7c/README.md"}, {"label": "固定版本安装实现", "url": "https://github.com/garrytan/gstack/blob/eaf1701da2d68b5c03136ff530aa228013eedb7c/setup"}, {"label": "固定版本安装与 Hook 说明", "url": "https://github.com/garrytan/gstack/blob/eaf1701da2d68b5c03136ff530aa228013eedb7c/docs/install.md"}]
+  },
+  "lz4/lz4": {
+    "title": "LZ4：面向低延迟场景的高速无损压缩库与 CLI",
+    "summary": "提供 C 语言的内存块压缩、流式与 Frame API，以及兼容 gzip 风格用法的命令行工具；可在压缩速度、压缩率和多线程内存预算之间调节。",
+    "highlights": ["默认模式强调高速压缩与接近内存带宽的解压", "LZ4_HC 用更多 CPU 换取压缩率，解压路径保持兼容", "Frame 格式封装块、尺寸、校验和与字典标识，适合可移植文件和数据流"],
+    "useCases": ["日志、缓存、数据库或 RPC 中对延迟敏感的压缩", "用 CLI 压缩文件并以校验和或字典增强特定工作负载"],
+    "audience": "需要在系统软件、存储或数据管道中权衡吞吐、内存与压缩率的工程团队",
+    "caution": "README 性能数字来自特定 CPU、编译器和 Silesia 语料，不能替代目标数据与硬件基准。裸 block API 不携带压缩尺寸和解压上限，调用方必须可靠保存这些元数据并使用安全解压接口；需要自包含与互操作时应使用 Frame API。多线程 Frame 压缩仍标为 experimental，字典只使用输入末尾 64 KiB。库采用 BSD-2-Clause，CLI 采用 GPL-2.0-or-later，分发时须分别核对；压缩和校验也不提供加密或真实性保证。本页未编译或跑基准。",
+    "status": "draft",
+    "commit": "7f3d45e7fd68d340585b4650eca4cda5432c08ba",
+    "researchedAt": "2026-11-06",
+    "workflow": ["按目标平台用 Make、CMake、Meson 或包管理器固定版本构建", "先用代表性数据比较默认、HC、字典与 Frame 参数的吞吐、比例和内存", "集成安全解压与错误处理，并用损坏输入、容量不足和跨实现文件验证边界"],
+    "implementation": "lz4.h 暴露单次、上下文复用和流式 block API；LZ4_compress_default 在目标容量不足时返回 0，LZ4_decompress_safe 以压缩大小和目标容量限制读写并返回负错误码。lz4frame.h 在块之上加入 Frame 元数据、校验和、链接模式、字典 ID 与可选工作线程；CLI 只处理 Frame，并将文件、递归、校验、字典和基准参数映射到库接口。",
+    "sources": [{"label": "固定版本官方 README 与许可、基准", "url": "https://github.com/lz4/lz4/blob/7f3d45e7fd68d340585b4650eca4cda5432c08ba/README.md"}, {"label": "固定版本 block API 与安全边界", "url": "https://github.com/lz4/lz4/blob/7f3d45e7fd68d340585b4650eca4cda5432c08ba/lib/lz4.h"}, {"label": "固定版本 Frame API 与多线程边界", "url": "https://github.com/lz4/lz4/blob/7f3d45e7fd68d340585b4650eca4cda5432c08ba/lib/lz4frame.h"}, {"label": "固定版本 CLI 说明", "url": "https://github.com/lz4/lz4/blob/7f3d45e7fd68d340585b4650eca4cda5432c08ba/programs/README.md"}]
+  },
+  "google/skills": {
+    "title": "Google Agent Skills：Google 产品的可安装任务知识库",
+    "summary": "把 Google Cloud、Gemini、GKE、数据、安全、身份、广告等产品的操作流程拆成可选择安装的 Agent Skills，并提供目录索引、辅助资源和部分宿主插件。",
+    "highlights": ["固定版本 index.json 收录 186 个技能入口与路由描述", "可通过 npx skills 选择技能、目标 Agent 和项目或全局作用域", "技能可携带参考资料、脚本与输出模板，部分插件还组合 MCP 服务"],
+    "useCases": ["为 Agent 按需补充 Google 产品的官方流程和边界", "在团队项目中固定云架构、故障排查或 API 集成操作规范"],
+    "audience": "使用 Google 产品并能审查 Agent 指令、云权限和命令副作用的平台与应用团队",
+    "caution": "仓库由 Google 维护不等于每个技能适合当前账号、区域、版本或生产环境；目录中的描述只用于路由，真正执行前仍应读取完整 SKILL.md、引用资料和脚本。安装依赖 npx skills 并会写入所选 Agent 的项目或全局技能目录；部分技能可能调用 gcloud、REST、MCP 或修改云资源，应使用最小权限、确认计费与地域并保留人工审批。目录和入口会更新，固定版本研究不能替代安装时复核。本页未安装技能或调用 Google 服务。",
+    "status": "draft",
+    "commit": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+    "researchedAt": "2026-11-06",
+    "workflow": ["从固定版本目录按描述筛出最多几个与任务直接相关的技能", "审查对应 SKILL.md、引用文件、脚本、认证和资源修改范围", "在项目作用域安装并用低权限测试账号验证，再决定是否更新或扩大到全局"],
+    "implementation": "README 提供 npx skills 的选择式安装与更新入口；index.json 将技能名、触发描述和原始 SKILL.md 地址组成机器可读目录。Skill Finder 先拉取并校验目录，再最多选择三个匹配项、按需读取入口；具体技能通过同目录 references、scripts 与 assets 逐步加载产品资料和执行辅助。插件目录则把技能与 MCP 服务按宿主安装方式组合。",
+    "sources": [{"label": "固定版本官方 README 与安装方式", "url": "https://github.com/google/skills/blob/c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2/README.md"}, {"label": "固定版本技能目录", "url": "https://github.com/google/skills/blob/c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2/index.json"}, {"label": "固定版本按需路由技能", "url": "https://github.com/google/skills/blob/c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2/skills/developers/finding-google-skills/SKILL.md"}, {"label": "固定版本开发者知识技能示例", "url": "https://github.com/google/skills/blob/c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2/skills/developers/retrieving-developer-knowledge/SKILL.md"}]
+  },
   "NVIDIA/auto-ontology": {
     "title": "Auto Ontology：企业数据的语义图与可核验问答层",
     "summary": "从数据库元数据构建术语、SQL 属性和关系图，再把经过认证的业务语义提供给聊天、API、CLI 与 MCP，用于约束自然语言转 SQL。",
