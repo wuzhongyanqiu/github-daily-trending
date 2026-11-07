@@ -1,37 +1,103 @@
 {
-  "generatedAt": "2026-11-06T01:09:38.464Z",
+  "generatedAt": "2026-11-07T00:28:45.460Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "status": "success",
   "coverage": {
-    "researched": 10,
+    "researched": 7,
     "pendingResearch": [
-      "vercel-labs/agent-browser",
-      "scenario-labs/skills",
-      "ConardLi/garden-skills",
-      "microsoft/VibeVoice",
-      "JiaFeiMiao-K-Cat/DiscImageStudio"
+      "rust-lang/rust",
+      "react/react",
+      "angular/angular",
+      "symfony/symfony",
+      "prometheus/prometheus",
+      "microsoft/vscode",
+      "nushell/nushell",
+      "etcd-io/etcd",
+      "openssl/openssl",
+      "astral-sh/ruff"
     ],
     "metadataFailures": []
   },
   "repositories": [
     {
       "rank": 1,
+      "fullName": "zed-industries/zed",
+      "owner": "zed-industries",
+      "name": "zed",
+      "url": "https://github.com/zed-industries/zed",
+      "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "language": "Rust",
+      "stars": 93617,
+      "forks": 11499,
+      "starsToday": 306,
+      "license": "NOASSERTION",
+      "topics": [
+        "gpui",
+        "rust-lang",
+        "text-editor",
+        "zed"
+      ],
+      "homepage": "https://zed.dev",
+      "updatedAt": "2026-11-06T20:00:38Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
+      "chinese": {
+        "title": "Zed：以 Rust 与 GPUI 构建的高性能协作代码编辑器",
+        "summary": "面向 macOS、Linux 和 Windows 的原生代码编辑器，把项目、语言工具、多人协作、Git、终端与 Agent 入口组织在同一桌面工作区；当前不提供 Web 版。",
+        "highlights": [
+          "官方提供桌面安装包，也可按平台固定源码版本自行构建",
+          "主应用通过 GPUI 注册窗口、命令、设置、工作区和多种面板",
+          "Linux 同时支持 Wayland 与 X11，发行打包需安装 CLI 和编辑器两个二进制"
+        ],
+        "useCases": [
+          "在大型代码库中使用原生编辑、语言服务、终端和 Git 工作流",
+          "评估多人协作或 Agent 辅助开发的桌面编辑器"
+        ],
+        "audience": "愿意核对桌面平台、联网服务、扩展和许可证边界的开发者与工程团队",
+        "caution": "源码主要采用 GPL-3.0-or-later，标记组件使用 Apache-2.0，打包和再分发需逐项核对。Linux 文档明确默认连接 AI、遥测与协作服务，扩展还可能安装语言服务器等工具；这些能力可配置关闭，但在受限网络或沙箱环境采用前应审查默认设置、扩展和数据流。项目更新频繁，固定版本源码阅读不能替代目标平台安装、性能、协作和隐私实测。本页未安装或运行 Zed。",
+        "status": "draft",
+        "commit": "9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3",
+        "researchedAt": "2026-11-07",
+        "workflow": [
+          "按目标平台固定版本，优先使用官方包或依照平台文档准备依赖",
+          "先在测试项目验证编辑、语言服务、Git 与终端，再按需启用协作、Agent 和扩展",
+          "核对联网、遥测、凭据、扩展安装和更新策略后再用于敏感代码库"
+        ],
+        "implementation": "README 定义了桌面平台、构建入口与许可证；crates/zed/src/zed.rs 以 GPUI 初始化主应用，注册窗口、命令、设置、工作区以及编辑器、Git、终端、调试、扩展和 Agent 等模块。Linux 构建文档说明 CLI 负责用户入口，zed-editor 提供主界面，并明确联网服务、工具自动安装和沙箱兼容性的当前边界。",
+        "sources": [
+          {
+            "label": "固定版本官方 README 与许可证",
+            "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/README.md"
+          },
+          {
+            "label": "固定版本主应用初始化实现",
+            "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/crates/zed/src/zed.rs"
+          },
+          {
+            "label": "固定版本 Linux 构建与运行边界",
+            "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/docs/src/development/linux.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 2,
       "fullName": "NVIDIA/auto-ontology",
       "owner": "NVIDIA",
       "name": "auto-ontology",
       "url": "https://github.com/NVIDIA/auto-ontology",
       "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
       "language": "Python",
-      "stars": 7353,
-      "forks": 585,
-      "starsToday": 2679,
+      "stars": 9011,
+      "forks": 724,
+      "starsToday": 2015,
       "license": "Apache-2.0",
       "topics": [],
       "homepage": null,
-      "updatedAt": "2026-11-05T14:45:30Z",
+      "updatedAt": "2026-11-06T23:03:36Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
       "chinese": {
         "title": "Auto Ontology：企业数据的语义图与可核验问答层",
         "summary": "从数据库元数据构建术语、SQL 属性和关系图，再把经过认证的业务语义提供给聊天、API、CLI 与 MCP，用于约束自然语言转 SQL。",
@@ -72,422 +138,345 @@
       }
     },
     {
-      "rank": 2,
-      "fullName": "mattpocock/skills",
-      "owner": "mattpocock",
-      "name": "skills",
-      "url": "https://github.com/mattpocock/skills",
-      "description": "Skills for Real Engineers. Straight from my .agents directory.",
-      "language": "Shell",
-      "stars": 315241,
-      "forks": 26399,
-      "starsToday": 2071,
-      "license": "MIT",
-      "topics": [],
-      "homepage": "https://aihero.dev/skills",
-      "updatedAt": "2026-11-05T10:40:01Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
-      "chinese": {
-        "title": "Skills for Real Engineers：可组合的工程 Agent 技能",
-        "summary": "Matt Pocock 分享的工程与效率技能集合，以独立 SKILL.md 指导需求澄清、规格实现和验证等任务，供多个编程 Agent 宿主选用。",
-        "highlights": [
-          "按宿主选择插件或可编辑文件安装",
-          "首次运行 setup 技能配置 issue 跟踪和文档位置",
-          "工程技能和效率技能可按任务单独加载"
-        ],
-        "useCases": [
-          "给编程 Agent 配置可审查的工作流程",
-          "参考需求澄清和规格实施指令"
-        ],
-        "audience": "使用编程 Agent 的软件工程师",
-        "caution": "技能是操作指令，不保证代码质量；插件自动更新与 skills.sh 复制文件的更新方式不同，重复安装会出现双份技能。实施规格技能会要求创建分支和子 Agent，运行前应审查指令与权限。本页未安装实测。",
-        "status": "draft",
-        "commit": "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa",
-        "researchedAt": "2026-10-31",
-        "workflow": [
-          "按宿主选择一种安装方式并审查技能文件",
-          "运行 setup 技能配置项目约定",
-          "在小任务中检查触发、变更和测试结果"
-        ],
-        "implementation": "README 把技能组织为小型可组合指令；implement-spec 技能读取规格和工单图，要求独立实现分支与审查，实际执行仍取决于宿主 Agent。",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/mattpocock/skills/blob/a496f5513d4a4cf889bc48e189e579f4b0bdf6aa/README.md"
-          },
-          {
-            "label": "固定版本 implement-spec 技能",
-            "url": "https://github.com/mattpocock/skills/blob/a496f5513d4a4cf889bc48e189e579f4b0bdf6aa/skills/engineering/implement-spec/SKILL.md"
-          }
-        ]
-      }
-    },
-    {
       "rank": 3,
-      "fullName": "garrytan/gstack",
-      "owner": "garrytan",
-      "name": "gstack",
-      "url": "https://github.com/garrytan/gstack",
-      "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
-      "language": "TypeScript",
-      "stars": 139948,
-      "forks": 20699,
-      "starsToday": 612,
+      "fullName": "rails/rails",
+      "owner": "rails",
+      "name": "rails",
+      "url": "https://github.com/rails/rails",
+      "description": "Ruby on Rails",
+      "language": "Ruby",
+      "stars": 59024,
+      "forks": 23833,
+      "starsToday": 142,
       "license": "MIT",
-      "topics": [],
-      "homepage": null,
-      "updatedAt": "2026-11-06T01:01:37Z",
+      "topics": [
+        "activejob",
+        "activerecord",
+        "framework",
+        "html",
+        "mvc",
+        "rails",
+        "ruby"
+      ],
+      "homepage": "https://rubyonrails.org",
+      "updatedAt": "2026-11-06T23:19:25Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
       "chinese": {
-        "title": "gstack：把编程 Agent 组织成端到端工程团队",
-        "summary": "以一组有顺序的 Agent Skills 覆盖产品澄清、架构、设计、代码审查、浏览器 QA、安全、发布和复盘，并为多种编程 Agent 提供安装与宿主适配。",
+        "title": "Ruby on Rails：覆盖 MVC 与应用运行时的全栈 Web 框架",
+        "summary": "把 Active Record、Action Pack、Action View 等组件组合为数据库驱动的 MVC 应用，并继续提供邮件、后台任务、WebSocket、文件和富文本等常用服务。",
         "highlights": [
-          "从 office-hours、计划评审到 review、qa、ship 串联同一轮产物",
-          "可按宿主安装到 Claude Code、Codex 等环境并检查安装状态",
-          "包含浏览器驱动、Hook、升级通道和团队仓库引导工具"
+          "模型、视图、控制器和路由形成默认的数据库 Web 应用链路",
+          "多个核心组件可在完整 Rails 应用之外独立使用",
+          "Rails::Application 统一执行 Railtie 与 Engine 初始化器、路由重载和中间件构建"
         ],
         "useCases": [
-          "为 AI 辅助开发建立可重复的评审、验证与发布流程",
-          "给技术创始人或小团队配置分角色的工程检查清单"
+          "快速构建约定优先的数据库 Web 产品与 JSON 服务",
+          "在 Ruby 系统中按需采用 ORM、任务、邮件或 WebSocket 组件"
         ],
-        "audience": "愿意审查 Agent 指令、安装脚本和执行权限的技术负责人及高级开发者",
-        "caution": "安装脚本会写入宿主的技能目录和配置，按选择注册 Hook，并可能构建或下载浏览器组件；团队模式还会修改项目内配置并建议提交。部分技能可运行测试、控制已登录浏览器、修改代码、推送或创建 PR，跨模型复核也依赖额外 CLI 登录。Codex 等非 Claude 宿主在固定版本中标为 experimental，安全约束可能只是建议而非强制。采用前应在隔离环境审查 setup、Hook、更新通道和每个将启用的技能；本页未安装或执行 gstack。",
+        "audience": "接受 Rails 约定并能维护 Ruby、数据库、队列与部署链路的 Web 团队",
+        "caution": "框架覆盖面广不等于默认配置适合所有生产场景；应用仍需自行处理认证授权、密钥、参数过滤、数据库迁移、后台任务、文件存储、容量和可观测性。插件、引擎与版本升级会进入同一初始化、路由和中间件链路，应固定 Ruby 与依赖版本并阅读升级和安全公告。README 的快速开始只证明开发服务器入口，本页未创建应用、运行测试或做生产负载验证。",
         "status": "draft",
-        "commit": "eaf1701da2d68b5c03136ff530aa228013eedb7c",
-        "researchedAt": "2026-11-06",
+        "commit": "f4a33dbbd3e38d6def4f776cb6b60eb4070a9aff",
+        "researchedAt": "2026-11-07",
         "workflow": [
-          "在隔离环境固定版本，审查 setup、宿主适配、Hook 与更新策略",
-          "只安装一个目标宿主，先运行状态检查和低风险的产品/计划技能",
-          "逐项授权 review、qa 与 ship，核对代码改动、浏览器会话、Git 远端和发布门禁"
+          "固定 Rails、Ruby 和数据库版本，用 rails new 生成最小应用并记录选项",
+          "实现一个模型、迁移、路由和控制器闭环，再接入测试与后台组件",
+          "在生产前审查密钥、参数过滤、中间件、数据库迁移、任务和升级策略"
         ],
-        "implementation": "仓库以独立 SKILL.md 和分段模板定义角色流程，前序技能生成的设计、计划与测试产物供后序技能读取。setup 校验 Bun 等前置条件，按宿主渲染或复制技能，维护安装登记并选择性注册 Hook；浏览器和发布能力由配套 bin 工具提供。团队模式用 SessionStart 更新检查跟随 stable 或 main 通道，并可在仓库中加入必需或可选的 gstack 引导。",
+        "implementation": "README 将请求链路拆成 Active Record/Active Model、Action View 与 Action Pack，并列出邮件、任务、WebSocket、存储和富文本组件。railties/lib/rails/application.rb 显示 Rails::Application 继承 Engine，按顺序装载环境、Railtie、Engine 与应用初始化器，随后构建中间件、路由重载器、自动加载器和 eager load；应用配置与插件因此共享同一启动生命周期。",
         "sources": [
           {
-            "label": "固定版本官方 README 与工作流",
-            "url": "https://github.com/garrytan/gstack/blob/eaf1701da2d68b5c03136ff530aa228013eedb7c/README.md"
+            "label": "固定版本官方 README 与组件说明",
+            "url": "https://github.com/rails/rails/blob/f4a33dbbd3e38d6def4f776cb6b60eb4070a9aff/README.md"
           },
           {
-            "label": "固定版本安装实现",
-            "url": "https://github.com/garrytan/gstack/blob/eaf1701da2d68b5c03136ff530aa228013eedb7c/setup"
-          },
-          {
-            "label": "固定版本安装与 Hook 说明",
-            "url": "https://github.com/garrytan/gstack/blob/eaf1701da2d68b5c03136ff530aa228013eedb7c/docs/install.md"
+            "label": "固定版本应用启动与中间件实现",
+            "url": "https://github.com/rails/rails/blob/f4a33dbbd3e38d6def4f776cb6b60eb4070a9aff/railties/lib/rails/application.rb"
           }
         ]
       }
     },
     {
       "rank": 4,
-      "fullName": "Usagi-org/ai-goofish-monitor",
-      "owner": "Usagi-org",
-      "name": "ai-goofish-monitor",
-      "url": "https://github.com/Usagi-org/ai-goofish-monitor",
-      "description": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
-      "language": "Python",
-      "stars": 17540,
-      "forks": 2945,
-      "starsToday": 240,
-      "license": "MIT",
+      "fullName": "mpv-player/mpv",
+      "owner": "mpv-player",
+      "name": "mpv",
+      "url": "https://github.com/mpv-player/mpv",
+      "description": "🎥 Command line media player",
+      "language": "C",
+      "stars": 37873,
+      "forks": 3632,
+      "starsToday": 37,
+      "license": "NOASSERTION",
       "topics": [
-        "ai",
-        "ai-assistant",
-        "ai-tools",
-        "automation",
-        "gemini",
-        "goofish",
-        "open-source",
-        "openai"
+        "audio",
+        "c",
+        "ffmpeg",
+        "mplayer",
+        "mpv",
+        "multimedia",
+        "video"
       ],
-      "homepage": null,
-      "updatedAt": "2026-10-10T07:39:16Z",
+      "homepage": "https://mpv.io",
+      "updatedAt": "2026-11-05T15:31:49Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
       "chinese": {
-        "title": "闲鱼智能监控系统：多任务商品抓取与分析工作台",
-        "summary": "通过 Web 界面配置关键词、价格、区域、账号和定时任务，用 Playwright 抓取闲鱼商品与卖家信息，再以关键词规则或多模态模型分析并将推荐结果发送到通知渠道。",
+        "title": "mpv：可脚本化、可嵌入的跨平台媒体播放器",
+        "summary": "以命令行为主入口，结合 FFmpeg、libplacebo、libass 等组件播放多种音视频与字幕格式，也可通过 libmpv C API 嵌入其他应用。",
         "highlights": [
-          "支持多任务、定时调度、账号与代理轮换",
-          "商品结果、任务与价格历史保存到 SQLite",
-          "分析链路覆盖卖家信息、商品图片、规则或 AI 判断及多渠道通知"
+          "支持 Linux、Windows 与 macOS，播放、滤镜、字幕和输出参数可细粒度配置",
+          "视频渲染主要使用着色器，硬件解码需显式启用并按设备验证",
+          "libmpv 提供属性、命令和事件接口，C 插件与 Lua/JavaScript 脚本可扩展播放器"
         ],
         "useCases": [
-          "在明确授权和合理频率下追踪特定二手商品条件",
-          "用关键词规则或图文模型辅助筛选大量新增商品"
+          "用命令行和配置文件建立可重复的本地或流媒体播放流程",
+          "把播放器作为音视频后端嵌入桌面工具或自动化系统"
         ],
-        "audience": "熟悉自托管、浏览器自动化与闲鱼使用边界的个人研究者和开发者",
-        "caution": "运行需要导入闲鱼登录态，并可能把商品、卖家和图片发送到所配置的模型接口或通知服务；应保护 cookie、API Key、数据库与日志，核对第三方数据处理范围。默认 Web 账号密码必须修改，服务应限制在可信网络。抓取需遵守平台条款、robots.txt、频率限制和适用法律，账号或代理轮换不能规避平台规则；AI 推荐也不能替代商品真伪、价格与交易风险判断。本页未登录、抓取或调用模型。",
-        "workflow": [
-          "在隔离主机配置模型、Web 认证和持久化目录并启动服务",
-          "导入专用测试账号登录态，先用低频关键词任务验证抓取与 SQLite 结果",
-          "再启用图片分析和单一通知渠道，核对隐私、误报、限频与失败保护后扩展"
-        ],
-        "implementation": "主服务按手动操作或 Cron 启动抓取任务，Playwright 搜索新商品并采集详情；ItemAnalysisDispatcher 以信号量限制并发，补充卖家信息后选择关键词规则或 AI 图文分析，先保存结果再仅对推荐项通知，临时图片在分析后清理。任务、结果和价格历史以 SQLite 为主存储，登录态和日志仍保留在文件系统。",
-        "commit": "77f8d75869acd65f9dba72731b95c7c49ea67bdf",
+        "audience": "需要可控播放参数、脚本化或嵌入能力，并能处理原生依赖与媒体安全边界的开发者",
+        "caution": "硬件解码默认关闭，低功耗 GPU、旧系统、驱动和具体编码格式都需实机验证；构建完整功能依赖 FFmpeg、libplacebo、libass 等原生库。配置目录中的脚本和 C 插件会被加载并可调用播放器接口，只应安装可信代码；网络媒体与复杂容器也应视为不可信输入。项目通常每年发布一到两次且仅维护最新版本，发行包可能带下游补丁。默认 GPL-2.0-or-later，使用 -Dgpl=false 才是 LGPL-2.1-or-later 组合，嵌入与分发需核对构建选项。本页未编译、播放或跑性能测试。",
         "status": "draft",
-        "researchedAt": "2026-11-04",
+        "commit": "902818753849d9ad8f0096fad6ca5aeaa37113b9",
+        "researchedAt": "2026-11-07",
+        "workflow": [
+          "优先选用可信发行包并固定版本，用代表性本地文件验证音频、视频和字幕",
+          "按设备逐项测试 GPU 输出、硬件解码、色彩、同步与失败回退，再保存最小配置",
+          "嵌入时通过 libmpv 的命令、属性和事件边界集成，并审查脚本、插件、网络与许可证"
+        ],
+        "implementation": "README 给出平台、依赖、Meson 构建、发布和许可证口径。player/main.c 组装命令行、配置、输入、解复用、解码、音视频输出、OSD、IPC 与客户端生命周期；DOCS/man/libmpv.rst 说明嵌入应用通过 C API 控制同一底层机制，C 插件运行在独立线程并需遵守事件等待和句柄所有权约束。",
         "sources": [
           {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/Usagi-org/ai-goofish-monitor/blob/77f8d75869acd65f9dba72731b95c7c49ea67bdf/README.md"
+            "label": "固定版本官方 README 与构建边界",
+            "url": "https://github.com/mpv-player/mpv/blob/902818753849d9ad8f0096fad6ca5aeaa37113b9/README.md"
           },
           {
-            "label": "固定版本商品分析分发器",
-            "url": "https://github.com/Usagi-org/ai-goofish-monitor/blob/77f8d75869acd65f9dba72731b95c7c49ea67bdf/src/services/item_analysis_dispatcher.py"
+            "label": "固定版本播放器主流程实现",
+            "url": "https://github.com/mpv-player/mpv/blob/902818753849d9ad8f0096fad6ca5aeaa37113b9/player/main.c"
+          },
+          {
+            "label": "固定版本 libmpv 与插件说明",
+            "url": "https://github.com/mpv-player/mpv/blob/902818753849d9ad8f0096fad6ca5aeaa37113b9/DOCS/man/libmpv.rst"
           }
         ]
       }
     },
     {
       "rank": 5,
-      "fullName": "D4Vinci/Scrapling",
-      "owner": "D4Vinci",
-      "name": "Scrapling",
-      "url": "https://github.com/D4Vinci/Scrapling",
-      "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
-      "language": "Python",
-      "stars": 97990,
-      "forks": 10263,
-      "starsToday": 1655,
-      "license": "BSD-3-Clause",
+      "fullName": "rust-lang/rust",
+      "owner": "rust-lang",
+      "name": "rust",
+      "url": "https://github.com/rust-lang/rust",
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "language": "Rust",
+      "stars": 121442,
+      "forks": 17365,
+      "starsToday": 192,
+      "license": "Apache-2.0",
       "topics": [
-        "ai",
-        "ai-scraping",
-        "automation",
-        "crawler",
-        "crawling",
-        "crawling-python",
-        "data",
-        "data-extraction"
+        "compiler",
+        "language",
+        "rust"
       ],
-      "homepage": "https://scrapling.readthedocs.io/en/latest/",
-      "updatedAt": "2026-11-05T18:01:47Z",
+      "homepage": "https://www.rust-lang.org",
+      "updatedAt": "2026-11-07T00:13:38Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
       "chinese": {
-        "title": "Scrapling：覆盖请求、浏览器与并发爬虫的 Python 抓取框架",
-        "summary": "把 HTTP 请求、JavaScript 浏览器、选择器解析、并发 Spider、代理轮换、断点续爬、导出和 Agent 接口放入同一个 Python 抓取工具链。",
+        "title": "rust",
+        "summary": "Empowering everyone to build reliable and efficient software.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "Fetcher 与浏览器 Session 覆盖静态和动态页面",
-          "Spider 支持并发、限速、重试、断点续爬和流式结果",
-          "提供 CLI、MCP Server、Agent Skill 与 Markdown 输出"
+          "今日新增 192 Star",
+          "主要使用 Rust，当前累计 121,442 Star",
+          "仓库标注 Apache-2.0 许可证"
         ],
         "useCases": [
-          "从单页字段提取扩展到可恢复的网站爬取",
-          "为检索或 Agent 工作流准备结构化数据与清洗后的 Markdown"
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
         ],
-        "audience": "网页数据采集开发者、研究工程师和需要浏览器抓取能力的 Agent 团队",
-        "caution": "抓取前仍须遵守目标站点条款、robots.txt、隐私与适用法律，并控制频率；代理、指纹伪装和反机器人功能不保证成功，也不能替代访问授权。README 中的速度、覆盖率与绕过能力属于项目方自述，未在本页同条件复现；MCP 浏览器会扩大网络与页面内容暴露面。本页未运行抓取。",
-        "workflow": [
-          "先用 Fetcher 对公开测试页验证选择器和输出",
-          "需要渲染时再切换浏览器 Session，并限制域名、凭据和资源",
-          "扩展为 Spider 后配置限速、重试、crawldir 与导出，再核对完整性"
-        ],
-        "implementation": "README 展示同一选择器接口可用于一次性 HTTP、持久 Session 和浏览器响应；Spider 通过 Request/Response 与异步 parse 产生条目或后续请求，crawldir 保存待处理请求和已见 URL。浏览器路径还可记录后台 API 响应，使用时需单独管理会话状态和敏感数据。",
-        "commit": "95cf9019ab5a5d6f3e9654b7ef1c6a26e29dc5c0",
-        "status": "draft",
-        "researchedAt": "2026-11-03",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/D4Vinci/Scrapling/blob/95cf9019ab5a5d6f3e9654b7ef1c6a26e29dc5c0/README.md"
-          }
-        ]
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
       }
     },
     {
       "rank": 6,
-      "fullName": "vercel-labs/agent-desktop",
-      "owner": "vercel-labs",
-      "name": "agent-desktop",
-      "url": "https://github.com/vercel-labs/agent-desktop",
-      "description": "Computer use CLI for AI agents",
-      "language": "Rust",
-      "stars": 16860,
-      "forks": 1189,
-      "starsToday": 2173,
-      "license": "Apache-2.0",
+      "fullName": "react/react",
+      "owner": "react",
+      "name": "react",
+      "url": "https://github.com/react/react",
+      "description": "The library for web and native user interfaces.",
+      "language": "JavaScript",
+      "stars": 252252,
+      "forks": 51811,
+      "starsToday": 248,
+      "license": "MIT",
       "topics": [
-        "accessibility",
-        "accessibility-api",
-        "ai-agents",
-        "automation",
-        "cli",
-        "computer-use",
-        "computer-use-agent",
-        "computer-use-agents"
+        "declarative",
+        "frontend",
+        "javascript",
+        "library",
+        "react",
+        "ui"
       ],
-      "homepage": "https://agent-browser.dev/desktop",
-      "updatedAt": "2026-11-05T06:31:12Z",
+      "homepage": "https://react.dev",
+      "updatedAt": "2026-11-07T00:20:04Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
       "chinese": {
-        "title": "agent-desktop：基于系统无障碍树的桌面操作 CLI",
-        "summary": "为 macOS、Windows 与 Linux 提供桌面快照和引用式操作接口，让 Agent 读取系统无障碍树、对快照内元素执行动作，再重新观察结果。",
+        "title": "react",
+        "summary": "The library for web and native user interfaces.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "快照为可操作元素分配带 snapshot id 的 ref",
-          "CLI 每次调用输出统一 JSON envelope",
-          "支持命令行与随发布包提供的 C FFI"
+          "今日新增 248 Star",
+          "主要使用 JavaScript，当前累计 252,252 Star",
+          "仓库标注 MIT 许可证"
         ],
         "useCases": [
-          "让 Agent 操作原生桌面应用并保留结构化证据",
-          "在无像素匹配的前提下测试跨平台辅助功能自动化"
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
         ],
-        "audience": "构建桌面 Agent、辅助功能自动化和原生应用测试工具的开发者",
-        "caution": "必须按平台授予相应辅助功能权限，Linux 还受 X11、Wayland 和 AT-SPI 能力差异影响。快照、剪贴板、截图、命令输出和调试产物可能包含私密桌面内容；ref 只对所属快照有效，界面变化后必须重新观察。本页未安装或操作桌面应用。",
-        "workflow": [
-          "安装后先核对版本、平台能力与权限状态",
-          "用 snapshot 获取带完整 snapshot id 的元素 ref",
-          "对 ref 执行动作并再次 snapshot 验证结果"
-        ],
-        "implementation": "固定版本实现把 ref 动作送入统一管线：加载 RefStore、在 RefMap 查找、严格解析实时元素、执行可操作性预检后再分发。裸 @eN 会被拒绝；语义动作默认遵守严格无头策略，调用方只能在明确策略下启用焦点回退或 headed 输入。",
-        "commit": "060c83af4be63096de33fc22d79fb9c4d02f528e",
-        "status": "draft",
-        "researchedAt": "2026-11-03",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/vercel-labs/agent-desktop/blob/060c83af4be63096de33fc22d79fb9c4d02f528e/README.md"
-          },
-          {
-            "label": "固定版本 ref 动作入口",
-            "url": "https://github.com/vercel-labs/agent-desktop/blob/060c83af4be63096de33fc22d79fb9c4d02f528e/crates/core/src/commands/execute_by_ref.rs"
-          }
-        ]
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
       }
     },
     {
       "rank": 7,
-      "fullName": "max-sixty/worktrunk",
-      "owner": "max-sixty",
-      "name": "worktrunk",
-      "url": "https://github.com/max-sixty/worktrunk",
-      "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
-      "language": "Rust",
-      "stars": 11518,
-      "forks": 439,
-      "starsToday": 546,
-      "license": "NOASSERTION",
+      "fullName": "angular/angular",
+      "owner": "angular",
+      "name": "angular",
+      "url": "https://github.com/angular/angular",
+      "description": "Deliver web apps with confidence 🚀",
+      "language": "TypeScript",
+      "stars": 101357,
+      "forks": 28912,
+      "starsToday": 135,
+      "license": "MIT",
       "topics": [
-        "agents",
-        "claude-code",
-        "codex",
-        "developer-tools",
-        "git",
-        "worktrees"
+        "angular",
+        "javascript",
+        "pwa",
+        "typescript",
+        "web",
+        "web-framework",
+        "web-performance"
       ],
-      "homepage": "https://worktrunk.dev",
-      "updatedAt": "2026-11-06T00:31:20Z",
+      "homepage": "https://angular.dev",
+      "updatedAt": "2026-11-06T19:39:34Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
       "chinese": {
-        "title": "Worktrunk：面向并行 Agent 的 Git worktree 管理 CLI",
-        "summary": "把创建、切换、列出、合并和移除 Git worktree 封装成较短的 wt 命令，并用 Hooks、缓存与状态预览支持多个并行开发任务。",
+        "title": "angular",
+        "summary": "Deliver web apps with confidence 🚀。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "wt switch 可创建分支与 worktree 并启动指定命令",
-          "wt list 汇总差异、提交、CI 与 PR 等上下文",
-          "wt merge 和 remove 组织本地合并与清理流程"
+          "今日新增 135 Star",
+          "主要使用 TypeScript，当前累计 101,357 Star",
+          "仓库标注 MIT 许可证"
         ],
         "useCases": [
-          "为多个编程 Agent 建立互相隔离的工作目录",
-          "统一 worktree 初始化、开发服务和合并清理 Hook"
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
         ],
-        "audience": "并行处理多分支任务的开发者和使用编程 Agent 的团队",
-        "caution": "工具简化的是 Git worktree 操作，不会替用户判断分支、远端、未提交改动或合并策略；merge、remove 和 Hook 可能改动仓库或运行任意命令。LLM 提交信息、PR 状态和外部 CLI 集成需单独配置与审查。本页未安装或执行 wt。",
-        "workflow": [
-          "在干净仓库核对主分支和 worktree 目录策略",
-          "用 wt switch --create 建立一个测试分支并检查 Hook",
-          "完成验证后选择 PR 流程或本地 merge，再确认安全清理"
-        ],
-        "implementation": "README 将 switch、list、merge、remove 作为核心命令；-x 可在切换后启动 Agent，参数在 -- 之后传入。Hook 用于安装依赖、启动服务等初始化，交互选择器可补充 diff、日志、CI 和 PR 上下文，但最终 Git 操作仍需按仓库规则复核。",
-        "commit": "f478bb3885b2c40120d511a0b3dfd1d14ba36bb7",
-        "status": "draft",
-        "researchedAt": "2026-11-03",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/max-sixty/worktrunk/blob/f478bb3885b2c40120d511a0b3dfd1d14ba36bb7/README.md"
-          }
-        ]
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
       }
     },
     {
       "rank": 8,
-      "fullName": "lz4/lz4",
-      "owner": "lz4",
-      "name": "lz4",
-      "url": "https://github.com/lz4/lz4",
-      "description": "Extremely Fast Compression algorithm",
-      "language": "C",
-      "stars": 12387,
-      "forks": 1634,
-      "starsToday": 23,
-      "license": "NOASSERTION",
+      "fullName": "symfony/symfony",
+      "owner": "symfony",
+      "name": "symfony",
+      "url": "https://github.com/symfony/symfony",
+      "description": "The Symfony PHP framework",
+      "language": "PHP",
+      "stars": 31426,
+      "forks": 9948,
+      "starsToday": 128,
+      "license": "MIT",
       "topics": [
-        "c",
-        "compression",
-        "lz4"
+        "bundle",
+        "framework",
+        "hacktoberfest",
+        "php",
+        "php-framework",
+        "symfony",
+        "symfony-bundle"
       ],
-      "homepage": "http://www.lz4.org",
-      "updatedAt": "2026-11-06T00:00:14Z",
+      "homepage": "https://symfony.com",
+      "updatedAt": "2026-11-06T22:12:59Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
       "chinese": {
-        "title": "LZ4：面向低延迟场景的高速无损压缩库与 CLI",
-        "summary": "提供 C 语言的内存块压缩、流式与 Frame API，以及兼容 gzip 风格用法的命令行工具；可在压缩速度、压缩率和多线程内存预算之间调节。",
+        "title": "symfony",
+        "summary": "The Symfony PHP framework。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "默认模式强调高速压缩与接近内存带宽的解压",
-          "LZ4_HC 用更多 CPU 换取压缩率，解压路径保持兼容",
-          "Frame 格式封装块、尺寸、校验和与字典标识，适合可移植文件和数据流"
+          "今日新增 128 Star",
+          "主要使用 PHP，当前累计 31,426 Star",
+          "仓库标注 MIT 许可证"
         ],
         "useCases": [
-          "日志、缓存、数据库或 RPC 中对延迟敏感的压缩",
-          "用 CLI 压缩文件并以校验和或字典增强特定工作负载"
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
         ],
-        "audience": "需要在系统软件、存储或数据管道中权衡吞吐、内存与压缩率的工程团队",
-        "caution": "README 性能数字来自特定 CPU、编译器和 Silesia 语料，不能替代目标数据与硬件基准。裸 block API 不携带压缩尺寸和解压上限，调用方必须可靠保存这些元数据并使用安全解压接口；需要自包含与互操作时应使用 Frame API。多线程 Frame 压缩仍标为 experimental，字典只使用输入末尾 64 KiB。库采用 BSD-2-Clause，CLI 采用 GPL-2.0-or-later，分发时须分别核对；压缩和校验也不提供加密或真实性保证。本页未编译或跑基准。",
-        "status": "draft",
-        "commit": "7f3d45e7fd68d340585b4650eca4cda5432c08ba",
-        "researchedAt": "2026-11-06",
-        "workflow": [
-          "按目标平台用 Make、CMake、Meson 或包管理器固定版本构建",
-          "先用代表性数据比较默认、HC、字典与 Frame 参数的吞吐、比例和内存",
-          "集成安全解压与错误处理，并用损坏输入、容量不足和跨实现文件验证边界"
-        ],
-        "implementation": "lz4.h 暴露单次、上下文复用和流式 block API；LZ4_compress_default 在目标容量不足时返回 0，LZ4_decompress_safe 以压缩大小和目标容量限制读写并返回负错误码。lz4frame.h 在块之上加入 Frame 元数据、校验和、链接模式、字典 ID 与可选工作线程；CLI 只处理 Frame，并将文件、递归、校验、字典和基准参数映射到库接口。",
-        "sources": [
-          {
-            "label": "固定版本官方 README 与许可、基准",
-            "url": "https://github.com/lz4/lz4/blob/7f3d45e7fd68d340585b4650eca4cda5432c08ba/README.md"
-          },
-          {
-            "label": "固定版本 block API 与安全边界",
-            "url": "https://github.com/lz4/lz4/blob/7f3d45e7fd68d340585b4650eca4cda5432c08ba/lib/lz4.h"
-          },
-          {
-            "label": "固定版本 Frame API 与多线程边界",
-            "url": "https://github.com/lz4/lz4/blob/7f3d45e7fd68d340585b4650eca4cda5432c08ba/lib/lz4frame.h"
-          },
-          {
-            "label": "固定版本 CLI 说明",
-            "url": "https://github.com/lz4/lz4/blob/7f3d45e7fd68d340585b4650eca4cda5432c08ba/programs/README.md"
-          }
-        ]
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
       }
     },
     {
       "rank": 9,
+      "fullName": "prometheus/prometheus",
+      "owner": "prometheus",
+      "name": "prometheus",
+      "url": "https://github.com/prometheus/prometheus",
+      "description": "The Prometheus monitoring system and time series database.",
+      "language": "Go",
+      "stars": 67178,
+      "forks": 10988,
+      "starsToday": 148,
+      "license": "Apache-2.0",
+      "topics": [
+        "alerting",
+        "graphing",
+        "hacktoberfest",
+        "metrics",
+        "monitoring",
+        "prometheus",
+        "time-series"
+      ],
+      "homepage": "https://prometheus.io/",
+      "updatedAt": "2026-11-06T17:19:24Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
+      "chinese": {
+        "title": "prometheus",
+        "summary": "The Prometheus monitoring system and time series database.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 148 Star",
+          "主要使用 Go，当前累计 67,178 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 10,
       "fullName": "google/skills",
       "owner": "google",
       "name": "skills",
       "url": "https://github.com/google/skills",
       "description": "Agent Skills for Google products and technologies",
       "language": "Python",
-      "stars": 22381,
-      "forks": 1893,
-      "starsToday": 211,
+      "stars": 22831,
+      "forks": 1920,
+      "starsToday": 534,
       "license": "Apache-2.0",
       "topics": [
         "google",
@@ -495,9 +484,9 @@
         "skills"
       ],
       "homepage": null,
-      "updatedAt": "2026-11-05T22:00:15Z",
+      "updatedAt": "2026-11-06T22:01:22Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
       "chinese": {
         "title": "Google Agent Skills：Google 产品的可安装任务知识库",
         "summary": "把 Google Cloud、Gemini、GKE、数据、安全、身份、广告等产品的操作流程拆成可选择安装的 Agent Skills，并提供目录索引、辅助资源和部分宿主插件。",
@@ -542,71 +531,34 @@
       }
     },
     {
-      "rank": 10,
-      "fullName": "vercel-labs/agent-browser",
-      "owner": "vercel-labs",
-      "name": "agent-browser",
-      "url": "https://github.com/vercel-labs/agent-browser",
-      "description": "Browser automation CLI for AI agents",
-      "language": "Rust",
-      "stars": 45893,
-      "forks": 3148,
-      "starsToday": 150,
-      "license": "Apache-2.0",
-      "topics": [],
-      "homepage": "https://agent-browser.dev",
-      "updatedAt": "2026-11-06T01:02:45Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
-      "chinese": {
-        "title": "agent-browser",
-        "summary": "Browser automation CLI for AI agents。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 150 Star",
-          "主要使用 Rust，当前累计 45,893 Star",
-          "仓库标注 Apache-2.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
       "rank": 11,
-      "fullName": "scenario-labs/skills",
-      "owner": "scenario-labs",
-      "name": "skills",
-      "url": "https://github.com/scenario-labs/skills",
-      "description": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.",
-      "language": "Python",
-      "stars": 3062,
-      "forks": 271,
-      "starsToday": 667,
+      "fullName": "microsoft/vscode",
+      "owner": "microsoft",
+      "name": "vscode",
+      "url": "https://github.com/microsoft/vscode",
+      "description": "Visual Studio Code",
+      "language": "TypeScript",
+      "stars": 195023,
+      "forks": 44425,
+      "starsToday": 301,
       "license": "MIT",
       "topics": [
-        "3d-models",
-        "agent-skills",
-        "ai-agents",
-        "ai-art",
-        "blender",
-        "claude-code",
-        "claude-skills",
-        "codex"
+        "editor",
+        "electron",
+        "microsoft",
+        "typescript",
+        "visual-studio-code"
       ],
-      "homepage": "https://www.skills.sh/scenario-labs/skills",
-      "updatedAt": "2026-11-05T23:21:04Z",
+      "homepage": "https://code.visualstudio.com",
+      "updatedAt": "2026-11-07T00:28:28Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
       "chinese": {
-        "title": "skills",
-        "summary": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "vscode",
+        "summary": "Visual Studio Code。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 667 Star",
-          "主要使用 Python，当前累计 3,062 Star",
+          "今日新增 301 Star",
+          "主要使用 TypeScript，当前累计 195,023 Star",
           "仓库标注 MIT 许可证"
         ],
         "useCases": [
@@ -620,34 +572,31 @@
     },
     {
       "rank": 12,
-      "fullName": "ConardLi/garden-skills",
-      "owner": "ConardLi",
-      "name": "garden-skills",
-      "url": "https://github.com/ConardLi/garden-skills",
-      "description": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
-      "language": "JavaScript",
-      "stars": 14138,
-      "forks": 1648,
-      "starsToday": 175,
+      "fullName": "nushell/nushell",
+      "owner": "nushell",
+      "name": "nushell",
+      "url": "https://github.com/nushell/nushell",
+      "description": "A new type of shell",
+      "language": "Rust",
+      "stars": 40980,
+      "forks": 2343,
+      "starsToday": 131,
       "license": "MIT",
       "topics": [
-        "agent",
-        "claude",
-        "gpt-image-2",
-        "rag",
-        "skills",
-        "web-design"
+        "nushell",
+        "rust",
+        "shell"
       ],
-      "homepage": "https://github.com/ConardLi/garden-skills",
-      "updatedAt": "2026-10-25T13:45:33Z",
+      "homepage": "https://www.nushell.sh/",
+      "updatedAt": "2026-11-06T12:38:23Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
       "chinese": {
-        "title": "garden-skills",
-        "summary": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "nushell",
+        "summary": "A new type of shell。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 175 Star",
-          "主要使用 JavaScript，当前累计 14,138 Star",
+          "今日新增 131 Star",
+          "主要使用 Rust，当前累计 40,980 Star",
           "仓库标注 MIT 许可证"
         ],
         "useCases": [
@@ -661,28 +610,37 @@
     },
     {
       "rank": 13,
-      "fullName": "microsoft/VibeVoice",
-      "owner": "microsoft",
-      "name": "VibeVoice",
-      "url": "https://github.com/microsoft/VibeVoice",
-      "description": "Open-Source Frontier Voice AI",
-      "language": "Python",
-      "stars": 55941,
-      "forks": 6296,
-      "starsToday": 223,
-      "license": "MIT",
-      "topics": [],
-      "homepage": "https://microsoft.github.io/VibeVoice/",
-      "updatedAt": "2026-10-08T05:29:29Z",
+      "fullName": "etcd-io/etcd",
+      "owner": "etcd-io",
+      "name": "etcd",
+      "url": "https://github.com/etcd-io/etcd",
+      "description": "Distributed reliable key-value store for the most critical data of a distributed system",
+      "language": "Go",
+      "stars": 52614,
+      "forks": 10590,
+      "starsToday": 128,
+      "license": "Apache-2.0",
+      "topics": [
+        "cncf",
+        "consensus",
+        "database",
+        "distributed-database",
+        "distributed-systems",
+        "etcd",
+        "go",
+        "key-value"
+      ],
+      "homepage": "https://etcd.io",
+      "updatedAt": "2026-11-06T12:29:27Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
       "chinese": {
-        "title": "VibeVoice",
-        "summary": "Open-Source Frontier Voice AI。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "etcd",
+        "summary": "Distributed reliable key-value store for the most critical data of a distributed system。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 223 Star",
-          "主要使用 Python，当前累计 55,941 Star",
-          "仓库标注 MIT 许可证"
+          "今日新增 128 Star",
+          "主要使用 Go，当前累计 52,614 Star",
+          "仓库标注 Apache-2.0 许可证"
         ],
         "useCases": [
           "了解近期开发者关注方向",
@@ -695,93 +653,178 @@
     },
     {
       "rank": 14,
-      "fullName": "floci-io/floci",
-      "owner": "floci-io",
-      "name": "floci",
-      "url": "https://github.com/floci-io/floci",
-      "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
-      "language": "Java",
-      "stars": 30419,
-      "forks": 3333,
-      "starsToday": 779,
-      "license": "MIT",
+      "fullName": "openssl/openssl",
+      "owner": "openssl",
+      "name": "openssl",
+      "url": "https://github.com/openssl/openssl",
+      "description": "General purpose TLS and crypto library",
+      "language": "C",
+      "stars": 31287,
+      "forks": 11580,
+      "starsToday": 26,
+      "license": "Apache-2.0",
       "topics": [
-        "aws",
-        "aws-emulation",
-        "devops",
-        "docker",
-        "ec2",
-        "ecs",
-        "localstack",
-        "s3"
+        "cryptography",
+        "decryption",
+        "encryption",
+        "openssl",
+        "ssl",
+        "tls"
       ],
-      "homepage": "https://floci.io/floci/",
-      "updatedAt": "2026-11-05T21:02:20Z",
+      "homepage": "https://openssl-library.org/",
+      "updatedAt": "2026-11-06T21:22:27Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
       "chinese": {
-        "title": "Floci：本地开发与测试用的 AWS 兼容模拟器",
-        "summary": "在本机 4566 端口提供多种 AWS 形态的服务，让 SDK、CLI、Terraform、OpenTofu 和测试套件通过改写 endpoint 运行；部分服务进程内模拟，部分用真实容器承载。",
+        "title": "openssl",
+        "summary": "General purpose TLS and crypto library。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "兼容多种 AWS SDK、CLI 与基础设施即代码工作流",
-          "支持内存、持久化、混合与预写日志存储模式",
-          "Lambda、数据库、消息与计算等部分服务使用 Docker 后端"
+          "今日新增 26 Star",
+          "主要使用 C，当前累计 31,287 Star",
+          "仓库标注 Apache-2.0 许可证"
         ],
         "useCases": [
-          "在开发机或 CI 中验证 AWS 集成而不访问真实云账号",
-          "为集成测试启动隔离的 S3、SQS、DynamoDB 或容器化服务环境"
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
         ],
-        "audience": "开发和测试 AWS 应用、基础设施代码与 SDK 集成的工程团队",
-        "caution": "本地 AWS 形态不等于真实云的完整行为、配额、安全边界或性能，采用前应按具体服务核对支持表并保留真实环境验收。容器后端和可选 Web 控制台可能需要 Docker socket、下载额外镜像并开放端口；持久化数据与测试凭据也需隔离。项目方的启动、内存、兼容测试和替代品对比数字未在本页复现，本页未运行模拟器。",
-        "workflow": [
-          "选择固定版本镜像或原生二进制，在隔离环境启动 Floci",
-          "把 AWS SDK 或 CLI endpoint 指向 http://localhost:4566，并先验证一个最小资源生命周期",
-          "按所需服务检查兼容矩阵、存储和 Docker 配置，再放入集成测试与 CI"
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 15,
+      "fullName": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 316706,
+      "forks": 26494,
+      "starsToday": 2070,
+      "license": "MIT",
+      "topics": [],
+      "homepage": "https://aihero.dev/skills",
+      "updatedAt": "2026-11-05T10:40:01Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
+      "chinese": {
+        "title": "Skills for Real Engineers：可组合的工程 Agent 技能",
+        "summary": "Matt Pocock 分享的工程与效率技能集合，以独立 SKILL.md 指导需求澄清、规格实现和验证等任务，供多个编程 Agent 宿主选用。",
+        "highlights": [
+          "按宿主选择插件或可编辑文件安装",
+          "首次运行 setup 技能配置 issue 跟踪和文档位置",
+          "工程技能和效率技能可按任务单独加载"
         ],
-        "implementation": "固定版本通过 JAX-RS/Vert.x 入口识别 AWS JSON、Query、CBOR 与 REST 等线协议，再把请求路由到服务实现；无状态与部分有状态服务使用进程内存储后端，Lambda、RDS、ECS 等由 Docker 承载。协议过滤器把识别结果写入请求上下文，并可拒绝未知服务签名，避免错误落入 S3 通配路由。",
-        "commit": "64a72bfc20f1143ccd496bc2dc62ff45f7f3bfec",
+        "useCases": [
+          "给编程 Agent 配置可审查的工作流程",
+          "参考需求澄清和规格实施指令"
+        ],
+        "audience": "使用编程 Agent 的软件工程师",
+        "caution": "技能是操作指令，不保证代码质量；插件自动更新与 skills.sh 复制文件的更新方式不同，重复安装会出现双份技能。实施规格技能会要求创建分支和子 Agent，运行前应审查指令与权限。本页未安装实测。",
         "status": "draft",
-        "researchedAt": "2026-11-04",
+        "commit": "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa",
+        "researchedAt": "2026-10-31",
+        "workflow": [
+          "按宿主选择一种安装方式并审查技能文件",
+          "运行 setup 技能配置项目约定",
+          "在小任务中检查触发、变更和测试结果"
+        ],
+        "implementation": "README 把技能组织为小型可组合指令；implement-spec 技能读取规格和工单图，要求独立实现分支与审查，实际执行仍取决于宿主 Agent。",
         "sources": [
           {
-            "label": "固定版本官方 README 与架构说明",
-            "url": "https://github.com/floci-io/floci/blob/64a72bfc20f1143ccd496bc2dc62ff45f7f3bfec/README.md"
+            "label": "固定版本官方 README",
+            "url": "https://github.com/mattpocock/skills/blob/a496f5513d4a4cf889bc48e189e579f4b0bdf6aa/README.md"
           },
           {
-            "label": "固定版本 AWS 协议识别过滤器",
-            "url": "https://github.com/floci-io/floci/blob/64a72bfc20f1143ccd496bc2dc62ff45f7f3bfec/src/main/java/io/github/hectorvent/floci/core/common/AwsProtocolClaimFilter.java"
-          },
-          {
-            "label": "固定版本线协议定义",
-            "url": "https://github.com/floci-io/floci/blob/64a72bfc20f1143ccd496bc2dc62ff45f7f3bfec/src/main/java/io/github/hectorvent/floci/core/common/WireProtocol.java"
+            "label": "固定版本 implement-spec 技能",
+            "url": "https://github.com/mattpocock/skills/blob/a496f5513d4a4cf889bc48e189e579f4b0bdf6aa/skills/engineering/implement-spec/SKILL.md"
           }
         ]
       }
     },
     {
-      "rank": 15,
-      "fullName": "JiaFeiMiao-K-Cat/DiscImageStudio",
-      "owner": "JiaFeiMiao-K-Cat",
-      "name": "DiscImageStudio",
-      "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
-      "description": "",
-      "language": "C#",
-      "stars": 7270,
-      "forks": 260,
-      "starsToday": 984,
-      "license": "GPL-3.0",
+      "rank": 16,
+      "fullName": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": 63978,
+      "forks": 4146,
+      "starsToday": 2548,
+      "license": "MIT",
       "topics": [],
       "homepage": null,
-      "updatedAt": "2026-11-05T17:24:40Z",
+      "updatedAt": "2026-09-14T19:29:02Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-06T01:09:38.464Z",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
       "chinese": {
-        "title": "DiscImageStudio",
-        "summary": "JiaFeiMiao-K-Cat/DiscImageStudio 开源仓库。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "Cloudflare 安全审查技能",
+        "summary": "把单仓代码安全审查拆成架构侦察、覆盖台账、候选验证和报告生成。主文件与多个专题参考共同指导 Agent，校验脚本检查报告结构；它不是扫描一次就能证明仓库安全的产品。",
         "highlights": [
-          "今日新增 984 Star",
-          "主要使用 C#，当前累计 7,270 Star",
-          "仓库标注 GPL-3.0 许可证"
+          "先列信任边界和输入面，再按覆盖单元审查",
+          "区分已确认、待验证和已否定发现",
+          "README 将 SKILL.md、专题文档、report-schema.json 与 validate-findings.cjs 分开：模型产生候选和证据，程序校验结构，再由独立审阅核对结论。"
+        ],
+        "useCases": [
+          "授权仓库的安全评审流程设计",
+          "已有发现的证据复核"
+        ],
+        "audience": "安全工程师和维护自有代码的团队",
+        "caution": "只对明确授权的代码开展审查；结构校验通过不能证明漏洞结论正确，本页未执行安全扫描。",
+        "status": "draft",
+        "commit": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+        "researchedAt": "2026-10-22",
+        "workflow": [
+          "先列信任边界和输入面，再按覆盖单元审查",
+          "区分已确认、待验证和已否定发现",
+          "用独立复核约束源码引用与结论"
+        ],
+        "implementation": "README 将 SKILL.md、专题文档、report-schema.json 与 validate-findings.cjs 分开：模型产生候选和证据，程序校验结构，再由独立审阅核对结论。",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/cloudflare/security-audit-skill/blob/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 17,
+      "fullName": "astral-sh/ruff",
+      "owner": "astral-sh",
+      "name": "ruff",
+      "url": "https://github.com/astral-sh/ruff",
+      "description": "An extremely fast Python linter and code formatter, written in Rust.",
+      "language": "Rust",
+      "stars": 50688,
+      "forks": 2611,
+      "starsToday": 169,
+      "license": "MIT",
+      "topics": [
+        "linter",
+        "pep8",
+        "python",
+        "python3",
+        "ruff",
+        "rust",
+        "rustpython",
+        "static-analysis"
+      ],
+      "homepage": "https://docs.astral.sh/ruff",
+      "updatedAt": "2026-11-07T00:07:06Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
+      "chinese": {
+        "title": "ruff",
+        "summary": "An extremely fast Python linter and code formatter, written in Rust.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 169 Star",
+          "主要使用 Rust，当前累计 50,688 Star",
+          "仓库标注 MIT 许可证"
         ],
         "useCases": [
           "了解近期开发者关注方向",

@@ -1,4 +1,114 @@
 {
+  "zed-industries/zed": {
+    "title": "Zed：以 Rust 与 GPUI 构建的高性能协作代码编辑器",
+    "summary": "面向 macOS、Linux 和 Windows 的原生代码编辑器，把项目、语言工具、多人协作、Git、终端与 Agent 入口组织在同一桌面工作区；当前不提供 Web 版。",
+    "highlights": [
+      "官方提供桌面安装包，也可按平台固定源码版本自行构建",
+      "主应用通过 GPUI 注册窗口、命令、设置、工作区和多种面板",
+      "Linux 同时支持 Wayland 与 X11，发行打包需安装 CLI 和编辑器两个二进制"
+    ],
+    "useCases": [
+      "在大型代码库中使用原生编辑、语言服务、终端和 Git 工作流",
+      "评估多人协作或 Agent 辅助开发的桌面编辑器"
+    ],
+    "audience": "愿意核对桌面平台、联网服务、扩展和许可证边界的开发者与工程团队",
+    "caution": "源码主要采用 GPL-3.0-or-later，标记组件使用 Apache-2.0，打包和再分发需逐项核对。Linux 文档明确默认连接 AI、遥测与协作服务，扩展还可能安装语言服务器等工具；这些能力可配置关闭，但在受限网络或沙箱环境采用前应审查默认设置、扩展和数据流。项目更新频繁，固定版本源码阅读不能替代目标平台安装、性能、协作和隐私实测。本页未安装或运行 Zed。",
+    "status": "draft",
+    "commit": "9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3",
+    "researchedAt": "2026-11-07",
+    "workflow": [
+      "按目标平台固定版本，优先使用官方包或依照平台文档准备依赖",
+      "先在测试项目验证编辑、语言服务、Git 与终端，再按需启用协作、Agent 和扩展",
+      "核对联网、遥测、凭据、扩展安装和更新策略后再用于敏感代码库"
+    ],
+    "implementation": "README 定义了桌面平台、构建入口与许可证；crates/zed/src/zed.rs 以 GPUI 初始化主应用，注册窗口、命令、设置、工作区以及编辑器、Git、终端、调试、扩展和 Agent 等模块。Linux 构建文档说明 CLI 负责用户入口，zed-editor 提供主界面，并明确联网服务、工具自动安装和沙箱兼容性的当前边界。",
+    "sources": [
+      {
+        "label": "固定版本官方 README 与许可证",
+        "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/README.md"
+      },
+      {
+        "label": "固定版本主应用初始化实现",
+        "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/crates/zed/src/zed.rs"
+      },
+      {
+        "label": "固定版本 Linux 构建与运行边界",
+        "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/docs/src/development/linux.md"
+      }
+    ]
+  },
+  "rails/rails": {
+    "title": "Ruby on Rails：覆盖 MVC 与应用运行时的全栈 Web 框架",
+    "summary": "把 Active Record、Action Pack、Action View 等组件组合为数据库驱动的 MVC 应用，并继续提供邮件、后台任务、WebSocket、文件和富文本等常用服务。",
+    "highlights": [
+      "模型、视图、控制器和路由形成默认的数据库 Web 应用链路",
+      "多个核心组件可在完整 Rails 应用之外独立使用",
+      "Rails::Application 统一执行 Railtie 与 Engine 初始化器、路由重载和中间件构建"
+    ],
+    "useCases": [
+      "快速构建约定优先的数据库 Web 产品与 JSON 服务",
+      "在 Ruby 系统中按需采用 ORM、任务、邮件或 WebSocket 组件"
+    ],
+    "audience": "接受 Rails 约定并能维护 Ruby、数据库、队列与部署链路的 Web 团队",
+    "caution": "框架覆盖面广不等于默认配置适合所有生产场景；应用仍需自行处理认证授权、密钥、参数过滤、数据库迁移、后台任务、文件存储、容量和可观测性。插件、引擎与版本升级会进入同一初始化、路由和中间件链路，应固定 Ruby 与依赖版本并阅读升级和安全公告。README 的快速开始只证明开发服务器入口，本页未创建应用、运行测试或做生产负载验证。",
+    "status": "draft",
+    "commit": "f4a33dbbd3e38d6def4f776cb6b60eb4070a9aff",
+    "researchedAt": "2026-11-07",
+    "workflow": [
+      "固定 Rails、Ruby 和数据库版本，用 rails new 生成最小应用并记录选项",
+      "实现一个模型、迁移、路由和控制器闭环，再接入测试与后台组件",
+      "在生产前审查密钥、参数过滤、中间件、数据库迁移、任务和升级策略"
+    ],
+    "implementation": "README 将请求链路拆成 Active Record/Active Model、Action View 与 Action Pack，并列出邮件、任务、WebSocket、存储和富文本组件。railties/lib/rails/application.rb 显示 Rails::Application 继承 Engine，按顺序装载环境、Railtie、Engine 与应用初始化器，随后构建中间件、路由重载器、自动加载器和 eager load；应用配置与插件因此共享同一启动生命周期。",
+    "sources": [
+      {
+        "label": "固定版本官方 README 与组件说明",
+        "url": "https://github.com/rails/rails/blob/f4a33dbbd3e38d6def4f776cb6b60eb4070a9aff/README.md"
+      },
+      {
+        "label": "固定版本应用启动与中间件实现",
+        "url": "https://github.com/rails/rails/blob/f4a33dbbd3e38d6def4f776cb6b60eb4070a9aff/railties/lib/rails/application.rb"
+      }
+    ]
+  },
+  "mpv-player/mpv": {
+    "title": "mpv：可脚本化、可嵌入的跨平台媒体播放器",
+    "summary": "以命令行为主入口，结合 FFmpeg、libplacebo、libass 等组件播放多种音视频与字幕格式，也可通过 libmpv C API 嵌入其他应用。",
+    "highlights": [
+      "支持 Linux、Windows 与 macOS，播放、滤镜、字幕和输出参数可细粒度配置",
+      "视频渲染主要使用着色器，硬件解码需显式启用并按设备验证",
+      "libmpv 提供属性、命令和事件接口，C 插件与 Lua/JavaScript 脚本可扩展播放器"
+    ],
+    "useCases": [
+      "用命令行和配置文件建立可重复的本地或流媒体播放流程",
+      "把播放器作为音视频后端嵌入桌面工具或自动化系统"
+    ],
+    "audience": "需要可控播放参数、脚本化或嵌入能力，并能处理原生依赖与媒体安全边界的开发者",
+    "caution": "硬件解码默认关闭，低功耗 GPU、旧系统、驱动和具体编码格式都需实机验证；构建完整功能依赖 FFmpeg、libplacebo、libass 等原生库。配置目录中的脚本和 C 插件会被加载并可调用播放器接口，只应安装可信代码；网络媒体与复杂容器也应视为不可信输入。项目通常每年发布一到两次且仅维护最新版本，发行包可能带下游补丁。默认 GPL-2.0-or-later，使用 -Dgpl=false 才是 LGPL-2.1-or-later 组合，嵌入与分发需核对构建选项。本页未编译、播放或跑性能测试。",
+    "status": "draft",
+    "commit": "902818753849d9ad8f0096fad6ca5aeaa37113b9",
+    "researchedAt": "2026-11-07",
+    "workflow": [
+      "优先选用可信发行包并固定版本，用代表性本地文件验证音频、视频和字幕",
+      "按设备逐项测试 GPU 输出、硬件解码、色彩、同步与失败回退，再保存最小配置",
+      "嵌入时通过 libmpv 的命令、属性和事件边界集成，并审查脚本、插件、网络与许可证"
+    ],
+    "implementation": "README 给出平台、依赖、Meson 构建、发布和许可证口径。player/main.c 组装命令行、配置、输入、解复用、解码、音视频输出、OSD、IPC 与客户端生命周期；DOCS/man/libmpv.rst 说明嵌入应用通过 C API 控制同一底层机制，C 插件运行在独立线程并需遵守事件等待和句柄所有权约束。",
+    "sources": [
+      {
+        "label": "固定版本官方 README 与构建边界",
+        "url": "https://github.com/mpv-player/mpv/blob/902818753849d9ad8f0096fad6ca5aeaa37113b9/README.md"
+      },
+      {
+        "label": "固定版本播放器主流程实现",
+        "url": "https://github.com/mpv-player/mpv/blob/902818753849d9ad8f0096fad6ca5aeaa37113b9/player/main.c"
+      },
+      {
+        "label": "固定版本 libmpv 与插件说明",
+        "url": "https://github.com/mpv-player/mpv/blob/902818753849d9ad8f0096fad6ca5aeaa37113b9/DOCS/man/libmpv.rst"
+      }
+    ]
+  },
   "garrytan/gstack": {
     "title": "gstack：把编程 Agent 组织成端到端工程团队",
     "summary": "以一组有顺序的 Agent Skills 覆盖产品澄清、架构、设计、代码审查、浏览器 QA、安全、发布和复盘，并为多种编程 Agent 提供安装与宿主适配。",
