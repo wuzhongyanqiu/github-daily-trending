@@ -1,5 +1,10 @@
 name: 部署中文趋势看板
 
+# 源码仓库是私有的，而 GitHub 免费计划的 Pages 只支持公开仓库，
+# 所以部署方式改为：这里构建，把 dist 推到公开的
+# wuzhongyanqiu/github-daily-trending-site，Pages 在那个仓库上发布。
+# 源码不外泄，且不再需要私有仓库开 Pages。
+
 on:
   push:
     branches: [main]
@@ -7,12 +12,14 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
   cancel-in-progress: true
+
+env:
+  # 必须和公开站点仓库同名，否则资源路径会 404
+  SITE_REPO: github-daily-trending-site
 
 jobs:
   build:
@@ -27,17 +34,54 @@ jobs:
       - run: npm test
       - run: npm run build
         env:
-          VITE_BASE_PATH: /github-daily-trending/
-      - uses: actions/upload-pages-artifact@v3
+          VITE_BASE_PATH: /${{ env.SITE_REPO }}/
+      - uses: actions/upload-artifact@v4
         with:
+          name: dist
           path: dist
+          retention-days: 7
+
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: 发布
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: 检查部署凭据
+        id: creds
+        env:
+          TOKEN: ${{ secrets.SITE_DEPLOY_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::warning::缺少 SITE_DEPLOY_TOKEN，本次跳过发布（构建产物仍已生成）"
+            echo "::notice::请在仓库 Settings → Secrets and variables → Actions 里添加 SITE_DEPLOY_TOKEN：一个只对 ${SITE_REPO} 有 Contents: Read and write 权限的 fine-grained PAT"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 推送到公开站点仓库
+        if: steps.creds.outputs.ready == 'true'
+        env:
+          TOKEN: ${{ secrets.SITE_DEPLOY_TOKEN }}
+        run: |
+          set -euo pipefail
+          git clone -q "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY_OWNER}/${SITE_REPO}.git" site
+          cd site
+          # 保留 README.md 和 .nojekyll，其余换成最新产物
+          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name README.md ! -name .nojekyll -exec rm -rf {} +
+          cp -R ../dist/. .
+          touch .nojekyll
+          git add -A
+          if git diff --cached --quiet; then
+            echo "产物无变化，跳过提交"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -q -m "deploy: 构建产物 $(date -u +%Y-%m-%dT%H:%M:%SZ) 来自 ${GITHUB_SHA:0:7}"
+          git push -q origin HEAD:main
+          echo "已发布到 https://${GITHUB_REPOSITORY_OWNER}.github.io/${SITE_REPO}/"
