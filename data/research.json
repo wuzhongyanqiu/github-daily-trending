@@ -1,4 +1,46 @@
 {
+  "vercel-labs/agent-browser": {
+    "title": "agent-browser：面向 Agent 的命令行浏览器自动化层",
+    "summary": "以 Rust CLI 把页面导航、无障碍树快照、元素引用和交互命令组织成短调用，并由后台守护进程维持浏览器与会话，供 shell、技能或 MCP 客户端驱动。",
+    "highlights": [
+      "snapshot 生成紧凑可访问性树和临时 ref，操作后需重新读取页面核验",
+      "每个 session 由独立守护进程连接浏览器，支持本地 Chrome、CDP、其他引擎和云端提供方",
+      "会话设置集中声明域名白名单、动作策略、确认动作、文件访问与空闲超时等边界"
+    ],
+    "useCases": [
+      "让编程 Agent 通过短命令完成网页读取、表单交互和结果核验",
+      "通过 shell 或 MCP 接入可分会话、可配置安全策略的浏览器自动化"
+    ],
+    "audience": "需要为 Agent 提供浏览器操作能力，并能管理浏览器版本、会话状态、网络访问和动作权限的开发者与平台团队",
+    "caution": "浏览器自动化会接触登录状态、页面内容、下载和本地文件，采用前应最小化域名、动作、文件访问与会话持久化权限。ref 只对应生成快照时的页面状态，DOM 变化后复用可能失效；CDP、云端提供方和其他引擎的能力及数据边界也不同。README 的失败检测与安全能力是项目设计说明，本页未安装 CLI、连接真实账号或执行端到端浏览器测试。",
+    "status": "draft",
+    "commit": "370d41db67a198944bcee2c96cc454594e7d56c6",
+    "researchedAt": "2026-11-08",
+    "workflow": [
+      "按平台安装 CLI 与 Chrome for Testing，先在无账号测试页建立独立 session",
+      "执行 open、snapshot、交互、再次 snapshot 或 get 的读取-操作-核验闭环",
+      "接入真实站点前配置允许域名、动作策略、确认项和状态保存，并审查 CDP 或云端提供方的数据流"
+    ],
+    "implementation": "CLI 解析命令和会话级设置，把请求发送给按 session 隔离的后台守护进程；守护进程通过本地套接字或端口处理命令、维护浏览器状态、定期保存会话，并按空闲策略退出。设置表把 profile、代理、扩展、文件访问、允许域名、动作策略、确认动作和超时等选项统一标注为即时生效或需要重启、是否持久化及是否属于敏感值。",
+    "sources": [
+      {
+        "label": "固定版本官方 README 与使用链路",
+        "url": "https://github.com/vercel-labs/agent-browser/blob/370d41db67a198944bcee2c96cc454594e7d56c6/README.md"
+      },
+      {
+        "label": "固定版本 CLI 命令与会话入口",
+        "url": "https://github.com/vercel-labs/agent-browser/blob/370d41db67a198944bcee2c96cc454594e7d56c6/cli/src/main.rs"
+      },
+      {
+        "label": "固定版本会话设置与安全选项表",
+        "url": "https://github.com/vercel-labs/agent-browser/blob/370d41db67a198944bcee2c96cc454594e7d56c6/cli/src/session_settings/spec.rs"
+      },
+      {
+        "label": "固定版本守护进程与会话生命周期实现",
+        "url": "https://github.com/vercel-labs/agent-browser/blob/370d41db67a198944bcee2c96cc454594e7d56c6/cli/src/native/daemon.rs"
+      }
+    ]
+  },
   "zed-industries/zed": {
     "title": "Zed：以 Rust 与 GPUI 构建的高性能协作代码编辑器",
     "summary": "面向 macOS、Linux 和 Windows 的原生代码编辑器，把项目、语言工具、多人协作、Git、终端与 Agent 入口组织在同一桌面工作区；当前不提供 Web 版。",

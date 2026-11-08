@@ -1,482 +1,142 @@
 {
-  "generatedAt": "2026-11-07T00:28:45.460Z",
+  "generatedAt": "2026-11-08T00:22:52.859Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "status": "success",
   "coverage": {
     "researched": 7,
     "pendingResearch": [
-      "rust-lang/rust",
-      "react/react",
-      "angular/angular",
-      "symfony/symfony",
+      "meta/astryx",
       "prometheus/prometheus",
-      "microsoft/vscode",
-      "nushell/nushell",
-      "etcd-io/etcd",
-      "openssl/openssl",
-      "astral-sh/ruff"
+      "sherlock-project/sherlock",
+      "astral-sh/ruff",
+      "tailwindlabs/tailwindcss",
+      "mbillow/localthings",
+      "ranxianglei/billion-context",
+      "dsx-ai-factory/nvke"
     ],
     "metadataFailures": []
   },
   "repositories": [
     {
       "rank": 1,
-      "fullName": "zed-industries/zed",
-      "owner": "zed-industries",
-      "name": "zed",
-      "url": "https://github.com/zed-industries/zed",
-      "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "fullName": "vercel-labs/agent-browser",
+      "owner": "vercel-labs",
+      "name": "agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
       "language": "Rust",
-      "stars": 93617,
-      "forks": 11499,
-      "starsToday": 306,
-      "license": "NOASSERTION",
-      "topics": [
-        "gpui",
-        "rust-lang",
-        "text-editor",
-        "zed"
-      ],
-      "homepage": "https://zed.dev",
-      "updatedAt": "2026-11-06T20:00:38Z",
+      "stars": 46818,
+      "forks": 3208,
+      "starsToday": 190,
+      "license": "Apache-2.0",
+      "topics": [],
+      "homepage": "https://agent-browser.dev",
+      "updatedAt": "2026-11-08T00:20:26Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
       "chinese": {
-        "title": "Zed：以 Rust 与 GPUI 构建的高性能协作代码编辑器",
-        "summary": "面向 macOS、Linux 和 Windows 的原生代码编辑器，把项目、语言工具、多人协作、Git、终端与 Agent 入口组织在同一桌面工作区；当前不提供 Web 版。",
+        "title": "agent-browser：面向 Agent 的命令行浏览器自动化层",
+        "summary": "以 Rust CLI 把页面导航、无障碍树快照、元素引用和交互命令组织成短调用，并由后台守护进程维持浏览器与会话，供 shell、技能或 MCP 客户端驱动。",
         "highlights": [
-          "官方提供桌面安装包，也可按平台固定源码版本自行构建",
-          "主应用通过 GPUI 注册窗口、命令、设置、工作区和多种面板",
-          "Linux 同时支持 Wayland 与 X11，发行打包需安装 CLI 和编辑器两个二进制"
+          "snapshot 生成紧凑可访问性树和临时 ref，操作后需重新读取页面核验",
+          "每个 session 由独立守护进程连接浏览器，支持本地 Chrome、CDP、其他引擎和云端提供方",
+          "会话设置集中声明域名白名单、动作策略、确认动作、文件访问与空闲超时等边界"
         ],
         "useCases": [
-          "在大型代码库中使用原生编辑、语言服务、终端和 Git 工作流",
-          "评估多人协作或 Agent 辅助开发的桌面编辑器"
+          "让编程 Agent 通过短命令完成网页读取、表单交互和结果核验",
+          "通过 shell 或 MCP 接入可分会话、可配置安全策略的浏览器自动化"
         ],
-        "audience": "愿意核对桌面平台、联网服务、扩展和许可证边界的开发者与工程团队",
-        "caution": "源码主要采用 GPL-3.0-or-later，标记组件使用 Apache-2.0，打包和再分发需逐项核对。Linux 文档明确默认连接 AI、遥测与协作服务，扩展还可能安装语言服务器等工具；这些能力可配置关闭，但在受限网络或沙箱环境采用前应审查默认设置、扩展和数据流。项目更新频繁，固定版本源码阅读不能替代目标平台安装、性能、协作和隐私实测。本页未安装或运行 Zed。",
+        "audience": "需要为 Agent 提供浏览器操作能力，并能管理浏览器版本、会话状态、网络访问和动作权限的开发者与平台团队",
+        "caution": "浏览器自动化会接触登录状态、页面内容、下载和本地文件，采用前应最小化域名、动作、文件访问与会话持久化权限。ref 只对应生成快照时的页面状态，DOM 变化后复用可能失效；CDP、云端提供方和其他引擎的能力及数据边界也不同。README 的失败检测与安全能力是项目设计说明，本页未安装 CLI、连接真实账号或执行端到端浏览器测试。",
         "status": "draft",
-        "commit": "9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3",
-        "researchedAt": "2026-11-07",
+        "commit": "370d41db67a198944bcee2c96cc454594e7d56c6",
+        "researchedAt": "2026-11-08",
         "workflow": [
-          "按目标平台固定版本，优先使用官方包或依照平台文档准备依赖",
-          "先在测试项目验证编辑、语言服务、Git 与终端，再按需启用协作、Agent 和扩展",
-          "核对联网、遥测、凭据、扩展安装和更新策略后再用于敏感代码库"
+          "按平台安装 CLI 与 Chrome for Testing，先在无账号测试页建立独立 session",
+          "执行 open、snapshot、交互、再次 snapshot 或 get 的读取-操作-核验闭环",
+          "接入真实站点前配置允许域名、动作策略、确认项和状态保存，并审查 CDP 或云端提供方的数据流"
         ],
-        "implementation": "README 定义了桌面平台、构建入口与许可证；crates/zed/src/zed.rs 以 GPUI 初始化主应用，注册窗口、命令、设置、工作区以及编辑器、Git、终端、调试、扩展和 Agent 等模块。Linux 构建文档说明 CLI 负责用户入口，zed-editor 提供主界面，并明确联网服务、工具自动安装和沙箱兼容性的当前边界。",
+        "implementation": "CLI 解析命令和会话级设置，把请求发送给按 session 隔离的后台守护进程；守护进程通过本地套接字或端口处理命令、维护浏览器状态、定期保存会话，并按空闲策略退出。设置表把 profile、代理、扩展、文件访问、允许域名、动作策略、确认动作和超时等选项统一标注为即时生效或需要重启、是否持久化及是否属于敏感值。",
         "sources": [
           {
-            "label": "固定版本官方 README 与许可证",
-            "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/README.md"
+            "label": "固定版本官方 README 与使用链路",
+            "url": "https://github.com/vercel-labs/agent-browser/blob/370d41db67a198944bcee2c96cc454594e7d56c6/README.md"
           },
           {
-            "label": "固定版本主应用初始化实现",
-            "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/crates/zed/src/zed.rs"
+            "label": "固定版本 CLI 命令与会话入口",
+            "url": "https://github.com/vercel-labs/agent-browser/blob/370d41db67a198944bcee2c96cc454594e7d56c6/cli/src/main.rs"
           },
           {
-            "label": "固定版本 Linux 构建与运行边界",
-            "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/docs/src/development/linux.md"
+            "label": "固定版本会话设置与安全选项表",
+            "url": "https://github.com/vercel-labs/agent-browser/blob/370d41db67a198944bcee2c96cc454594e7d56c6/cli/src/session_settings/spec.rs"
+          },
+          {
+            "label": "固定版本守护进程与会话生命周期实现",
+            "url": "https://github.com/vercel-labs/agent-browser/blob/370d41db67a198944bcee2c96cc454594e7d56c6/cli/src/native/daemon.rs"
           }
         ]
       }
     },
     {
       "rank": 2,
-      "fullName": "NVIDIA/auto-ontology",
-      "owner": "NVIDIA",
-      "name": "auto-ontology",
-      "url": "https://github.com/NVIDIA/auto-ontology",
-      "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
-      "language": "Python",
-      "stars": 9011,
-      "forks": 724,
-      "starsToday": 2015,
-      "license": "Apache-2.0",
+      "fullName": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": 65703,
+      "forks": 4265,
+      "starsToday": 2085,
+      "license": "MIT",
       "topics": [],
       "homepage": null,
-      "updatedAt": "2026-11-06T23:03:36Z",
+      "updatedAt": "2026-09-14T19:29:02Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
       "chinese": {
-        "title": "Auto Ontology：企业数据的语义图与可核验问答层",
-        "summary": "从数据库元数据构建术语、SQL 属性和关系图，再把经过认证的业务语义提供给聊天、API、CLI 与 MCP，用于约束自然语言转 SQL。",
+        "title": "Cloudflare 安全审查技能",
+        "summary": "把单仓代码安全审查拆成架构侦察、覆盖台账、候选验证和报告生成。主文件与多个专题参考共同指导 Agent，校验脚本检查报告结构；它不是扫描一次就能证明仓库安全的产品。",
         "highlights": [
-          "采集结构、样例值和查询信息生成语义目录",
-          "以 Postgres 与 pgvector 保存术语、关系和检索向量",
-          "回答附带 SQL、执行步骤与来源线索供复核"
+          "先列信任边界和输入面，再按覆盖单元审查",
+          "区分已确认、待验证和已否定发现",
+          "README 将 SKILL.md、专题文档、report-schema.json 与 validate-findings.cjs 分开：模型产生候选和证据，程序校验结构，再由独立审阅核对结论。"
         ],
         "useCases": [
-          "统一企业指标定义并辅助数据问答",
-          "给 Agent 提供只读的语义检索与问答工具"
+          "授权仓库的安全评审流程设计",
+          "已有发现的证据复核"
         ],
-        "audience": "拥有结构化数据、语义治理和自托管能力的数据平台团队",
-        "caution": "可靠性依赖数据接入、人工认证和模型配置，自动生成的本体不能直接视为可信业务口径。快速开始需要 Docker、Postgres、NVIDIA 推理端点与密钥；README 要求后端和摄取服务留在私网，因为内部身份头和管理端点不能直接暴露。本页未部署或复现项目基准。",
+        "audience": "安全工程师和维护自有代码的团队",
+        "caution": "只对明确授权的代码开展审查；结构校验通过不能证明漏洞结论正确，本页未执行安全扫描。",
         "status": "draft",
-        "commit": "2a24f5d34ef6b6e168a7f22d308504d3ab36a198",
-        "researchedAt": "2026-11-05",
+        "commit": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+        "researchedAt": "2026-10-22",
         "workflow": [
-          "配置模型端点、数据库凭据和部署密钥",
-          "启动 Postgres 与应用栈，摄取数据并启用语义编译",
-          "用真实问题认证术语和 SQL 属性，再通过 UI 或 MCP 检查 SQL 与结果"
+          "先列信任边界和输入面，再按覆盖单元审查",
+          "区分已确认、待验证和已否定发现",
+          "用独立复核约束源码引用与结论"
         ],
-        "implementation": "摄取层读取数据库结构、分布和样例值并生成术语、关系与 SQL 属性；交互协调器合并澄清和知识库证据，文本转 SQL 图再执行候选检索、校验、修复和查询。MCP 只读工具经 Web 应用权限层访问这些能力。",
+        "implementation": "README 将 SKILL.md、专题文档、report-schema.json 与 validate-findings.cjs 分开：模型产生候选和证据，程序校验结构，再由独立审阅核对结论。",
         "sources": [
           {
-            "label": "固定版本官方 README 与部署边界",
-            "url": "https://github.com/NVIDIA/auto-ontology/blob/2a24f5d34ef6b6e168a7f22d308504d3ab36a198/README.md"
-          },
-          {
-            "label": "固定版本交互问答协调器",
-            "url": "https://github.com/NVIDIA/auto-ontology/blob/2a24f5d34ef6b6e168a7f22d308504d3ab36a198/auto_ontology/retrieval/interactive/coordinator.py"
-          },
-          {
-            "label": "固定版本文本转 SQL 入口",
-            "url": "https://github.com/NVIDIA/auto-ontology/blob/2a24f5d34ef6b6e168a7f22d308504d3ab36a198/auto_ontology/retrieval/text_to_sql/main.py"
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/cloudflare/security-audit-skill/blob/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8/README.md"
           }
         ]
       }
     },
     {
       "rank": 3,
-      "fullName": "rails/rails",
-      "owner": "rails",
-      "name": "rails",
-      "url": "https://github.com/rails/rails",
-      "description": "Ruby on Rails",
-      "language": "Ruby",
-      "stars": 59024,
-      "forks": 23833,
-      "starsToday": 142,
-      "license": "MIT",
-      "topics": [
-        "activejob",
-        "activerecord",
-        "framework",
-        "html",
-        "mvc",
-        "rails",
-        "ruby"
-      ],
-      "homepage": "https://rubyonrails.org",
-      "updatedAt": "2026-11-06T23:19:25Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
-      "chinese": {
-        "title": "Ruby on Rails：覆盖 MVC 与应用运行时的全栈 Web 框架",
-        "summary": "把 Active Record、Action Pack、Action View 等组件组合为数据库驱动的 MVC 应用，并继续提供邮件、后台任务、WebSocket、文件和富文本等常用服务。",
-        "highlights": [
-          "模型、视图、控制器和路由形成默认的数据库 Web 应用链路",
-          "多个核心组件可在完整 Rails 应用之外独立使用",
-          "Rails::Application 统一执行 Railtie 与 Engine 初始化器、路由重载和中间件构建"
-        ],
-        "useCases": [
-          "快速构建约定优先的数据库 Web 产品与 JSON 服务",
-          "在 Ruby 系统中按需采用 ORM、任务、邮件或 WebSocket 组件"
-        ],
-        "audience": "接受 Rails 约定并能维护 Ruby、数据库、队列与部署链路的 Web 团队",
-        "caution": "框架覆盖面广不等于默认配置适合所有生产场景；应用仍需自行处理认证授权、密钥、参数过滤、数据库迁移、后台任务、文件存储、容量和可观测性。插件、引擎与版本升级会进入同一初始化、路由和中间件链路，应固定 Ruby 与依赖版本并阅读升级和安全公告。README 的快速开始只证明开发服务器入口，本页未创建应用、运行测试或做生产负载验证。",
-        "status": "draft",
-        "commit": "f4a33dbbd3e38d6def4f776cb6b60eb4070a9aff",
-        "researchedAt": "2026-11-07",
-        "workflow": [
-          "固定 Rails、Ruby 和数据库版本，用 rails new 生成最小应用并记录选项",
-          "实现一个模型、迁移、路由和控制器闭环，再接入测试与后台组件",
-          "在生产前审查密钥、参数过滤、中间件、数据库迁移、任务和升级策略"
-        ],
-        "implementation": "README 将请求链路拆成 Active Record/Active Model、Action View 与 Action Pack，并列出邮件、任务、WebSocket、存储和富文本组件。railties/lib/rails/application.rb 显示 Rails::Application 继承 Engine，按顺序装载环境、Railtie、Engine 与应用初始化器，随后构建中间件、路由重载器、自动加载器和 eager load；应用配置与插件因此共享同一启动生命周期。",
-        "sources": [
-          {
-            "label": "固定版本官方 README 与组件说明",
-            "url": "https://github.com/rails/rails/blob/f4a33dbbd3e38d6def4f776cb6b60eb4070a9aff/README.md"
-          },
-          {
-            "label": "固定版本应用启动与中间件实现",
-            "url": "https://github.com/rails/rails/blob/f4a33dbbd3e38d6def4f776cb6b60eb4070a9aff/railties/lib/rails/application.rb"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 4,
-      "fullName": "mpv-player/mpv",
-      "owner": "mpv-player",
-      "name": "mpv",
-      "url": "https://github.com/mpv-player/mpv",
-      "description": "🎥 Command line media player",
-      "language": "C",
-      "stars": 37873,
-      "forks": 3632,
-      "starsToday": 37,
-      "license": "NOASSERTION",
-      "topics": [
-        "audio",
-        "c",
-        "ffmpeg",
-        "mplayer",
-        "mpv",
-        "multimedia",
-        "video"
-      ],
-      "homepage": "https://mpv.io",
-      "updatedAt": "2026-11-05T15:31:49Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
-      "chinese": {
-        "title": "mpv：可脚本化、可嵌入的跨平台媒体播放器",
-        "summary": "以命令行为主入口，结合 FFmpeg、libplacebo、libass 等组件播放多种音视频与字幕格式，也可通过 libmpv C API 嵌入其他应用。",
-        "highlights": [
-          "支持 Linux、Windows 与 macOS，播放、滤镜、字幕和输出参数可细粒度配置",
-          "视频渲染主要使用着色器，硬件解码需显式启用并按设备验证",
-          "libmpv 提供属性、命令和事件接口，C 插件与 Lua/JavaScript 脚本可扩展播放器"
-        ],
-        "useCases": [
-          "用命令行和配置文件建立可重复的本地或流媒体播放流程",
-          "把播放器作为音视频后端嵌入桌面工具或自动化系统"
-        ],
-        "audience": "需要可控播放参数、脚本化或嵌入能力，并能处理原生依赖与媒体安全边界的开发者",
-        "caution": "硬件解码默认关闭，低功耗 GPU、旧系统、驱动和具体编码格式都需实机验证；构建完整功能依赖 FFmpeg、libplacebo、libass 等原生库。配置目录中的脚本和 C 插件会被加载并可调用播放器接口，只应安装可信代码；网络媒体与复杂容器也应视为不可信输入。项目通常每年发布一到两次且仅维护最新版本，发行包可能带下游补丁。默认 GPL-2.0-or-later，使用 -Dgpl=false 才是 LGPL-2.1-or-later 组合，嵌入与分发需核对构建选项。本页未编译、播放或跑性能测试。",
-        "status": "draft",
-        "commit": "902818753849d9ad8f0096fad6ca5aeaa37113b9",
-        "researchedAt": "2026-11-07",
-        "workflow": [
-          "优先选用可信发行包并固定版本，用代表性本地文件验证音频、视频和字幕",
-          "按设备逐项测试 GPU 输出、硬件解码、色彩、同步与失败回退，再保存最小配置",
-          "嵌入时通过 libmpv 的命令、属性和事件边界集成，并审查脚本、插件、网络与许可证"
-        ],
-        "implementation": "README 给出平台、依赖、Meson 构建、发布和许可证口径。player/main.c 组装命令行、配置、输入、解复用、解码、音视频输出、OSD、IPC 与客户端生命周期；DOCS/man/libmpv.rst 说明嵌入应用通过 C API 控制同一底层机制，C 插件运行在独立线程并需遵守事件等待和句柄所有权约束。",
-        "sources": [
-          {
-            "label": "固定版本官方 README 与构建边界",
-            "url": "https://github.com/mpv-player/mpv/blob/902818753849d9ad8f0096fad6ca5aeaa37113b9/README.md"
-          },
-          {
-            "label": "固定版本播放器主流程实现",
-            "url": "https://github.com/mpv-player/mpv/blob/902818753849d9ad8f0096fad6ca5aeaa37113b9/player/main.c"
-          },
-          {
-            "label": "固定版本 libmpv 与插件说明",
-            "url": "https://github.com/mpv-player/mpv/blob/902818753849d9ad8f0096fad6ca5aeaa37113b9/DOCS/man/libmpv.rst"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 5,
-      "fullName": "rust-lang/rust",
-      "owner": "rust-lang",
-      "name": "rust",
-      "url": "https://github.com/rust-lang/rust",
-      "description": "Empowering everyone to build reliable and efficient software.",
-      "language": "Rust",
-      "stars": 121442,
-      "forks": 17365,
-      "starsToday": 192,
-      "license": "Apache-2.0",
-      "topics": [
-        "compiler",
-        "language",
-        "rust"
-      ],
-      "homepage": "https://www.rust-lang.org",
-      "updatedAt": "2026-11-07T00:13:38Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
-      "chinese": {
-        "title": "rust",
-        "summary": "Empowering everyone to build reliable and efficient software.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 192 Star",
-          "主要使用 Rust，当前累计 121,442 Star",
-          "仓库标注 Apache-2.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 6,
-      "fullName": "react/react",
-      "owner": "react",
-      "name": "react",
-      "url": "https://github.com/react/react",
-      "description": "The library for web and native user interfaces.",
-      "language": "JavaScript",
-      "stars": 252252,
-      "forks": 51811,
-      "starsToday": 248,
-      "license": "MIT",
-      "topics": [
-        "declarative",
-        "frontend",
-        "javascript",
-        "library",
-        "react",
-        "ui"
-      ],
-      "homepage": "https://react.dev",
-      "updatedAt": "2026-11-07T00:20:04Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
-      "chinese": {
-        "title": "react",
-        "summary": "The library for web and native user interfaces.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 248 Star",
-          "主要使用 JavaScript，当前累计 252,252 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 7,
-      "fullName": "angular/angular",
-      "owner": "angular",
-      "name": "angular",
-      "url": "https://github.com/angular/angular",
-      "description": "Deliver web apps with confidence 🚀",
-      "language": "TypeScript",
-      "stars": 101357,
-      "forks": 28912,
-      "starsToday": 135,
-      "license": "MIT",
-      "topics": [
-        "angular",
-        "javascript",
-        "pwa",
-        "typescript",
-        "web",
-        "web-framework",
-        "web-performance"
-      ],
-      "homepage": "https://angular.dev",
-      "updatedAt": "2026-11-06T19:39:34Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
-      "chinese": {
-        "title": "angular",
-        "summary": "Deliver web apps with confidence 🚀。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 135 Star",
-          "主要使用 TypeScript，当前累计 101,357 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 8,
-      "fullName": "symfony/symfony",
-      "owner": "symfony",
-      "name": "symfony",
-      "url": "https://github.com/symfony/symfony",
-      "description": "The Symfony PHP framework",
-      "language": "PHP",
-      "stars": 31426,
-      "forks": 9948,
-      "starsToday": 128,
-      "license": "MIT",
-      "topics": [
-        "bundle",
-        "framework",
-        "hacktoberfest",
-        "php",
-        "php-framework",
-        "symfony",
-        "symfony-bundle"
-      ],
-      "homepage": "https://symfony.com",
-      "updatedAt": "2026-11-06T22:12:59Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
-      "chinese": {
-        "title": "symfony",
-        "summary": "The Symfony PHP framework。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 128 Star",
-          "主要使用 PHP，当前累计 31,426 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 9,
-      "fullName": "prometheus/prometheus",
-      "owner": "prometheus",
-      "name": "prometheus",
-      "url": "https://github.com/prometheus/prometheus",
-      "description": "The Prometheus monitoring system and time series database.",
-      "language": "Go",
-      "stars": 67178,
-      "forks": 10988,
-      "starsToday": 148,
-      "license": "Apache-2.0",
-      "topics": [
-        "alerting",
-        "graphing",
-        "hacktoberfest",
-        "metrics",
-        "monitoring",
-        "prometheus",
-        "time-series"
-      ],
-      "homepage": "https://prometheus.io/",
-      "updatedAt": "2026-11-06T17:19:24Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
-      "chinese": {
-        "title": "prometheus",
-        "summary": "The Prometheus monitoring system and time series database.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 148 Star",
-          "主要使用 Go，当前累计 67,178 Star",
-          "仓库标注 Apache-2.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 10,
       "fullName": "google/skills",
       "owner": "google",
       "name": "skills",
       "url": "https://github.com/google/skills",
       "description": "Agent Skills for Google products and technologies",
       "language": "Python",
-      "stars": 22831,
-      "forks": 1920,
-      "starsToday": 534,
+      "stars": 23391,
+      "forks": 1953,
+      "starsToday": 443,
       "license": "Apache-2.0",
       "topics": [
         "google",
@@ -484,9 +144,9 @@
         "skills"
       ],
       "homepage": null,
-      "updatedAt": "2026-11-06T22:01:22Z",
+      "updatedAt": "2026-11-07T14:41:39Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
       "chinese": {
         "title": "Google Agent Skills：Google 产品的可安装任务知识库",
         "summary": "把 Google Cloud、Gemini、GKE、数据、安全、身份、广告等产品的操作流程拆成可选择安装的 Agent Skills，并提供目录索引、辅助资源和部分宿主插件。",
@@ -531,184 +191,22 @@
       }
     },
     {
-      "rank": 11,
-      "fullName": "microsoft/vscode",
-      "owner": "microsoft",
-      "name": "vscode",
-      "url": "https://github.com/microsoft/vscode",
-      "description": "Visual Studio Code",
-      "language": "TypeScript",
-      "stars": 195023,
-      "forks": 44425,
-      "starsToday": 301,
-      "license": "MIT",
-      "topics": [
-        "editor",
-        "electron",
-        "microsoft",
-        "typescript",
-        "visual-studio-code"
-      ],
-      "homepage": "https://code.visualstudio.com",
-      "updatedAt": "2026-11-07T00:28:28Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
-      "chinese": {
-        "title": "vscode",
-        "summary": "Visual Studio Code。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 301 Star",
-          "主要使用 TypeScript，当前累计 195,023 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 12,
-      "fullName": "nushell/nushell",
-      "owner": "nushell",
-      "name": "nushell",
-      "url": "https://github.com/nushell/nushell",
-      "description": "A new type of shell",
-      "language": "Rust",
-      "stars": 40980,
-      "forks": 2343,
-      "starsToday": 131,
-      "license": "MIT",
-      "topics": [
-        "nushell",
-        "rust",
-        "shell"
-      ],
-      "homepage": "https://www.nushell.sh/",
-      "updatedAt": "2026-11-06T12:38:23Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
-      "chinese": {
-        "title": "nushell",
-        "summary": "A new type of shell。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 131 Star",
-          "主要使用 Rust，当前累计 40,980 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 13,
-      "fullName": "etcd-io/etcd",
-      "owner": "etcd-io",
-      "name": "etcd",
-      "url": "https://github.com/etcd-io/etcd",
-      "description": "Distributed reliable key-value store for the most critical data of a distributed system",
-      "language": "Go",
-      "stars": 52614,
-      "forks": 10590,
-      "starsToday": 128,
-      "license": "Apache-2.0",
-      "topics": [
-        "cncf",
-        "consensus",
-        "database",
-        "distributed-database",
-        "distributed-systems",
-        "etcd",
-        "go",
-        "key-value"
-      ],
-      "homepage": "https://etcd.io",
-      "updatedAt": "2026-11-06T12:29:27Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
-      "chinese": {
-        "title": "etcd",
-        "summary": "Distributed reliable key-value store for the most critical data of a distributed system。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 128 Star",
-          "主要使用 Go，当前累计 52,614 Star",
-          "仓库标注 Apache-2.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 14,
-      "fullName": "openssl/openssl",
-      "owner": "openssl",
-      "name": "openssl",
-      "url": "https://github.com/openssl/openssl",
-      "description": "General purpose TLS and crypto library",
-      "language": "C",
-      "stars": 31287,
-      "forks": 11580,
-      "starsToday": 26,
-      "license": "Apache-2.0",
-      "topics": [
-        "cryptography",
-        "decryption",
-        "encryption",
-        "openssl",
-        "ssl",
-        "tls"
-      ],
-      "homepage": "https://openssl-library.org/",
-      "updatedAt": "2026-11-06T21:22:27Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
-      "chinese": {
-        "title": "openssl",
-        "summary": "General purpose TLS and crypto library。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 26 Star",
-          "主要使用 C，当前累计 31,287 Star",
-          "仓库标注 Apache-2.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 15,
+      "rank": 4,
       "fullName": "mattpocock/skills",
       "owner": "mattpocock",
       "name": "skills",
       "url": "https://github.com/mattpocock/skills",
       "description": "Skills for Real Engineers. Straight from my .agents directory.",
       "language": "Shell",
-      "stars": 316706,
-      "forks": 26494,
-      "starsToday": 2070,
+      "stars": 317695,
+      "forks": 26579,
+      "starsToday": 1100,
       "license": "MIT",
       "topics": [],
       "homepage": "https://aihero.dev/skills",
       "updatedAt": "2026-11-05T10:40:01Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
       "chinese": {
         "title": "Skills for Real Engineers：可组合的工程 Agent 技能",
         "summary": "Matt Pocock 分享的工程与效率技能集合，以独立 SKILL.md 指导需求澄清、规格实现和验证等任务，供多个编程 Agent 宿主选用。",
@@ -745,64 +243,242 @@
       }
     },
     {
-      "rank": 16,
-      "fullName": "cloudflare/security-audit-skill",
-      "owner": "cloudflare",
-      "name": "security-audit-skill",
-      "url": "https://github.com/cloudflare/security-audit-skill",
-      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-      "language": "JavaScript",
-      "stars": 63978,
-      "forks": 4146,
-      "starsToday": 2548,
-      "license": "MIT",
-      "topics": [],
+      "rank": 5,
+      "fullName": "anthropics/skills",
+      "owner": "anthropics",
+      "name": "skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "language": "Python",
+      "stars": 188779,
+      "forks": 22250,
+      "starsToday": 390,
+      "license": null,
+      "topics": [
+        "agent-skills"
+      ],
       "homepage": null,
-      "updatedAt": "2026-09-14T19:29:02Z",
+      "updatedAt": "2026-11-06T22:32:32Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
       "chinese": {
-        "title": "Cloudflare 安全审查技能",
-        "summary": "把单仓代码安全审查拆成架构侦察、覆盖台账、候选验证和报告生成。主文件与多个专题参考共同指导 Agent，校验脚本检查报告结构；它不是扫描一次就能证明仓库安全的产品。",
+        "title": "Anthropic Skills：Claude 技能示例与规范资料",
+        "summary": "Anthropic 提供的技能示例、模板和规范目录；技能由 SKILL.md、脚本及资源组成，可在 Claude Code、Claude.ai 或 API 的相应能力中使用。",
         "highlights": [
-          "先列信任边界和输入面，再按覆盖单元审查",
-          "区分已确认、待验证和已否定发现",
-          "README 将 SKILL.md、专题文档、report-schema.json 与 validate-findings.cjs 分开：模型产生候选和证据，程序校验结构，再由独立审阅核对结论。"
+          "README 区分示例技能、规范和模板",
+          "Claude Code 可按插件集合安装",
+          "文档类技能含仅供参考的 source-available 内容"
         ],
         "useCases": [
-          "授权仓库的安全评审流程设计",
-          "已有发现的证据复核"
+          "学习 Claude 技能目录组织方式",
+          "参考文档、开发和企业任务技能示例"
         ],
-        "audience": "安全工程师和维护自有代码的团队",
-        "caution": "只对明确授权的代码开展审查；结构校验通过不能证明漏洞结论正确，本页未执行安全扫描。",
+        "audience": "Claude 技能作者和 Agent 平台开发者",
+        "caution": "仓库并非所有目录都以同一开源许可发布；文档处理技能为 source-available，采用前应逐目录核对许可。README 明确示例仅供演示和教学，不能把示例效果视作生产保证。本页未执行技能。",
         "status": "draft",
-        "commit": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
-        "researchedAt": "2026-10-22",
+        "commit": "ca45fc496a3436251f191354091d557da31c15b5",
+        "researchedAt": "2026-10-31",
         "workflow": [
-          "先列信任边界和输入面，再按覆盖单元审查",
-          "区分已确认、待验证和已否定发现",
-          "用独立复核约束源码引用与结论"
+          "先区分需要的示例、模板或规范目录",
+          "按目标 Claude 宿主安装插件或上传技能",
+          "审查具体 SKILL.md 与许可，在测试任务中验证行为"
         ],
-        "implementation": "README 将 SKILL.md、专题文档、report-schema.json 与 validate-findings.cjs 分开：模型产生候选和证据，程序校验结构，再由独立审阅核对结论。",
+        "implementation": "README 说明技能文件夹通过 SKILL.md 元数据和正文声明任务指令，运行时由 Claude 按需要加载；仓库另含 spec 与 template 供创作参考。",
         "sources": [
           {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/cloudflare/security-audit-skill/blob/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8/README.md"
+            "label": "固定版本官方 README",
+            "url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/README.md"
           }
         ]
       }
     },
     {
-      "rank": 17,
+      "rank": 6,
+      "fullName": "meta/astryx",
+      "owner": "meta",
+      "name": "astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "stars": 14503,
+      "forks": 1184,
+      "starsToday": 96,
+      "license": "MIT",
+      "topics": [],
+      "homepage": "http://astryx.atmeta.com",
+      "updatedAt": "2026-11-08T00:03:35Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
+      "chinese": {
+        "title": "astryx",
+        "summary": "An open source design system that's fully customizable and agent ready。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 96 Star",
+          "主要使用 TypeScript，当前累计 14,503 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 7,
+      "fullName": "prometheus/prometheus",
+      "owner": "prometheus",
+      "name": "prometheus",
+      "url": "https://github.com/prometheus/prometheus",
+      "description": "The Prometheus monitoring system and time series database.",
+      "language": "Go",
+      "stars": 67443,
+      "forks": 11002,
+      "starsToday": 322,
+      "license": "Apache-2.0",
+      "topics": [
+        "alerting",
+        "graphing",
+        "hacktoberfest",
+        "metrics",
+        "monitoring",
+        "prometheus",
+        "time-series"
+      ],
+      "homepage": "https://prometheus.io/",
+      "updatedAt": "2026-11-07T22:52:23Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
+      "chinese": {
+        "title": "prometheus",
+        "summary": "The Prometheus monitoring system and time series database.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 322 Star",
+          "主要使用 Go，当前累计 67,443 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 8,
+      "fullName": "sherlock-project/sherlock",
+      "owner": "sherlock-project",
+      "name": "sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "stars": 100433,
+      "forks": 11863,
+      "starsToday": 1766,
+      "license": "MIT",
+      "topics": [
+        "cli",
+        "cti",
+        "cybersecurity",
+        "forensics",
+        "hacktoberfest",
+        "information-gathering",
+        "infosec",
+        "linux"
+      ],
+      "homepage": "https://sherlockproject.xyz",
+      "updatedAt": "2026-11-07T05:13:07Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
+      "chinese": {
+        "title": "sherlock",
+        "summary": "Hunt down social media accounts by username across social networks。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 1,766 Star",
+          "主要使用 Python，当前累计 100,433 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 9,
+      "fullName": "milind-soni/OpenMausBot",
+      "owner": "milind-soni",
+      "name": "OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "stars": 16965,
+      "forks": 2402,
+      "starsToday": 1955,
+      "license": "Apache-2.0",
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "computer-use",
+        "docker",
+        "electron",
+        "expo",
+        "grok"
+      ],
+      "homepage": "https://www.openmausbot.com/",
+      "updatedAt": "2026-11-08T00:17:42Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
+      "chinese": {
+        "title": "OpenMausBot：本机多 Agent 聊天工作台",
+        "summary": "以聊天联系人形式管理多个 Claude、Codex 等 CLI Agent，各 Bot 可配置模型、独立会话和电脑环境。",
+        "highlights": [
+          "本机 harness 在 127.0.0.1 管理 Agent 进程",
+          "聊天中显示命令、文件修改等审批卡片",
+          "可连接外部应用和独立电脑环境"
+        ],
+        "useCases": [
+          "在一个桌面界面管理多个编程 Agent",
+          "评估需要人工审批的 Agent 操作流程"
+        ],
+        "audience": "已使用 Agent CLI 的个人开发者和团队",
+        "caution": "README 的本地优先和权限边界是项目自述；连接应用与控制电脑涉及高权限，需核对具体平台支持及实际审批行为。主机控制仅在指定平台显式开启，Ubuntu Wayland 仍禁用。本页未安装实测。",
+        "status": "draft",
+        "commit": "0213b7435fc83a936f77c18475ba2a0d7b7c2de4",
+        "researchedAt": "2026-10-30",
+        "workflow": [
+          "从固定版本 README 核对平台及所需 CLI",
+          "安装桌面版本并配置 Agent 引擎",
+          "用非敏感任务检查审批、会话存储与应用权限"
+        ],
+        "implementation": "README 描述本机 harness 管理 Agent 子进程，会话和密钥位于 ~/.openmausbot；云电脑、本地 VM、主机控制是不同执行边界。",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/milind-soni/OpenMausBot/blob/0213b7435fc83a936f77c18475ba2a0d7b7c2de4/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 10,
       "fullName": "astral-sh/ruff",
       "owner": "astral-sh",
       "name": "ruff",
       "url": "https://github.com/astral-sh/ruff",
       "description": "An extremely fast Python linter and code formatter, written in Rust.",
       "language": "Rust",
-      "stars": 50688,
-      "forks": 2611,
-      "starsToday": 169,
+      "stars": 50973,
+      "forks": 2630,
+      "starsToday": 350,
       "license": "MIT",
       "topics": [
         "linter",
@@ -815,16 +491,238 @@
         "static-analysis"
       ],
       "homepage": "https://docs.astral.sh/ruff",
-      "updatedAt": "2026-11-07T00:07:06Z",
+      "updatedAt": "2026-11-07T20:47:39Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-07T00:28:45.460Z",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
       "chinese": {
         "title": "ruff",
         "summary": "An extremely fast Python linter and code formatter, written in Rust.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 169 Star",
-          "主要使用 Rust，当前累计 50,688 Star",
+          "今日新增 350 Star",
+          "主要使用 Rust，当前累计 50,973 Star",
           "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 11,
+      "fullName": "tailwindlabs/tailwindcss",
+      "owner": "tailwindlabs",
+      "name": "tailwindcss",
+      "url": "https://github.com/tailwindlabs/tailwindcss",
+      "description": "A utility-first CSS framework for rapid UI development.",
+      "language": "TypeScript",
+      "stars": 98463,
+      "forks": 7107,
+      "starsToday": 122,
+      "license": "MIT",
+      "topics": [
+        "css",
+        "css-framework",
+        "functional-css",
+        "postcss",
+        "responsive",
+        "tailwindcss",
+        "utility-classes"
+      ],
+      "homepage": "https://tailwindcss.com/",
+      "updatedAt": "2026-11-06T14:50:08Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
+      "chinese": {
+        "title": "tailwindcss",
+        "summary": "A utility-first CSS framework for rapid UI development.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 122 Star",
+          "主要使用 TypeScript，当前累计 98,463 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 12,
+      "fullName": "mbillow/localthings",
+      "owner": "mbillow",
+      "name": "localthings",
+      "url": "https://github.com/mbillow/localthings",
+      "description": "Control your Samsung appliances from Home Assistant over your home network, with no cloud account.",
+      "language": "Python",
+      "stars": 1055,
+      "forks": 112,
+      "starsToday": 186,
+      "license": "MIT",
+      "topics": [
+        "coap-protocol",
+        "coap-server",
+        "custom-component",
+        "dtls",
+        "hacs",
+        "hacs-integration",
+        "home-assistant",
+        "home-automation"
+      ],
+      "homepage": null,
+      "updatedAt": "2026-11-07T06:48:26Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
+      "chinese": {
+        "title": "localthings",
+        "summary": "Control your Samsung appliances from Home Assistant over your home network, with no cloud account.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 186 Star",
+          "主要使用 Python，当前累计 1,055 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 13,
+      "fullName": "zed-industries/zed",
+      "owner": "zed-industries",
+      "name": "zed",
+      "url": "https://github.com/zed-industries/zed",
+      "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "language": "Rust",
+      "stars": 94269,
+      "forks": 11550,
+      "starsToday": 1114,
+      "license": "NOASSERTION",
+      "topics": [
+        "gpui",
+        "rust-lang",
+        "text-editor",
+        "zed"
+      ],
+      "homepage": "https://zed.dev",
+      "updatedAt": "2026-11-07T22:34:09Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
+      "chinese": {
+        "title": "Zed：以 Rust 与 GPUI 构建的高性能协作代码编辑器",
+        "summary": "面向 macOS、Linux 和 Windows 的原生代码编辑器，把项目、语言工具、多人协作、Git、终端与 Agent 入口组织在同一桌面工作区；当前不提供 Web 版。",
+        "highlights": [
+          "官方提供桌面安装包，也可按平台固定源码版本自行构建",
+          "主应用通过 GPUI 注册窗口、命令、设置、工作区和多种面板",
+          "Linux 同时支持 Wayland 与 X11，发行打包需安装 CLI 和编辑器两个二进制"
+        ],
+        "useCases": [
+          "在大型代码库中使用原生编辑、语言服务、终端和 Git 工作流",
+          "评估多人协作或 Agent 辅助开发的桌面编辑器"
+        ],
+        "audience": "愿意核对桌面平台、联网服务、扩展和许可证边界的开发者与工程团队",
+        "caution": "源码主要采用 GPL-3.0-or-later，标记组件使用 Apache-2.0，打包和再分发需逐项核对。Linux 文档明确默认连接 AI、遥测与协作服务，扩展还可能安装语言服务器等工具；这些能力可配置关闭，但在受限网络或沙箱环境采用前应审查默认设置、扩展和数据流。项目更新频繁，固定版本源码阅读不能替代目标平台安装、性能、协作和隐私实测。本页未安装或运行 Zed。",
+        "status": "draft",
+        "commit": "9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3",
+        "researchedAt": "2026-11-07",
+        "workflow": [
+          "按目标平台固定版本，优先使用官方包或依照平台文档准备依赖",
+          "先在测试项目验证编辑、语言服务、Git 与终端，再按需启用协作、Agent 和扩展",
+          "核对联网、遥测、凭据、扩展安装和更新策略后再用于敏感代码库"
+        ],
+        "implementation": "README 定义了桌面平台、构建入口与许可证；crates/zed/src/zed.rs 以 GPUI 初始化主应用，注册窗口、命令、设置、工作区以及编辑器、Git、终端、调试、扩展和 Agent 等模块。Linux 构建文档说明 CLI 负责用户入口，zed-editor 提供主界面，并明确联网服务、工具自动安装和沙箱兼容性的当前边界。",
+        "sources": [
+          {
+            "label": "固定版本官方 README 与许可证",
+            "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/README.md"
+          },
+          {
+            "label": "固定版本主应用初始化实现",
+            "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/crates/zed/src/zed.rs"
+          },
+          {
+            "label": "固定版本 Linux 构建与运行边界",
+            "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/docs/src/development/linux.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "fullName": "ranxianglei/billion-context",
+      "owner": "ranxianglei",
+      "name": "billion-context",
+      "url": "https://github.com/ranxianglei/billion-context",
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "language": "TypeScript",
+      "stars": 4601,
+      "forks": 369,
+      "starsToday": 191,
+      "license": "NOASSERTION",
+      "topics": [
+        "dsh-plugin"
+      ],
+      "homepage": null,
+      "updatedAt": "2026-11-07T23:53:39Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
+      "chinese": {
+        "title": "billion-context",
+        "summary": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 191 Star",
+          "主要使用 TypeScript，当前累计 4,601 Star",
+          "仓库标注 NOASSERTION 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 15,
+      "fullName": "dsx-ai-factory/nvke",
+      "owner": "dsx-ai-factory",
+      "name": "nvke",
+      "url": "https://github.com/dsx-ai-factory/nvke",
+      "description": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+      "language": "Go",
+      "stars": 552,
+      "forks": 88,
+      "starsToday": 123,
+      "license": "Apache-2.0",
+      "topics": [
+        "bare-metal",
+        "cluster-api",
+        "gpu",
+        "kubernetes",
+        "nvidia"
+      ],
+      "homepage": "https://docs.nvidia.com/nvke/",
+      "updatedAt": "2026-11-07T02:09:56Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
+      "chinese": {
+        "title": "nvke",
+        "summary": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 123 Star",
+          "主要使用 Go，当前累计 552 Star",
+          "仓库标注 Apache-2.0 许可证"
         ],
         "useCases": [
           "了解近期开发者关注方向",
