@@ -1,40 +1,237 @@
 {
-  "generatedAt": "2026-11-08T00:22:52.859Z",
+  "generatedAt": "2026-11-09T00:55:50.950Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "status": "success",
   "coverage": {
-    "researched": 7,
+    "researched": 4,
     "pendingResearch": [
+      "dsx-ai-factory/nvke",
+      "anthropics/claude-quickstarts",
       "meta/astryx",
-      "prometheus/prometheus",
-      "sherlock-project/sherlock",
-      "astral-sh/ruff",
-      "tailwindlabs/tailwindcss",
-      "mbillow/localthings",
-      "ranxianglei/billion-context",
-      "dsx-ai-factory/nvke"
+      "google-deepmind/mujoco",
+      "ranxianglei/billion-context"
     ],
     "metadataFailures": []
   },
   "repositories": [
     {
       "rank": 1,
+      "fullName": "sherlock-project/sherlock",
+      "owner": "sherlock-project",
+      "name": "sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "stars": 103517,
+      "forks": 12131,
+      "starsToday": 2373,
+      "license": "MIT",
+      "topics": [
+        "cli",
+        "cti",
+        "cybersecurity",
+        "forensics",
+        "hacktoberfest",
+        "information-gathering",
+        "infosec",
+        "linux"
+      ],
+      "homepage": "https://sherlockproject.xyz",
+      "updatedAt": "2026-11-08T05:13:22Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-09T00:55:50.950Z",
+      "chinese": {
+        "title": "Sherlock：跨社交网络检索用户名是否被占用",
+        "summary": "把同一用户名代入站点清单中的个人页或探测地址，并发请求数百个社交网络，再按状态码、响应正文或重定向结果整理可能存在的账号链接。",
+        "highlights": [
+          "支持单个或多个用户名，并可限定站点、设置代理和导出文本、CSV 或 XLSX",
+          "站点清单为每个目标声明 URL、用户名规则、请求方式与存在性判断方法",
+          "结果区分已发现、未发现、非法用户名、未知错误与 WAF 拦截"
+        ],
+        "useCases": [
+          "在获得授权的品牌保护或账号盘点中查找相同用户名的公开主页",
+          "为 OSINT 调查生成待人工复核的公开账号候选列表"
+        ],
+        "audience": "理解公开信息调查、平台条款、误报风险与个人数据边界的安全研究和品牌保护人员",
+        "caution": "同名账号不证明属于同一主体，状态码、页面文案、重定向和 WAF 也会随站点变化并产生误报、漏报或未知结果，输出必须逐站人工核验。默认会联网获取实时站点清单和排除列表，然后向大量第三方站点并发请求；采用前应审查目标、频率、代理、日志、当地法律与平台条款，避免骚扰、画像或未授权调查。社区安装包并非都由项目方维护，README 还明确提示部分发行版包损坏。本页未安装工具、查询用户名或验证站点准确率。",
+        "workflow": [
+          "固定 Sherlock 版本并审查实时站点清单来源，先在隔离环境用本地清单和获授权测试名限定少量站点",
+          "运行查询后保留 claimed、unknown、WAF 等状态和错误上下文，不把候选链接直接归因到个人",
+          "逐站核验公开页面、记录时间与证据，再按数据最小化原则处理和删除结果"
+        ],
+        "implementation": "主流程从站点清单为用户名插值 URL，先按正则排除不合法用户名，再以最多 20 个工作线程发起 GET、HEAD、POST 或 PUT 请求；结果依据正文中的错误消息、HTTP 状态或禁用重定向后的响应分类，并单独识别部分 WAF 页面和请求异常。SitesInformation 默认从 data.sherlockproject.xyz 读取实时清单，再尝试加载 false-positive 排除列表；使用 --local 或指定 JSON 才能固定目标集合，因此固定代码版本并不自动固定实际探测配置。",
+        "commit": "c588d7c8b476df9f9c84912a05d1430fb8cdcdae",
+        "status": "draft",
+        "researchedAt": "2026-11-09",
+        "sources": [
+          {
+            "label": "固定版本官方 README 与安装、使用边界",
+            "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/docs/README.md"
+          },
+          {
+            "label": "固定版本并发探测与结果分类实现",
+            "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/sherlock_project/sherlock.py"
+          },
+          {
+            "label": "固定版本站点清单与排除列表加载实现",
+            "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/sherlock_project/sites.py"
+          },
+          {
+            "label": "固定版本站点清单 schema",
+            "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/sherlock_project/resources/data.schema.json"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "fullName": "dsx-ai-factory/nvke",
+      "owner": "dsx-ai-factory",
+      "name": "nvke",
+      "url": "https://github.com/dsx-ai-factory/nvke",
+      "description": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+      "language": "Go",
+      "stars": 851,
+      "forks": 111,
+      "starsToday": 345,
+      "license": "Apache-2.0",
+      "topics": [
+        "bare-metal",
+        "cluster-api",
+        "gpu",
+        "kubernetes",
+        "nvidia"
+      ],
+      "homepage": "https://docs.nvidia.com/nvke/",
+      "updatedAt": "2026-11-07T02:09:56Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-09T00:55:50.950Z",
+      "chinese": {
+        "title": "nvke",
+        "summary": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 345 Star",
+          "主要使用 Go，当前累计 851 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 3,
+      "fullName": "milind-soni/OpenMausBot",
+      "owner": "milind-soni",
+      "name": "OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "stars": 18257,
+      "forks": 2534,
+      "starsToday": 1439,
+      "license": "Apache-2.0",
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "computer-use",
+        "docker",
+        "electron",
+        "grok",
+        "grok-bot"
+      ],
+      "homepage": "https://www.mausbot.com/",
+      "updatedAt": "2026-11-08T21:59:04Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-09T00:55:50.950Z",
+      "chinese": {
+        "title": "OpenMausBot：本机多 Agent 聊天工作台",
+        "summary": "以聊天联系人形式管理多个 Claude、Codex 等 CLI Agent，各 Bot 可配置模型、独立会话和电脑环境。",
+        "highlights": [
+          "本机 harness 在 127.0.0.1 管理 Agent 进程",
+          "聊天中显示命令、文件修改等审批卡片",
+          "可连接外部应用和独立电脑环境"
+        ],
+        "useCases": [
+          "在一个桌面界面管理多个编程 Agent",
+          "评估需要人工审批的 Agent 操作流程"
+        ],
+        "audience": "已使用 Agent CLI 的个人开发者和团队",
+        "caution": "README 的本地优先和权限边界是项目自述；连接应用与控制电脑涉及高权限，需核对具体平台支持及实际审批行为。主机控制仅在指定平台显式开启，Ubuntu Wayland 仍禁用。本页未安装实测。",
+        "status": "draft",
+        "commit": "0213b7435fc83a936f77c18475ba2a0d7b7c2de4",
+        "researchedAt": "2026-10-30",
+        "workflow": [
+          "从固定版本 README 核对平台及所需 CLI",
+          "安装桌面版本并配置 Agent 引擎",
+          "用非敏感任务检查审批、会话存储与应用权限"
+        ],
+        "implementation": "README 描述本机 harness 管理 Agent 子进程，会话和密钥位于 ~/.openmausbot；云电脑、本地 VM、主机控制是不同执行边界。",
+        "sources": [
+          {
+            "label": "固定版本官方 README",
+            "url": "https://github.com/milind-soni/OpenMausBot/blob/0213b7435fc83a936f77c18475ba2a0d7b7c2de4/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "fullName": "anthropics/claude-quickstarts",
+      "owner": "anthropics",
+      "name": "claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "language": "Python",
+      "stars": 19417,
+      "forks": 3280,
+      "starsToday": 32,
+      "license": "MIT",
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-11-06T19:37:57Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-09T00:55:50.950Z",
+      "chinese": {
+        "title": "claude-quickstarts",
+        "summary": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 32 Star",
+          "主要使用 Python，当前累计 19,417 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 5,
       "fullName": "vercel-labs/agent-browser",
       "owner": "vercel-labs",
       "name": "agent-browser",
       "url": "https://github.com/vercel-labs/agent-browser",
       "description": "Browser automation CLI for AI agents",
       "language": "Rust",
-      "stars": 46818,
-      "forks": 3208,
-      "starsToday": 190,
+      "stars": 47604,
+      "forks": 3258,
+      "starsToday": 815,
       "license": "Apache-2.0",
       "topics": [],
       "homepage": "https://agent-browser.dev",
-      "updatedAt": "2026-11-08T00:20:26Z",
+      "updatedAt": "2026-11-08T10:03:53Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
+      "metadataCheckedAt": "2026-11-09T00:55:50.950Z",
       "chinese": {
         "title": "agent-browser：面向 Agent 的命令行浏览器自动化层",
         "summary": "以 Rust CLI 把页面导航、无障碍树快照、元素引用和交互命令组织成短调用，并由后台守护进程维持浏览器与会话，供 shell、技能或 MCP 客户端驱动。",
@@ -79,180 +276,50 @@
       }
     },
     {
-      "rank": 2,
-      "fullName": "cloudflare/security-audit-skill",
-      "owner": "cloudflare",
-      "name": "security-audit-skill",
-      "url": "https://github.com/cloudflare/security-audit-skill",
-      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-      "language": "JavaScript",
-      "stars": 65703,
-      "forks": 4265,
-      "starsToday": 2085,
+      "rank": 6,
+      "fullName": "meta/astryx",
+      "owner": "meta",
+      "name": "astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "stars": 16791,
+      "forks": 1322,
+      "starsToday": 875,
       "license": "MIT",
       "topics": [],
-      "homepage": null,
-      "updatedAt": "2026-09-14T19:29:02Z",
+      "homepage": "http://astryx.atmeta.com",
+      "updatedAt": "2026-11-09T00:52:29Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
+      "metadataCheckedAt": "2026-11-09T00:55:50.950Z",
       "chinese": {
-        "title": "Cloudflare 安全审查技能",
-        "summary": "把单仓代码安全审查拆成架构侦察、覆盖台账、候选验证和报告生成。主文件与多个专题参考共同指导 Agent，校验脚本检查报告结构；它不是扫描一次就能证明仓库安全的产品。",
+        "title": "astryx",
+        "summary": "An open source design system that's fully customizable and agent ready。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "先列信任边界和输入面，再按覆盖单元审查",
-          "区分已确认、待验证和已否定发现",
-          "README 将 SKILL.md、专题文档、report-schema.json 与 validate-findings.cjs 分开：模型产生候选和证据，程序校验结构，再由独立审阅核对结论。"
+          "今日新增 875 Star",
+          "主要使用 TypeScript，当前累计 16,791 Star",
+          "仓库标注 MIT 许可证"
         ],
         "useCases": [
-          "授权仓库的安全评审流程设计",
-          "已有发现的证据复核"
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
         ],
-        "audience": "安全工程师和维护自有代码的团队",
-        "caution": "只对明确授权的代码开展审查；结构校验通过不能证明漏洞结论正确，本页未执行安全扫描。",
-        "status": "draft",
-        "commit": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
-        "researchedAt": "2026-10-22",
-        "workflow": [
-          "先列信任边界和输入面，再按覆盖单元审查",
-          "区分已确认、待验证和已否定发现",
-          "用独立复核约束源码引用与结论"
-        ],
-        "implementation": "README 将 SKILL.md、专题文档、report-schema.json 与 validate-findings.cjs 分开：模型产生候选和证据，程序校验结构，再由独立审阅核对结论。",
-        "sources": [
-          {
-            "label": "固定版本官方 README（资料依据）",
-            "url": "https://github.com/cloudflare/security-audit-skill/blob/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8/README.md"
-          }
-        ]
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
       }
     },
     {
-      "rank": 3,
-      "fullName": "google/skills",
-      "owner": "google",
-      "name": "skills",
-      "url": "https://github.com/google/skills",
-      "description": "Agent Skills for Google products and technologies",
-      "language": "Python",
-      "stars": 23391,
-      "forks": 1953,
-      "starsToday": 443,
-      "license": "Apache-2.0",
-      "topics": [
-        "google",
-        "googlecloud",
-        "skills"
-      ],
-      "homepage": null,
-      "updatedAt": "2026-11-07T14:41:39Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
-      "chinese": {
-        "title": "Google Agent Skills：Google 产品的可安装任务知识库",
-        "summary": "把 Google Cloud、Gemini、GKE、数据、安全、身份、广告等产品的操作流程拆成可选择安装的 Agent Skills，并提供目录索引、辅助资源和部分宿主插件。",
-        "highlights": [
-          "固定版本 index.json 收录 186 个技能入口与路由描述",
-          "可通过 npx skills 选择技能、目标 Agent 和项目或全局作用域",
-          "技能可携带参考资料、脚本与输出模板，部分插件还组合 MCP 服务"
-        ],
-        "useCases": [
-          "为 Agent 按需补充 Google 产品的官方流程和边界",
-          "在团队项目中固定云架构、故障排查或 API 集成操作规范"
-        ],
-        "audience": "使用 Google 产品并能审查 Agent 指令、云权限和命令副作用的平台与应用团队",
-        "caution": "仓库由 Google 维护不等于每个技能适合当前账号、区域、版本或生产环境；目录中的描述只用于路由，真正执行前仍应读取完整 SKILL.md、引用资料和脚本。安装依赖 npx skills 并会写入所选 Agent 的项目或全局技能目录；部分技能可能调用 gcloud、REST、MCP 或修改云资源，应使用最小权限、确认计费与地域并保留人工审批。目录和入口会更新，固定版本研究不能替代安装时复核。本页未安装技能或调用 Google 服务。",
-        "status": "draft",
-        "commit": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
-        "researchedAt": "2026-11-06",
-        "workflow": [
-          "从固定版本目录按描述筛出最多几个与任务直接相关的技能",
-          "审查对应 SKILL.md、引用文件、脚本、认证和资源修改范围",
-          "在项目作用域安装并用低权限测试账号验证，再决定是否更新或扩大到全局"
-        ],
-        "implementation": "README 提供 npx skills 的选择式安装与更新入口；index.json 将技能名、触发描述和原始 SKILL.md 地址组成机器可读目录。Skill Finder 先拉取并校验目录，再最多选择三个匹配项、按需读取入口；具体技能通过同目录 references、scripts 与 assets 逐步加载产品资料和执行辅助。插件目录则把技能与 MCP 服务按宿主安装方式组合。",
-        "sources": [
-          {
-            "label": "固定版本官方 README 与安装方式",
-            "url": "https://github.com/google/skills/blob/c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2/README.md"
-          },
-          {
-            "label": "固定版本技能目录",
-            "url": "https://github.com/google/skills/blob/c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2/index.json"
-          },
-          {
-            "label": "固定版本按需路由技能",
-            "url": "https://github.com/google/skills/blob/c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2/skills/developers/finding-google-skills/SKILL.md"
-          },
-          {
-            "label": "固定版本开发者知识技能示例",
-            "url": "https://github.com/google/skills/blob/c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2/skills/developers/retrieving-developer-knowledge/SKILL.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 4,
-      "fullName": "mattpocock/skills",
-      "owner": "mattpocock",
-      "name": "skills",
-      "url": "https://github.com/mattpocock/skills",
-      "description": "Skills for Real Engineers. Straight from my .agents directory.",
-      "language": "Shell",
-      "stars": 317695,
-      "forks": 26579,
-      "starsToday": 1100,
-      "license": "MIT",
-      "topics": [],
-      "homepage": "https://aihero.dev/skills",
-      "updatedAt": "2026-11-05T10:40:01Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
-      "chinese": {
-        "title": "Skills for Real Engineers：可组合的工程 Agent 技能",
-        "summary": "Matt Pocock 分享的工程与效率技能集合，以独立 SKILL.md 指导需求澄清、规格实现和验证等任务，供多个编程 Agent 宿主选用。",
-        "highlights": [
-          "按宿主选择插件或可编辑文件安装",
-          "首次运行 setup 技能配置 issue 跟踪和文档位置",
-          "工程技能和效率技能可按任务单独加载"
-        ],
-        "useCases": [
-          "给编程 Agent 配置可审查的工作流程",
-          "参考需求澄清和规格实施指令"
-        ],
-        "audience": "使用编程 Agent 的软件工程师",
-        "caution": "技能是操作指令，不保证代码质量；插件自动更新与 skills.sh 复制文件的更新方式不同，重复安装会出现双份技能。实施规格技能会要求创建分支和子 Agent，运行前应审查指令与权限。本页未安装实测。",
-        "status": "draft",
-        "commit": "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa",
-        "researchedAt": "2026-10-31",
-        "workflow": [
-          "按宿主选择一种安装方式并审查技能文件",
-          "运行 setup 技能配置项目约定",
-          "在小任务中检查触发、变更和测试结果"
-        ],
-        "implementation": "README 把技能组织为小型可组合指令；implement-spec 技能读取规格和工单图，要求独立实现分支与审查，实际执行仍取决于宿主 Agent。",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/mattpocock/skills/blob/a496f5513d4a4cf889bc48e189e579f4b0bdf6aa/README.md"
-          },
-          {
-            "label": "固定版本 implement-spec 技能",
-            "url": "https://github.com/mattpocock/skills/blob/a496f5513d4a4cf889bc48e189e579f4b0bdf6aa/skills/engineering/implement-spec/SKILL.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 5,
+      "rank": 7,
       "fullName": "anthropics/skills",
       "owner": "anthropics",
       "name": "skills",
       "url": "https://github.com/anthropics/skills",
       "description": "Public repository for Agent Skills",
       "language": "Python",
-      "stars": 188779,
-      "forks": 22250,
-      "starsToday": 390,
+      "stars": 189653,
+      "forks": 22349,
+      "starsToday": 792,
       "license": null,
       "topics": [
         "agent-skills"
@@ -260,7 +327,7 @@
       "homepage": null,
       "updatedAt": "2026-11-06T22:32:32Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
+      "metadataCheckedAt": "2026-11-09T00:55:50.950Z",
       "chinese": {
         "title": "Anthropic Skills：Claude 技能示例与规范资料",
         "summary": "Anthropic 提供的技能示例、模板和规范目录；技能由 SKILL.md、脚本及资源组成，可在 Claude Code、Claude.ai 或 API 的相应能力中使用。",
@@ -293,114 +360,33 @@
       }
     },
     {
-      "rank": 6,
-      "fullName": "meta/astryx",
-      "owner": "meta",
-      "name": "astryx",
-      "url": "https://github.com/meta/astryx",
-      "description": "An open source design system that's fully customizable and agent ready",
-      "language": "TypeScript",
-      "stars": 14503,
-      "forks": 1184,
-      "starsToday": 96,
-      "license": "MIT",
-      "topics": [],
-      "homepage": "http://astryx.atmeta.com",
-      "updatedAt": "2026-11-08T00:03:35Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
-      "chinese": {
-        "title": "astryx",
-        "summary": "An open source design system that's fully customizable and agent ready。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 96 Star",
-          "主要使用 TypeScript，当前累计 14,503 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 7,
-      "fullName": "prometheus/prometheus",
-      "owner": "prometheus",
-      "name": "prometheus",
-      "url": "https://github.com/prometheus/prometheus",
-      "description": "The Prometheus monitoring system and time series database.",
-      "language": "Go",
-      "stars": 67443,
-      "forks": 11002,
-      "starsToday": 322,
+      "rank": 8,
+      "fullName": "google-deepmind/mujoco",
+      "owner": "google-deepmind",
+      "name": "mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "language": "C++",
+      "stars": 16419,
+      "forks": 1953,
+      "starsToday": 41,
       "license": "Apache-2.0",
       "topics": [
-        "alerting",
-        "graphing",
-        "hacktoberfest",
-        "metrics",
-        "monitoring",
-        "prometheus",
-        "time-series"
+        "mujoco",
+        "physics",
+        "robotics"
       ],
-      "homepage": "https://prometheus.io/",
-      "updatedAt": "2026-11-07T22:52:23Z",
+      "homepage": "https://mujoco.org",
+      "updatedAt": "2026-11-08T23:35:03Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
+      "metadataCheckedAt": "2026-11-09T00:55:50.950Z",
       "chinese": {
-        "title": "prometheus",
-        "summary": "The Prometheus monitoring system and time series database.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "mujoco",
+        "summary": "Multi-Joint dynamics with Contact. A general purpose physics simulator.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 322 Star",
-          "主要使用 Go，当前累计 67,443 Star",
+          "今日新增 41 Star",
+          "主要使用 C++，当前累计 16,419 Star",
           "仓库标注 Apache-2.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 8,
-      "fullName": "sherlock-project/sherlock",
-      "owner": "sherlock-project",
-      "name": "sherlock",
-      "url": "https://github.com/sherlock-project/sherlock",
-      "description": "Hunt down social media accounts by username across social networks",
-      "language": "Python",
-      "stars": 100433,
-      "forks": 11863,
-      "starsToday": 1766,
-      "license": "MIT",
-      "topics": [
-        "cli",
-        "cti",
-        "cybersecurity",
-        "forensics",
-        "hacktoberfest",
-        "information-gathering",
-        "infosec",
-        "linux"
-      ],
-      "homepage": "https://sherlockproject.xyz",
-      "updatedAt": "2026-11-07T05:13:07Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
-      "chinese": {
-        "title": "sherlock",
-        "summary": "Hunt down social media accounts by username across social networks。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 1,766 Star",
-          "主要使用 Python，当前累计 100,433 Star",
-          "仓库标注 MIT 许可证"
         ],
         "useCases": [
           "了解近期开发者关注方向",
@@ -413,316 +399,30 @@
     },
     {
       "rank": 9,
-      "fullName": "milind-soni/OpenMausBot",
-      "owner": "milind-soni",
-      "name": "OpenMausBot",
-      "url": "https://github.com/milind-soni/OpenMausBot",
-      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
-      "language": "TypeScript",
-      "stars": 16965,
-      "forks": 2402,
-      "starsToday": 1955,
-      "license": "Apache-2.0",
-      "topics": [
-        "ai-agents",
-        "claude-code",
-        "codex",
-        "computer-use",
-        "docker",
-        "electron",
-        "expo",
-        "grok"
-      ],
-      "homepage": "https://www.openmausbot.com/",
-      "updatedAt": "2026-11-08T00:17:42Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
-      "chinese": {
-        "title": "OpenMausBot：本机多 Agent 聊天工作台",
-        "summary": "以聊天联系人形式管理多个 Claude、Codex 等 CLI Agent，各 Bot 可配置模型、独立会话和电脑环境。",
-        "highlights": [
-          "本机 harness 在 127.0.0.1 管理 Agent 进程",
-          "聊天中显示命令、文件修改等审批卡片",
-          "可连接外部应用和独立电脑环境"
-        ],
-        "useCases": [
-          "在一个桌面界面管理多个编程 Agent",
-          "评估需要人工审批的 Agent 操作流程"
-        ],
-        "audience": "已使用 Agent CLI 的个人开发者和团队",
-        "caution": "README 的本地优先和权限边界是项目自述；连接应用与控制电脑涉及高权限，需核对具体平台支持及实际审批行为。主机控制仅在指定平台显式开启，Ubuntu Wayland 仍禁用。本页未安装实测。",
-        "status": "draft",
-        "commit": "0213b7435fc83a936f77c18475ba2a0d7b7c2de4",
-        "researchedAt": "2026-10-30",
-        "workflow": [
-          "从固定版本 README 核对平台及所需 CLI",
-          "安装桌面版本并配置 Agent 引擎",
-          "用非敏感任务检查审批、会话存储与应用权限"
-        ],
-        "implementation": "README 描述本机 harness 管理 Agent 子进程，会话和密钥位于 ~/.openmausbot；云电脑、本地 VM、主机控制是不同执行边界。",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/milind-soni/OpenMausBot/blob/0213b7435fc83a936f77c18475ba2a0d7b7c2de4/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 10,
-      "fullName": "astral-sh/ruff",
-      "owner": "astral-sh",
-      "name": "ruff",
-      "url": "https://github.com/astral-sh/ruff",
-      "description": "An extremely fast Python linter and code formatter, written in Rust.",
-      "language": "Rust",
-      "stars": 50973,
-      "forks": 2630,
-      "starsToday": 350,
-      "license": "MIT",
-      "topics": [
-        "linter",
-        "pep8",
-        "python",
-        "python3",
-        "ruff",
-        "rust",
-        "rustpython",
-        "static-analysis"
-      ],
-      "homepage": "https://docs.astral.sh/ruff",
-      "updatedAt": "2026-11-07T20:47:39Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
-      "chinese": {
-        "title": "ruff",
-        "summary": "An extremely fast Python linter and code formatter, written in Rust.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 350 Star",
-          "主要使用 Rust，当前累计 50,973 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 11,
-      "fullName": "tailwindlabs/tailwindcss",
-      "owner": "tailwindlabs",
-      "name": "tailwindcss",
-      "url": "https://github.com/tailwindlabs/tailwindcss",
-      "description": "A utility-first CSS framework for rapid UI development.",
-      "language": "TypeScript",
-      "stars": 98463,
-      "forks": 7107,
-      "starsToday": 122,
-      "license": "MIT",
-      "topics": [
-        "css",
-        "css-framework",
-        "functional-css",
-        "postcss",
-        "responsive",
-        "tailwindcss",
-        "utility-classes"
-      ],
-      "homepage": "https://tailwindcss.com/",
-      "updatedAt": "2026-11-06T14:50:08Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
-      "chinese": {
-        "title": "tailwindcss",
-        "summary": "A utility-first CSS framework for rapid UI development.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 122 Star",
-          "主要使用 TypeScript，当前累计 98,463 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 12,
-      "fullName": "mbillow/localthings",
-      "owner": "mbillow",
-      "name": "localthings",
-      "url": "https://github.com/mbillow/localthings",
-      "description": "Control your Samsung appliances from Home Assistant over your home network, with no cloud account.",
-      "language": "Python",
-      "stars": 1055,
-      "forks": 112,
-      "starsToday": 186,
-      "license": "MIT",
-      "topics": [
-        "coap-protocol",
-        "coap-server",
-        "custom-component",
-        "dtls",
-        "hacs",
-        "hacs-integration",
-        "home-assistant",
-        "home-automation"
-      ],
-      "homepage": null,
-      "updatedAt": "2026-11-07T06:48:26Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
-      "chinese": {
-        "title": "localthings",
-        "summary": "Control your Samsung appliances from Home Assistant over your home network, with no cloud account.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 186 Star",
-          "主要使用 Python，当前累计 1,055 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 13,
-      "fullName": "zed-industries/zed",
-      "owner": "zed-industries",
-      "name": "zed",
-      "url": "https://github.com/zed-industries/zed",
-      "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
-      "language": "Rust",
-      "stars": 94269,
-      "forks": 11550,
-      "starsToday": 1114,
-      "license": "NOASSERTION",
-      "topics": [
-        "gpui",
-        "rust-lang",
-        "text-editor",
-        "zed"
-      ],
-      "homepage": "https://zed.dev",
-      "updatedAt": "2026-11-07T22:34:09Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
-      "chinese": {
-        "title": "Zed：以 Rust 与 GPUI 构建的高性能协作代码编辑器",
-        "summary": "面向 macOS、Linux 和 Windows 的原生代码编辑器，把项目、语言工具、多人协作、Git、终端与 Agent 入口组织在同一桌面工作区；当前不提供 Web 版。",
-        "highlights": [
-          "官方提供桌面安装包，也可按平台固定源码版本自行构建",
-          "主应用通过 GPUI 注册窗口、命令、设置、工作区和多种面板",
-          "Linux 同时支持 Wayland 与 X11，发行打包需安装 CLI 和编辑器两个二进制"
-        ],
-        "useCases": [
-          "在大型代码库中使用原生编辑、语言服务、终端和 Git 工作流",
-          "评估多人协作或 Agent 辅助开发的桌面编辑器"
-        ],
-        "audience": "愿意核对桌面平台、联网服务、扩展和许可证边界的开发者与工程团队",
-        "caution": "源码主要采用 GPL-3.0-or-later，标记组件使用 Apache-2.0，打包和再分发需逐项核对。Linux 文档明确默认连接 AI、遥测与协作服务，扩展还可能安装语言服务器等工具；这些能力可配置关闭，但在受限网络或沙箱环境采用前应审查默认设置、扩展和数据流。项目更新频繁，固定版本源码阅读不能替代目标平台安装、性能、协作和隐私实测。本页未安装或运行 Zed。",
-        "status": "draft",
-        "commit": "9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3",
-        "researchedAt": "2026-11-07",
-        "workflow": [
-          "按目标平台固定版本，优先使用官方包或依照平台文档准备依赖",
-          "先在测试项目验证编辑、语言服务、Git 与终端，再按需启用协作、Agent 和扩展",
-          "核对联网、遥测、凭据、扩展安装和更新策略后再用于敏感代码库"
-        ],
-        "implementation": "README 定义了桌面平台、构建入口与许可证；crates/zed/src/zed.rs 以 GPUI 初始化主应用，注册窗口、命令、设置、工作区以及编辑器、Git、终端、调试、扩展和 Agent 等模块。Linux 构建文档说明 CLI 负责用户入口，zed-editor 提供主界面，并明确联网服务、工具自动安装和沙箱兼容性的当前边界。",
-        "sources": [
-          {
-            "label": "固定版本官方 README 与许可证",
-            "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/README.md"
-          },
-          {
-            "label": "固定版本主应用初始化实现",
-            "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/crates/zed/src/zed.rs"
-          },
-          {
-            "label": "固定版本 Linux 构建与运行边界",
-            "url": "https://github.com/zed-industries/zed/blob/9a8ab54db4f9f9af4dc6efb42b304c55c6a62bd3/docs/src/development/linux.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 14,
       "fullName": "ranxianglei/billion-context",
       "owner": "ranxianglei",
       "name": "billion-context",
       "url": "https://github.com/ranxianglei/billion-context",
       "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
       "language": "TypeScript",
-      "stars": 4601,
-      "forks": 369,
-      "starsToday": 191,
+      "stars": 5154,
+      "forks": 406,
+      "starsToday": 460,
       "license": "NOASSERTION",
       "topics": [
         "dsh-plugin"
       ],
       "homepage": null,
-      "updatedAt": "2026-11-07T23:53:39Z",
+      "updatedAt": "2026-11-09T00:54:19Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
+      "metadataCheckedAt": "2026-11-09T00:55:50.950Z",
       "chinese": {
         "title": "billion-context",
         "summary": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 191 Star",
-          "主要使用 TypeScript，当前累计 4,601 Star",
+          "今日新增 460 Star",
+          "主要使用 TypeScript，当前累计 5,154 Star",
           "仓库标注 NOASSERTION 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 15,
-      "fullName": "dsx-ai-factory/nvke",
-      "owner": "dsx-ai-factory",
-      "name": "nvke",
-      "url": "https://github.com/dsx-ai-factory/nvke",
-      "description": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
-      "language": "Go",
-      "stars": 552,
-      "forks": 88,
-      "starsToday": 123,
-      "license": "Apache-2.0",
-      "topics": [
-        "bare-metal",
-        "cluster-api",
-        "gpu",
-        "kubernetes",
-        "nvidia"
-      ],
-      "homepage": "https://docs.nvidia.com/nvke/",
-      "updatedAt": "2026-11-07T02:09:56Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-08T00:22:52.859Z",
-      "chinese": {
-        "title": "nvke",
-        "summary": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 123 Star",
-          "主要使用 Go，当前累计 552 Star",
-          "仓库标注 Apache-2.0 许可证"
         ],
         "useCases": [
           "了解近期开发者关注方向",

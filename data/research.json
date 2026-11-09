@@ -2255,6 +2255,48 @@
       }
     ]
   },
+  "sherlock-project/sherlock": {
+    "title": "Sherlock：跨社交网络检索用户名是否被占用",
+    "summary": "把同一用户名代入站点清单中的个人页或探测地址，并发请求数百个社交网络，再按状态码、响应正文或重定向结果整理可能存在的账号链接。",
+    "highlights": [
+      "支持单个或多个用户名，并可限定站点、设置代理和导出文本、CSV 或 XLSX",
+      "站点清单为每个目标声明 URL、用户名规则、请求方式与存在性判断方法",
+      "结果区分已发现、未发现、非法用户名、未知错误与 WAF 拦截"
+    ],
+    "useCases": [
+      "在获得授权的品牌保护或账号盘点中查找相同用户名的公开主页",
+      "为 OSINT 调查生成待人工复核的公开账号候选列表"
+    ],
+    "audience": "理解公开信息调查、平台条款、误报风险与个人数据边界的安全研究和品牌保护人员",
+    "caution": "同名账号不证明属于同一主体，状态码、页面文案、重定向和 WAF 也会随站点变化并产生误报、漏报或未知结果，输出必须逐站人工核验。默认会联网获取实时站点清单和排除列表，然后向大量第三方站点并发请求；采用前应审查目标、频率、代理、日志、当地法律与平台条款，避免骚扰、画像或未授权调查。社区安装包并非都由项目方维护，README 还明确提示部分发行版包损坏。本页未安装工具、查询用户名或验证站点准确率。",
+    "workflow": [
+      "固定 Sherlock 版本并审查实时站点清单来源，先在隔离环境用本地清单和获授权测试名限定少量站点",
+      "运行查询后保留 claimed、unknown、WAF 等状态和错误上下文，不把候选链接直接归因到个人",
+      "逐站核验公开页面、记录时间与证据，再按数据最小化原则处理和删除结果"
+    ],
+    "implementation": "主流程从站点清单为用户名插值 URL，先按正则排除不合法用户名，再以最多 20 个工作线程发起 GET、HEAD、POST 或 PUT 请求；结果依据正文中的错误消息、HTTP 状态或禁用重定向后的响应分类，并单独识别部分 WAF 页面和请求异常。SitesInformation 默认从 data.sherlockproject.xyz 读取实时清单，再尝试加载 false-positive 排除列表；使用 --local 或指定 JSON 才能固定目标集合，因此固定代码版本并不自动固定实际探测配置。",
+    "commit": "c588d7c8b476df9f9c84912a05d1430fb8cdcdae",
+    "status": "draft",
+    "researchedAt": "2026-11-09",
+    "sources": [
+      {
+        "label": "固定版本官方 README 与安装、使用边界",
+        "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/docs/README.md"
+      },
+      {
+        "label": "固定版本并发探测与结果分类实现",
+        "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/sherlock_project/sherlock.py"
+      },
+      {
+        "label": "固定版本站点清单与排除列表加载实现",
+        "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/sherlock_project/sites.py"
+      },
+      {
+        "label": "固定版本站点清单 schema",
+        "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/sherlock_project/resources/data.schema.json"
+      }
+    ]
+  },
   "Usagi-org/ai-goofish-monitor": {
     "title": "闲鱼智能监控系统：多任务商品抓取与分析工作台",
     "summary": "通过 Web 界面配置关键词、价格、区域、账号和定时任务，用 Playwright 抓取闲鱼商品与卖家信息，再以关键词规则或多模态模型分析并将推荐结果发送到通知渠道。",
