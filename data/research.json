@@ -1,4 +1,18 @@
 {
+  "meta/astryx": {
+    "title": "Astryx：可主题化且面向 Agent 的 React 设计系统",
+    "summary": "Meta 开源的 React 19 设计系统，提供组件、主题、页面模板和 CLI；应用可直接引入预构建样式，也可让人或编程 Agent 通过同一套文档与命令检索、生成和定制界面。",
+    "highlights": ["150 余个带 TypeScript 类型的组件与常用页面模式", "主题通过 CSS 自定义属性覆盖品牌、明暗模式和设计 token", "CLI 同时提供人类可读输出、JSON API、模板、迁移与源码弹出"],
+    "useCases": ["为 React 19 应用建立可换品牌主题的组件基线", "让编程 Agent 基于项目内组件索引、模板和文档生成一致界面"],
+    "audience": "维护 React 产品、设计系统或 AI 辅助前端流程的工程与设计团队",
+    "caution": "项目仍标为 Beta，核心包要求 React 19+，CLI 和组件版本应在项目中固定并随升级复核。消费者虽然不用配置 StyleX 构建插件，但仍需按顺序加载 reset、组件和主题 CSS；Tailwind 还要正确声明层叠顺序。swizzle 会把组件完整源码写入项目，此后定制代码和上游修复由使用方维护。主题提供者对普通 portal 保留上下文，但独立 React root 只能回退到根主题，无法恢复嵌套主题。本页未安装、运行组件或验证可访问性声明。",
+    "status": "draft",
+    "commit": "5f1c1161b0a9658db8e3485c41bf8c05f0cb3b64",
+    "researchedAt": "2026-11-10",
+    "workflow": ["安装 core、一个主题与 StyleX，并按规定顺序引入预构建 CSS", "用 Theme 和 LinkProvider 接入应用，再通过 CLI 查询组件、token 或页面模板", "先用 className 与 CSS token 覆盖样式，确需深改时再 swizzle 源码并纳入自己的测试与升级流程"],
+    "implementation": "核心包把组件规则、主题 token 和运行时 Theme 分开：已构建主题依赖消费者加载 CSS，未构建主题才由 provider 编译并共享注入样式；根 provider 同步文档属性，嵌套 provider 保持局部作用域。CLI 从同一知识与组件索引输出终端文档、类型化 JSON、模板和 codemod，init 还会把组件入口写入 AGENTS.md 或 CLAUDE.md，降低 Agent 猜测 API 的概率。",
+    "sources": [{"label": "固定版本官方 README 与项目边界", "url": "https://github.com/meta/astryx/blob/5f1c1161b0a9658db8e3485c41bf8c05f0cb3b64/README.md"}, {"label": "固定版本核心包快速开始", "url": "https://github.com/meta/astryx/blob/5f1c1161b0a9658db8e3485c41bf8c05f0cb3b64/packages/core/README.md"}, {"label": "固定版本 CLI 接口与工作流", "url": "https://github.com/meta/astryx/blob/5f1c1161b0a9658db8e3485c41bf8c05f0cb3b64/packages/cli/README.md"}, {"label": "固定版本主题应用架构", "url": "https://github.com/meta/astryx/blob/5f1c1161b0a9658db8e3485c41bf8c05f0cb3b64/docs/architecture/theme-application.md"}]
+  },
   "vercel-labs/agent-browser": {
     "title": "agent-browser：面向 Agent 的命令行浏览器自动化层",
     "summary": "以 Rust CLI 把页面导航、无障碍树快照、元素引用和交互命令组织成短调用，并由后台守护进程维持浏览器与会话，供 shell、技能或 MCP 客户端驱动。",
