@@ -1,87 +1,38 @@
 {
-  "generatedAt": "2026-11-10T00:23:02.539Z",
+  "generatedAt": "2026-11-11T00:25:19.426Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "status": "success",
   "coverage": {
     "researched": 6,
     "pendingResearch": [
+      "addyosmani/agent-skills",
       "google-deepmind/mujoco",
-      "anthropics/claude-quickstarts",
-      "garrytan/gbrain",
-      "ZhuLinsen/daily_stock_analysis",
-      "homeassistant-ai/ha-mcp"
+      "we-promise/sure",
+      "homeassistant-ai/ha-mcp",
+      "tokio-rs/topcoat",
+      "ranxianglei/billion-context"
     ],
     "metadataFailures": []
   },
   "repositories": [
     {
       "rank": 1,
-      "fullName": "anthropics/skills",
-      "owner": "anthropics",
-      "name": "skills",
-      "url": "https://github.com/anthropics/skills",
-      "description": "Public repository for Agent Skills",
-      "language": "Python",
-      "stars": 190945,
-      "forks": 22439,
-      "starsToday": 1038,
-      "license": null,
-      "topics": [
-        "agent-skills"
-      ],
-      "homepage": null,
-      "updatedAt": "2026-11-06T22:32:32Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-10T00:23:02.539Z",
-      "chinese": {
-        "title": "Anthropic Skills：Claude 技能示例与规范资料",
-        "summary": "Anthropic 提供的技能示例、模板和规范目录；技能由 SKILL.md、脚本及资源组成，可在 Claude Code、Claude.ai 或 API 的相应能力中使用。",
-        "highlights": [
-          "README 区分示例技能、规范和模板",
-          "Claude Code 可按插件集合安装",
-          "文档类技能含仅供参考的 source-available 内容"
-        ],
-        "useCases": [
-          "学习 Claude 技能目录组织方式",
-          "参考文档、开发和企业任务技能示例"
-        ],
-        "audience": "Claude 技能作者和 Agent 平台开发者",
-        "caution": "仓库并非所有目录都以同一开源许可发布；文档处理技能为 source-available，采用前应逐目录核对许可。README 明确示例仅供演示和教学，不能把示例效果视作生产保证。本页未执行技能。",
-        "status": "draft",
-        "commit": "ca45fc496a3436251f191354091d557da31c15b5",
-        "researchedAt": "2026-10-31",
-        "workflow": [
-          "先区分需要的示例、模板或规范目录",
-          "按目标 Claude 宿主安装插件或上传技能",
-          "审查具体 SKILL.md 与许可，在测试任务中验证行为"
-        ],
-        "implementation": "README 说明技能文件夹通过 SKILL.md 元数据和正文声明任务指令，运行时由 Claude 按需要加载；仓库另含 spec 与 template 供创作参考。",
-        "sources": [
-          {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 2,
       "fullName": "meta/astryx",
       "owner": "meta",
       "name": "astryx",
       "url": "https://github.com/meta/astryx",
       "description": "An open source design system that's fully customizable and agent ready",
       "language": "TypeScript",
-      "stars": 19998,
-      "forks": 1524,
-      "starsToday": 3278,
+      "stars": 22771,
+      "forks": 1816,
+      "starsToday": 3108,
       "license": "MIT",
       "topics": [],
       "homepage": "http://astryx.atmeta.com",
-      "updatedAt": "2026-11-10T00:22:42Z",
+      "updatedAt": "2026-11-11T00:23:17Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-10T00:23:02.539Z",
+      "metadataCheckedAt": "2026-11-11T00:25:19.426Z",
       "chinese": {
         "title": "Astryx：可主题化且面向 Agent 的 React 设计系统",
         "summary": "Meta 开源的 React 19 设计系统，提供组件、主题、页面模板和 CLI；应用可直接引入预构建样式，也可让人或编程 Agent 通过同一套文档与命令检索、生成和定制界面。",
@@ -126,85 +77,171 @@
       }
     },
     {
-      "rank": 3,
-      "fullName": "sherlock-project/sherlock",
-      "owner": "sherlock-project",
-      "name": "sherlock",
-      "url": "https://github.com/sherlock-project/sherlock",
-      "description": "Hunt down social media accounts by username across social networks",
+      "rank": 2,
+      "fullName": "anthropics/skills",
+      "owner": "anthropics",
+      "name": "skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
       "language": "Python",
-      "stars": 106989,
-      "forks": 12376,
-      "starsToday": 4267,
-      "license": "MIT",
+      "stars": 192302,
+      "forks": 22642,
+      "starsToday": 1679,
+      "license": null,
       "topics": [
-        "cli",
-        "cti",
-        "cybersecurity",
-        "forensics",
-        "hacktoberfest",
-        "information-gathering",
-        "infosec",
-        "linux"
+        "agent-skills"
       ],
-      "homepage": "https://sherlockproject.xyz",
-      "updatedAt": "2026-11-09T05:14:34Z",
+      "homepage": null,
+      "updatedAt": "2026-11-06T22:32:32Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-10T00:23:02.539Z",
+      "metadataCheckedAt": "2026-11-11T00:25:19.426Z",
       "chinese": {
-        "title": "Sherlock：跨社交网络检索用户名是否被占用",
-        "summary": "把同一用户名代入站点清单中的个人页或探测地址，并发请求数百个社交网络，再按状态码、响应正文或重定向结果整理可能存在的账号链接。",
+        "title": "Anthropic Skills：Claude 技能示例与规范资料",
+        "summary": "Anthropic 提供的技能示例、模板和规范目录；技能由 SKILL.md、脚本及资源组成，可在 Claude Code、Claude.ai 或 API 的相应能力中使用。",
         "highlights": [
-          "支持单个或多个用户名，并可限定站点、设置代理和导出文本、CSV 或 XLSX",
-          "站点清单为每个目标声明 URL、用户名规则、请求方式与存在性判断方法",
-          "结果区分已发现、未发现、非法用户名、未知错误与 WAF 拦截"
+          "README 区分示例技能、规范和模板",
+          "Claude Code 可按插件集合安装",
+          "文档类技能含仅供参考的 source-available 内容"
         ],
         "useCases": [
-          "在获得授权的品牌保护或账号盘点中查找相同用户名的公开主页",
-          "为 OSINT 调查生成待人工复核的公开账号候选列表"
+          "学习 Claude 技能目录组织方式",
+          "参考文档、开发和企业任务技能示例"
         ],
-        "audience": "理解公开信息调查、平台条款、误报风险与个人数据边界的安全研究和品牌保护人员",
-        "caution": "同名账号不证明属于同一主体，状态码、页面文案、重定向和 WAF 也会随站点变化并产生误报、漏报或未知结果，输出必须逐站人工核验。默认会联网获取实时站点清单和排除列表，然后向大量第三方站点并发请求；采用前应审查目标、频率、代理、日志、当地法律与平台条款，避免骚扰、画像或未授权调查。社区安装包并非都由项目方维护，README 还明确提示部分发行版包损坏。本页未安装工具、查询用户名或验证站点准确率。",
-        "workflow": [
-          "固定 Sherlock 版本并审查实时站点清单来源，先在隔离环境用本地清单和获授权测试名限定少量站点",
-          "运行查询后保留 claimed、unknown、WAF 等状态和错误上下文，不把候选链接直接归因到个人",
-          "逐站核验公开页面、记录时间与证据，再按数据最小化原则处理和删除结果"
-        ],
-        "implementation": "主流程从站点清单为用户名插值 URL，先按正则排除不合法用户名，再以最多 20 个工作线程发起 GET、HEAD、POST 或 PUT 请求；结果依据正文中的错误消息、HTTP 状态或禁用重定向后的响应分类，并单独识别部分 WAF 页面和请求异常。SitesInformation 默认从 data.sherlockproject.xyz 读取实时清单，再尝试加载 false-positive 排除列表；使用 --local 或指定 JSON 才能固定目标集合，因此固定代码版本并不自动固定实际探测配置。",
-        "commit": "c588d7c8b476df9f9c84912a05d1430fb8cdcdae",
+        "audience": "Claude 技能作者和 Agent 平台开发者",
+        "caution": "仓库并非所有目录都以同一开源许可发布；文档处理技能为 source-available，采用前应逐目录核对许可。README 明确示例仅供演示和教学，不能把示例效果视作生产保证。本页未执行技能。",
         "status": "draft",
-        "researchedAt": "2026-11-09",
+        "commit": "ca45fc496a3436251f191354091d557da31c15b5",
+        "researchedAt": "2026-10-31",
+        "workflow": [
+          "先区分需要的示例、模板或规范目录",
+          "按目标 Claude 宿主安装插件或上传技能",
+          "审查具体 SKILL.md 与许可，在测试任务中验证行为"
+        ],
+        "implementation": "README 说明技能文件夹通过 SKILL.md 元数据和正文声明任务指令，运行时由 Claude 按需要加载；仓库另含 spec 与 template 供创作参考。",
         "sources": [
           {
-            "label": "固定版本官方 README 与安装、使用边界",
-            "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/docs/README.md"
-          },
-          {
-            "label": "固定版本并发探测与结果分类实现",
-            "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/sherlock_project/sherlock.py"
-          },
-          {
-            "label": "固定版本站点清单与排除列表加载实现",
-            "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/sherlock_project/sites.py"
-          },
-          {
-            "label": "固定版本站点清单 schema",
-            "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/sherlock_project/resources/data.schema.json"
+            "label": "固定版本官方 README",
+            "url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/README.md"
           }
         ]
       }
     },
     {
+      "rank": 3,
+      "fullName": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": 115149,
+      "forks": 12095,
+      "starsToday": 465,
+      "license": "MIT",
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "homepage": "https://skills.addy.ie",
+      "updatedAt": "2026-11-01T19:24:49Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-11T00:25:19.426Z",
+      "chinese": {
+        "title": "agent-skills",
+        "summary": "Production-grade engineering skills for AI coding agents.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 465 Star",
+          "主要使用 JavaScript，当前累计 115,149 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
       "rank": 4,
+      "fullName": "anthropics/claude-quickstarts",
+      "owner": "anthropics",
+      "name": "claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "language": "Python",
+      "stars": 20485,
+      "forks": 3469,
+      "starsToday": 531,
+      "license": "MIT",
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-11-06T19:37:57Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-11T00:25:19.426Z",
+      "chinese": {
+        "title": "Claude Quickstarts：Claude API 与 Agent 应用示例集合",
+        "summary": "Anthropic 维护的一组独立示例项目，覆盖基础工具调用 Agent、数据分析与客服界面、浏览器和桌面操作、长时编码任务及 Managed Agents 集成；每个目录有自己的依赖、凭据和运行方式，不是一个统一 SDK。",
+        "highlights": [
+          "根目录按使用场景索引独立 quickstart，采用时应进入具体子目录阅读说明",
+          "最小 Agents 示例展示 Claude 消息、工具调用、本地或 MCP 工具执行与历史截断的循环",
+          "computer-use 参考实现包含流式响应、截图裁剪、提示缓存、失败重试和轨迹记录"
+        ],
+        "useCases": [
+          "学习 Claude API 工具调用、MCP 接入和多轮 Agent 循环的基本结构",
+          "从一个边界明确的示例起步，验证浏览器、桌面、编码或托管 Agent 产品原型"
+        ],
+        "audience": "准备基于 Claude API 或 Managed Agents 构建原型，并能自行补齐安全、运维和评测能力的开发者与平台团队",
+        "caution": "仓库中的示例成熟度和依赖各不相同，Agents 目录明确说明它不是 SDK 且缺少生产能力。运行需要 API 凭据并会产生模型费用；浏览器和桌面示例还会接触屏幕、输入、文件与网页内容，应在隔离环境使用最小权限并管理轨迹中的敏感数据。computer-use 示例默认显式声明工具，因此不会自动获得 Anthropic 托管 computer 工具专用的安全分类器覆盖，除非改用其 hosted computer 配置；即使启用也不能替代提示注入防护、人工确认、域名与动作限制。本页未安装依赖、调用模型或操作真实桌面。",
+        "workflow": [
+          "先按目标场景选择一个子目录，固定仓库与依赖版本并阅读该目录 README 和环境变量要求",
+          "在隔离测试环境用专用凭据、低额度和最小工具权限运行最小任务，核对工具调用、输出、费用与轨迹",
+          "进入真实业务前补齐身份验证、输入校验、沙箱、确认点、限额、重试、监控、数据留存和场景评测"
+        ],
+        "implementation": "根 README 只负责列出各自独立的示例。最小 Agents 实现把系统提示、消息历史和工具 schema 发送给 Messages API，检测 tool_use 后执行本地或 MCP 工具，把 tool_result 追加为用户消息并继续循环，且在每轮请求前按上下文预算截断历史。computer-use 参考实现则在同一循环中流式组装响应，给系统与尾部工具结果设置缓存断点，按策略裁剪旧截图，对限流、连接和服务端错误退避重试，并把消息与截图写入轨迹；显式工具和 hosted computer 工具的安全覆盖范围不同。",
+        "commit": "4a4224bdf0e9cfb3332167b69c90457403813625",
+        "status": "draft",
+        "researchedAt": "2026-11-11",
+        "sources": [
+          {
+            "label": "固定版本官方 README 与示例索引",
+            "url": "https://github.com/anthropics/claude-quickstarts/blob/4a4224bdf0e9cfb3332167b69c90457403813625/README.md"
+          },
+          {
+            "label": "固定版本最小 Agents 说明与非生产边界",
+            "url": "https://github.com/anthropics/claude-quickstarts/blob/4a4224bdf0e9cfb3332167b69c90457403813625/agents/README.md"
+          },
+          {
+            "label": "固定版本消息与工具执行循环",
+            "url": "https://github.com/anthropics/claude-quickstarts/blob/4a4224bdf0e9cfb3332167b69c90457403813625/agents/agent.py"
+          },
+          {
+            "label": "固定版本 computer-use 使用与安全边界",
+            "url": "https://github.com/anthropics/claude-quickstarts/blob/4a4224bdf0e9cfb3332167b69c90457403813625/computer-use-best-practices/README.md"
+          },
+          {
+            "label": "固定版本 computer-use Agent 循环实现",
+            "url": "https://github.com/anthropics/claude-quickstarts/blob/4a4224bdf0e9cfb3332167b69c90457403813625/computer-use-best-practices/computer_use/loop.py"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 5,
       "fullName": "google-deepmind/mujoco",
       "owner": "google-deepmind",
       "name": "mujoco",
       "url": "https://github.com/google-deepmind/mujoco",
       "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
       "language": "C++",
-      "stars": 16900,
-      "forks": 1991,
-      "starsToday": 574,
+      "stars": 17342,
+      "forks": 2146,
+      "starsToday": 456,
       "license": "Apache-2.0",
       "topics": [
         "mujoco",
@@ -212,15 +249,15 @@
         "robotics"
       ],
       "homepage": "https://mujoco.org",
-      "updatedAt": "2026-11-09T12:57:21Z",
+      "updatedAt": "2026-11-10T20:50:33Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-10T00:23:02.539Z",
+      "metadataCheckedAt": "2026-11-11T00:25:19.426Z",
       "chinese": {
         "title": "mujoco",
         "summary": "Multi-Joint dynamics with Contact. A general purpose physics simulator.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 574 Star",
-          "主要使用 C++，当前累计 16,900 Star",
+          "今日新增 456 Star",
+          "主要使用 C++，当前累计 17,342 Star",
           "仓库标注 Apache-2.0 许可证"
         ],
         "useCases": [
@@ -233,63 +270,29 @@
       }
     },
     {
-      "rank": 5,
-      "fullName": "anthropics/claude-quickstarts",
-      "owner": "anthropics",
-      "name": "claude-quickstarts",
-      "url": "https://github.com/anthropics/claude-quickstarts",
-      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
-      "language": "Python",
-      "stars": 20009,
-      "forks": 3310,
-      "starsToday": 551,
-      "license": "MIT",
-      "topics": [],
-      "homepage": null,
-      "updatedAt": "2026-11-06T19:37:57Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-10T00:23:02.539Z",
-      "chinese": {
-        "title": "claude-quickstarts",
-        "summary": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 551 Star",
-          "主要使用 Python，当前累计 20,009 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
       "rank": 6,
-      "fullName": "garrytan/gbrain",
-      "owner": "garrytan",
-      "name": "gbrain",
-      "url": "https://github.com/garrytan/gbrain",
-      "description": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
-      "language": "TypeScript",
-      "stars": 32128,
-      "forks": 4764,
-      "starsToday": 216,
-      "license": "MIT",
+      "fullName": "we-promise/sure",
+      "owner": "we-promise",
+      "name": "sure",
+      "url": "https://github.com/we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "language": "Ruby",
+      "stars": 11923,
+      "forks": 888,
+      "starsToday": 159,
+      "license": "AGPL-3.0",
       "topics": [],
-      "homepage": null,
-      "updatedAt": "2026-11-10T00:18:20Z",
+      "homepage": "https://sure.am",
+      "updatedAt": "2026-11-11T00:12:31Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-10T00:23:02.539Z",
+      "metadataCheckedAt": "2026-11-11T00:25:19.426Z",
       "chinese": {
-        "title": "gbrain",
-        "summary": "Garry's Opinionated OpenClaw/Hermes Agent Brain。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "sure",
+        "summary": "The personal finance app for everyone (by everyone)。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 216 Star",
-          "主要使用 TypeScript，当前累计 32,128 Star",
-          "仓库标注 MIT 许可证"
+          "今日新增 159 Star",
+          "主要使用 Ruby，当前累计 11,923 Star",
+          "仓库标注 AGPL-3.0 许可证"
         ],
         "useCases": [
           "了解近期开发者关注方向",
@@ -302,21 +305,64 @@
     },
     {
       "rank": 7,
+      "fullName": "homeassistant-ai/ha-mcp",
+      "owner": "homeassistant-ai",
+      "name": "ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "language": "Python",
+      "stars": 6641,
+      "forks": 429,
+      "starsToday": 790,
+      "license": "MIT",
+      "topics": [
+        "ai",
+        "claude",
+        "hacs",
+        "home-assistant",
+        "home-automation",
+        "llm",
+        "mcp",
+        "model-context-protocol"
+      ],
+      "homepage": "https://homeassistant-ai.github.io/ha-mcp/",
+      "updatedAt": "2026-11-11T00:21:27Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-11T00:25:19.426Z",
+      "chinese": {
+        "title": "ha-mcp",
+        "summary": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 790 Star",
+          "主要使用 Python，当前累计 6,641 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 8,
       "fullName": "vercel-labs/agent-browser",
       "owner": "vercel-labs",
       "name": "agent-browser",
       "url": "https://github.com/vercel-labs/agent-browser",
       "description": "Browser automation CLI for AI agents",
       "language": "Rust",
-      "stars": 48449,
-      "forks": 3300,
-      "starsToday": 916,
+      "stars": 49193,
+      "forks": 3448,
+      "starsToday": 780,
       "license": "Apache-2.0",
       "topics": [],
       "homepage": "https://agent-browser.dev",
-      "updatedAt": "2026-11-09T22:48:08Z",
+      "updatedAt": "2026-11-11T00:17:19Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-10T00:23:02.539Z",
+      "metadataCheckedAt": "2026-11-11T00:25:19.426Z",
       "chinese": {
         "title": "agent-browser：面向 Agent 的命令行浏览器自动化层",
         "summary": "以 Rust CLI 把页面导航、无障碍树快照、元素引用和交互命令组织成短调用，并由后台守护进程维持浏览器与会话，供 shell、技能或 MCP 客户端驱动。",
@@ -361,140 +407,97 @@
       }
     },
     {
-      "rank": 8,
-      "fullName": "ruvnet/RuView",
-      "owner": "ruvnet",
-      "name": "RuView",
-      "url": "https://github.com/ruvnet/RuView",
-      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
-      "language": "Rust",
-      "stars": 103435,
-      "forks": 13404,
-      "starsToday": 172,
+      "rank": 9,
+      "fullName": "sherlock-project/sherlock",
+      "owner": "sherlock-project",
+      "name": "sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "stars": 108943,
+      "forks": 12655,
+      "starsToday": 2393,
       "license": "MIT",
       "topics": [
-        "claude",
-        "claude-code",
-        "esp32",
-        "firmware",
-        "home-assistant",
-        "home-automation",
-        "iot",
-        "mcp"
+        "cli",
+        "cti",
+        "cybersecurity",
+        "forensics",
+        "hacktoberfest",
+        "information-gathering",
+        "infosec",
+        "linux"
       ],
-      "homepage": "https://cognitum.one",
-      "updatedAt": "2026-11-10T00:20:31Z",
+      "homepage": "https://sherlockproject.xyz",
+      "updatedAt": "2026-11-10T05:13:55Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-10T00:23:02.539Z",
+      "metadataCheckedAt": "2026-11-11T00:25:19.426Z",
       "chinese": {
-        "title": "RuView：基于 WiFi 信号的空间感知平台",
-        "summary": "采集 WiFi CSI 等无线信号并用于存在、活动和体征推断；提供模拟数据、硬件接入、模型与可视化流程。",
+        "title": "Sherlock：跨社交网络检索用户名是否被占用",
+        "summary": "把同一用户名代入站点清单中的个人页或探测地址，并发请求数百个社交网络，再按状态码、响应正文或重定向结果整理可能存在的账号链接。",
         "highlights": [
-          "可用 Docker 或源码启动模拟模式",
-          "ESP32-S3 等设备可采集实际 CSI",
-          "用户指南明确区分模拟展示与硬件实测能力"
+          "支持单个或多个用户名，并可限定站点、设置代理和导出文本、CSV 或 XLSX",
+          "站点清单为每个目标声明 URL、用户名规则、请求方式与存在性判断方法",
+          "结果区分已发现、未发现、非法用户名、未知错误与 WAF 拦截"
         ],
         "useCases": [
-          "研究无线信号感知管线",
-          "在受控环境评估存在与活动检测"
+          "在获得授权的品牌保护或账号盘点中查找相同用户名的公开主页",
+          "为 OSINT 调查生成待人工复核的公开账号候选列表"
         ],
-        "audience": "无线感知研究者和边缘设备开发者",
-        "caution": "项目用户指南明确实时 17 关键点姿态能力尚未达到目标且未经验证；无硬件演示使用合成 CSI。体征、跌倒等涉及安全的宣称须用真实设备和独立数据验证，并注意隐私。本页未运行系统。",
-        "status": "draft",
-        "commit": "3686bc770f77eb6161d5379861dcd09d7d9a1e4b",
-        "researchedAt": "2026-10-29",
+        "audience": "理解公开信息调查、平台条款、误报风险与个人数据边界的安全研究和品牌保护人员",
+        "caution": "同名账号不证明属于同一主体，状态码、页面文案、重定向和 WAF 也会随站点变化并产生误报、漏报或未知结果，输出必须逐站人工核验。默认会联网获取实时站点清单和排除列表，然后向大量第三方站点并发请求；采用前应审查目标、频率、代理、日志、当地法律与平台条款，避免骚扰、画像或未授权调查。社区安装包并非都由项目方维护，README 还明确提示部分发行版包损坏。本页未安装工具、查询用户名或验证站点准确率。",
         "workflow": [
-          "先按用户指南启动模拟模式确认接口与界面",
-          "准备兼容 CSI 设备并按硬件说明采集数据",
-          "用独立标注数据核对具体检测指标与误报"
+          "固定 Sherlock 版本并审查实时站点清单来源，先在隔离环境用本地清单和获授权测试名限定少量站点",
+          "运行查询后保留 claimed、unknown、WAF 等状态和错误上下文，不把候选链接直接归因到个人",
+          "逐站核验公开页面、记录时间与证据，再按数据最小化原则处理和删除结果"
         ],
-        "implementation": "用户指南将 Docker、Rust 源码和 Python 旧版路径分开，并列出模拟、RSSI 与 ESP32-S3 CSI 数据源；这些路径的能力不可混同。",
+        "implementation": "主流程从站点清单为用户名插值 URL，先按正则排除不合法用户名，再以最多 20 个工作线程发起 GET、HEAD、POST 或 PUT 请求；结果依据正文中的错误消息、HTTP 状态或禁用重定向后的响应分类，并单独识别部分 WAF 页面和请求异常。SitesInformation 默认从 data.sherlockproject.xyz 读取实时清单，再尝试加载 false-positive 排除列表；使用 --local 或指定 JSON 才能固定目标集合，因此固定代码版本并不自动固定实际探测配置。",
+        "commit": "c588d7c8b476df9f9c84912a05d1430fb8cdcdae",
+        "status": "draft",
+        "researchedAt": "2026-11-09",
         "sources": [
           {
-            "label": "固定版本官方 README",
-            "url": "https://github.com/ruvnet/RuView/blob/3686bc770f77eb6161d5379861dcd09d7d9a1e4b/README.md"
+            "label": "固定版本官方 README 与安装、使用边界",
+            "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/docs/README.md"
           },
           {
-            "label": "固定版本用户指南与能力边界",
-            "url": "https://github.com/ruvnet/RuView/blob/3686bc770f77eb6161d5379861dcd09d7d9a1e4b/docs/user-guide.md"
+            "label": "固定版本并发探测与结果分类实现",
+            "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/sherlock_project/sherlock.py"
+          },
+          {
+            "label": "固定版本站点清单与排除列表加载实现",
+            "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/sherlock_project/sites.py"
+          },
+          {
+            "label": "固定版本站点清单 schema",
+            "url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/sherlock_project/resources/data.schema.json"
           }
         ]
       }
     },
     {
-      "rank": 9,
-      "fullName": "ZhuLinsen/daily_stock_analysis",
-      "owner": "ZhuLinsen",
-      "name": "daily_stock_analysis",
-      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
-      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
-      "language": "Python",
-      "stars": 68827,
-      "forks": 56382,
-      "starsToday": 506,
-      "license": "MIT",
-      "topics": [
-        "a-stock",
-        "ai-agent",
-        "aigc",
-        "llm",
-        "quant",
-        "quantitative-finance",
-        "quantitative-trading"
-      ],
-      "homepage": "https://dsa.zhulinsen.tech",
-      "updatedAt": "2026-11-09T14:14:52Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-10T00:23:02.539Z",
-      "chinese": {
-        "title": "daily_stock_analysis",
-        "summary": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 506 Star",
-          "主要使用 Python，当前累计 68,827 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
       "rank": 10,
-      "fullName": "homeassistant-ai/ha-mcp",
-      "owner": "homeassistant-ai",
-      "name": "ha-mcp",
-      "url": "https://github.com/homeassistant-ai/ha-mcp",
-      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
-      "language": "Python",
-      "stars": 5953,
-      "forks": 293,
-      "starsToday": 31,
+      "fullName": "tokio-rs/topcoat",
+      "owner": "tokio-rs",
+      "name": "topcoat",
+      "url": "https://github.com/tokio-rs/topcoat",
+      "description": "A batteries-included framework for building web apps",
+      "language": "Rust",
+      "stars": 6800,
+      "forks": 300,
+      "starsToday": 192,
       "license": "MIT",
-      "topics": [
-        "ai",
-        "claude",
-        "hacs",
-        "home-assistant",
-        "home-automation",
-        "llm",
-        "mcp",
-        "model-context-protocol"
-      ],
-      "homepage": "https://homeassistant-ai.github.io/ha-mcp/",
-      "updatedAt": "2026-11-09T22:34:50Z",
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-11-10T18:32:12Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-10T00:23:02.539Z",
+      "metadataCheckedAt": "2026-11-11T00:25:19.426Z",
       "chinese": {
-        "title": "ha-mcp",
-        "summary": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "topcoat",
+        "summary": "A batteries-included framework for building web apps。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 31 Star",
-          "主要使用 Python，当前累计 5,953 Star",
+          "今日新增 192 Star",
+          "主要使用 Rust，当前累计 6,800 Star",
           "仓库标注 MIT 许可证"
         ],
         "useCases": [
@@ -508,57 +511,88 @@
     },
     {
       "rank": 11,
-      "fullName": "milind-soni/OpenMausBot",
-      "owner": "milind-soni",
-      "name": "OpenMausBot",
-      "url": "https://github.com/milind-soni/OpenMausBot",
-      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "fullName": "ranxianglei/billion-context",
+      "owner": "ranxianglei",
+      "name": "billion-context",
+      "url": "https://github.com/ranxianglei/billion-context",
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
       "language": "TypeScript",
-      "stars": 19656,
-      "forks": 2693,
-      "starsToday": 1587,
-      "license": "Apache-2.0",
+      "stars": 6303,
+      "forks": 527,
+      "starsToday": 375,
+      "license": "NOASSERTION",
       "topics": [
-        "ai-agents",
-        "claude-code",
-        "codex",
-        "computer-use",
-        "docker",
-        "electron",
-        "grok",
-        "grok-bot"
+        "dsh-plugin"
       ],
-      "homepage": "https://www.mausbot.com/",
-      "updatedAt": "2026-11-10T00:13:03Z",
+      "homepage": null,
+      "updatedAt": "2026-11-11T00:01:43Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-10T00:23:02.539Z",
+      "metadataCheckedAt": "2026-11-11T00:25:19.426Z",
       "chinese": {
-        "title": "OpenMausBot：本机多 Agent 聊天工作台",
-        "summary": "以聊天联系人形式管理多个 Claude、Codex 等 CLI Agent，各 Bot 可配置模型、独立会话和电脑环境。",
+        "title": "billion-context",
+        "summary": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "本机 harness 在 127.0.0.1 管理 Agent 进程",
-          "聊天中显示命令、文件修改等审批卡片",
-          "可连接外部应用和独立电脑环境"
+          "今日新增 375 Star",
+          "主要使用 TypeScript，当前累计 6,303 Star",
+          "仓库标注 NOASSERTION 许可证"
         ],
         "useCases": [
-          "在一个桌面界面管理多个编程 Agent",
-          "评估需要人工审批的 Agent 操作流程"
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
         ],
-        "audience": "已使用 Agent CLI 的个人开发者和团队",
-        "caution": "README 的本地优先和权限边界是项目自述；连接应用与控制电脑涉及高权限，需核对具体平台支持及实际审批行为。主机控制仅在指定平台显式开启，Ubuntu Wayland 仍禁用。本页未安装实测。",
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 12,
+      "fullName": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 320893,
+      "forks": 26909,
+      "starsToday": 1225,
+      "license": "MIT",
+      "topics": [],
+      "homepage": "https://aihero.dev/skills",
+      "updatedAt": "2026-11-09T14:03:07Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-11T00:25:19.426Z",
+      "chinese": {
+        "title": "Skills for Real Engineers：可组合的工程 Agent 技能",
+        "summary": "Matt Pocock 分享的工程与效率技能集合，以独立 SKILL.md 指导需求澄清、规格实现和验证等任务，供多个编程 Agent 宿主选用。",
+        "highlights": [
+          "按宿主选择插件或可编辑文件安装",
+          "首次运行 setup 技能配置 issue 跟踪和文档位置",
+          "工程技能和效率技能可按任务单独加载"
+        ],
+        "useCases": [
+          "给编程 Agent 配置可审查的工作流程",
+          "参考需求澄清和规格实施指令"
+        ],
+        "audience": "使用编程 Agent 的软件工程师",
+        "caution": "技能是操作指令，不保证代码质量；插件自动更新与 skills.sh 复制文件的更新方式不同，重复安装会出现双份技能。实施规格技能会要求创建分支和子 Agent，运行前应审查指令与权限。本页未安装实测。",
         "status": "draft",
-        "commit": "0213b7435fc83a936f77c18475ba2a0d7b7c2de4",
-        "researchedAt": "2026-10-30",
+        "commit": "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa",
+        "researchedAt": "2026-10-31",
         "workflow": [
-          "从固定版本 README 核对平台及所需 CLI",
-          "安装桌面版本并配置 Agent 引擎",
-          "用非敏感任务检查审批、会话存储与应用权限"
+          "按宿主选择一种安装方式并审查技能文件",
+          "运行 setup 技能配置项目约定",
+          "在小任务中检查触发、变更和测试结果"
         ],
-        "implementation": "README 描述本机 harness 管理 Agent 子进程，会话和密钥位于 ~/.openmausbot；云电脑、本地 VM、主机控制是不同执行边界。",
+        "implementation": "README 把技能组织为小型可组合指令；implement-spec 技能读取规格和工单图，要求独立实现分支与审查，实际执行仍取决于宿主 Agent。",
         "sources": [
           {
             "label": "固定版本官方 README",
-            "url": "https://github.com/milind-soni/OpenMausBot/blob/0213b7435fc83a936f77c18475ba2a0d7b7c2de4/README.md"
+            "url": "https://github.com/mattpocock/skills/blob/a496f5513d4a4cf889bc48e189e579f4b0bdf6aa/README.md"
+          },
+          {
+            "label": "固定版本 implement-spec 技能",
+            "url": "https://github.com/mattpocock/skills/blob/a496f5513d4a4cf889bc48e189e579f4b0bdf6aa/skills/engineering/implement-spec/SKILL.md"
           }
         ]
       }

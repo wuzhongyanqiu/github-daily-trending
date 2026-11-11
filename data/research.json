@@ -2344,5 +2344,51 @@
         "url": "https://github.com/Usagi-org/ai-goofish-monitor/blob/77f8d75869acd65f9dba72731b95c7c49ea67bdf/src/services/item_analysis_dispatcher.py"
       }
     ]
+  },
+  "anthropics/claude-quickstarts": {
+    "title": "Claude Quickstarts：Claude API 与 Agent 应用示例集合",
+    "summary": "Anthropic 维护的一组独立示例项目，覆盖基础工具调用 Agent、数据分析与客服界面、浏览器和桌面操作、长时编码任务及 Managed Agents 集成；每个目录有自己的依赖、凭据和运行方式，不是一个统一 SDK。",
+    "highlights": [
+      "根目录按使用场景索引独立 quickstart，采用时应进入具体子目录阅读说明",
+      "最小 Agents 示例展示 Claude 消息、工具调用、本地或 MCP 工具执行与历史截断的循环",
+      "computer-use 参考实现包含流式响应、截图裁剪、提示缓存、失败重试和轨迹记录"
+    ],
+    "useCases": [
+      "学习 Claude API 工具调用、MCP 接入和多轮 Agent 循环的基本结构",
+      "从一个边界明确的示例起步，验证浏览器、桌面、编码或托管 Agent 产品原型"
+    ],
+    "audience": "准备基于 Claude API 或 Managed Agents 构建原型，并能自行补齐安全、运维和评测能力的开发者与平台团队",
+    "caution": "仓库中的示例成熟度和依赖各不相同，Agents 目录明确说明它不是 SDK 且缺少生产能力。运行需要 API 凭据并会产生模型费用；浏览器和桌面示例还会接触屏幕、输入、文件与网页内容，应在隔离环境使用最小权限并管理轨迹中的敏感数据。computer-use 示例默认显式声明工具，因此不会自动获得 Anthropic 托管 computer 工具专用的安全分类器覆盖，除非改用其 hosted computer 配置；即使启用也不能替代提示注入防护、人工确认、域名与动作限制。本页未安装依赖、调用模型或操作真实桌面。",
+    "workflow": [
+      "先按目标场景选择一个子目录，固定仓库与依赖版本并阅读该目录 README 和环境变量要求",
+      "在隔离测试环境用专用凭据、低额度和最小工具权限运行最小任务，核对工具调用、输出、费用与轨迹",
+      "进入真实业务前补齐身份验证、输入校验、沙箱、确认点、限额、重试、监控、数据留存和场景评测"
+    ],
+    "implementation": "根 README 只负责列出各自独立的示例。最小 Agents 实现把系统提示、消息历史和工具 schema 发送给 Messages API，检测 tool_use 后执行本地或 MCP 工具，把 tool_result 追加为用户消息并继续循环，且在每轮请求前按上下文预算截断历史。computer-use 参考实现则在同一循环中流式组装响应，给系统与尾部工具结果设置缓存断点，按策略裁剪旧截图，对限流、连接和服务端错误退避重试，并把消息与截图写入轨迹；显式工具和 hosted computer 工具的安全覆盖范围不同。",
+    "commit": "4a4224bdf0e9cfb3332167b69c90457403813625",
+    "status": "draft",
+    "researchedAt": "2026-11-11",
+    "sources": [
+      {
+        "label": "固定版本官方 README 与示例索引",
+        "url": "https://github.com/anthropics/claude-quickstarts/blob/4a4224bdf0e9cfb3332167b69c90457403813625/README.md"
+      },
+      {
+        "label": "固定版本最小 Agents 说明与非生产边界",
+        "url": "https://github.com/anthropics/claude-quickstarts/blob/4a4224bdf0e9cfb3332167b69c90457403813625/agents/README.md"
+      },
+      {
+        "label": "固定版本消息与工具执行循环",
+        "url": "https://github.com/anthropics/claude-quickstarts/blob/4a4224bdf0e9cfb3332167b69c90457403813625/agents/agent.py"
+      },
+      {
+        "label": "固定版本 computer-use 使用与安全边界",
+        "url": "https://github.com/anthropics/claude-quickstarts/blob/4a4224bdf0e9cfb3332167b69c90457403813625/computer-use-best-practices/README.md"
+      },
+      {
+        "label": "固定版本 computer-use Agent 循环实现",
+        "url": "https://github.com/anthropics/claude-quickstarts/blob/4a4224bdf0e9cfb3332167b69c90457403813625/computer-use-best-practices/computer_use/loop.py"
+      }
+    ]
   }
 }
