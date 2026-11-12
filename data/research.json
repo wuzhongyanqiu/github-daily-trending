@@ -13,6 +13,48 @@
     "implementation": "核心包把组件规则、主题 token 和运行时 Theme 分开：已构建主题依赖消费者加载 CSS，未构建主题才由 provider 编译并共享注入样式；根 provider 同步文档属性，嵌套 provider 保持局部作用域。CLI 从同一知识与组件索引输出终端文档、类型化 JSON、模板和 codemod，init 还会把组件入口写入 AGENTS.md 或 CLAUDE.md，降低 Agent 猜测 API 的概率。",
     "sources": [{"label": "固定版本官方 README 与项目边界", "url": "https://github.com/meta/astryx/blob/5f1c1161b0a9658db8e3485c41bf8c05f0cb3b64/README.md"}, {"label": "固定版本核心包快速开始", "url": "https://github.com/meta/astryx/blob/5f1c1161b0a9658db8e3485c41bf8c05f0cb3b64/packages/core/README.md"}, {"label": "固定版本 CLI 接口与工作流", "url": "https://github.com/meta/astryx/blob/5f1c1161b0a9658db8e3485c41bf8c05f0cb3b64/packages/cli/README.md"}, {"label": "固定版本主题应用架构", "url": "https://github.com/meta/astryx/blob/5f1c1161b0a9658db8e3485c41bf8c05f0cb3b64/docs/architecture/theme-application.md"}]
   },
+  "ZhuLinsen/daily_stock_analysis": {
+    "title": "daily_stock_analysis：多市场股票分析、报告与推送工作台",
+    "summary": "面向 A 股、港股、美股及部分日韩台标的的自动分析系统，将多源行情与技术指标、可选新闻检索、LLM 报告、历史记录和多渠道通知组织为一条可通过命令行、GitHub Actions、Web 或桌面端触发的链路。",
+    "highlights": [
+      "同一管线组合日线、实时行情、技术分析、基本面、新闻证据和 LLM 结构化结论",
+      "行情层按市场和场景选择多个数据源，单源失败可继续尝试后续来源并记录降级状态",
+      "提供 GitHub Actions、本地定时、FastAPI、Web 与桌面工作台等多种运行入口"
+    ],
+    "useCases": [
+      "定时整理自选股的技术面、事件线索和风险提示，并推送到已有通知渠道",
+      "在本地工作台查看分析历史、数据能力、回测、持仓和多市场研究结果"
+    ],
+    "audience": "能自行配置模型、行情与搜索凭据，并理解市场数据时效和模型结论局限的个人研究者与工程团队",
+    "caution": "项目输出不构成投资建议。免费行情和新闻源可能限流、延迟、缺字段或临时失效；后续来源或最近缓存可维持流程，但不等于数据完整。未配置搜索渠道或检索零命中时，报告会缺少新闻面证据。不同市场只覆盖各自已实现的数据、交易日历和代码格式，例如日韩台主要依赖显式后缀与 YFinance，不能把 A 股的资金流、板块或实时能力类推过去。LLM、搜索与部分稳定数据源需要外部凭据并可能产生费用，真实使用前应核对报告中的来源、时间、降级标记和免责声明。本页未安装依赖、调用模型、连接行情账户或验证投资结果。",
+    "status": "draft",
+    "commit": "ef44660f00e08ce66dcd4dc4d2e700836c45e833",
+    "researchedAt": "2026-11-12",
+    "workflow": [
+      "选择 GitHub Actions、本地、Docker 或 Web 入口，配置自选股以及至少一个可用模型渠道",
+      "按目标市场核对数据源、代码格式、搜索与通知配置，先用 dry-run 或少量标的检查实际来源和缺口",
+      "运行分析后检查数据时间、fallback、新闻证据与报告边界，再决定是否保存、推送或接入定时任务"
+    ],
+    "implementation": "主入口解析运行模式、股票清单、交易日过滤和大盘上下文后创建 StockAnalysisPipeline。单股管线先通过 DataFetcherManager 获取并缓存行情，计算均线、MACD、RSI、量价、支撑压力等技术指标，再按配置补充实时行情、基本面、筹码、市场阶段、新闻与持仓上下文；传统模式把增强上下文交给 LLM 生成结构化报告，Agent 模式则切入工具与策略编排。结果随后经过决策护栏、数据来源标注和历史保存，再由通知层按渠道发送。数据层按市场和场景维护优先级、熔断与 fallback：单源异常继续后续来源，缓存只作为明确标记的降级结果；新闻检索初始化或调用失败也不会阻断主分析，但报告会区分未检索与零命中。",
+    "sources": [
+      {
+        "label": "固定版本官方 README、入口与免责声明",
+        "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/README.md"
+      },
+      {
+        "label": "固定版本分析管线实现",
+        "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/src/core/pipeline.py"
+      },
+      {
+        "label": "固定版本数据源策略入口",
+        "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/data_provider/__init__.py"
+      },
+      {
+        "label": "固定版本数据源稳定性与降级边界",
+        "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/docs/data-source-stability.md"
+      }
+    ]
+  },
   "vercel-labs/agent-browser": {
     "title": "agent-browser：面向 Agent 的命令行浏览器自动化层",
     "summary": "以 Rust CLI 把页面导航、无障碍树快照、元素引用和交互命令组织成短调用，并由后台守护进程维持浏览器与会话，供 shell、技能或 MCP 客户端驱动。",
