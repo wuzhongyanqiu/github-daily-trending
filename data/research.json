@@ -1,4 +1,50 @@
 {
+  "GoogleChrome/modern-web-guidance-src": {
+    "title": "Modern Web Guidance：把现代 Web 平台规范送入编程 Agent",
+    "summary": "由 Chrome、Edge、Firefox、MDN 团队与社区共同维护的 Web 开发指南源仓库；发布的 skill 与 CLI 让编程 Agent 先按任务检索，再按 ID 取回包含浏览器兼容性、无障碍、性能、陷阱和回退策略的精简指南。",
+    "highlights": [
+      "用本地静态嵌入与 BM25 混合检索，把英文任务查询映射到具体指南而非整库塞入上下文",
+      "取回指南时读取项目 .mwgrc，按 Baseline 目标调整回退提示，并对 Origin Trial 与易变特性要求显式授权",
+      "legacy-scan 以确定性 AST、DOM、CSS 和依赖规则发现候选旧模式，再交给 Agent 按 keep/drop rubric 复核"
+    ],
+    "useCases": [
+      "让编程 Agent 在实现 Web UI、性能、无障碍或安全功能前检索当前平台做法与兼容边界",
+      "扫描已有前端代码中的部分旧模式，结合指南规划并验证现代化改造"
+    ],
+    "audience": "希望减少 Agent 生成陈旧 Web 模式，并能明确浏览器支持策略、审查检索结果和维护 skill 更新的前端团队",
+    "caution": "指南覆盖面和评测结果不等于适用于每个框架、浏览器矩阵或生产场景；采用前仍需按项目目标浏览器、无障碍要求和真实运行环境验证。legacy-scan 只覆盖约 20% 指南的可确定性检测子集，命中项是待复核候选，不是自动修复或无误报保证。Origin Trial 与易变特性默认受门控，不能绕过项目策略。CLI 会采集安装量、调用 Agent、检索 ID 和 Agent 生成的搜索查询等匿名遥测，可用 DISABLE_TELEMETRY=1 退出；npx 首次取包和更新仍需联网。本页只阅读固定版本文档与实现，未安装 skill、运行扫描或复现实验看板的提升数据。",
+    "status": "draft",
+    "commit": "24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8",
+    "researchedAt": "2026-11-13",
+    "workflow": [
+      "安装或接入 skill，并在项目 .mwgrc 中明确 Baseline 目标及是否允许实验性或易变特性",
+      "用聚焦的英文任务词 search，核对返回描述后 retrieve 相关指南，再按兼容性、回退和无障碍要求实现",
+      "改造旧项目时先运行 legacy-scan，把候选逐项按 keep/drop rubric 复核，取回对应指南后修改并重跑扫描与项目测试"
+    ],
+    "implementation": "skill 指令把 Web UI 任务路由到 search/retrieve 链路；search 从随包发布的指南分块、量化静态向量和 BM25 索引中分别计算语义与词法排名，再用 reciprocal rank fusion 合并结果，全程不依赖外部模型 API。retrieve 根据 ID 读取完整指南，同时解析项目或用户级 .mwgrc：Baseline 目标会改变回退提示，Origin Trial 和单引擎易变特性未获明确允许时直接阻止取回。legacy-scan 则使用 token 预筛和 AST、DOM、CSS、依赖扫描器生成带文件位置与验证 rubric 的候选，默认规则需先通过 held-out 精度门槛，但运行结果仍要求 Agent 结合上下文剔除误报。",
+    "sources": [
+      {
+        "label": "固定版本官方 README、安装链路、门控与隐私边界",
+        "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/README.md"
+      },
+      {
+        "label": "固定版本 Agent skill 使用流程",
+        "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/guides/modern-web-guidance/SKILL.md"
+      },
+      {
+        "label": "固定版本本地混合检索实现",
+        "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/src/rag/search.ts"
+      },
+      {
+        "label": "固定版本指南取回与功能门控实现",
+        "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/src/rag/retrieve.ts"
+      },
+      {
+        "label": "固定版本旧模式扫描架构与限制",
+        "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/src/analyzing/README.md"
+      }
+    ]
+  },
   "meta/astryx": {
     "title": "Astryx：可主题化且面向 Agent 的 React 设计系统",
     "summary": "Meta 开源的 React 19 设计系统，提供组件、主题、页面模板和 CLI；应用可直接引入预构建样式，也可让人或编程 Agent 通过同一套文档与命令检索、生成和定制界面。",

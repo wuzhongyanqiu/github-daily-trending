@@ -1,39 +1,440 @@
 {
-  "generatedAt": "2026-11-12T00:24:02.453Z",
+  "generatedAt": "2026-11-13T00:23:02.633Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "status": "success",
   "coverage": {
-    "researched": 3,
+    "researched": 4,
     "pendingResearch": [
-      "GoogleChrome/modern-web-guidance-src",
-      "shadcn/improve",
-      "addyosmani/agent-skills",
-      "we-promise/sure",
-      "homeassistant-ai/ha-mcp",
       "openai/codex-security",
-      "TheAlgorithms/Java"
+      "nvm-sh/nvm",
+      "pookjw/HermesEnabler",
+      "we-promise/sure",
+      "QwenLM/qwen-code",
+      "ashhart/TensorFold",
+      "addyosmani/agent-skills",
+      "Alishahryar1/free-claude-code",
+      "ggml-org/llama.cpp"
     ],
     "metadataFailures": []
   },
   "repositories": [
     {
       "rank": 1,
+      "fullName": "GoogleChrome/modern-web-guidance-src",
+      "owner": "GoogleChrome",
+      "name": "modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "language": "TypeScript",
+      "stars": 2895,
+      "forks": 196,
+      "starsToday": 739,
+      "license": "Apache-2.0",
+      "topics": [],
+      "homepage": "https://goo.gle/modern-web-guidance",
+      "updatedAt": "2026-11-12T22:54:00Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-13T00:23:02.633Z",
+      "chinese": {
+        "title": "Modern Web Guidance：把现代 Web 平台规范送入编程 Agent",
+        "summary": "由 Chrome、Edge、Firefox、MDN 团队与社区共同维护的 Web 开发指南源仓库；发布的 skill 与 CLI 让编程 Agent 先按任务检索，再按 ID 取回包含浏览器兼容性、无障碍、性能、陷阱和回退策略的精简指南。",
+        "highlights": [
+          "用本地静态嵌入与 BM25 混合检索，把英文任务查询映射到具体指南而非整库塞入上下文",
+          "取回指南时读取项目 .mwgrc，按 Baseline 目标调整回退提示，并对 Origin Trial 与易变特性要求显式授权",
+          "legacy-scan 以确定性 AST、DOM、CSS 和依赖规则发现候选旧模式，再交给 Agent 按 keep/drop rubric 复核"
+        ],
+        "useCases": [
+          "让编程 Agent 在实现 Web UI、性能、无障碍或安全功能前检索当前平台做法与兼容边界",
+          "扫描已有前端代码中的部分旧模式，结合指南规划并验证现代化改造"
+        ],
+        "audience": "希望减少 Agent 生成陈旧 Web 模式，并能明确浏览器支持策略、审查检索结果和维护 skill 更新的前端团队",
+        "caution": "指南覆盖面和评测结果不等于适用于每个框架、浏览器矩阵或生产场景；采用前仍需按项目目标浏览器、无障碍要求和真实运行环境验证。legacy-scan 只覆盖约 20% 指南的可确定性检测子集，命中项是待复核候选，不是自动修复或无误报保证。Origin Trial 与易变特性默认受门控，不能绕过项目策略。CLI 会采集安装量、调用 Agent、检索 ID 和 Agent 生成的搜索查询等匿名遥测，可用 DISABLE_TELEMETRY=1 退出；npx 首次取包和更新仍需联网。本页只阅读固定版本文档与实现，未安装 skill、运行扫描或复现实验看板的提升数据。",
+        "status": "draft",
+        "commit": "24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8",
+        "researchedAt": "2026-11-13",
+        "workflow": [
+          "安装或接入 skill，并在项目 .mwgrc 中明确 Baseline 目标及是否允许实验性或易变特性",
+          "用聚焦的英文任务词 search，核对返回描述后 retrieve 相关指南，再按兼容性、回退和无障碍要求实现",
+          "改造旧项目时先运行 legacy-scan，把候选逐项按 keep/drop rubric 复核，取回对应指南后修改并重跑扫描与项目测试"
+        ],
+        "implementation": "skill 指令把 Web UI 任务路由到 search/retrieve 链路；search 从随包发布的指南分块、量化静态向量和 BM25 索引中分别计算语义与词法排名，再用 reciprocal rank fusion 合并结果，全程不依赖外部模型 API。retrieve 根据 ID 读取完整指南，同时解析项目或用户级 .mwgrc：Baseline 目标会改变回退提示，Origin Trial 和单引擎易变特性未获明确允许时直接阻止取回。legacy-scan 则使用 token 预筛和 AST、DOM、CSS、依赖扫描器生成带文件位置与验证 rubric 的候选，默认规则需先通过 held-out 精度门槛，但运行结果仍要求 Agent 结合上下文剔除误报。",
+        "sources": [
+          {
+            "label": "固定版本官方 README、安装链路、门控与隐私边界",
+            "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/README.md"
+          },
+          {
+            "label": "固定版本 Agent skill 使用流程",
+            "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/guides/modern-web-guidance/SKILL.md"
+          },
+          {
+            "label": "固定版本本地混合检索实现",
+            "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/src/rag/search.ts"
+          },
+          {
+            "label": "固定版本指南取回与功能门控实现",
+            "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/src/rag/retrieve.ts"
+          },
+          {
+            "label": "固定版本旧模式扫描架构与限制",
+            "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/src/analyzing/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "fullName": "openai/codex-security",
+      "owner": "openai",
+      "name": "codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "language": "TypeScript",
+      "stars": 12407,
+      "forks": 976,
+      "starsToday": 643,
+      "license": "Apache-2.0",
+      "topics": [
+        "ai-security",
+        "application-security",
+        "cli",
+        "code-scanning",
+        "codex",
+        "codex-security",
+        "cybersecurity",
+        "devsecops"
+      ],
+      "homepage": "https://developers.openai.com/codex/security",
+      "updatedAt": "2026-11-12T21:10:11Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-13T00:23:02.633Z",
+      "chinese": {
+        "title": "codex-security",
+        "summary": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 643 Star",
+          "主要使用 TypeScript，当前累计 12,407 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 3,
+      "fullName": "nvm-sh/nvm",
+      "owner": "nvm-sh",
+      "name": "nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "language": "Shell",
+      "stars": 96010,
+      "forks": 10758,
+      "starsToday": 63,
+      "license": "MIT",
+      "topics": [
+        "bash",
+        "install",
+        "lts",
+        "node",
+        "node-js",
+        "nodejs",
+        "nvm",
+        "nvmrc"
+      ],
+      "homepage": null,
+      "updatedAt": "2026-11-12T05:50:45Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-13T00:23:02.633Z",
+      "chinese": {
+        "title": "nvm",
+        "summary": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 63 Star",
+          "主要使用 Shell，当前累计 96,010 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 4,
+      "fullName": "pookjw/HermesEnabler",
+      "owner": "pookjw",
+      "name": "HermesEnabler",
+      "url": "https://github.com/pookjw/HermesEnabler",
+      "description": "Enable Hermès Watch Faces on any Apple Watch devices",
+      "language": "Objective-C",
+      "stars": 1533,
+      "forks": 139,
+      "starsToday": 218,
+      "license": "MIT",
+      "topics": [],
+      "homepage": null,
+      "updatedAt": "2026-11-12T14:49:08Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-13T00:23:02.633Z",
+      "chinese": {
+        "title": "HermesEnabler",
+        "summary": "Enable Hermès Watch Faces on any Apple Watch devices。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 218 Star",
+          "主要使用 Objective-C，当前累计 1,533 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 5,
+      "fullName": "we-promise/sure",
+      "owner": "we-promise",
+      "name": "sure",
+      "url": "https://github.com/we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "language": "Ruby",
+      "stars": 13900,
+      "forks": 1040,
+      "starsToday": 967,
+      "license": "AGPL-3.0",
+      "topics": [],
+      "homepage": "https://sure.am",
+      "updatedAt": "2026-11-12T23:09:43Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-13T00:23:02.633Z",
+      "chinese": {
+        "title": "sure",
+        "summary": "The personal finance app for everyone (by everyone)。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 967 Star",
+          "主要使用 Ruby，当前累计 13,900 Star",
+          "仓库标注 AGPL-3.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 6,
+      "fullName": "QwenLM/qwen-code",
+      "owner": "QwenLM",
+      "name": "qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "language": "TypeScript",
+      "stars": 29799,
+      "forks": 3393,
+      "starsToday": 151,
+      "license": "Apache-2.0",
+      "topics": [
+        "agentic",
+        "ai",
+        "ai-agent",
+        "ai-coding",
+        "cli",
+        "coding-agent",
+        "developer-tools",
+        "llm"
+      ],
+      "homepage": "https://qwenlm.github.io/qwen-code-docs/en/users/overview",
+      "updatedAt": "2026-11-13T00:18:17Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-13T00:23:02.633Z",
+      "chinese": {
+        "title": "qwen-code",
+        "summary": "An open-source AI coding agent that lives in your terminal.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 151 Star",
+          "主要使用 TypeScript，当前累计 29,799 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 7,
+      "fullName": "ashhart/TensorFold",
+      "owner": "ashhart",
+      "name": "TensorFold",
+      "url": "https://github.com/ashhart/TensorFold",
+      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "language": "Zig",
+      "stars": 1934,
+      "forks": 391,
+      "starsToday": 54,
+      "license": "Apache-2.0",
+      "topics": [
+        "ai",
+        "ai-tools",
+        "llm",
+        "llm-inference",
+        "llm-tools"
+      ],
+      "homepage": "https://tensorfold.dev",
+      "updatedAt": "2026-11-13T00:22:40Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-13T00:23:02.633Z",
+      "chinese": {
+        "title": "TensorFold",
+        "summary": "LLM Inference Engine for Metal, CUDA and Vulkan.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 54 Star",
+          "主要使用 Zig，当前累计 1,934 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 8,
+      "fullName": "nodejs/node",
+      "owner": "nodejs",
+      "name": "node",
+      "url": "https://github.com/nodejs/node",
+      "description": "Node.js JavaScript runtime ✨🐢🚀✨",
+      "language": "JavaScript",
+      "stars": 123597,
+      "forks": 38055,
+      "starsToday": 62,
+      "license": "NOASSERTION",
+      "topics": [
+        "javascript",
+        "js",
+        "linux",
+        "macos",
+        "mit",
+        "node",
+        "nodejs",
+        "runtime"
+      ],
+      "homepage": "https://nodejs.org",
+      "updatedAt": "2026-11-12T21:07:38Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-13T00:23:02.633Z",
+      "chinese": {
+        "title": "Node.js：跨平台 JavaScript 运行时",
+        "summary": "Node.js 是开源的跨平台 JavaScript 运行时，项目采用开放治理并提供 Current、LTS、Nightly 等发布线。它是运行服务和工具的基础设施，不是单一应用框架。",
+        "highlights": [
+          "用官方发行包或源码构建运行时",
+          "按 Current、LTS 和 Nightly 选择发布线",
+          "通过校验和与签名验证下载的二进制"
+        ],
+        "useCases": [
+          "运行 JavaScript 服务与构建工具",
+          "研究运行时、模块和发布流程"
+        ],
+        "audience": "JavaScript 开发者、平台工程师和工具维护者",
+        "caution": "Alpha 和 Nightly 不适合生产；不同发布线的 ABI、支持周期和兼容性不同，升级前应查看官方发行说明和项目测试。",
+        "status": "draft",
+        "commit": "b12bad4b1119608ba98dcfdcddb4fabaa3c93daf",
+        "researchedAt": "2026-10-24",
+        "workflow": [
+          "按项目需求选择 LTS 或 Current",
+          "从官方渠道下载并验证签名",
+          "运行应用测试后再切换生产版本"
+        ],
+        "implementation": "README 将运行时支持、发布线、二进制校验、源码构建、安全和贡献入口分开说明；Node.js 通过 OpenJS Foundation 获得支持，仓库采用开放治理。资料阅读未编译运行时。",
+        "sources": [
+          {
+            "label": "固定版本官方 README（资料依据）",
+            "url": "https://github.com/nodejs/node/blob/b12bad4b1119608ba98dcfdcddb4fabaa3c93daf/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "fullName": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": 116661,
+      "forks": 12209,
+      "starsToday": 816,
+      "license": "MIT",
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "homepage": "https://skills.addy.ie",
+      "updatedAt": "2026-11-01T19:24:49Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-13T00:23:02.633Z",
+      "chinese": {
+        "title": "agent-skills",
+        "summary": "Production-grade engineering skills for AI coding agents.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 816 Star",
+          "主要使用 JavaScript，当前累计 116,661 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 10,
       "fullName": "meta/astryx",
       "owner": "meta",
       "name": "astryx",
       "url": "https://github.com/meta/astryx",
       "description": "An open source design system that's fully customizable and agent ready",
       "language": "TypeScript",
-      "stars": 24939,
-      "forks": 1950,
-      "starsToday": 2776,
+      "stars": 26509,
+      "forks": 2058,
+      "starsToday": 1830,
       "license": "MIT",
       "topics": [],
       "homepage": "http://astryx.atmeta.com",
-      "updatedAt": "2026-11-12T00:22:19Z",
+      "updatedAt": "2026-11-13T00:20:59Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-12T00:24:02.453Z",
+      "metadataCheckedAt": "2026-11-13T00:23:02.633Z",
       "chinese": {
         "title": "Astryx：可主题化且面向 Agent 的 React 设计系统",
         "summary": "Meta 开源的 React 19 设计系统，提供组件、主题、页面模板和 CLI；应用可直接引入预构建样式，也可让人或编程 Agent 通过同一套文档与命令检索、生成和定制界面。",
@@ -78,394 +479,120 @@
       }
     },
     {
-      "rank": 2,
-      "fullName": "ZhuLinsen/daily_stock_analysis",
-      "owner": "ZhuLinsen",
-      "name": "daily_stock_analysis",
-      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
-      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
-      "language": "Python",
-      "stars": 70216,
-      "forks": 56838,
-      "starsToday": 278,
+      "rank": 11,
+      "fullName": "CopilotKit/OpenBot",
+      "owner": "CopilotKit",
+      "name": "OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "language": "TypeScript",
+      "stars": 11593,
+      "forks": 1435,
+      "starsToday": 298,
       "license": "MIT",
       "topics": [
-        "a-stock",
-        "ai-agent",
-        "aigc",
-        "llm",
-        "quant",
-        "quantitative-finance",
-        "quantitative-trading"
+        "ag-ui",
+        "agent-governance",
+        "ai-agents",
+        "browser-automation",
+        "copilotkit",
+        "generative-ui",
+        "mcp"
       ],
-      "homepage": "https://dsa.zhulinsen.tech",
-      "updatedAt": "2026-11-10T11:51:09Z",
+      "homepage": "open.bot",
+      "updatedAt": "2026-11-13T00:13:52Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-12T00:24:02.453Z",
+      "metadataCheckedAt": "2026-11-13T00:23:02.633Z",
       "chinese": {
-        "title": "daily_stock_analysis：多市场股票分析、报告与推送工作台",
-        "summary": "面向 A 股、港股、美股及部分日韩台标的的自动分析系统，将多源行情与技术指标、可选新闻检索、LLM 报告、历史记录和多渠道通知组织为一条可通过命令行、GitHub Actions、Web 或桌面端触发的链路。",
+        "title": "OpenBot：可自托管的 Agent 工作台模板",
+        "summary": "克隆并定制一套 Agent 工作台，以 AG-UI 接入不同框架的 Bot，并通过网关处理工具动作和审计。",
         "highlights": [
-          "同一管线组合日线、实时行情、技术分析、基本面、新闻证据和 LLM 结构化结论",
-          "行情层按市场和场景选择多个数据源，单源失败可继续尝试后续来源并记录降级状态",
-          "提供 GitHub Actions、本地定时、FastAPI、Web 与桌面工作台等多种运行入口"
+          "Docker Compose 启动应用、API 与 PostgreSQL",
+          "Agent 端点使用 AG-UI 协议",
+          "工具调用经过决策与审计网关"
         ],
         "useCases": [
-          "定时整理自选股的技术面、事件线索和风险提示，并推送到已有通知渠道",
-          "在本地工作台查看分析历史、数据能力、回测、持仓和多市场研究结果"
+          "构建企业内部 Agent 工作台原型",
+          "评估 Agent 工具权限与审计流程"
         ],
-        "audience": "能自行配置模型、行情与搜索凭据，并理解市场数据时效和模型结论局限的个人研究者与工程团队",
-        "caution": "项目输出不构成投资建议。免费行情和新闻源可能限流、延迟、缺字段或临时失效；后续来源或最近缓存可维持流程，但不等于数据完整。未配置搜索渠道或检索零命中时，报告会缺少新闻面证据。不同市场只覆盖各自已实现的数据、交易日历和代码格式，例如日韩台主要依赖显式后缀与 YFinance，不能把 A 股的资金流、板块或实时能力类推过去。LLM、搜索与部分稳定数据源需要外部凭据并可能产生费用，真实使用前应核对报告中的来源、时间、降级标记和免责声明。本页未安装依赖、调用模型、连接行情账户或验证投资结果。",
+        "audience": "有自托管能力的 Agent 平台团队",
+        "caution": "README 明确这是 beta 模板而非现成托管产品；示例环境的 OPENBOT_SINGLE_USER=true 允许所有请求以管理员身份进入，外部访问前必须配置登录。还需 Docker、Bun、模型密钥及 CopilotKit Intelligence 项目/许可。本页未部署实测。",
         "status": "draft",
-        "commit": "ef44660f00e08ce66dcd4dc4d2e700836c45e833",
-        "researchedAt": "2026-11-12",
+        "commit": "ab9855c19848378c90a806426130d86699cc798c",
+        "researchedAt": "2026-10-30",
         "workflow": [
-          "选择 GitHub Actions、本地、Docker 或 Web 入口，配置自选股以及至少一个可用模型渠道",
-          "按目标市场核对数据源、代码格式、搜索与通知配置，先用 dry-run 或少量标的检查实际来源和缺口",
-          "运行分析后检查数据时间、fallback、新闻证据与报告边界，再决定是否保存、推送或接入定时任务"
+          "克隆仓库并按 README 配置环境和依赖",
+          "替换 examples 下的示例租户与 Bot",
+          "启动后检查登录、工具审批及 /admin/audit"
         ],
-        "implementation": "主入口解析运行模式、股票清单、交易日过滤和大盘上下文后创建 StockAnalysisPipeline。单股管线先通过 DataFetcherManager 获取并缓存行情，计算均线、MACD、RSI、量价、支撑压力等技术指标，再按配置补充实时行情、基本面、筹码、市场阶段、新闻与持仓上下文；传统模式把增强上下文交给 LLM 生成结构化报告，Agent 模式则切入工具与策略编排。结果随后经过决策护栏、数据来源标注和历史保存，再由通知层按渠道发送。数据层按市场和场景维护优先级、熔断与 fallback：单源异常继续后续来源，缓存只作为明确标记的降级结果；新闻检索初始化或调用失败也不会阻断主分析，但报告会区分未检索与零命中。",
+        "implementation": "README 的架构说明将 AG-UI Agent 请求送入服务端；工具动作回到网关进行策略判定、审计记录和执行，Bot 电脑使用独立容器。",
         "sources": [
           {
-            "label": "固定版本官方 README、入口与免责声明",
-            "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/README.md"
-          },
-          {
-            "label": "固定版本分析管线实现",
-            "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/src/core/pipeline.py"
-          },
-          {
-            "label": "固定版本数据源策略入口",
-            "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/data_provider/__init__.py"
-          },
-          {
-            "label": "固定版本数据源稳定性与降级边界",
-            "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/docs/data-source-stability.md"
+            "label": "固定版本官方 README 与架构说明",
+            "url": "https://github.com/CopilotKit/OpenBot/blob/ab9855c19848378c90a806426130d86699cc798c/README.md"
           }
         ]
       }
     },
     {
-      "rank": 3,
-      "fullName": "GoogleChrome/modern-web-guidance-src",
-      "owner": "GoogleChrome",
-      "name": "modern-web-guidance-src",
-      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
-      "description": "",
-      "language": "TypeScript",
-      "stars": 1735,
-      "forks": 140,
-      "starsToday": 159,
-      "license": "Apache-2.0",
-      "topics": [],
-      "homepage": "https://goo.gle/modern-web-guidance",
-      "updatedAt": "2026-11-11T23:48:18Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-12T00:24:02.453Z",
-      "chinese": {
-        "title": "modern-web-guidance-src",
-        "summary": "GoogleChrome/modern-web-guidance-src 开源仓库。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 159 Star",
-          "主要使用 TypeScript，当前累计 1,735 Star",
-          "仓库标注 Apache-2.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 4,
-      "fullName": "shadcn/improve",
-      "owner": "shadcn",
-      "name": "improve",
-      "url": "https://github.com/shadcn/improve",
-      "description": "Use your most capable model to audit your codebase and write plans for cheaper models to execute.",
-      "language": null,
-      "stars": 10856,
-      "forks": 443,
-      "starsToday": 361,
-      "license": "MIT",
-      "topics": [],
-      "homepage": null,
-      "updatedAt": "2026-09-12T11:29:28Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-12T00:24:02.453Z",
-      "chinese": {
-        "title": "improve",
-        "summary": "Use your most capable model to audit your codebase and write plans for cheaper models to execute.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 361 Star",
-          "主要语言暂未识别，当前累计 10,856 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 5,
-      "fullName": "addyosmani/agent-skills",
-      "owner": "addyosmani",
-      "name": "agent-skills",
-      "url": "https://github.com/addyosmani/agent-skills",
-      "description": "Production-grade engineering skills for AI coding agents.",
-      "language": "JavaScript",
-      "stars": 115929,
-      "forks": 12161,
-      "starsToday": 787,
-      "license": "MIT",
-      "topics": [
-        "agent-skills",
-        "antigravity",
-        "claude-code",
-        "codex",
-        "cursor",
-        "skills"
-      ],
-      "homepage": "https://skills.addy.ie",
-      "updatedAt": "2026-11-01T19:24:49Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-12T00:24:02.453Z",
-      "chinese": {
-        "title": "agent-skills",
-        "summary": "Production-grade engineering skills for AI coding agents.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 787 Star",
-          "主要使用 JavaScript，当前累计 115,929 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 6,
-      "fullName": "vercel-labs/agent-browser",
-      "owner": "vercel-labs",
-      "name": "agent-browser",
-      "url": "https://github.com/vercel-labs/agent-browser",
-      "description": "Browser automation CLI for AI agents",
-      "language": "Rust",
-      "stars": 49852,
-      "forks": 3488,
-      "starsToday": 708,
-      "license": "Apache-2.0",
-      "topics": [],
-      "homepage": "https://agent-browser.dev",
-      "updatedAt": "2026-11-11T22:13:48Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-12T00:24:02.453Z",
-      "chinese": {
-        "title": "agent-browser：面向 Agent 的命令行浏览器自动化层",
-        "summary": "以 Rust CLI 把页面导航、无障碍树快照、元素引用和交互命令组织成短调用，并由后台守护进程维持浏览器与会话，供 shell、技能或 MCP 客户端驱动。",
-        "highlights": [
-          "snapshot 生成紧凑可访问性树和临时 ref，操作后需重新读取页面核验",
-          "每个 session 由独立守护进程连接浏览器，支持本地 Chrome、CDP、其他引擎和云端提供方",
-          "会话设置集中声明域名白名单、动作策略、确认动作、文件访问与空闲超时等边界"
-        ],
-        "useCases": [
-          "让编程 Agent 通过短命令完成网页读取、表单交互和结果核验",
-          "通过 shell 或 MCP 接入可分会话、可配置安全策略的浏览器自动化"
-        ],
-        "audience": "需要为 Agent 提供浏览器操作能力，并能管理浏览器版本、会话状态、网络访问和动作权限的开发者与平台团队",
-        "caution": "浏览器自动化会接触登录状态、页面内容、下载和本地文件，采用前应最小化域名、动作、文件访问与会话持久化权限。ref 只对应生成快照时的页面状态，DOM 变化后复用可能失效；CDP、云端提供方和其他引擎的能力及数据边界也不同。README 的失败检测与安全能力是项目设计说明，本页未安装 CLI、连接真实账号或执行端到端浏览器测试。",
-        "status": "draft",
-        "commit": "370d41db67a198944bcee2c96cc454594e7d56c6",
-        "researchedAt": "2026-11-08",
-        "workflow": [
-          "按平台安装 CLI 与 Chrome for Testing，先在无账号测试页建立独立 session",
-          "执行 open、snapshot、交互、再次 snapshot 或 get 的读取-操作-核验闭环",
-          "接入真实站点前配置允许域名、动作策略、确认项和状态保存，并审查 CDP 或云端提供方的数据流"
-        ],
-        "implementation": "CLI 解析命令和会话级设置，把请求发送给按 session 隔离的后台守护进程；守护进程通过本地套接字或端口处理命令、维护浏览器状态、定期保存会话，并按空闲策略退出。设置表把 profile、代理、扩展、文件访问、允许域名、动作策略、确认动作和超时等选项统一标注为即时生效或需要重启、是否持久化及是否属于敏感值。",
-        "sources": [
-          {
-            "label": "固定版本官方 README 与使用链路",
-            "url": "https://github.com/vercel-labs/agent-browser/blob/370d41db67a198944bcee2c96cc454594e7d56c6/README.md"
-          },
-          {
-            "label": "固定版本 CLI 命令与会话入口",
-            "url": "https://github.com/vercel-labs/agent-browser/blob/370d41db67a198944bcee2c96cc454594e7d56c6/cli/src/main.rs"
-          },
-          {
-            "label": "固定版本会话设置与安全选项表",
-            "url": "https://github.com/vercel-labs/agent-browser/blob/370d41db67a198944bcee2c96cc454594e7d56c6/cli/src/session_settings/spec.rs"
-          },
-          {
-            "label": "固定版本守护进程与会话生命周期实现",
-            "url": "https://github.com/vercel-labs/agent-browser/blob/370d41db67a198944bcee2c96cc454594e7d56c6/cli/src/native/daemon.rs"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 7,
-      "fullName": "we-promise/sure",
-      "owner": "we-promise",
-      "name": "sure",
-      "url": "https://github.com/we-promise/sure",
-      "description": "The personal finance app for everyone (by everyone)",
-      "language": "Ruby",
-      "stars": 12943,
-      "forks": 958,
-      "starsToday": 1078,
-      "license": "AGPL-3.0",
-      "topics": [],
-      "homepage": "https://sure.am",
-      "updatedAt": "2026-11-11T22:32:40Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-12T00:24:02.453Z",
-      "chinese": {
-        "title": "sure",
-        "summary": "The personal finance app for everyone (by everyone)。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 1,078 Star",
-          "主要使用 Ruby，当前累计 12,943 Star",
-          "仓库标注 AGPL-3.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 8,
-      "fullName": "homeassistant-ai/ha-mcp",
-      "owner": "homeassistant-ai",
-      "name": "ha-mcp",
-      "url": "https://github.com/homeassistant-ai/ha-mcp",
-      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "rank": 12,
+      "fullName": "Alishahryar1/free-claude-code",
+      "owner": "Alishahryar1",
+      "name": "free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "description": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
       "language": "Python",
-      "stars": 7357,
-      "forks": 455,
-      "starsToday": 645,
-      "license": "MIT",
-      "topics": [
-        "ai",
-        "claude",
-        "hacs",
-        "home-assistant",
-        "home-automation",
-        "llm",
-        "mcp",
-        "model-context-protocol"
-      ],
-      "homepage": "https://homeassistant-ai.github.io/ha-mcp/",
-      "updatedAt": "2026-11-11T22:58:32Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-12T00:24:02.453Z",
-      "chinese": {
-        "title": "ha-mcp",
-        "summary": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 645 Star",
-          "主要使用 Python，当前累计 7,357 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 9,
-      "fullName": "openai/codex-security",
-      "owner": "openai",
-      "name": "codex-security",
-      "url": "https://github.com/openai/codex-security",
-      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
-      "language": "TypeScript",
-      "stars": 11709,
-      "forks": 937,
-      "starsToday": 52,
-      "license": "Apache-2.0",
-      "topics": [
-        "ai-security",
-        "application-security",
-        "cli",
-        "code-scanning",
-        "codex",
-        "codex-security",
-        "cybersecurity",
-        "devsecops"
-      ],
-      "homepage": "https://developers.openai.com/codex/security",
-      "updatedAt": "2026-11-12T00:18:44Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-12T00:24:02.453Z",
-      "chinese": {
-        "title": "codex-security",
-        "summary": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 52 Star",
-          "主要使用 TypeScript，当前累计 11,709 Star",
-          "仓库标注 Apache-2.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 10,
-      "fullName": "TheAlgorithms/Java",
-      "owner": "TheAlgorithms",
-      "name": "Java",
-      "url": "https://github.com/TheAlgorithms/Java",
-      "description": "All Algorithms implemented in Java",
-      "language": "Java",
-      "stars": 67008,
-      "forks": 21506,
-      "starsToday": 51,
-      "license": "MIT",
-      "topics": [
-        "algorithm",
-        "algorithm-challenges",
-        "algorithms",
-        "algorithms-datastructures",
-        "data-structures",
-        "hacktoberfest",
-        "java",
-        "search"
-      ],
+      "stars": 69282,
+      "forks": 10757,
+      "starsToday": 415,
+      "license": "NOASSERTION",
+      "topics": [],
       "homepage": null,
-      "updatedAt": "2026-11-11T21:56:41Z",
+      "updatedAt": "2026-11-12T19:36:16Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-12T00:24:02.453Z",
+      "metadataCheckedAt": "2026-11-13T00:23:02.633Z",
       "chinese": {
-        "title": "Java",
-        "summary": "All Algorithms implemented in Java。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "free-claude-code",
+        "summary": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 51 Star",
-          "主要使用 Java，当前累计 67,008 Star",
+          "今日新增 415 Star",
+          "主要使用 Python，当前累计 69,282 Star",
+          "仓库标注 NOASSERTION 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 13,
+      "fullName": "ggml-org/llama.cpp",
+      "owner": "ggml-org",
+      "name": "llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "description": "LLM inference in C/C++",
+      "language": "C++",
+      "stars": 134546,
+      "forks": 25507,
+      "starsToday": 176,
+      "license": "MIT",
+      "topics": [
+        "ggml"
+      ],
+      "homepage": "https://llama.app",
+      "updatedAt": "2026-11-12T23:52:14Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-13T00:23:02.633Z",
+      "chinese": {
+        "title": "llama.cpp",
+        "summary": "LLM inference in C/C++。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 176 Star",
+          "主要使用 C++，当前累计 134,546 Star",
           "仓库标注 MIT 许可证"
         ],
         "useCases": [
