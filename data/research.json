@@ -2433,6 +2433,52 @@
       }
     ]
   },
+  "openai/codex-security": {
+    "title": "Codex Security：面向代码仓库的 Agent 安全审计工作流",
+    "summary": "把仓库、指定路径、提交差异或工作区改动绑定为只读审计范围，结合项目 SECURITY.md 与用户上下文，让安全审计 Agent 从攻击入口和敏感操作追踪真实控制，再保存威胁模型、发现、证据、排除项和覆盖限制；后续可单独验证、修复或核验修复。",
+    "highlights": [
+      "同时提供 Codex 插件、命令行、TypeScript SDK、GitHub Action 与容器化批量扫描入口",
+      "标准扫描完成一次证据驱动审计，深度扫描重复标准扫描并对结果去重",
+      "扫描产物保留报告、结构化发现、威胁模型、范围与排除项，支持 SARIF、JSON 和 CSV 导出"
+    ],
+    "useCases": [
+      "审查完整仓库、选定组件、分支差异或工作区改动中的可利用安全问题",
+      "对已有告警做源码验证，生成候选修复并以独立步骤核验修复是否成立"
+    ],
+    "audience": "能界定授权范围、保护代码与凭据，并能人工复核 Agent 证据和修复风险的安全团队与开发平台团队",
+    "caution": "扫描是模型驱动的证据审查，不是确定性证明；零发现仍可能伴随排除路径、未决问题或覆盖缺口，报告必须连同 scan-manifest 和来源证据一起阅读。运行需要 Codex 或模型提供方凭据并可能产生费用，项目配置还能选择模型端点或启动 MCP 服务，因此配置文件本身应按可信代码审查。部分网络安全请求和受保护发现需要相应账户访问资格。生成补丁、创建 PR、发布发现和连接 Jira、Linear、GitHub 或云端都会扩大数据与写入范围，应单独授权并复核。深度扫描会并行、重复分析并去重，不能把更高成本等同于完整覆盖。本页只阅读固定版本源码与文档，未安装工具、上传仓库、调用模型或验证检出率。",
+    "workflow": [
+      "固定工具版本，在受控环境配置最小权限凭据，并先用仓库或路径范围运行标准扫描",
+      "打开保存的报告、findings 与 scan-manifest，逐项核对源码证据、排除路径、覆盖限制和严重性依据",
+      "仅对确认问题启动验证或修复流程，审查差异和风险后再运行只读修复核验；需要更广覆盖时再评估深度扫描、费用与并发"
+    ],
+    "implementation": "TypeScript SDK 的 CodexSecurity.run() 先规范化目标与扫描配置，绑定仓库修订、范围、SECURITY.md、知识库、模型、凭据、费用与输出目录，再注册持久化扫描并把安全扫描 skill 交给 Codex 执行。标准审计从不可信输入或敏感操作出发，建立威胁模型，将候选发现连同反证和未决问题分阶段写入草稿；完成时由工作台生成 scan-manifest.json、findings.json 与 report.md，并保留排除项和覆盖面。插件契约要求目标源码只读、离线审查，先保存可用威胁模型，再验证每个独立候选；SDK 负责封存结果、进度、恢复、费用和目标漂移检查。修复与 verify-fix 是扫描之后的独立流程，避免把发现直接当作已证实或已修复。",
+    "commit": "f26b669b56a4423abd773c81f6c6c9c2ebadc42a",
+    "status": "draft",
+    "researchedAt": "2026-11-14",
+    "sources": [
+      {
+        "label": "固定版本官方 README 与使用入口",
+        "url": "https://github.com/openai/codex-security/blob/f26b669b56a4423abd773c81f6c6c9c2ebadc42a/README.md"
+      },
+      {
+        "label": "固定版本任务选择、结果读取与恢复边界",
+        "url": "https://github.com/openai/codex-security/blob/f26b669b56a4423abd773c81f6c6c9c2ebadc42a/docs/agent-workflows.md"
+      },
+      {
+        "label": "固定版本 TypeScript SDK 扫描编排入口",
+        "url": "https://github.com/openai/codex-security/blob/f26b669b56a4423abd773c81f6c6c9c2ebadc42a/sdk/typescript/src/api.ts"
+      },
+      {
+        "label": "固定版本标准安全扫描 skill 契约",
+        "url": "https://github.com/openai/codex-security/blob/f26b669b56a4423abd773c81f6c6c9c2ebadc42a/plugins/codex-security/skills/security-scan/SKILL.md"
+      },
+      {
+        "label": "固定版本核心审计与证据保留流程",
+        "url": "https://github.com/openai/codex-security/blob/f26b669b56a4423abd773c81f6c6c9c2ebadc42a/plugins/codex-security/references/core-scan.md"
+      }
+    ]
+  },
   "anthropics/claude-quickstarts": {
     "title": "Claude Quickstarts：Claude API 与 Agent 应用示例集合",
     "summary": "Anthropic 维护的一组独立示例项目，覆盖基础工具调用 Agent、数据分析与客服界面、浏览器和桌面操作、长时编码任务及 Managed Agents 集成；每个目录有自己的依赖、凭据和运行方式，不是一个统一 SDK。",
