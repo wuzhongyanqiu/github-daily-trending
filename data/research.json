@@ -2479,6 +2479,60 @@
       }
     ]
   },
+  "QwenLM/qwen-code": {
+    "title": "Qwen Code：跨终端、编辑器与服务端的开源编程 Agent",
+    "summary": "以 TypeScript CLI 和核心 Agent 运行时连接代码库、模型与工具：既可在终端交互，也可通过 headless、SDK 或本地 daemon 接入自动化、编辑器和 Web 客户端，并能按配置扩展 MCP、skills、subagents 与多种模型提供方。",
+    "highlights": [
+      "同一运行时覆盖终端、编辑器、桌面、Web、聊天通道、headless、SDK 与 daemon 接入形态",
+      "工具注册表统一装配文件、Shell、搜索、MCP 和 Agent 工具，核心调度器再处理权限确认、排队与执行结果",
+      "支持 Qwen、OpenAI、Anthropic、Gemini 兼容接口及本地模型，但认证、计费、数据处理和能力取决于实际提供方"
+    ],
+    "useCases": [
+      "在代码库内完成解释、检索、修改、测试和多步开发任务，并按风险选择交互式审批模式",
+      "用 headless、SDK 或本地 daemon 把 Agent 会话接入脚本、CI、编辑器或自有客户端"
+    ],
+    "audience": "需要可自托管 Agent 壳、多模型接入和工具扩展能力，并能自行管理权限、凭据、网络、工作区信任与评测的开发者和平台团队",
+    "caution": "审批模式与执行隔离是两层控制：YOLO 会自动批准工具，而 Linux execution sandbox 需另行配置，且文档明确其主机读取、既有文件描述符和部分后端能力仍有限。MCP、hooks、skills、浏览器、聊天通道和 daemon 都会扩大代码、页面、凭据或写操作的边界；daemon 默认仅监听回环但不要求 bearer，其他本机进程仍可能调用完整 API，共享或远程环境应启用令牌并限制网络。浏览器结果可能进入会话并发送给所选模型提供方；匿名使用统计默认开启并单独发往阿里云 RUM，可显式关闭。不同模型端点的条款、费用、保留和效果不同，仓库给出的 SWE-bench 结果也不能替代目标代码库上的同条件评测。本页只阅读固定版本文档和关键实现，未安装 CLI、登录账号、调用模型或复现评测。",
+    "workflow": [
+      "固定版本并先在可信测试仓库选择 Plan 或逐次确认模式，配置专用模型端点、最小权限凭据并按需关闭使用统计",
+      "从终端交互链路核对模型、工具清单、审批提示和实际 diff，再按风险配置 Linux 执行沙箱、MCP/skills 白名单与工作区信任",
+      "接入 headless、SDK 或 daemon 前单独启用认证、回环或受控网络、日志脱敏、费用限额和场景评测，再逐步开放写入与外部系统"
+    ],
+    "implementation": "CLI 入口解析交互、headless、ACP、serve 等运行形态，加载分层设置、认证、工作区信任与审批模式后创建核心 Config。Config 初始化时构建 ToolRegistry，注册内建文件、Shell、搜索、MCP、Agent 等工具，并根据禁用项、审批模式、沙箱和运行形态收窄能力；模型循环生成工具调用后，CoreToolScheduler 负责校验、请求确认、排队、执行、取消和整理结果，再把工具响应送回模型继续推理。交互 CLI、SDK 与 daemon 因而共享核心会话和工具基础，但 daemon 还增加 HTTP/SSE、工作区与会话生命周期以及独立认证边界。",
+    "commit": "90be7c869f668789a05431b214d6491b424e2483",
+    "status": "draft",
+    "researchedAt": "2026-11-15",
+    "sources": [
+      {
+        "label": "固定版本官方 README、入口形态与能力边界",
+        "url": "https://github.com/QwenLM/qwen-code/blob/90be7c869f668789a05431b214d6491b424e2483/README.md"
+      },
+      {
+        "label": "固定版本 CLI 启动与命令路由",
+        "url": "https://github.com/QwenLM/qwen-code/blob/90be7c869f668789a05431b214d6491b424e2483/packages/cli/src/cli.ts"
+      },
+      {
+        "label": "固定版本核心配置与工具注册",
+        "url": "https://github.com/QwenLM/qwen-code/blob/90be7c869f668789a05431b214d6491b424e2483/packages/core/src/config/config.ts"
+      },
+      {
+        "label": "固定版本工具审批、调度与执行链路",
+        "url": "https://github.com/QwenLM/qwen-code/blob/90be7c869f668789a05431b214d6491b424e2483/packages/core/src/core/coreToolScheduler.ts"
+      },
+      {
+        "label": "固定版本认证、浏览器数据与遥测边界",
+        "url": "https://github.com/QwenLM/qwen-code/blob/90be7c869f668789a05431b214d6491b424e2483/docs/users/support/tos-privacy.md"
+      },
+      {
+        "label": "固定版本审批模式与风险分级",
+        "url": "https://github.com/QwenLM/qwen-code/blob/90be7c869f668789a05431b214d6491b424e2483/docs/users/features/approval-mode.md"
+      },
+      {
+        "label": "固定版本 Linux 执行沙箱能力与限制",
+        "url": "https://github.com/QwenLM/qwen-code/blob/90be7c869f668789a05431b214d6491b424e2483/docs/users/features/sandbox.md"
+      }
+    ]
+  },
   "anthropics/claude-quickstarts": {
     "title": "Claude Quickstarts：Claude API 与 Agent 应用示例集合",
     "summary": "Anthropic 维护的一组独立示例项目，覆盖基础工具调用 Agent、数据分析与客服界面、浏览器和桌面操作、长时编码任务及 Managed Agents 集成；每个目录有自己的依赖、凭据和运行方式，不是一个统一 SDK。",
