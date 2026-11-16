@@ -2533,6 +2533,56 @@
       }
     ]
   },
+  "dream-num/univer": {
+    "title": "Univer：可嵌入产品与 Agent 的开源 Office Web SDK 核心",
+    "summary": "用 TypeScript 提供电子表格和文档的内容模型、编辑、渲染、公式计算、插件系统与 Facade API；应用既可嵌入浏览器编辑器，也可在 Node.js Headless 流程中读写快照和执行自动化任务。",
+    "highlights": [
+      "Sheets Core preset 把内容、渲染、UI、公式、数字格式与对应 Facade 扩展组装为可直接嵌入的编辑器",
+      "插件依赖经过拓扑排序并按 Starting、Ready、Rendered、Steady 生命周期初始化，功能逻辑与 UI 插件可分开组合",
+      "命令系统区分业务 Command、写入快照的 Mutation 与只改瞬态状态的 Operation，为撤销重做和协作同步提供统一变更边界"
+    ],
+    "useCases": [
+      "在 SaaS、企业系统或 Agent 产品中嵌入可编辑、可计算的表格或富文本文档界面",
+      "在 Node.js Headless 任务中用公开 Facade 读写 Office 内容快照、触发公式计算并接入自有数据和流程"
+    ],
+    "audience": "需要把表格或文档能力嵌入自有产品，并能管理前端生命周期、持久化、权限、版本一致性和插件测试的应用与平台团队",
+    "caution": "本仓库开源的是 Apache-2.0 的 Web SDK 核心、Sheets/Docs 能力和 Headless 内容操作；实时协作、修订历史、Office 文件导入导出、部分高级 Web 插件及 AI SDK 扩展另行分发和授权，演示页也可能包含商业功能。workbook.save() 产生 Univer JSON 快照，不等同 XLSX/DOCX/PPTX 转换，持久化、身份、权限、存储和模型编排仍由应用负责。所有协调发布的 @univerjs/* 包应使用同一精确版本；公开导出不自动等于稳定 API，应用应依赖文档化 Facade、preset、插件与入口，并在升级时验证编辑、公式、撤销重做、保存恢复及目标运行时。Headless 需 Node.js >=18.17，浏览器还要满足版本与 Intl.Segmenter 等运行时要求。本页只阅读固定版本文档和关键实现，未安装依赖、运行编辑器、导入真实文件或验证协作与商业能力。",
+    "workflow": [
+      "先按开源/商业功能对照确定范围，固定所有协调发布的 @univerjs/* 包版本，并选择浏览器 preset、手动插件模式或 Node.js Headless 入口",
+      "浏览器端创建容器后用 Sheets Core preset 初始化，等待 Steady 生命周期，再通过 univerAPI 的 Workbook、Worksheet 与 Range Facade 写入数据、等待公式结果并保存 JSON 快照",
+      "由应用实现快照存储、身份和权限；增加插件或升级版本时只用文档化入口，验证插件依赖、事件、撤销重做、公式、保存恢复和资源释放，再单独评估文件转换、协作或 AI 扩展"
+    ],
+    "implementation": "createUniver 将多个 preset 和显式插件按名称合并，注册到 Univer 后用 FUniver 暴露统一 Facade；Sheets Core preset 则组合网络、Docs、渲染、UI、公式、Sheets、数字格式及其 Facade 扩展，并可把公式执行切到 Worker。PluginService 校验插件类型与版本，通过 DependentOn 做依赖拓扑排序，再让实例依次进入 Starting、Ready、Rendered 和 Steady 生命周期。业务编辑统一进入 CommandService：Command 编排动作，Mutation 携带可序列化参数并修改快照、可供协作层同步，Operation 只管理面板或滚动等瞬态状态；前后置监听与触发来源为事件桥接和跨功能协调提供入口。应用层使用 Workbook/Worksheet/Range Facade 操作同一内容模型，等待计算结果后保存包含已注册插件数据的 JSON 快照。",
+    "commit": "0d7923dd7a26e6bea56f1bc791a03618235a4618",
+    "status": "draft",
+    "researchedAt": "2026-11-16",
+    "sources": [
+      {
+        "label": "固定版本官方 README、快速开始、应用链路与开源商业边界",
+        "url": "https://github.com/dream-num/univer/blob/0d7923dd7a26e6bea56f1bc791a03618235a4618/README.md"
+      },
+      {
+        "label": "固定版本 preset 聚合与 Facade 初始化实现",
+        "url": "https://github.com/dream-num/univer/blob/0d7923dd7a26e6bea56f1bc791a03618235a4618/presets/src/preset.ts"
+      },
+      {
+        "label": "固定版本 Sheets Core 插件组合实现",
+        "url": "https://github.com/dream-num/univer/blob/0d7923dd7a26e6bea56f1bc791a03618235a4618/presets/packages/preset-sheets-core/src/preset.ts"
+      },
+      {
+        "label": "固定版本插件依赖与生命周期实现",
+        "url": "https://github.com/dream-num/univer/blob/0d7923dd7a26e6bea56f1bc791a03618235a4618/packages/core/src/services/plugin/plugin.service.ts"
+      },
+      {
+        "label": "固定版本命令、变更与协作监听实现",
+        "url": "https://github.com/dream-num/univer/blob/0d7923dd7a26e6bea56f1bc791a03618235a4618/packages/core/src/services/command/command.service.ts"
+      },
+      {
+        "label": "固定版本 API 稳定、版本对齐与升级边界",
+        "url": "https://github.com/dream-num/univer/blob/0d7923dd7a26e6bea56f1bc791a03618235a4618/docs/API_STABILITY.md"
+      }
+    ]
+  },
   "anthropics/claude-quickstarts": {
     "title": "Claude Quickstarts：Claude API 与 Agent 应用示例集合",
     "summary": "Anthropic 维护的一组独立示例项目，覆盖基础工具调用 Agent、数据分析与客服界面、浏览器和桌面操作、长时编码任务及 Managed Agents 集成；每个目录有自己的依赖、凭据和运行方式，不是一个统一 SDK。",
