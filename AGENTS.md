@@ -14,6 +14,7 @@
 - `npm run build` 必须产出**单文件可双击**的 `dist/index.html`：JS/CSS 内联，数据在 `file://` 下走构建期内联快照。
 - 任何构建产物交付前，必须用 `file://` 实际打开验证（Chromium/Chrome 实测渲染 + 控制台无报错 + 截图），dev server 能跑不算通过。
 - 服务端部署仍走 `http(s)` 下拉取 `data/trending.json` 的逻辑，内联快照只在 `file:` 协议下生效。
+- 构建验证必须覆盖两种环境：**本地不设 base**（`npm run build`）与 **CI 设 base**（`VITE_BASE_PATH=/github-daily-trending/ npm run build`）。只验本地等于没验——CI 的 base 前缀会让引用路径变长，曾因此把部署打挂。
 
 ## 每日推荐的真实试验要求（2026-11-17 起）
 
