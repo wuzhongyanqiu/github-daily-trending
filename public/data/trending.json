@@ -1,36 +1,123 @@
 {
-  "generatedAt": "2026-11-16T01:03:16.914Z",
+  "generatedAt": "2026-11-17T07:12:32.307Z",
   "source": "https://github.com/trending?since=daily",
   "period": "daily",
   "status": "success",
   "coverage": {
-    "researched": 2,
+    "researched": 1,
     "pendingResearch": [
       "ag-ui-protocol/ag-ui",
-      "google-labs-code/stitch-skills",
       "backnotprop/plannotator",
-      "ChromeDevTools/chrome-devtools-mcp",
-      "alibaba/open-code-review",
-      "Tencent/LoopForge",
-      "ggml-org/ggml",
-      "elementalsouls/Claude-BugHunter",
       "tradermonty/claude-trading-skills",
-      "NVIDIA/SkillEvaluator"
+      "elementalsouls/Claude-BugHunter",
+      "getarcaneapp/arcane",
+      "DeanChensj/jiangshan-map",
+      "google-labs-code/stitch-skills",
+      "mvanhorn/last30days-skill",
+      "NVIDIA/SkillEvaluator",
+      "alibaba/open-code-review",
+      "google-research/paper-orchestra",
+      "ChromeDevTools/chrome-devtools-mcp",
+      "sveltejs/svelte",
+      "kajisho5/ffmpeg-skill"
     ],
     "metadataFailures": []
   },
   "repositories": [
     {
       "rank": 1,
+      "fullName": "ag-ui-protocol/ag-ui",
+      "owner": "ag-ui-protocol",
+      "name": "ag-ui",
+      "url": "https://github.com/ag-ui-protocol/ag-ui",
+      "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "language": "TypeScript",
+      "stars": 19467,
+      "forks": 2009,
+      "starsToday": 791,
+      "license": "MIT",
+      "topics": [
+        "ag-ui-protocol",
+        "agent-frontend",
+        "agent-ui",
+        "agentic-workflow",
+        "ai-agents"
+      ],
+      "homepage": "https://ag-ui.com",
+      "updatedAt": "2026-11-17T04:12:28Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
+      "chinese": {
+        "title": "ag-ui",
+        "summary": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 791 Star",
+          "主要使用 TypeScript，当前累计 19,467 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 2,
+      "fullName": "backnotprop/plannotator",
+      "owner": "backnotprop",
+      "name": "plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click. ",
+      "language": "TypeScript",
+      "stars": 12775,
+      "forks": 1267,
+      "starsToday": 696,
+      "license": "Apache-2.0",
+      "topics": [
+        "agents",
+        "claude-code",
+        "code-review",
+        "codex",
+        "obsidian",
+        "opencode",
+        "pi-mono",
+        "plan-mode"
+      ],
+      "homepage": "https://plannotator.ai",
+      "updatedAt": "2026-11-17T06:56:37Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
+      "chinese": {
+        "title": "plannotator",
+        "summary": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click. 。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 696 Star",
+          "主要使用 TypeScript，当前累计 12,775 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 3,
       "fullName": "dream-num/univer",
       "owner": "dream-num",
       "name": "univer",
       "url": "https://github.com/dream-num/univer",
       "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
       "language": "TypeScript",
-      "stars": 25733,
-      "forks": 2346,
-      "starsToday": 988,
+      "stars": 28297,
+      "forks": 2559,
+      "starsToday": 1828,
       "license": "Apache-2.0",
       "topics": [
         "board",
@@ -43,9 +130,9 @@
         "pdf"
       ],
       "homepage": "https://univer.ai",
-      "updatedAt": "2026-11-15T17:20:06Z",
+      "updatedAt": "2026-11-17T07:05:18Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-16T01:03:16.914Z",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
       "chinese": {
         "title": "Univer：可嵌入产品与 Agent 的开源 Office Web SDK 核心",
         "summary": "用 TypeScript 提供电子表格和文档的内容模型、编辑、渲染、公式计算、插件系统与 Facade API；应用既可嵌入浏览器编辑器，也可在 Node.js Headless 流程中读写快照和执行自动化任务。",
@@ -98,112 +185,29 @@
       }
     },
     {
-      "rank": 2,
-      "fullName": "ag-ui-protocol/ag-ui",
-      "owner": "ag-ui-protocol",
-      "name": "ag-ui",
-      "url": "https://github.com/ag-ui-protocol/ag-ui",
-      "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
-      "language": "TypeScript",
-      "stars": 17871,
-      "forks": 1820,
-      "starsToday": 355,
-      "license": "MIT",
-      "topics": [
-        "ag-ui-protocol",
-        "agent-frontend",
-        "agent-ui",
-        "agentic-workflow",
-        "ai-agents"
-      ],
-      "homepage": "https://ag-ui.com",
-      "updatedAt": "2026-11-15T02:26:33Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-16T01:03:16.914Z",
-      "chinese": {
-        "title": "ag-ui",
-        "summary": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 355 Star",
-          "主要使用 TypeScript，当前累计 17,871 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 3,
-      "fullName": "google-labs-code/stitch-skills",
-      "owner": "google-labs-code",
-      "name": "stitch-skills",
-      "url": "https://github.com/google-labs-code/stitch-skills",
-      "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
-      "language": "TypeScript",
-      "stars": 9302,
-      "forks": 1128,
-      "starsToday": 247,
-      "license": "Apache-2.0",
-      "topics": [],
-      "homepage": "https://stitch.withgoogle.com/docs/mcp/setup",
-      "updatedAt": "2026-08-17T20:20:23Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-16T01:03:16.914Z",
-      "chinese": {
-        "title": "stitch-skills",
-        "summary": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 247 Star",
-          "主要使用 TypeScript，当前累计 9,302 Star",
-          "仓库标注 Apache-2.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
       "rank": 4,
-      "fullName": "backnotprop/plannotator",
-      "owner": "backnotprop",
-      "name": "plannotator",
-      "url": "https://github.com/backnotprop/plannotator",
-      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click. ",
-      "language": "TypeScript",
-      "stars": 11841,
-      "forks": 1083,
-      "starsToday": 866,
-      "license": "Apache-2.0",
-      "topics": [
-        "agents",
-        "claude-code",
-        "code-review",
-        "codex",
-        "obsidian",
-        "opencode",
-        "pi-mono",
-        "plan-mode"
-      ],
-      "homepage": "https://plannotator.ai",
-      "updatedAt": "2026-11-16T01:01:19Z",
+      "fullName": "tradermonty/claude-trading-skills",
+      "owner": "tradermonty",
+      "name": "claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "language": "Python",
+      "stars": 6546,
+      "forks": 1374,
+      "starsToday": 837,
+      "license": "MIT",
+      "topics": [],
+      "homepage": "https://tradermonty.github.io/claude-trading-skills/",
+      "updatedAt": "2026-11-17T07:11:26Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-16T01:03:16.914Z",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
       "chinese": {
-        "title": "plannotator",
-        "summary": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click. 。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "title": "claude-trading-skills",
+        "summary": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 866 Star",
-          "主要使用 TypeScript，当前累计 11,841 Star",
-          "仓库标注 Apache-2.0 许可证"
+          "今日新增 837 Star",
+          "主要使用 Python，当前累计 6,546 Star",
+          "仓库标注 MIT 许可证"
         ],
         "useCases": [
           "了解近期开发者关注方向",
@@ -216,178 +220,15 @@
     },
     {
       "rank": 5,
-      "fullName": "ChromeDevTools/chrome-devtools-mcp",
-      "owner": "ChromeDevTools",
-      "name": "chrome-devtools-mcp",
-      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "description": "Chrome DevTools for coding agents",
-      "language": "TypeScript",
-      "stars": 56936,
-      "forks": 4811,
-      "starsToday": 717,
-      "license": "Apache-2.0",
-      "topics": [
-        "browser",
-        "chrome",
-        "chrome-devtools",
-        "debugging",
-        "devtools",
-        "mcp",
-        "mcp-server",
-        "puppeteer"
-      ],
-      "homepage": "https://developer.chrome.com/docs/devtools/agents",
-      "updatedAt": "2026-11-15T03:06:25Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-16T01:03:16.914Z",
-      "chinese": {
-        "title": "chrome-devtools-mcp",
-        "summary": "Chrome DevTools for coding agents。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 717 Star",
-          "主要使用 TypeScript，当前累计 56,936 Star",
-          "仓库标注 Apache-2.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 6,
-      "fullName": "alibaba/open-code-review",
-      "owner": "alibaba",
-      "name": "open-code-review",
-      "url": "https://github.com/alibaba/open-code-review",
-      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "language": "Go",
-      "stars": 52102,
-      "forks": 4111,
-      "starsToday": 691,
-      "license": "Apache-2.0",
-      "topics": [
-        "agent",
-        "agent-skills",
-        "code-review",
-        "code-review-assistant",
-        "harness",
-        "repository-level-context"
-      ],
-      "homepage": "https://open-codereview.ai",
-      "updatedAt": "2026-11-15T02:41:14Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-16T01:03:16.914Z",
-      "chinese": {
-        "title": "open-code-review",
-        "summary": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 691 Star",
-          "主要使用 Go，当前累计 52,102 Star",
-          "仓库标注 Apache-2.0 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 7,
-      "fullName": "Tencent/LoopForge",
-      "owner": "Tencent",
-      "name": "LoopForge",
-      "url": "https://github.com/Tencent/LoopForge",
-      "description": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
-      "language": "Go",
-      "stars": 1497,
-      "forks": 270,
-      "starsToday": 423,
-      "license": "NOASSERTION",
-      "topics": [
-        "agent-orchestration",
-        "agentic-workflow",
-        "ai-agents",
-        "ai-coding",
-        "claude-code",
-        "code-review",
-        "codebuddy",
-        "codex"
-      ],
-      "homepage": "https://loopforge.cn",
-      "updatedAt": "2026-11-15T11:05:37Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-16T01:03:16.914Z",
-      "chinese": {
-        "title": "LoopForge",
-        "summary": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 423 Star",
-          "主要使用 Go，当前累计 1,497 Star",
-          "仓库标注 NOASSERTION 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 8,
-      "fullName": "ggml-org/ggml",
-      "owner": "ggml-org",
-      "name": "ggml",
-      "url": "https://github.com/ggml-org/ggml",
-      "description": "Tensor library for machine learning",
-      "language": "C++",
-      "stars": 15909,
-      "forks": 2019,
-      "starsToday": 43,
-      "license": "MIT",
-      "topics": [
-        "machine-learning"
-      ],
-      "homepage": "https://github.com/ggml-org",
-      "updatedAt": "2026-11-13T08:34:20Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-16T01:03:16.914Z",
-      "chinese": {
-        "title": "ggml",
-        "summary": "Tensor library for machine learning。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 43 Star",
-          "主要使用 C++，当前累计 15,909 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 9,
       "fullName": "elementalsouls/Claude-BugHunter",
       "owner": "elementalsouls",
       "name": "Claude-BugHunter",
       "url": "https://github.com/elementalsouls/Claude-BugHunter",
       "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
       "language": "Python",
-      "stars": 6451,
-      "forks": 970,
-      "starsToday": 98,
+      "stars": 7755,
+      "forks": 1212,
+      "starsToday": 1094,
       "license": "MIT",
       "topics": [
         "ai-security",
@@ -400,15 +241,178 @@
         "claude-code"
       ],
       "homepage": "https://elementalsouls.github.io/Claude-BugHunter",
-      "updatedAt": "2026-11-15T11:59:53Z",
+      "updatedAt": "2026-11-16T23:40:07Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-16T01:03:16.914Z",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
       "chinese": {
         "title": "Claude-BugHunter",
         "summary": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 98 Star",
-          "主要使用 Python，当前累计 6,451 Star",
+          "今日新增 1,094 Star",
+          "主要使用 Python，当前累计 7,755 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 6,
+      "fullName": "getarcaneapp/arcane",
+      "owner": "getarcaneapp",
+      "name": "arcane",
+      "url": "https://github.com/getarcaneapp/arcane",
+      "description": "Modern Docker Management, Designed for Everyone",
+      "language": "Go",
+      "stars": 8923,
+      "forks": 456,
+      "starsToday": 46,
+      "license": "BSD-3-Clause",
+      "topics": [
+        "compose",
+        "container-management",
+        "containers",
+        "docker",
+        "docker-compose",
+        "docker-management",
+        "go",
+        "self-hosted"
+      ],
+      "homepage": "https://getarcane.app",
+      "updatedAt": "2026-11-17T05:32:06Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
+      "chinese": {
+        "title": "arcane",
+        "summary": "Modern Docker Management, Designed for Everyone。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 46 Star",
+          "主要使用 Go，当前累计 8,923 Star",
+          "仓库标注 BSD-3-Clause 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 7,
+      "fullName": "DeanChensj/jiangshan-map",
+      "owner": "DeanChensj",
+      "name": "jiangshan-map",
+      "url": "https://github.com/DeanChensj/jiangshan-map",
+      "description": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
+      "language": "JavaScript",
+      "stars": 7268,
+      "forks": 870,
+      "starsToday": 288,
+      "license": "GPL-3.0",
+      "topics": [
+        "ancient-china",
+        "cartography",
+        "china-map",
+        "chinese-history",
+        "classical-chinese-poetry",
+        "digital-humanities",
+        "gis",
+        "historical-atlas"
+      ],
+      "homepage": "https://deanchen.me/jiangshan-map/",
+      "updatedAt": "2026-11-16T11:59:10Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
+      "chinese": {
+        "title": "jiangshan-map",
+        "summary": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 288 Star",
+          "主要使用 JavaScript，当前累计 7,268 Star",
+          "仓库标注 GPL-3.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 8,
+      "fullName": "google-labs-code/stitch-skills",
+      "owner": "google-labs-code",
+      "name": "stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "language": "TypeScript",
+      "stars": 9835,
+      "forks": 1277,
+      "starsToday": 529,
+      "license": "Apache-2.0",
+      "topics": [],
+      "homepage": "https://stitch.withgoogle.com/docs/mcp/setup",
+      "updatedAt": "2026-08-17T20:20:23Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
+      "chinese": {
+        "title": "stitch-skills",
+        "summary": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 529 Star",
+          "主要使用 TypeScript，当前累计 9,835 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 9,
+      "fullName": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python",
+      "stars": 68365,
+      "forks": 6081,
+      "starsToday": 135,
+      "license": "MIT",
+      "topics": [
+        "ai-prompts",
+        "ai-skill",
+        "bluesky",
+        "claude",
+        "claude-code",
+        "clawhub",
+        "deep-research",
+        "hackernews"
+      ],
+      "homepage": null,
+      "updatedAt": "2026-11-17T02:38:27Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
+      "chinese": {
+        "title": "last30days-skill",
+        "summary": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 135 Star",
+          "主要使用 Python，当前累计 68,365 Star",
           "仓库标注 MIT 许可证"
         ],
         "useCases": [
@@ -422,113 +426,15 @@
     },
     {
       "rank": 10,
-      "fullName": "GoogleChrome/modern-web-guidance-src",
-      "owner": "GoogleChrome",
-      "name": "modern-web-guidance-src",
-      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
-      "description": "Keep your coding agent up to date with the latest web best practices",
-      "language": "TypeScript",
-      "stars": 7174,
-      "forks": 604,
-      "starsToday": 1219,
-      "license": "Apache-2.0",
-      "topics": [],
-      "homepage": "https://goo.gle/modern-web-guidance",
-      "updatedAt": "2026-11-15T12:09:36Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-16T01:03:16.914Z",
-      "chinese": {
-        "title": "Modern Web Guidance：把现代 Web 平台规范送入编程 Agent",
-        "summary": "由 Chrome、Edge、Firefox、MDN 团队与社区共同维护的 Web 开发指南源仓库；发布的 skill 与 CLI 让编程 Agent 先按任务检索，再按 ID 取回包含浏览器兼容性、无障碍、性能、陷阱和回退策略的精简指南。",
-        "highlights": [
-          "用本地静态嵌入与 BM25 混合检索，把英文任务查询映射到具体指南而非整库塞入上下文",
-          "取回指南时读取项目 .mwgrc，按 Baseline 目标调整回退提示，并对 Origin Trial 与易变特性要求显式授权",
-          "legacy-scan 以确定性 AST、DOM、CSS 和依赖规则发现候选旧模式，再交给 Agent 按 keep/drop rubric 复核"
-        ],
-        "useCases": [
-          "让编程 Agent 在实现 Web UI、性能、无障碍或安全功能前检索当前平台做法与兼容边界",
-          "扫描已有前端代码中的部分旧模式，结合指南规划并验证现代化改造"
-        ],
-        "audience": "希望减少 Agent 生成陈旧 Web 模式，并能明确浏览器支持策略、审查检索结果和维护 skill 更新的前端团队",
-        "caution": "指南覆盖面和评测结果不等于适用于每个框架、浏览器矩阵或生产场景；采用前仍需按项目目标浏览器、无障碍要求和真实运行环境验证。legacy-scan 只覆盖约 20% 指南的可确定性检测子集，命中项是待复核候选，不是自动修复或无误报保证。Origin Trial 与易变特性默认受门控，不能绕过项目策略。CLI 会采集安装量、调用 Agent、检索 ID 和 Agent 生成的搜索查询等匿名遥测，可用 DISABLE_TELEMETRY=1 退出；npx 首次取包和更新仍需联网。本页只阅读固定版本文档与实现，未安装 skill、运行扫描或复现实验看板的提升数据。",
-        "status": "draft",
-        "commit": "24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8",
-        "researchedAt": "2026-11-13",
-        "workflow": [
-          "安装或接入 skill，并在项目 .mwgrc 中明确 Baseline 目标及是否允许实验性或易变特性",
-          "用聚焦的英文任务词 search，核对返回描述后 retrieve 相关指南，再按兼容性、回退和无障碍要求实现",
-          "改造旧项目时先运行 legacy-scan，把候选逐项按 keep/drop rubric 复核，取回对应指南后修改并重跑扫描与项目测试"
-        ],
-        "implementation": "skill 指令把 Web UI 任务路由到 search/retrieve 链路；search 从随包发布的指南分块、量化静态向量和 BM25 索引中分别计算语义与词法排名，再用 reciprocal rank fusion 合并结果，全程不依赖外部模型 API。retrieve 根据 ID 读取完整指南，同时解析项目或用户级 .mwgrc：Baseline 目标会改变回退提示，Origin Trial 和单引擎易变特性未获明确允许时直接阻止取回。legacy-scan 则使用 token 预筛和 AST、DOM、CSS、依赖扫描器生成带文件位置与验证 rubric 的候选，默认规则需先通过 held-out 精度门槛，但运行结果仍要求 Agent 结合上下文剔除误报。",
-        "sources": [
-          {
-            "label": "固定版本官方 README、安装链路、门控与隐私边界",
-            "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/README.md"
-          },
-          {
-            "label": "固定版本 Agent skill 使用流程",
-            "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/guides/modern-web-guidance/SKILL.md"
-          },
-          {
-            "label": "固定版本本地混合检索实现",
-            "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/src/rag/search.ts"
-          },
-          {
-            "label": "固定版本指南取回与功能门控实现",
-            "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/src/rag/retrieve.ts"
-          },
-          {
-            "label": "固定版本旧模式扫描架构与限制",
-            "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/24975dc8dc6dee22ce477b5b5bcbe0251b4ab5e8/src/analyzing/README.md"
-          }
-        ]
-      }
-    },
-    {
-      "rank": 11,
-      "fullName": "tradermonty/claude-trading-skills",
-      "owner": "tradermonty",
-      "name": "claude-trading-skills",
-      "url": "https://github.com/tradermonty/claude-trading-skills",
-      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
-      "language": "Python",
-      "stars": 5564,
-      "forks": 1175,
-      "starsToday": 706,
-      "license": "MIT",
-      "topics": [],
-      "homepage": "https://tradermonty.github.io/claude-trading-skills/",
-      "updatedAt": "2026-11-16T00:54:59Z",
-      "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-16T01:03:16.914Z",
-      "chinese": {
-        "title": "claude-trading-skills",
-        "summary": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
-        "highlights": [
-          "今日新增 706 Star",
-          "主要使用 Python，当前累计 5,564 Star",
-          "仓库标注 MIT 许可证"
-        ],
-        "useCases": [
-          "了解近期开发者关注方向",
-          "评估是否值得进一步试用或调研"
-        ],
-        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
-        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
-        "status": "metadata"
-      }
-    },
-    {
-      "rank": 12,
       "fullName": "NVIDIA/SkillEvaluator",
       "owner": "NVIDIA",
       "name": "SkillEvaluator",
       "url": "https://github.com/NVIDIA/SkillEvaluator",
-      "description": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+      "description": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
       "language": "Python",
-      "stars": 1690,
-      "forks": 230,
-      "starsToday": 122,
+      "stars": 2986,
+      "forks": 420,
+      "starsToday": 873,
       "license": "Apache-2.0",
       "topics": [
         "agent-evaluation",
@@ -541,16 +447,218 @@
         "codex"
       ],
       "homepage": "https://docs.nvidia.com/skills/skillevaluator/",
-      "updatedAt": "2026-11-16T00:53:35Z",
+      "updatedAt": "2026-11-17T07:12:30Z",
       "metadataStatus": "fresh",
-      "metadataCheckedAt": "2026-11-16T01:03:16.914Z",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
       "chinese": {
         "title": "SkillEvaluator",
-        "summary": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "summary": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
         "highlights": [
-          "今日新增 122 Star",
-          "主要使用 Python，当前累计 1,690 Star",
+          "今日新增 873 Star",
+          "主要使用 Python，当前累计 2,986 Star",
           "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 11,
+      "fullName": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": 53183,
+      "forks": 4356,
+      "starsToday": 951,
+      "license": "Apache-2.0",
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "homepage": "https://open-codereview.ai",
+      "updatedAt": "2026-11-17T06:20:18Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
+      "chinese": {
+        "title": "open-code-review",
+        "summary": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 951 Star",
+          "主要使用 Go，当前累计 53,183 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 12,
+      "fullName": "google-research/paper-orchestra",
+      "owner": "google-research",
+      "name": "paper-orchestra",
+      "url": "https://github.com/google-research/paper-orchestra",
+      "description": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+      "language": "Python",
+      "stars": 1832,
+      "forks": 295,
+      "starsToday": 313,
+      "license": "Apache-2.0",
+      "topics": [
+        "ai-research-assistant",
+        "multi-agent-systems"
+      ],
+      "homepage": "https://yiwen-song.github.io/paper_orchestra/",
+      "updatedAt": "2026-11-15T18:08:08Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
+      "chinese": {
+        "title": "paper-orchestra",
+        "summary": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 313 Star",
+          "主要使用 Python，当前累计 1,832 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 13,
+      "fullName": "ChromeDevTools/chrome-devtools-mcp",
+      "owner": "ChromeDevTools",
+      "name": "chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "description": "Chrome DevTools for coding agents",
+      "language": "TypeScript",
+      "stars": 57821,
+      "forks": 4857,
+      "starsToday": 841,
+      "license": "Apache-2.0",
+      "topics": [
+        "browser",
+        "chrome",
+        "chrome-devtools",
+        "debugging",
+        "devtools",
+        "mcp",
+        "mcp-server",
+        "puppeteer"
+      ],
+      "homepage": "https://developer.chrome.com/docs/devtools/agents",
+      "updatedAt": "2026-11-17T07:06:57Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
+      "chinese": {
+        "title": "chrome-devtools-mcp",
+        "summary": "Chrome DevTools for coding agents。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 841 Star",
+          "主要使用 TypeScript，当前累计 57,821 Star",
+          "仓库标注 Apache-2.0 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 14,
+      "fullName": "sveltejs/svelte",
+      "owner": "sveltejs",
+      "name": "svelte",
+      "url": "https://github.com/sveltejs/svelte",
+      "description": "web development for the rest of us",
+      "language": "JavaScript",
+      "stars": 89113,
+      "forks": 6133,
+      "starsToday": 115,
+      "license": "MIT",
+      "topics": [
+        "compiler",
+        "template",
+        "ui"
+      ],
+      "homepage": "https://svelte.dev",
+      "updatedAt": "2026-11-16T14:08:15Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
+      "chinese": {
+        "title": "svelte",
+        "summary": "web development for the rest of us。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 115 Star",
+          "主要使用 JavaScript，当前累计 89,113 Star",
+          "仓库标注 MIT 许可证"
+        ],
+        "useCases": [
+          "了解近期开发者关注方向",
+          "评估是否值得进一步试用或调研"
+        ],
+        "audience": "关注开源工具与技术趋势的开发者、研究者和产品团队",
+        "caution": "这是基于仓库公开元数据生成的中文整理，不代表项目方表述；采用前请核验 README、许可证、活跃度与安全边界。",
+        "status": "metadata"
+      }
+    },
+    {
+      "rank": 15,
+      "fullName": "kajisho5/ffmpeg-skill",
+      "owner": "kajisho5",
+      "name": "ffmpeg-skill",
+      "url": "https://github.com/kajisho5/ffmpeg-skill",
+      "description": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
+      "language": "Python",
+      "stars": 7202,
+      "forks": 651,
+      "starsToday": 367,
+      "license": "MIT",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "audio-processing",
+        "captions",
+        "claude-code",
+        "codex",
+        "coding-agent",
+        "cursor"
+      ],
+      "homepage": "https://www.npmjs.com/package/ffmpeg-skill",
+      "updatedAt": "2026-11-16T01:08:43Z",
+      "metadataStatus": "fresh",
+      "metadataCheckedAt": "2026-11-17T07:12:32.307Z",
+      "chinese": {
+        "title": "ffmpeg-skill",
+        "summary": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.。该项目进入了今日 GitHub Trending，本条中文说明根据公开元数据整理，建议打开原仓库 README 核验具体能力与使用边界。",
+        "highlights": [
+          "今日新增 367 Star",
+          "主要使用 Python，当前累计 7,202 Star",
+          "仓库标注 MIT 许可证"
         ],
         "useCases": [
           "了解近期开发者关注方向",
