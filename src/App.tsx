@@ -138,15 +138,24 @@ function App() {
   const [selectedName, setSelectedName] = useState('');
 
   useEffect(() => {
+    const apply = (data: TrendingSnapshot) => {
+      setSnapshot(data);
+      setSelectedName(window.matchMedia('(min-width: 721px)').matches ? data.repositories[0]?.fullName || '' : '');
+    };
+
+    // 单文件构建：file:// 双击打开时 fetch 会被浏览器拦截（协议/CORS），改用构建期内联快照
+    const embedded = window.__TRENDING_SNAPSHOT__;
+    if (location.protocol === 'file:' && embedded) {
+      apply(embedded);
+      return;
+    }
+
     fetch(`${import.meta.env.BASE_URL}data/trending.json`)
       .then((response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         return response.json();
       })
-      .then((data: TrendingSnapshot) => {
-        setSnapshot(data);
-        setSelectedName(window.matchMedia('(min-width: 721px)').matches ? data.repositories[0]?.fullName || '' : '');
-      })
+      .then(apply)
       .catch(() => setError('趋势数据加载失败，请确认 public/data/trending.json 已生成。'));
   }, []);
 
