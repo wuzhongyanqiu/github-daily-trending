@@ -41,9 +41,13 @@ npm test
 npm run build
 ```
 
+构建产物 `dist/index.html` 是单文件（JS/CSS/趋势数据已内联），可直接双击用 `file://` 打开；交付前必须用浏览器实际打开验证一次，dev server 能跑不算通过。
+
 ## 自动更新与部署
 
 Codex 本地定时任务 `github` 每天北京时间 08:20 刷新数据、验证并在数据变化时提交，同时把执行结果写入 `sync-controller` 综合看板。`.github/workflows/update-trending.yml` 只保留手动补跑入口，避免与本地任务双跑；`deploy-pages.yml` 在主分支更新后构建并发布 GitHub Pages。
+
+每天的 3 个推荐里至少 1 个必须真跑一遍（库→调 API、应用→跑主流程、工具→真实任务），并回答「值不值得用、坑在哪、适合谁」；没跑就标「未实测」，不能拿 README 复述当体验结论。详见 `AGENTS.md`。
 
 匿名 GitHub API 请求有较低限额。自动化使用 GitHub Actions 自动提供的 `GITHUB_TOKEN`；本地需要更高限额时也只能通过同名环境变量注入，禁止写入仓库。
 
